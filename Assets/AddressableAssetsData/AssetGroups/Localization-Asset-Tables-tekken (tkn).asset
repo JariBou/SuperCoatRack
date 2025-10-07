@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: Localization-Asset-Tables-tekken (tkn)
+  m_EditorClassIdentifier: 
+  m_GroupName: Localization-Asset-Tables-tekken (tkn)
+  m_GUID: 8daf1e8e46c17724688877ce4cc25e2e
+  m_SerializeEntries:
+  - m_GUID: d11ac3c29303a984bb8ef4e4c1c1716a
+    m_Address: LocalizationAssetTableCollection_tkn
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-tkn
+    FlaggedDuringContentUpdateRestriction: 0
+  m_ReadOnly: 1
+  m_Settings: {fileID: 11400000, guid: 3a50db8a4a48b7f40b2a4537f940f9ed, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: 0b313d744764af540a2c4abcd1cb45e9, type: 2}
+    - {fileID: 11400000, guid: 157bd25ffc5aaa34b9fa137f0edc0b88, type: 2}
