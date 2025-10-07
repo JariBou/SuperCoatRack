@@ -1,0 +1,47 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Windows",
+  "BasePlatform": "Windows",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "154",
+  "SoundBanks": [
+   {
+    "Id": "3991942870",
+    "Type": "User",
+    "GUID": "{3F1F1E21-278D-41AA-8232-2670EB8A2976}",
+    "Language": "SFX",
+    "Hash": "{13325384-1F83-79FE-A455-5B305C6A20F1}",
+    "ObjectPath": "\\SoundBanks\\Default Work Unit\\Music",
+    "ShortName": "Music",
+    "Path": "Music.bnk",
+    "Media": [
+     {
+      "Id": "652455484",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Wii-Party-Soundtrack-Main-Menu-Music.wav",
+      "CachePath": "9D/{9D8A5573-78C8-D45E-B27C-9A6C0B1631CD}.wem"
+     }
+    ],
+    "Events": [
+     {
+      "Id": "92203756",
+      "Name": "PlayMusicEvent",
+      "ObjectPath": "\\Events\\Default Work Unit\\Events\\PlayMusicEvent",
+      "GUID": "{3A176EEA-E18F-4E16-9B1E-2110C68D1872}",
+      "DurationType": "OneShot",
+      "DurationMin": "152.439",
+      "DurationMax": "152.439",
+      "MediaRefs": [
+       {
+        "Id": "652455484"
+       }
+      ]
+     }
+    ]
+   }
+  ],
+  "FileHash": "{98733A2C-D585-3EB3-B711-4A3429A53ECE}"
+ }
+}

@@ -1,0 +1,6 @@
+Event	ID	Name			Wwise Object Path	Notes
+	92203756	PlayMusicEvent			\Default Work Unit\Events\PlayMusicEvent	feur 
+
+In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	652455484	Wii-Party-Soundtrack-Main-Menu-Music	C:\Users\jerem\Documents\UNITY\SuperCoatRack\SuperCoatRack_WwiseProject\.cache\9D\{9D8A5573-78C8-D45E-B27C-9A6C0B1631CD}.wem		\Interactive Music Hierarchy\Default Work Unit\New Music Segment\Wii-Party-Soundtrack-Main-Menu-Music		26890336
+
