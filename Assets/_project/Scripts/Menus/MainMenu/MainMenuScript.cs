@@ -1,6 +1,5 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using UnityEngine.Serialization;
 
 namespace _project.Scripts.Menus.MainMenu
 {
@@ -11,14 +10,19 @@ namespace _project.Scripts.Menus.MainMenu
         [SerializeField] 
         private GameObject _settingsPanel;
         
+        [SerializeField] 
+        private GameObject _selectionPanel;
+        
         private void Start()
         {
             _settingsPanel.SetActive(false);
+            _selectionPanel.SetActive(false);
         }
 
-        public void Play()
+        public void ToggleSelection()
         {
-            SceneManager.LoadScene("GameScene");
+            _mainMenuPanel.SetActive(!_mainMenuPanel.activeSelf);
+            _selectionPanel.SetActive(!_selectionPanel.activeSelf);
         }
 
         public void ToggleSettings()

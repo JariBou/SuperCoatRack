@@ -11,9 +11,23 @@ namespace _project.Scripts.Menus
 
         [SerializeField] private AudioMixer _audioMixer;
 
+        private void Start()
+        {
+            float volumeValue = PlayerPrefs.GetFloat("Volume", 1f);
+            _volumeSlider.value = volumeValue;
+            UpdateMixerVolume(volumeValue);
+        }
+
         public void OnSliderValueChanged(float value)
         {
-            Debug.Log("Volume changed to: " + value);
+            PlayerPrefs.SetFloat("Volume", value);
+            UpdateMixerVolume(value);
+        }
+
+        private void UpdateMixerVolume(float linearValue)
+        {
+            float decibelMixerValue = Mathf.Log10(linearValue) * 20f;
+            _audioMixer.SetFloat("MasterVolume", decibelMixerValue);
         }
     }
 }
