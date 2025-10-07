@@ -66,7 +66,7 @@ MonoBehaviour:
     ParentPath: SoundBanks\Default Work Unit
     guid: 5b725a2a1ba53b4c8392d11313882357
     GuidInternal: 
-    m_lastTime: -8584417761780745703
+    m_lastTime: -8584417580949264885
     List:
     - name: Music
       guid: 211e1f3f8d27aa4182322670eb8a2976
@@ -94,8 +94,28 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: a4632d3c2cd3ab44959c4986e7d5aad3
     GuidInternal: 
-    m_lastTime: -8584417757365742771
+    m_lastTime: -8584417590842642577
     List:
+    - name: DoEvent
+      guid: 8e1db10ff1f39344892d7ece1555b585
+      id: 1892194498
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: a4632d3c2cd3ab44959c4986e7d5aad3
+      - ElementName: Events
+        ObjectType: 4
+        guid: 5be825d74390e343996d2421205490a1
+      - ElementName: DoEvent
+        ObjectType: 3
+        guid: 8e1db10ff1f39344892d7ece1555b585
+      Path: Events\Default Work Unit\Events\DoEvent
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
     - name: Events
       guid: 5be825d74390e343996d2421205490a1
       id: 1381315342
@@ -113,9 +133,9 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
-    - name: PlayMusicEvent
-      guid: ea6e173a8fe1164e9b1e2110c68d1872
-      id: 92203756
+    - name: PlayMusic
+      guid: 7d593f0c3c53f24eada5d5cd830ddb53
+      id: 417627684
       PathAndIcons:
       - ElementName: Events
         ObjectType: 5
@@ -126,13 +146,13 @@ MonoBehaviour:
       - ElementName: Events
         ObjectType: 4
         guid: 5be825d74390e343996d2421205490a1
-      - ElementName: PlayMusicEvent
+      - ElementName: PlayMusic
         ObjectType: 3
-        guid: ea6e173a8fe1164e9b1e2110c68d1872
-      Path: Events\Default Work Unit\Events\PlayMusicEvent
+        guid: 7d593f0c3c53f24eada5d5cd830ddb53
+      Path: Events\Default Work Unit\Events\PlayMusic
       maxAttenuation: 0
-      maxDuration: 152.439
-      minDuration: 152.439
+      maxDuration: 152.98445
+      minDuration: 152.98445
   RtpcWwu:
   - PhysicalPath: Game Parameters\Default Work Unit.wwu
     PathAndIcons:
@@ -145,7 +165,7 @@ MonoBehaviour:
     ParentPath: Game Parameters\Default Work Unit
     guid: 5a0b48d573c7224f9db0e81c3aa84e0e
     GuidInternal: 
-    m_lastTime: -8584417808104474914
+    m_lastTime: -8584417618211449690
     List: []
   StateWwu:
   - PhysicalPath: States\Default Work Unit.wwu
@@ -159,7 +179,7 @@ MonoBehaviour:
     ParentPath: States\Default Work Unit
     guid: 8a55044828da1243a1e22054cf264e47
     GuidInternal: 
-    m_lastTime: -8584417808104914872
+    m_lastTime: -8584417618211171959
     List: []
   SwitchWwu:
   - PhysicalPath: Switches\Default Work Unit.wwu
@@ -173,7 +193,7 @@ MonoBehaviour:
     ParentPath: Switches\Default Work Unit
     guid: 94edad3906a9b246a154be879e3bf0ce
     GuidInternal: 
-    m_lastTime: -8584417808104694880
+    m_lastTime: -8584417618211304680
     List: []
   TriggerWwu:
   - PhysicalPath: Triggers\Default Work Unit.wwu
@@ -187,10 +207,24 @@ MonoBehaviour:
     ParentPath: Triggers\Default Work Unit
     guid: 411c26b2e8fa7d43ba6d6e5da1a0e9ce
     GuidInternal: 
-    m_lastTime: -8584417808103069368
-    List: []
+    m_lastTime: -8584417618211058926
+    List:
+    - name: Mettre
+      guid: 62147515c8fb0b4a983969e001d42495
+      id: 1955038884
+      PathAndIcons:
+      - ElementName: Triggers
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 411c26b2e8fa7d43ba6d6e5da1a0e9ce
+      - ElementName: Mettre
+        ObjectType: 14
+        guid: 62147515c8fb0b4a983969e001d42495
+      Path: Triggers\Default Work Unit\Mettre
   ExpandedFileSystemItemIds: 
-  ExpandedWaapiItemIds: 0300000004000000060000000a00000012000000380000003f00000040000000530000005400000061000000620000007600000077000000840000008b0000008c0000008d000000a6000000a7000000aa000000cd000000d1000000d2000000d3000000d4000000d5000000d8000000e4000000ef000000ff000000110100002e0100002f01000040010000430100004e010000
+  ExpandedWaapiItemIds: 0300000004000000060000000a000000120000001400000015000000380000003f0000004000000053000000540000006000000061000000620000007600000077000000840000008b0000008c0000008d000000a6000000a7000000a9000000aa000000c4000000c5000000cd000000d1000000d2000000d3000000d4000000d5000000d8000000e4000000ef000000ff000000110100002e01000040010000430100004e010000
   AutoSyncSelection: 0
   autoPopulateEnabled: 1
   currentDataSource: 0

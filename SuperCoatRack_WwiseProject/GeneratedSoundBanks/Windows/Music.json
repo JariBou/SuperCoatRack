@@ -10,11 +10,19 @@
     "Type": "User",
     "GUID": "{3F1F1E21-278D-41AA-8232-2670EB8A2976}",
     "Language": "SFX",
-    "Hash": "{13325384-1F83-79FE-A455-5B305C6A20F1}",
+    "Hash": "{AB5BDB42-F8F6-D84F-647A-1DE66FB14AA2}",
     "ObjectPath": "\\SoundBanks\\Default Work Unit\\Music",
     "ShortName": "Music",
     "Path": "Music.bnk",
     "Media": [
+     {
+      "Id": "493148124",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Dachlatte-_Paul-Seul-Remix_.wav",
+      "CachePath": "ED/{ED686670-C4CF-5051-9816-8DE656978B3B}.wem"
+     },
      {
       "Id": "652455484",
       "Language": "SFX",
@@ -26,22 +34,38 @@
     ],
     "Events": [
      {
-      "Id": "92203756",
-      "Name": "PlayMusicEvent",
-      "ObjectPath": "\\Events\\Default Work Unit\\Events\\PlayMusicEvent",
-      "GUID": "{3A176EEA-E18F-4E16-9B1E-2110C68D1872}",
+      "Id": "417627684",
+      "Name": "PlayMusic",
+      "ObjectPath": "\\Events\\Default Work Unit\\Events\\PlayMusic",
+      "GUID": "{0C3F597D-533C-4EF2-ADA5-D5CD830DDB53}",
       "DurationType": "OneShot",
-      "DurationMin": "152.439",
-      "DurationMax": "152.439",
+      "DurationMin": "152.98445",
+      "DurationMax": "152.98445",
       "MediaRefs": [
        {
         "Id": "652455484"
        }
       ]
      }
+    ],
+    "Busses": [
+     {
+      "Id": "3803692087",
+      "Name": "Master Audio Bus",
+      "ObjectPath": "\\Master-Mixer Hierarchy\\Default Work Unit\\Master Audio Bus",
+      "GUID": "{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}"
+     }
+    ],
+    "GameParameters": [
+     {
+      "Id": "3797559158",
+      "Name": "MainBusVolume",
+      "ObjectPath": "\\Game Parameters\\Default Work Unit\\MainBusVolume",
+      "GUID": "{52F5956A-2B5C-4FD8-8660-AB6D841EB197}"
+     }
     ]
    }
   ],
-  "FileHash": "{98733A2C-D585-3EB3-B711-4A3429A53ECE}"
+  "FileHash": "{F15C4266-857E-C717-49F3-D091004F7D12}"
  }
 }

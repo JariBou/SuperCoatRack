@@ -5,14 +5,12 @@
 			<ChildrenList>
 				<Folder Name="Events" ID="{D725E85B-9043-43E3-996D-2421205490A1}" ShortID="156153306">
 					<ChildrenList>
-						<Event Name="PlayMusicEvent" ID="{3A176EEA-E18F-4E16-9B1E-2110C68D1872}">
-							<Comment>feur
-</Comment>
+						<Event Name="PlayMusic" ID="{0C3F597D-533C-4EF2-ADA5-D5CD830DDB53}">
 							<ChildrenList>
-								<Action Name="" ID="{0B2539A8-6AC6-435B-8A1F-10B5610F1BD4}" ShortID="560449775">
+								<Action Name="" ID="{DACC98FD-2CAF-493C-AD8B-BFFF6B1135E5}" ShortID="957036898">
 									<ReferenceList>
 										<Reference Name="Target">
-											<ObjectRef Name="New Music Segment" ID="{2BE186B6-01D6-436D-AD15-CAF824AC464C}" WorkUnitID="{ACD2CB43-14A2-429B-BD28-09BEF144217B}"/>
+											<ObjectRef Name="MainMusic" ID="{2BE186B6-01D6-436D-AD15-CAF824AC464C}" WorkUnitID="{ACD2CB43-14A2-429B-BD28-09BEF144217B}"/>
 										</Reference>
 									</ReferenceList>
 								</Action>

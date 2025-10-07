@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{D5480B5A-C773-4F22-9DB0-E81C3AA84E0E}" SchemaVersion="123">
 	<GameParameters>
-		<WorkUnit Name="Default Work Unit" ID="{D5480B5A-C773-4F22-9DB0-E81C3AA84E0E}" PersistMode="Standalone"/>
+		<WorkUnit Name="Default Work Unit" ID="{D5480B5A-C773-4F22-9DB0-E81C3AA84E0E}" PersistMode="Standalone">
+			<ChildrenList>
+				<GameParameter Name="MainBusVolume" ID="{52F5956A-2B5C-4FD8-8660-AB6D841EB197}">
+					<PropertyList>
+						<Property Name="InitialValue" Type="Real64" Value="0"/>
+					</PropertyList>
+				</GameParameter>
+			</ChildrenList>
+		</WorkUnit>
 	</GameParameters>
 </WwiseDocument>
