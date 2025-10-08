@@ -10,7 +10,7 @@
     "Type": "User",
     "GUID": "{3F1F1E21-278D-41AA-8232-2670EB8A2976}",
     "Language": "SFX",
-    "Hash": "{AB5BDB42-F8F6-D84F-647A-1DE66FB14AA2}",
+    "Hash": "{B458882F-50A1-E784-1984-AC3FCA208502}",
     "ObjectPath": "\\SoundBanks\\Default Work Unit\\Music",
     "ShortName": "Music",
     "Path": "Music.bnk",
@@ -47,25 +47,9 @@
        }
       ]
      }
-    ],
-    "Busses": [
-     {
-      "Id": "3803692087",
-      "Name": "Master Audio Bus",
-      "ObjectPath": "\\Master-Mixer Hierarchy\\Default Work Unit\\Master Audio Bus",
-      "GUID": "{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}"
-     }
-    ],
-    "GameParameters": [
-     {
-      "Id": "3797559158",
-      "Name": "MainBusVolume",
-      "ObjectPath": "\\Game Parameters\\Default Work Unit\\MainBusVolume",
-      "GUID": "{52F5956A-2B5C-4FD8-8660-AB6D841EB197}"
-     }
     ]
    }
   ],
-  "FileHash": "{64145C6E-AC67-6412-E356-7DFD96B9ACDC}"
+  "FileHash": "{11F1B9F8-47D4-E324-81BB-328EFF64C47E}"
  }
 }

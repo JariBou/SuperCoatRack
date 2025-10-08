@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
-  m_Name: Localization-Asset-Tables-tekken (tkn)
+  m_Name: Localization-Asset-Tables-Tekken (tkn)
   m_EditorClassIdentifier: 
-  m_GroupName: Localization-Asset-Tables-tekken (tkn)
-  m_GUID: 8daf1e8e46c17724688877ce4cc25e2e
+  m_GroupName: Localization-Asset-Tables-Tekken (tkn)
+  m_GUID: c428762104751c444a2e453640437ec3
   m_SerializeEntries:
   - m_GUID: d11ac3c29303a984bb8ef4e4c1c1716a
     m_Address: LocalizationAssetTableCollection_tkn

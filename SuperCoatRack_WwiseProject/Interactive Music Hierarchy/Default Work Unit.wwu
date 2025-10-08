@@ -18,13 +18,6 @@
 					</ReferenceList>
 					<ChildrenList>
 						<MusicTrack Name="Wii-Party-Soundtrack-Main-Menu-Music" ID="{077D1452-2D2A-4ACE-ACC9-8AEB66B240C1}" ShortID="1022453258">
-							<PropertyList>
-								<Property Name="Volume" Type="Real64">
-									<ValueList>
-										<Value>-12</Value>
-									</ValueList>
-								</Property>
-							</PropertyList>
 							<ReferenceList>
 								<Reference Name="OutputBus">
 									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{BFE55156-D556-409A-8C3D-FF830BCFC4B2}"/>
@@ -124,7 +117,7 @@
 						<Property Name="EndPosition" Type="Real64" Value="180784.715359067"/>
 						<Property Name="PlaybackSpeed" Type="Real64">
 							<ValueList>
-								<Value>1.2</Value>
+								<Value>1.3</Value>
 							</ValueList>
 						</Property>
 					</PropertyList>
@@ -138,13 +131,6 @@
 					</ReferenceList>
 					<ChildrenList>
 						<MusicTrack Name="Dachlatte-_Paul-Seul-Remix_" ID="{D206EBD4-F22B-4F95-8D6C-2EB09465003A}" ShortID="733806038">
-							<PropertyList>
-								<Property Name="Volume" Type="Real64">
-									<ValueList>
-										<Value>-10</Value>
-									</ValueList>
-								</Property>
-							</PropertyList>
 							<ReferenceList>
 								<Reference Name="OutputBus">
 									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{BFE55156-D556-409A-8C3D-FF830BCFC4B2}"/>

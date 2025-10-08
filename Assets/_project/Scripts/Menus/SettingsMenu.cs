@@ -37,12 +37,14 @@ namespace _project.Scripts.Menus
         public void OnSliderValueChanged(float value)
         {
             PlayerPrefs.SetFloat("Volume", value);
+            Debug.Log(value);
             UpdateMixerVolume(value);
         }
 
         private void UpdateMixerVolume(float linearValue)
         {
             float decibelMixerValue = Mathf.Log10(linearValue) * 20f;
+            AkUnitySoundEngine.SetRTPCValue("MainBusVolume", linearValue*100f);
             _audioMixer.SetFloat("MasterVolume", decibelMixerValue);
         }
 
