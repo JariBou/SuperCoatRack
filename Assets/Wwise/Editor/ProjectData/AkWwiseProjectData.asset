@@ -38,7 +38,7 @@ MonoBehaviour:
     ParentPath: Master-Mixer Hierarchy\Default Work Unit
     guid: 5651e5bf56d59a408c3dff830bcfc4b2
     GuidInternal: 
-    m_lastTime: -8584417808103184511
+    m_lastTime: -8584416955696474604
     List:
     - name: Master Audio Bus
       guid: d8a41415a61d2a41a17e75ca0c2149f3
@@ -94,28 +94,8 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: a4632d3c2cd3ab44959c4986e7d5aad3
     GuidInternal: 
-    m_lastTime: -8584417590842642577
+    m_lastTime: -8584416957915114016
     List:
-    - name: DoEvent
-      guid: 8e1db10ff1f39344892d7ece1555b585
-      id: 1892194498
-      PathAndIcons:
-      - ElementName: Events
-        ObjectType: 5
-        guid: 00000000000000000000000000000000
-      - ElementName: Default Work Unit
-        ObjectType: 12
-        guid: a4632d3c2cd3ab44959c4986e7d5aad3
-      - ElementName: Events
-        ObjectType: 4
-        guid: 5be825d74390e343996d2421205490a1
-      - ElementName: DoEvent
-        ObjectType: 3
-        guid: 8e1db10ff1f39344892d7ece1555b585
-      Path: Events\Default Work Unit\Events\DoEvent
-      maxAttenuation: 0
-      maxDuration: 0
-      minDuration: 0
     - name: Events
       guid: 5be825d74390e343996d2421205490a1
       id: 1381315342
@@ -165,8 +145,22 @@ MonoBehaviour:
     ParentPath: Game Parameters\Default Work Unit
     guid: 5a0b48d573c7224f9db0e81c3aa84e0e
     GuidInternal: 
-    m_lastTime: -8584417618211449690
-    List: []
+    m_lastTime: -8584416955696251189
+    List:
+    - name: MainBusVolume
+      guid: 6a95f5525c2bd84f8660ab6d841eb197
+      id: 3797559158
+      PathAndIcons:
+      - ElementName: Game Parameters
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 5a0b48d573c7224f9db0e81c3aa84e0e
+      - ElementName: MainBusVolume
+        ObjectType: 13
+        guid: 6a95f5525c2bd84f8660ab6d841eb197
+      Path: Game Parameters\Default Work Unit\MainBusVolume
   StateWwu:
   - PhysicalPath: States\Default Work Unit.wwu
     PathAndIcons:
