@@ -1,0 +1,55 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Windows",
+  "BasePlatform": "Windows",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "154",
+  "SoundBanks": [
+   {
+    "Id": "3991942870",
+    "Type": "User",
+    "GUID": "{3F1F1E21-278D-41AA-8232-2670EB8A2976}",
+    "Language": "SFX",
+    "Hash": "{B458882F-50A1-E784-1984-AC3FCA208502}",
+    "ObjectPath": "\\SoundBanks\\Default Work Unit\\Music",
+    "ShortName": "Music",
+    "Path": "Music.bnk",
+    "Media": [
+     {
+      "Id": "493148124",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Dachlatte-_Paul-Seul-Remix_.wav",
+      "CachePath": "ED/{ED686670-C4CF-5051-9816-8DE656978B3B}.wem"
+     },
+     {
+      "Id": "652455484",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Wii-Party-Soundtrack-Main-Menu-Music.wav",
+      "CachePath": "9D/{9D8A5573-78C8-D45E-B27C-9A6C0B1631CD}.wem"
+     }
+    ],
+    "Events": [
+     {
+      "Id": "417627684",
+      "Name": "PlayMusic",
+      "ObjectPath": "\\Events\\Default Work Unit\\Events\\PlayMusic",
+      "GUID": "{0C3F597D-533C-4EF2-ADA5-D5CD830DDB53}",
+      "DurationType": "OneShot",
+      "DurationMin": "152.98445",
+      "DurationMax": "152.98445",
+      "MediaRefs": [
+       {
+        "Id": "652455484"
+       }
+      ]
+     }
+    ]
+   }
+  ],
+  "FileHash": "{3D30247C-FA9C-A5DB-CAEC-9611134F34C7}"
+ }
+}

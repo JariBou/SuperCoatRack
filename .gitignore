@@ -72,3 +72,13 @@ crashlytics-build.properties
 
 # Ignore this file
 GitStartRepoUnity.bat
+
+
+.backup*
+.cache*
+*.akd
+*.prof
+*.validationcache
+*.wsettings
+AkWwisePorjectData.asset
+IncrementalSoundBankData.xml  

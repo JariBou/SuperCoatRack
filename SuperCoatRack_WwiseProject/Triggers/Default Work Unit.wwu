@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{B2261C41-FAE8-437D-BA6D-6E5DA1A0E9CE}" SchemaVersion="123">
+	<Triggers>
+		<WorkUnit Name="Default Work Unit" ID="{B2261C41-FAE8-437D-BA6D-6E5DA1A0E9CE}" PersistMode="Standalone">
+			<ChildrenList>
+				<Trigger Name="Mettre" ID="{15751462-FBC8-4A0B-9839-69E001D42495}"/>
+			</ChildrenList>
+		</WorkUnit>
+	</Triggers>
+</WwiseDocument>
