@@ -1246,7 +1246,7 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 489261722}
   m_CullTransparentMesh: 1
---- !u!1 &553729900
+--- !u!1 &540713277
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1254,23 +1254,38 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 553729903}
-  - component: {fileID: 553729902}
-  - component: {fileID: 553729901}
+  - component: {fileID: 540713278}
+  - component: {fileID: 540713280}
+  - component: {fileID: 540713279}
   m_Layer: 0
-  m_Name: WwisePlayEvent
+  m_Name: qsd
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &553729901
+--- !u!4 &540713278
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 540713277}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 693.17645, y: 340.9832, z: -8.027235}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &540713279
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 553729900}
+  m_GameObject: {fileID: 540713277}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2a22ec6a73821df4db517a81111e9926, type: 3}
@@ -1284,7 +1299,7 @@ MonoBehaviour:
   data:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 11400000, guid: 1c22cc9c381b0a24785a7fe79767abe1, type: 2}
+    WwiseObjectReference: {fileID: 0}
   useCallbacks: 0
   stopSoundOnDestroy: 1
   Callbacks: []
@@ -1293,13 +1308,13 @@ MonoBehaviour:
   eventIdInternal: 0
   valueGuidInternal: 
   m_callbackDataInternal: {fileID: 0}
---- !u!114 &553729902
+--- !u!114 &540713280
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 553729900}
+  m_GameObject: {fileID: 540713277}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 58f34da546764c549ba65bd451e67e91, type: 3}
@@ -1317,21 +1332,6 @@ MonoBehaviour:
   scalingFactor: 1
   m_posOffsetData: {fileID: 0}
   listenerMask: 1
---- !u!4 &553729903
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 553729900}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &630627994
 GameObject:
   m_ObjectHideFlags: 0
@@ -2150,6 +2150,7 @@ GameObject:
   m_Component:
   - component: {fileID: 948002356}
   - component: {fileID: 948002355}
+  - component: {fileID: 948002357}
   m_Layer: 0
   m_Name: WwiseGlobal
   m_TagString: Untagged
@@ -2197,6 +2198,22 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &948002357
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 948002354}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b95fa1978f6d9a14285bb80eb99c7911, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playMusicEvent:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 1c22cc9c381b0a24785a7fe79767abe1, type: 2}
 --- !u!1 &994576435
 GameObject:
   m_ObjectHideFlags: 0
@@ -5577,4 +5594,4 @@ SceneRoots:
   - {fileID: 1339446309}
   - {fileID: 948002356}
   - {fileID: 405414221}
-  - {fileID: 553729903}
+  - {fileID: 540713278}

@@ -5,17 +5,59 @@
 			<ChildrenList>
 				<Folder Name="Events" ID="{D725E85B-9043-43E3-996D-2421205490A1}" ShortID="156153306">
 					<ChildrenList>
-						<Event Name="PlayMusic" ID="{0C3F597D-533C-4EF2-ADA5-D5CD830DDB53}">
+						<Event Name="BeatEvent" ID="{C51F3117-0BB2-4E77-A51A-A652C2CB7DA8}"/>
+						<Folder Name="Play" ID="{33F93AA4-1C03-4FFB-B218-4112BFF454C8}" ShortID="877910424">
 							<ChildrenList>
-								<Action Name="" ID="{DACC98FD-2CAF-493C-AD8B-BFFF6B1135E5}" ShortID="957036898">
-									<ReferenceList>
-										<Reference Name="Target">
-											<ObjectRef Name="MainMusic" ID="{2BE186B6-01D6-436D-AD15-CAF824AC464C}" WorkUnitID="{ACD2CB43-14A2-429B-BD28-09BEF144217B}"/>
-										</Reference>
-									</ReferenceList>
-								</Action>
+								<Event Name="PlayWiiMusic" ID="{0C3F597D-533C-4EF2-ADA5-D5CD830DDB53}">
+									<ChildrenList>
+										<Action Name="" ID="{DACC98FD-2CAF-493C-AD8B-BFFF6B1135E5}" ShortID="957036898">
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="MainMusic" ID="{2BE186B6-01D6-436D-AD15-CAF824AC464C}" WorkUnitID="{ACD2CB43-14A2-429B-BD28-09BEF144217B}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+								<Event Name="PlayDaschlatt" ID="{E4EC9A34-B977-4E36-9894-0B5967FFDBAB}">
+									<ChildrenList>
+										<Action Name="" ID="{F7649E3C-0D64-48CE-BD66-C4C44404BD14}" ShortID="478661383">
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="Daschlatt" ID="{2E07434C-C8E8-4740-B8C0-99D73BC45FA5}" WorkUnitID="{ACD2CB43-14A2-429B-BD28-09BEF144217B}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+								<Event Name="PlayTestMusic" ID="{C421306C-1BFC-498F-AB7A-C540088430C3}">
+									<ChildrenList>
+										<Action Name="" ID="{57DEAEBC-8D1E-4C59-AEAE-B9D772C1C358}" ShortID="282140626">
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="ShortMusic" ID="{1B97442D-14C6-4204-B087-CE810FB52F1A}" WorkUnitID="{ACD2CB43-14A2-429B-BD28-09BEF144217B}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
 							</ChildrenList>
-						</Event>
+						</Folder>
+						<Folder Name="Stop" ID="{A0C56A3B-68F8-4A18-B59E-09086BA451EC}" ShortID="204520304">
+							<ChildrenList>
+								<Event Name="StopMusic" ID="{E01B3560-6C6A-4EC5-AD0D-8CEBC432C2F7}">
+									<ChildrenList>
+										<Action Name="" ID="{9E4D2517-43FC-4ABE-8B6A-C10C9570284F}" ShortID="277499675">
+											<PropertyList>
+												<Property Name="ActionType" Type="int16" Value="3"/>
+												<Property Name="Scope" Type="int16" Value="1"/>
+											</PropertyList>
+											<ReferenceList/>
+										</Action>
+									</ChildrenList>
+								</Event>
+							</ChildrenList>
+						</Folder>
 					</ChildrenList>
 				</Folder>
 			</ChildrenList>

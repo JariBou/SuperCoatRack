@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bd8d7b25caa2e984c8fc434d6a67028b, type: 3}
   m_Name: 0C3F597D-533C-4EF2-ADA5-D5CD830DDB53
   m_EditorClassIdentifier: 
-  objectName: PlayMusic
-  id: 417627684
+  objectName: PlayWiiMusic
+  id: 2131253029
   guid: 0C3F597D-533C-4EF2-ADA5-D5CD830DDB53
   IsInUserDefinedSoundBank: 1

@@ -66,7 +66,7 @@ MonoBehaviour:
     ParentPath: SoundBanks\Default Work Unit
     guid: 5b725a2a1ba53b4c8392d11313882357
     GuidInternal: 
-    m_lastTime: -8584416948688867509
+    m_lastTime: -8584416735188260103
     List:
     - name: Music
       guid: 211e1f3f8d27aa4182322670eb8a2976
@@ -94,8 +94,28 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: a4632d3c2cd3ab44959c4986e7d5aad3
     GuidInternal: 
-    m_lastTime: -8584416948703007926
+    m_lastTime: -8584416732259207718
     List:
+    - name: BeatEvent
+      guid: 17311fc5b20b774ea51aa652c2cb7da8
+      id: 3517968107
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: a4632d3c2cd3ab44959c4986e7d5aad3
+      - ElementName: Events
+        ObjectType: 4
+        guid: 5be825d74390e343996d2421205490a1
+      - ElementName: BeatEvent
+        ObjectType: 3
+        guid: 17311fc5b20b774ea51aa652c2cb7da8
+      Path: Events\Default Work Unit\Events\BeatEvent
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
     - name: Events
       guid: 5be825d74390e343996d2421205490a1
       id: 1381315342
@@ -113,9 +133,9 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
-    - name: PlayMusic
-      guid: 7d593f0c3c53f24eada5d5cd830ddb53
-      id: 417627684
+    - name: Play
+      guid: a43af933031cfb4fb2184112bff454c8
+      id: 1256202815
       PathAndIcons:
       - ElementName: Events
         ObjectType: 5
@@ -126,13 +146,125 @@ MonoBehaviour:
       - ElementName: Events
         ObjectType: 4
         guid: 5be825d74390e343996d2421205490a1
-      - ElementName: PlayMusic
+      - ElementName: Play
+        ObjectType: 4
+        guid: a43af933031cfb4fb2184112bff454c8
+      Path: Events\Default Work Unit\Events\Play
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: PlayDaschlatt
+      guid: 349aece477b9364e98940b5967ffdbab
+      id: 1622344417
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: a4632d3c2cd3ab44959c4986e7d5aad3
+      - ElementName: Events
+        ObjectType: 4
+        guid: 5be825d74390e343996d2421205490a1
+      - ElementName: Play
+        ObjectType: 4
+        guid: a43af933031cfb4fb2184112bff454c8
+      - ElementName: PlayDaschlatt
+        ObjectType: 3
+        guid: 349aece477b9364e98940b5967ffdbab
+      Path: Events\Default Work Unit\Events\Play\PlayDaschlatt
+      maxAttenuation: 0
+      maxDuration: 176
+      minDuration: 176
+    - name: PlayTestMusic
+      guid: 6c3021c4fc1b8f49ab7ac540088430c3
+      id: 575116772
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: a4632d3c2cd3ab44959c4986e7d5aad3
+      - ElementName: Events
+        ObjectType: 4
+        guid: 5be825d74390e343996d2421205490a1
+      - ElementName: Play
+        ObjectType: 4
+        guid: a43af933031cfb4fb2184112bff454c8
+      - ElementName: PlayTestMusic
+        ObjectType: 3
+        guid: 6c3021c4fc1b8f49ab7ac540088430c3
+      Path: Events\Default Work Unit\Events\Play\PlayTestMusic
+      maxAttenuation: 0
+      maxDuration: 5.878513
+      minDuration: 5.878513
+    - name: PlayWiiMusic
+      guid: 7d593f0c3c53f24eada5d5cd830ddb53
+      id: 2131253029
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: a4632d3c2cd3ab44959c4986e7d5aad3
+      - ElementName: Events
+        ObjectType: 4
+        guid: 5be825d74390e343996d2421205490a1
+      - ElementName: Play
+        ObjectType: 4
+        guid: a43af933031cfb4fb2184112bff454c8
+      - ElementName: PlayWiiMusic
         ObjectType: 3
         guid: 7d593f0c3c53f24eada5d5cd830ddb53
-      Path: Events\Default Work Unit\Events\PlayMusic
+      Path: Events\Default Work Unit\Events\Play\PlayWiiMusic
       maxAttenuation: 0
       maxDuration: 152.98445
       minDuration: 152.98445
+    - name: Stop
+      guid: 3b6ac5a0f868184ab59e09086ba451ec
+      id: 788884573
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: a4632d3c2cd3ab44959c4986e7d5aad3
+      - ElementName: Events
+        ObjectType: 4
+        guid: 5be825d74390e343996d2421205490a1
+      - ElementName: Stop
+        ObjectType: 4
+        guid: 3b6ac5a0f868184ab59e09086ba451ec
+      Path: Events\Default Work Unit\Events\Stop
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: StopMusic
+      guid: 60351be06a6cc54ead0d8cebc432c2f7
+      id: 1917263390
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: a4632d3c2cd3ab44959c4986e7d5aad3
+      - ElementName: Events
+        ObjectType: 4
+        guid: 5be825d74390e343996d2421205490a1
+      - ElementName: Stop
+        ObjectType: 4
+        guid: 3b6ac5a0f868184ab59e09086ba451ec
+      - ElementName: StopMusic
+        ObjectType: 3
+        guid: 60351be06a6cc54ead0d8cebc432c2f7
+      Path: Events\Default Work Unit\Events\Stop\StopMusic
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
   RtpcWwu:
   - PhysicalPath: Game Parameters\Default Work Unit.wwu
     PathAndIcons:
@@ -218,7 +350,7 @@ MonoBehaviour:
         guid: 62147515c8fb0b4a983969e001d42495
       Path: Triggers\Default Work Unit\Mettre
   ExpandedFileSystemItemIds: 
-  ExpandedWaapiItemIds: 0300000004000000060000000a000000120000001400000015000000380000003f0000004000000053000000540000006000000061000000620000007600000077000000840000008b0000008c0000008d000000a6000000a7000000a9000000aa000000c4000000c5000000cd000000d1000000d2000000d3000000d4000000d5000000d8000000e4000000ef000000ff000000110100002e01000040010000430100004e010000
+  ExpandedWaapiItemIds: 0300000004000000050000000600000007000000080000000a000000120000001400000015000000190000001a000000380000003f0000004000000053000000540000006000000061000000620000007600000077000000840000008b0000008c0000008d000000a6000000a7000000a9000000aa000000c4000000c5000000cd000000d1000000d2000000d3000000d4000000d5000000d8000000e4000000ef000000ff000000110100002e01000040010000430100004e010000
   AutoSyncSelection: 0
   autoPopulateEnabled: 1
   currentDataSource: 0

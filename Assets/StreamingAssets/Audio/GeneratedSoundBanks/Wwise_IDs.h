@@ -13,7 +13,11 @@ namespace AK
 {
     namespace EVENTS
     {
-        static const AkUniqueID PLAYMUSIC = 417627684U;
+        static const AkUniqueID BEATEVENT = 3517968107U;
+        static const AkUniqueID PLAYDASCHLATT = 1622344417U;
+        static const AkUniqueID PLAYTESTMUSIC = 575116772U;
+        static const AkUniqueID PLAYWIIMUSIC = 2131253029U;
+        static const AkUniqueID STOPMUSIC = 1917263390U;
     } // namespace EVENTS
 
     namespace GAME_PARAMETERS

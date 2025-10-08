@@ -10,7 +10,7 @@
     "Type": "User",
     "GUID": "{3F1F1E21-278D-41AA-8232-2670EB8A2976}",
     "Language": "SFX",
-    "Hash": "{B458882F-50A1-E784-1984-AC3FCA208502}",
+    "Hash": "{82806546-5E0B-0F55-E97C-FE6ADE4FA3CD}",
     "ObjectPath": "\\SoundBanks\\Default Work Unit\\Music",
     "ShortName": "Music",
     "Path": "Music.bnk",
@@ -30,13 +30,59 @@
       "Location": "Memory",
       "ShortName": "Wii-Party-Soundtrack-Main-Menu-Music.wav",
       "CachePath": "9D/{9D8A5573-78C8-D45E-B27C-9A6C0B1631CD}.wem"
+     },
+     {
+      "Id": "809893259",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Kirby - Poyo Poyo.wav",
+      "CachePath": "AE/{AECDAD6A-E3AA-12FA-D152-E77E5B39B64E}.wem"
      }
     ],
     "Events": [
      {
-      "Id": "417627684",
-      "Name": "PlayMusic",
-      "ObjectPath": "\\Events\\Default Work Unit\\Events\\PlayMusic",
+      "Id": "3517968107",
+      "Name": "BeatEvent",
+      "ObjectPath": "\\Events\\Default Work Unit\\Events\\BeatEvent",
+      "GUID": "{C51F3117-0BB2-4E77-A51A-A652C2CB7DA8}",
+      "MaxAttenuation": "0",
+      "DurationType": "OneShot",
+      "DurationMin": "0",
+      "DurationMax": "0"
+     },
+     {
+      "Id": "1622344417",
+      "Name": "PlayDaschlatt",
+      "ObjectPath": "\\Events\\Default Work Unit\\Events\\Play\\PlayDaschlatt",
+      "GUID": "{E4EC9A34-B977-4E36-9894-0B5967FFDBAB}",
+      "DurationType": "OneShot",
+      "DurationMin": "176",
+      "DurationMax": "176",
+      "MediaRefs": [
+       {
+        "Id": "493148124"
+       }
+      ]
+     },
+     {
+      "Id": "575116772",
+      "Name": "PlayTestMusic",
+      "ObjectPath": "\\Events\\Default Work Unit\\Events\\Play\\PlayTestMusic",
+      "GUID": "{C421306C-1BFC-498F-AB7A-C540088430C3}",
+      "DurationType": "OneShot",
+      "DurationMin": "5.878513",
+      "DurationMax": "5.878513",
+      "MediaRefs": [
+       {
+        "Id": "809893259"
+       }
+      ]
+     },
+     {
+      "Id": "2131253029",
+      "Name": "PlayWiiMusic",
+      "ObjectPath": "\\Events\\Default Work Unit\\Events\\Play\\PlayWiiMusic",
       "GUID": "{0C3F597D-533C-4EF2-ADA5-D5CD830DDB53}",
       "DurationType": "OneShot",
       "DurationMin": "152.98445",
@@ -46,10 +92,20 @@
         "Id": "652455484"
        }
       ]
+     },
+     {
+      "Id": "1917263390",
+      "Name": "StopMusic",
+      "ObjectPath": "\\Events\\Default Work Unit\\Events\\Stop\\StopMusic",
+      "GUID": "{E01B3560-6C6A-4EC5-AD0D-8CEBC432C2F7}",
+      "MaxAttenuation": "0",
+      "DurationType": "OneShot",
+      "DurationMin": "0",
+      "DurationMax": "0"
      }
     ]
    }
   ],
-  "FileHash": "{17B069EC-9CAA-C683-1C9C-01E28F6C6DF6}"
+  "FileHash": "{1D47BB0F-1680-5D86-D7CA-C66B62E071EA}"
  }
 }
