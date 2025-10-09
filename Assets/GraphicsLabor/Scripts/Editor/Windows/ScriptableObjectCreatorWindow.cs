@@ -119,7 +119,8 @@ namespace GraphicsLabor.Scripts.Editor.Windows
                 _totalDrawnHeight += LaborerGUIUtility.PropertyHeightSpacing*2;
             
                 GUI.EndScrollView();
-                
+                Color temp = GUI.backgroundColor;
+                GUI.backgroundColor = new Color(255/255f,165/255f,0);
                 if (GUI.Button(saveAsButtonRect, "Save As"))
                 {
                     //String tempPath = EditorUtility.OpenFolderPanel("Save ScriptableObject at:", "", "");
@@ -133,6 +134,8 @@ namespace GraphicsLabor.Scripts.Editor.Windows
                         IOHelper.CreateAssetAndOverride(obj, tempPath);
                     }
                 }
+
+                GUI.backgroundColor = temp;
                 saveAsButtonRect.y += LaborerGUIUtility.SingleLineHeight;
             }
             

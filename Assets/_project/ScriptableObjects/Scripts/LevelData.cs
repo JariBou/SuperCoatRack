@@ -8,7 +8,10 @@ namespace _project.ScriptableObjects.Scripts
     public class LevelData : ScriptableObject
     {
         public List<SequenceData> sequences = new();
+        public Sprite Icon;
 
         public SequenceData this[int levelName] => sequences[levelName];
+
+        public AK.Wwise.Event MusicToPlayEvent;
     }
 }

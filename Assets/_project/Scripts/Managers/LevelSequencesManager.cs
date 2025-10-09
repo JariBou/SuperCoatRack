@@ -38,9 +38,20 @@ namespace _project.Scripts.Managers
         private InputTypeLink _lastInput;
         private float _lastInputTime;
         private bool _waitingForInput;
-        
+
+        private void Start()
+        {
+            _levelData = LevelManager.Instance.CurrentLevelData;
+            AkUnitySoundEngine.PostEvent(
+                "StopMusic",
+                gameObject
+            );
+            GameManager.Instance.PlayLevelMusic();
+        }
+
         public void OnBeat()
         {
+            Debug.Log("Beat");
             if (_currentSequence == null) return;
             if (_currentSequence.DoBeat().HasActionOnBeat(out SequenceData.SequenceAction actionOnBeat))
             {
@@ -123,11 +134,16 @@ namespace _project.Scripts.Managers
         private void OnEnable()
         {
             InputManager.LastInputChanged += InputManagerOnLastInputChanged;
+            //WwiseManager.BeatEvent += OnBeat;
+            GameManager.Instance.onBeatUnityEvent += OnBeat;
         }
         
         private void OnDisable()
         {
             InputManager.LastInputChanged -= InputManagerOnLastInputChanged;
+            //WwiseManager.BeatEvent -= OnBeat;
+            GameManager.Instance.onBeatUnityEvent -= OnBeat;
+
         }
     }
 }

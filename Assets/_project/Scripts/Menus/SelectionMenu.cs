@@ -1,5 +1,6 @@
 ﻿using System;
 using _project.ScriptableObjects.Scripts;
+using _project.Scripts.Managers;
 using _project.Scripts.Utils;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -23,7 +24,7 @@ namespace _project.Scripts.Menus
             set
             {
                 _selectedLevelIndex = value;
-                _selectionDisplay.sprite = _levelsData[_selectedLevelIndex];
+                _selectionDisplay.sprite = LevelManager.Instance.ListOfLevels[_selectedLevelIndex].Icon;
             }
         }
 
@@ -34,17 +35,19 @@ namespace _project.Scripts.Menus
         
         public void Play()
         {
+            LevelManager.Instance.CurrentLevelData = LevelManager.Instance.ListOfLevels[SelectedLevelIndex];
+            GameManager.Instance.CurrentState = GameState.InGame;
             SceneManager.LoadScene("GameScene");
         }
 
         public void SelectNext()
         {
-            SelectedLevelIndex = (SelectedLevelIndex + 1) % _levelsData.selectionSprites.Count;
+            SelectedLevelIndex = (SelectedLevelIndex + 1) % LevelManager.Instance.ListOfLevels.Length;
         }
 
         public void SelectPrevious()
         {
-            SelectedLevelIndex = MathUtils.Mod(SelectedLevelIndex+1, _levelsData.selectionSprites.Count); ;
+            SelectedLevelIndex = MathUtils.Mod(SelectedLevelIndex+1, LevelManager.Instance.ListOfLevels.Length); ;
         }
         
     }
