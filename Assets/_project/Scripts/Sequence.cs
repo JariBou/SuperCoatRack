@@ -40,12 +40,17 @@ namespace _project.Scripts
 
         public bool HasActionOnBeat([MaybeNullWhen(false)] out SequenceData.SequenceAction result)
         {
-            return _sequences.TryGetValue(_beatCounter, out result);
+            return PeakBeat(0, out result);
         }
 
         public static Sequence FromSequenceData(SequenceData sequenceData)
         {
             return new Sequence(sequenceData);
+        }
+        
+        public bool PeakBeat(int peakCount, [MaybeNullWhen(false)] out SequenceData.SequenceAction result)
+        {
+            return _sequences.TryGetValue(_beatCounter + peakCount, out result);
         }
     }
 }
