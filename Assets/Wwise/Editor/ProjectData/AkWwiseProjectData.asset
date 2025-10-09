@@ -66,7 +66,7 @@ MonoBehaviour:
     ParentPath: SoundBanks\Default Work Unit
     guid: 5b725a2a1ba53b4c8392d11313882357
     GuidInternal: 
-    m_lastTime: -8584416083894854879
+    m_lastTime: -8584415878998572120
     List:
     - name: Music
       guid: 211e1f3f8d27aa4182322670eb8a2976
@@ -94,7 +94,7 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: a4632d3c2cd3ab44959c4986e7d5aad3
     GuidInternal: 
-    m_lastTime: -8584416083906909728
+    m_lastTime: -8584415878998606638
     List:
     - name: BeatEvent
       guid: 17311fc5b20b774ea51aa652c2cb7da8
@@ -114,8 +114,8 @@ MonoBehaviour:
         guid: 17311fc5b20b774ea51aa652c2cb7da8
       Path: Events\Default Work Unit\Events\BeatEvent
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0
+      minDuration: 0
     - name: Events
       guid: 5be825d74390e343996d2421205490a1
       id: 1381315342
@@ -174,8 +174,8 @@ MonoBehaviour:
         guid: 349aece477b9364e98940b5967ffdbab
       Path: Events\Default Work Unit\Events\Play\PlayDaschlatt
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 176
+      minDuration: 176
     - name: PlayTestMusic
       guid: 6c3021c4fc1b8f49ab7ac540088430c3
       id: 575116772
@@ -197,8 +197,8 @@ MonoBehaviour:
         guid: 6c3021c4fc1b8f49ab7ac540088430c3
       Path: Events\Default Work Unit\Events\Play\PlayTestMusic
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 5.878513
+      minDuration: 5.878513
     - name: PlayWiiMusic
       guid: 7d593f0c3c53f24eada5d5cd830ddb53
       id: 2131253029
@@ -220,8 +220,8 @@ MonoBehaviour:
         guid: 7d593f0c3c53f24eada5d5cd830ddb53
       Path: Events\Default Work Unit\Events\Play\PlayWiiMusic
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 153.12083
+      minDuration: 153.12083
     - name: Stop
       guid: 3b6ac5a0f868184ab59e09086ba451ec
       id: 788884573
@@ -263,8 +263,8 @@ MonoBehaviour:
         guid: 60351be06a6cc54ead0d8cebc432c2f7
       Path: Events\Default Work Unit\Events\Stop\StopMusic
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0
+      minDuration: 0
   RtpcWwu:
   - PhysicalPath: Game Parameters\Default Work Unit.wwu
     PathAndIcons:
@@ -350,7 +350,7 @@ MonoBehaviour:
         guid: 62147515c8fb0b4a983969e001d42495
       Path: Triggers\Default Work Unit\Mettre
   ExpandedFileSystemItemIds: 
-  ExpandedWaapiItemIds: 0300000004000000050000000600000007000000080000000a000000120000001400000015000000190000001a000000380000003f0000004000000053000000540000006000000061000000620000007600000077000000840000008b0000008c0000008d000000a6000000a7000000a9000000aa000000c4000000c5000000cd000000d1000000d2000000d3000000d4000000d5000000d8000000e4000000ef000000ff000000110100002e01000040010000430100004e010000
+  ExpandedWaapiItemIds: 010000000300000004000000050000000600000007000000080000000a0000000b0000000c0000000d0000000e000000120000001400000015000000190000001a000000380000003f0000004000000053000000540000006000000061000000620000007600000077000000840000008b0000008c0000008d000000a6000000a7000000a9000000aa000000c4000000c5000000cd000000d1000000d2000000d3000000d4000000d5000000d8000000e4000000ef000000ff000000110100002e01000040010000430100004e010000
   AutoSyncSelection: 0
   autoPopulateEnabled: 1
   currentDataSource: 0

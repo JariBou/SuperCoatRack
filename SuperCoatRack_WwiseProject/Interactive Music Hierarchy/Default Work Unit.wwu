@@ -3,148 +3,12 @@
 	<InteractiveMusic>
 		<WorkUnit Name="Default Work Unit" ID="{ACD2CB43-14A2-429B-BD28-09BEF144217B}" PersistMode="Standalone">
 			<ChildrenList>
-				<MusicPlaylistContainer Name="MainPlaylist" ID="{1E068AFE-F6F1-4C6D-A509-A7873B33033E}" ShortID="647689767">
-					<ReferenceList>
-						<Reference Name="Conversion">
-							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6D98A839-AC4C-4A37-83B9-A9D3E865E785}"/>
-						</Reference>
-						<Reference Name="OutputBus">
-							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{BFE55156-D556-409A-8C3D-FF830BCFC4B2}"/>
-						</Reference>
-						<Reference Name="PlaylistRoot">
-							<Custom>
-								<MusicPlaylistItem Name="" ID="{6C3942B6-C526-406F-8A62-EAB4330DEE67}" ShortID="957725848"/>
-							</Custom>
-						</Reference>
-						<Reference Name="TransitionRoot">
-							<Custom>
-								<MusicTransition Name="Root" ID="{464A4DFC-3C95-4F73-9B42-764775D7DA85}">
-									<PropertyList>
-										<Property Name="IsFolder" Type="bool" Value="True"/>
-									</PropertyList>
-									<ChildrenList>
-										<MusicTransition Name="Transition" ID="{B2E02593-F3D9-4901-B073-CBC3CCFAC67E}">
-											<TransitionInfo/>
-										</MusicTransition>
-									</ChildrenList>
-									<TransitionInfo/>
-								</MusicTransition>
-							</Custom>
-						</Reference>
-					</ReferenceList>
+				<Folder Name="Music" ID="{98F9ED3C-B6DA-4182-B533-A68275DD4C9F}" ShortID="407308223">
 					<ChildrenList>
-						<MusicSegment Name="MainMusic" ID="{2BE186B6-01D6-436D-AD15-CAF824AC464C}" ShortID="68027641">
-							<PropertyList>
-								<Property Name="EndPosition" Type="Real64" Value="153529.911358483"/>
-								<Property Name="Tempo" Type="Real64" Value="110"/>
-							</PropertyList>
-							<ReferenceList>
-								<Reference Name="Conversion">
-									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6D98A839-AC4C-4A37-83B9-A9D3E865E785}"/>
-								</Reference>
-								<Reference Name="OutputBus">
-									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{BFE55156-D556-409A-8C3D-FF830BCFC4B2}"/>
-								</Reference>
-							</ReferenceList>
-							<ChildrenList>
-								<MusicTrack Name="Wii-Party-Soundtrack-Main-Menu-Music" ID="{077D1452-2D2A-4ACE-ACC9-8AEB66B240C1}" ShortID="1022453258">
-									<ReferenceList>
-										<Reference Name="OutputBus">
-											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{BFE55156-D556-409A-8C3D-FF830BCFC4B2}"/>
-										</Reference>
-										<Reference Name="TransitionRoot">
-											<Custom>
-												<MusicTransition Name="Root" ID="{A5DB0598-9E19-4236-870C-D7FB57D92027}">
-													<PropertyList>
-														<Property Name="IsFolder" Type="bool" Value="True"/>
-													</PropertyList>
-													<TransitionInfo/>
-												</MusicTransition>
-											</Custom>
-										</Reference>
-									</ReferenceList>
-									<ChildrenList>
-										<AudioFileSource Name="Wii-Party-Soundtrack-Main-Menu-Music" ID="{E8D1F89D-129E-4FC0-829D-B240035981EA}">
-											<Language>SFX</Language>
-											<AudioFile>Wii-Party-Soundtrack-Main-Menu-Music.wav</AudioFile>
-											<MediaIDList>
-												<MediaID ID="652455484"/>
-											</MediaIDList>
-										</AudioFileSource>
-									</ChildrenList>
-									<ObjectLists>
-										<ObjectList Name="Sequences">
-											<Reference>
-												<Local>
-													<MusicTrackSequence Name="" ID="{AA3C685A-AC94-4E6E-A2FF-E783FD9DD2DD}">
-														<ObjectLists>
-															<ObjectList Name="Clips">
-																<Reference>
-																	<Local>
-																		<MusicClip Name="Wii-Party-Soundtrack-Main-Menu-Music" ID="{0B850F41-81C8-47A7-BF33-43D027FEA0DB}">
-																			<PropertyList>
-																				<Property Name="EndTrimOffset" Type="Real64" Value="152439.002267574"/>
-																				<Property Name="FadeInMode" Type="int16" Value="0"/>
-																				<Property Name="FadeOutMode" Type="int16" Value="0"/>
-																				<Property Name="PlayAt" Type="Real64" Value="545.454545454545"/>
-																			</PropertyList>
-																			<AudioSourceRef Name="Wii-Party-Soundtrack-Main-Menu-Music" ID="{E8D1F89D-129E-4FC0-829D-B240035981EA}"/>
-																			<PropertyCurveList>
-																				<PropertyCurve PropertyName="Lowpass">
-																					<Curve Name="" ID="{E7F106ED-AE4F-4B33-B0AD-91F3C998E23F}">
-																						<PropertyList>
-																							<Property Name="Flags" Type="int32" Value="1"/>
-																						</PropertyList>
-																						<PointList>
-																							<Point>
-																								<XPos>0</XPos>
-																								<YPos>0</YPos>
-																								<Flags>5</Flags>
-																							</Point>
-																							<Point>
-																								<XPos>152.439002267574</XPos>
-																								<YPos>0</YPos>
-																								<Flags>37</Flags>
-																							</Point>
-																						</PointList>
-																					</Curve>
-																				</PropertyCurve>
-																			</PropertyCurveList>
-																		</MusicClip>
-																	</Local>
-																</Reference>
-															</ObjectList>
-														</ObjectLists>
-													</MusicTrackSequence>
-												</Local>
-											</Reference>
-										</ObjectList>
-									</ObjectLists>
-								</MusicTrack>
-							</ChildrenList>
-							<ObjectLists>
-								<ObjectList Name="Cues">
-									<Reference>
-										<Local>
-											<MusicCue Name="Entry Cue" ID="{2C98200B-D956-444A-89A6-904398F31DFA}"/>
-										</Local>
-									</Reference>
-									<Reference>
-										<Local>
-											<MusicCue Name="Exit Cue" ID="{5FE727E0-0B59-4833-8CBE-EB9DB2A82FC9}">
-												<PropertyList>
-													<Property Name="CueType" Type="int16" Value="1"/>
-													<Property Name="TimeMs" Type="Real64" Value="152344.695649658"/>
-												</PropertyList>
-											</MusicCue>
-										</Local>
-									</Reference>
-								</ObjectList>
-							</ObjectLists>
-						</MusicSegment>
 						<MusicSegment Name="Daschlatt" ID="{2E07434C-C8E8-4740-B8C0-99D73BC45FA5}" ShortID="549209061">
 							<PropertyList>
 								<Property Name="EndPosition" Type="Real64" Value="180784.715359067"/>
+								<Property Name="Tempo" Type="Real64" Value="150"/>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
@@ -221,6 +85,115 @@
 												<PropertyList>
 													<Property Name="CueType" Type="int16" Value="1"/>
 													<Property Name="TimeMs" Type="Real64" Value="176000"/>
+												</PropertyList>
+											</MusicCue>
+										</Local>
+									</Reference>
+								</ObjectList>
+							</ObjectLists>
+						</MusicSegment>
+						<MusicSegment Name="MainMusic" ID="{2BE186B6-01D6-436D-AD15-CAF824AC464C}" ShortID="68027641">
+							<PropertyList>
+								<Property Name="EndPosition" Type="Real64" Value="153564.002267574"/>
+								<Property Name="Tempo" Type="Real64" Value="110"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6D98A839-AC4C-4A37-83B9-A9D3E865E785}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{BFE55156-D556-409A-8C3D-FF830BCFC4B2}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<MusicTrack Name="Wii-Party-Soundtrack-Main-Menu-Music" ID="{077D1452-2D2A-4ACE-ACC9-8AEB66B240C1}" ShortID="1022453258">
+									<ReferenceList>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{BFE55156-D556-409A-8C3D-FF830BCFC4B2}"/>
+										</Reference>
+										<Reference Name="TransitionRoot">
+											<Custom>
+												<MusicTransition Name="Root" ID="{A5DB0598-9E19-4236-870C-D7FB57D92027}">
+													<PropertyList>
+														<Property Name="IsFolder" Type="bool" Value="True"/>
+													</PropertyList>
+													<TransitionInfo/>
+												</MusicTransition>
+											</Custom>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Wii-Party-Soundtrack-Main-Menu-Music" ID="{E8D1F89D-129E-4FC0-829D-B240035981EA}">
+											<Language>SFX</Language>
+											<AudioFile>Wii-Party-Soundtrack-Main-Menu-Music.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="652455484"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ObjectLists>
+										<ObjectList Name="Sequences">
+											<Reference>
+												<Local>
+													<MusicTrackSequence Name="" ID="{AA3C685A-AC94-4E6E-A2FF-E783FD9DD2DD}">
+														<ObjectLists>
+															<ObjectList Name="Clips">
+																<Reference>
+																	<Local>
+																		<MusicClip Name="Wii-Party-Soundtrack-Main-Menu-Music" ID="{0B850F41-81C8-47A7-BF33-43D027FEA0DB}">
+																			<PropertyList>
+																				<Property Name="EndTrimOffset" Type="Real64" Value="152439.002267574"/>
+																				<Property Name="FadeInMode" Type="int16" Value="0"/>
+																				<Property Name="FadeOutMode" Type="int16" Value="0"/>
+																				<Property Name="PlayAt" Type="Real64" Value="681.818181818182"/>
+																			</PropertyList>
+																			<AudioSourceRef Name="Wii-Party-Soundtrack-Main-Menu-Music" ID="{E8D1F89D-129E-4FC0-829D-B240035981EA}"/>
+																			<PropertyCurveList>
+																				<PropertyCurve PropertyName="Lowpass">
+																					<Curve Name="" ID="{E7F106ED-AE4F-4B33-B0AD-91F3C998E23F}">
+																						<PropertyList>
+																							<Property Name="Flags" Type="int32" Value="1"/>
+																						</PropertyList>
+																						<PointList>
+																							<Point>
+																								<XPos>0</XPos>
+																								<YPos>0</YPos>
+																								<Flags>5</Flags>
+																							</Point>
+																							<Point>
+																								<XPos>152.439002267574</XPos>
+																								<YPos>0</YPos>
+																								<Flags>37</Flags>
+																							</Point>
+																						</PointList>
+																					</Curve>
+																				</PropertyCurve>
+																			</PropertyCurveList>
+																		</MusicClip>
+																	</Local>
+																</Reference>
+															</ObjectList>
+														</ObjectLists>
+													</MusicTrackSequence>
+												</Local>
+											</Reference>
+										</ObjectList>
+									</ObjectLists>
+								</MusicTrack>
+							</ChildrenList>
+							<ObjectLists>
+								<ObjectList Name="Cues">
+									<Reference>
+										<Local>
+											<MusicCue Name="Entry Cue" ID="{2C98200B-D956-444A-89A6-904398F31DFA}"/>
+										</Local>
+									</Reference>
+									<Reference>
+										<Local>
+											<MusicCue Name="Exit Cue" ID="{5FE727E0-0B59-4833-8CBE-EB9DB2A82FC9}">
+												<PropertyList>
+													<Property Name="CueType" Type="int16" Value="1"/>
+													<Property Name="TimeMs" Type="Real64" Value="152344.695649658"/>
 												</PropertyList>
 											</MusicCue>
 										</Local>
@@ -320,7 +293,7 @@
 							</ObjectLists>
 						</MusicSegment>
 					</ChildrenList>
-				</MusicPlaylistContainer>
+				</Folder>
 			</ChildrenList>
 		</WorkUnit>
 	</InteractiveMusic>
