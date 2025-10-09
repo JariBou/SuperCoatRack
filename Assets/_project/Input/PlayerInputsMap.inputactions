@@ -1,0 +1,55 @@
+{
+    "version": 1,
+    "name": "PlayerInputsMap",
+    "maps": [
+        {
+            "name": "MenuMap",
+            "id": "bf274b30-c4f9-4478-bf95-fbaabf08e3e7",
+            "actions": [
+                {
+                    "name": "Left",
+                    "type": "Button",
+                    "id": "4f0bcf45-dedd-4d1c-91c7-b9c6bfc2818c",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Right",
+                    "type": "Button",
+                    "id": "1ba19030-8d4d-489c-9fde-4cc10adee64a",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "21745bd4-2581-46b8-b392-4475df29e227",
+                    "path": "<HID::DragonRise Inc.   Generic   USB  Joystick  >/button5",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Left",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "cc36b3c8-4307-4620-ae20-e7fd13c58308",
+                    "path": "<HID::DragonRise Inc.   Generic   USB  Joystick  >/button6",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Right",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}

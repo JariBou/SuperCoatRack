@@ -113,20 +113,6 @@
 																		</MusicClip>
 																	</Local>
 																</Reference>
-																<Reference>
-																	<Local>
-																		<MusicEventCue Name="" ID="{C49A93E8-9987-42CC-A1A9-600C6CE77B8E}" ShortID="315742494">
-																			<PropertyList>
-																				<Property Name="PlayAt" Type="Real64" Value="34909.0909090909"/>
-																			</PropertyList>
-																			<ReferenceList>
-																				<Reference Name="PostEventTarget">
-																					<ObjectRef Name="BeatEvent" ID="{C51F3117-0BB2-4E77-A51A-A652C2CB7DA8}" WorkUnitID="{3C2D63A4-D32C-44AB-959C-4986E7D5AAD3}"/>
-																				</Reference>
-																			</ReferenceList>
-																		</MusicEventCue>
-																	</Local>
-																</Reference>
 															</ObjectList>
 														</ObjectLists>
 													</MusicTrackSequence>
