@@ -12,6 +12,7 @@ namespace _project.Scripts.Managers
         {
             public SequenceData.SequenceAction SequenceAction;
             public float Timestamp;
+            public SequenceActionState state = SequenceActionState.None;
 
             public SequenceActionTimed(SequenceData.SequenceAction actionOnBeat, float time)
             {
@@ -23,6 +24,18 @@ namespace _project.Scripts.Managers
             {
                 float timeDiff = Timestamp - lastInputTimestamp;
                 return SequenceAction.gracePeriod.x > timeDiff && timeDiff > -SequenceAction.gracePeriod.y;
+            }
+
+            public void SetState(SequenceActionState newState)
+            {
+                state = newState;
+            }
+
+            public enum SequenceActionState
+            {
+                None,
+                Failed,
+                Succeeded,
             }
         }
         [SerializeField]
@@ -67,6 +80,10 @@ namespace _project.Scripts.Managers
             _waitingForInput = true;
             yield return new WaitForSeconds(delay);
             _waitingForInput = false;
+            if (_lastSequenceAction is { state: SequenceActionTimed.SequenceActionState.None })
+            {
+                OnFail();
+            }
         }
         
         private void InputManagerOnLastInputChanged(InputTypeLink obj)
@@ -83,8 +100,12 @@ namespace _project.Scripts.Managers
         private void HandleInput()
         {
             if (_lastInput is null || _lastSequenceAction is null) return;
-            
-            if (!_lastSequenceAction.WasInputInTimeFrame(_lastInput.Timestamp)) return;
+
+            if (!_lastSequenceAction.WasInputInTimeFrame(_lastInput.Timestamp))
+            {
+                OnFail();
+                return;
+            }
 
             if (_lastSequenceAction.SequenceAction.ActionType == _lastInput.ActionType)
             {
@@ -94,30 +115,36 @@ namespace _project.Scripts.Managers
                     case SequenceConfig.ActionType.Drop:
                         if (_lastInput.ClotheType == _lastSequenceAction.SequenceAction.ClotheType)
                         {
-                            
+                            OnSuccess();    
+                            return;
                         }
                         break;
                     case SequenceConfig.ActionType.Scan:
                         if (_lastInput.ClotheType == _lastSequenceAction.SequenceAction.ClotheType &&
                             _lastInput.ClotheColor == _lastSequenceAction.SequenceAction.ClotheColor)
                         {
-                            
+                            OnSuccess();
+                            return;
                         }
                         break;
                     default:
                         throw new ArgumentOutOfRangeException();
                 }
             }
+            OnFail();
         }
 
         private void OnSuccess()
         {
-            
+            _lastSequenceAction!.SetState(SequenceActionTimed.SequenceActionState.Succeeded);
+            Debug.Log("Success");
         }
 
         private void OnFail()
         {
-            
+            _lastSequenceAction!.SetState(SequenceActionTimed.SequenceActionState.Failed);
+            _currentSequence = null;
+            Debug.Log("You failed");
         }
 
         private void OnEnable()
