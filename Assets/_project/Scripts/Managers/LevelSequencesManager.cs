@@ -81,8 +81,10 @@ namespace _project.Scripts.Managers
             }
         }
 
-        public void PlayNextSequence()
+        public void LoadNextSequence()
         {
+            //TODO: increment _sequenceIndex where needed
+            Debug.Log("LoadNextSequence");
             _currentSequence = Sequence.FromSequenceData(_levelData[_sequenceIndex]);
         }
 
@@ -148,6 +150,7 @@ namespace _project.Scripts.Managers
         private void OnSuccess()
         {
             _lastSequenceAction!.SetState(SequenceActionTimed.SequenceActionState.Succeeded);
+            _lastInput = null;
             Debug.Log("Success");
         }
 
@@ -155,6 +158,7 @@ namespace _project.Scripts.Managers
         {
             _lastSequenceAction!.SetState(SequenceActionTimed.SequenceActionState.Failed);
             _currentSequence = null;
+            _lastInput = null;
             Debug.Log("You failed");
         }
 
@@ -163,6 +167,7 @@ namespace _project.Scripts.Managers
             InputManager.LastInputChanged += InputManagerOnLastInputChanged;
             //WwiseManager.BeatEvent += OnBeat;
             GameManager.Instance.onBeatUnityEvent += OnBeat;
+            GameManager.Instance.SequenceEvent += LoadNextSequence;
         }
         
         private void OnDisable()
@@ -170,6 +175,7 @@ namespace _project.Scripts.Managers
             InputManager.LastInputChanged -= InputManagerOnLastInputChanged;
             //WwiseManager.BeatEvent -= OnBeat;
             GameManager.Instance.onBeatUnityEvent -= OnBeat;
+            GameManager.Instance.SequenceEvent -= LoadNextSequence;
 
         }
     }

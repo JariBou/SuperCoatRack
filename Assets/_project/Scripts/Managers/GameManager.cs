@@ -21,6 +21,7 @@ namespace _project.Scripts.Managers
         [SerializeField] private GameState _currentState;
 
         public event Action onBeatUnityEvent ;
+        public event Action SequenceEvent ;
 
         private void Awake()
         {
@@ -49,7 +50,7 @@ namespace _project.Scripts.Managers
             AkUnitySoundEngine.PostEvent(
                 LevelManager.Instance.CurrentLevelData.MusicToPlayEvent.Name,
                 gameObject,
-                (uint)AkCallbackType.AK_MusicSyncBeat | (uint)AkCallbackType.AK_EndOfEvent,
+                (uint)AkCallbackType.AK_MusicSyncBeat | (uint)AkCallbackType.AK_MusicSyncPoint | (uint)AkCallbackType.AK_EndOfEvent,
                 OnBeatEvent,
                 null
             );
@@ -65,6 +66,9 @@ namespace _project.Scripts.Managers
             {
                 Debug.Log("End of beat");
                 EndGame();
+            } else if (in_type == AkCallbackType.AK_MusicSyncPoint)
+            {
+                SequenceEvent?.Invoke();
             }
         }
     }
