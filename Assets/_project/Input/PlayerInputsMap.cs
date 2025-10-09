@@ -109,13 +109,40 @@ public partial class @PlayerInputsMap: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Up"",
+                    ""type"": ""Button"",
+                    ""id"": ""ba3ebcf2-96ee-4e80-b6c8-6340e49e013c"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Down"",
+                    ""type"": ""Button"",
+                    ""id"": ""cad42fad-eb74-4c42-be97-5fc1ecf2c1be"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Confirm"",
+                    ""type"": ""Button"",
+                    ""id"": ""ee829d9c-05f9-440c-b7fd-db69d4e1ea01"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
                 {
                     ""name"": """",
                     ""id"": ""21745bd4-2581-46b8-b392-4475df29e227"",
-                    ""path"": ""<HID::DragonRise Inc.   Generic   USB  Joystick  >/button5"",
+                    ""path"": ""<Joystick>/stick/down"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
@@ -126,11 +153,132 @@ public partial class @PlayerInputsMap: IInputActionCollection2, IDisposable
                 {
                     ""name"": """",
                     ""id"": ""cc36b3c8-4307-4620-ae20-e7fd13c58308"",
-                    ""path"": ""<HID::DragonRise Inc.   Generic   USB  Joystick  >/button6"",
+                    ""path"": ""<Joystick>/stick/up"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
                     ""action"": ""Right"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""f86f40f9-a481-46c6-9d3b-43fc7f69704f"",
+                    ""path"": ""<Joystick>/stick/left"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Up"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""15513c24-bcf7-45a7-a46c-baf4303352db"",
+                    ""path"": ""<Joystick>/stick/right"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Down"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""9c621ac7-02e8-4be2-b3a3-b2925ef2d4b7"",
+                    ""path"": ""<HID::DragonRise Inc.   Generic   USB  Joystick  >/button3"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Confirm"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                }
+            ]
+        },
+        {
+            ""name"": ""InGameMap"",
+            ""id"": ""b9236c2b-813b-424a-b0e0-b8ca8e0ab829"",
+            ""actions"": [
+                {
+                    ""name"": ""Coat1"",
+                    ""type"": ""Button"",
+                    ""id"": ""16d9ae27-f2ba-4c03-8390-b9f184b9d37c"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Coat2"",
+                    ""type"": ""Button"",
+                    ""id"": ""a8020c7f-b5fd-4d95-9a0f-899bcd9cd60b"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Hat1"",
+                    ""type"": ""Button"",
+                    ""id"": ""91c393fd-fdb6-4b49-90bf-f6523b3f55ed"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Hat2"",
+                    ""type"": ""Button"",
+                    ""id"": ""fd1fe117-7077-4e34-bea1-338441362edc"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                }
+            ],
+            ""bindings"": [
+                {
+                    ""name"": """",
+                    ""id"": ""19139d2f-6e23-43d0-8b4b-6757307395cc"",
+                    ""path"": ""<HID::DragonRise Inc.   Generic   USB  Joystick  >/button3"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Coat1"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""b91a8d63-f755-413c-ab5b-2e0c6e08d342"",
+                    ""path"": ""<Joystick>/stick/right"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Coat2"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""d28c6759-9137-49c8-8d5e-bfa0e4360c56"",
+                    ""path"": ""<Joystick>/trigger"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Hat1"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""d6aaee00-5f01-41a5-978e-82fbe2f9ba59"",
+                    ""path"": ""<HID::DragonRise Inc.   Generic   USB  Joystick  >/button2"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Hat2"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -143,11 +291,21 @@ public partial class @PlayerInputsMap: IInputActionCollection2, IDisposable
         m_MenuMap = asset.FindActionMap("MenuMap", throwIfNotFound: true);
         m_MenuMap_Left = m_MenuMap.FindAction("Left", throwIfNotFound: true);
         m_MenuMap_Right = m_MenuMap.FindAction("Right", throwIfNotFound: true);
+        m_MenuMap_Up = m_MenuMap.FindAction("Up", throwIfNotFound: true);
+        m_MenuMap_Down = m_MenuMap.FindAction("Down", throwIfNotFound: true);
+        m_MenuMap_Confirm = m_MenuMap.FindAction("Confirm", throwIfNotFound: true);
+        // InGameMap
+        m_InGameMap = asset.FindActionMap("InGameMap", throwIfNotFound: true);
+        m_InGameMap_Coat1 = m_InGameMap.FindAction("Coat1", throwIfNotFound: true);
+        m_InGameMap_Coat2 = m_InGameMap.FindAction("Coat2", throwIfNotFound: true);
+        m_InGameMap_Hat1 = m_InGameMap.FindAction("Hat1", throwIfNotFound: true);
+        m_InGameMap_Hat2 = m_InGameMap.FindAction("Hat2", throwIfNotFound: true);
     }
 
     ~@PlayerInputsMap()
     {
         UnityEngine.Debug.Assert(!m_MenuMap.enabled, "This will cause a leak and performance issues, PlayerInputsMap.MenuMap.Disable() has not been called.");
+        UnityEngine.Debug.Assert(!m_InGameMap.enabled, "This will cause a leak and performance issues, PlayerInputsMap.InGameMap.Disable() has not been called.");
     }
 
     /// <summary>
@@ -225,6 +383,9 @@ public partial class @PlayerInputsMap: IInputActionCollection2, IDisposable
     private List<IMenuMapActions> m_MenuMapActionsCallbackInterfaces = new List<IMenuMapActions>();
     private readonly InputAction m_MenuMap_Left;
     private readonly InputAction m_MenuMap_Right;
+    private readonly InputAction m_MenuMap_Up;
+    private readonly InputAction m_MenuMap_Down;
+    private readonly InputAction m_MenuMap_Confirm;
     /// <summary>
     /// Provides access to input actions defined in input action map "MenuMap".
     /// </summary>
@@ -244,6 +405,18 @@ public partial class @PlayerInputsMap: IInputActionCollection2, IDisposable
         /// Provides access to the underlying input action "MenuMap/Right".
         /// </summary>
         public InputAction @Right => m_Wrapper.m_MenuMap_Right;
+        /// <summary>
+        /// Provides access to the underlying input action "MenuMap/Up".
+        /// </summary>
+        public InputAction @Up => m_Wrapper.m_MenuMap_Up;
+        /// <summary>
+        /// Provides access to the underlying input action "MenuMap/Down".
+        /// </summary>
+        public InputAction @Down => m_Wrapper.m_MenuMap_Down;
+        /// <summary>
+        /// Provides access to the underlying input action "MenuMap/Confirm".
+        /// </summary>
+        public InputAction @Confirm => m_Wrapper.m_MenuMap_Confirm;
         /// <summary>
         /// Provides access to the underlying input action map instance.
         /// </summary>
@@ -276,6 +449,15 @@ public partial class @PlayerInputsMap: IInputActionCollection2, IDisposable
             @Right.started += instance.OnRight;
             @Right.performed += instance.OnRight;
             @Right.canceled += instance.OnRight;
+            @Up.started += instance.OnUp;
+            @Up.performed += instance.OnUp;
+            @Up.canceled += instance.OnUp;
+            @Down.started += instance.OnDown;
+            @Down.performed += instance.OnDown;
+            @Down.canceled += instance.OnDown;
+            @Confirm.started += instance.OnConfirm;
+            @Confirm.performed += instance.OnConfirm;
+            @Confirm.canceled += instance.OnConfirm;
         }
 
         /// <summary>
@@ -293,6 +475,15 @@ public partial class @PlayerInputsMap: IInputActionCollection2, IDisposable
             @Right.started -= instance.OnRight;
             @Right.performed -= instance.OnRight;
             @Right.canceled -= instance.OnRight;
+            @Up.started -= instance.OnUp;
+            @Up.performed -= instance.OnUp;
+            @Up.canceled -= instance.OnUp;
+            @Down.started -= instance.OnDown;
+            @Down.performed -= instance.OnDown;
+            @Down.canceled -= instance.OnDown;
+            @Confirm.started -= instance.OnConfirm;
+            @Confirm.performed -= instance.OnConfirm;
+            @Confirm.canceled -= instance.OnConfirm;
         }
 
         /// <summary>
@@ -326,6 +517,135 @@ public partial class @PlayerInputsMap: IInputActionCollection2, IDisposable
     /// Provides a new <see cref="MenuMapActions" /> instance referencing this action map.
     /// </summary>
     public MenuMapActions @MenuMap => new MenuMapActions(this);
+
+    // InGameMap
+    private readonly InputActionMap m_InGameMap;
+    private List<IInGameMapActions> m_InGameMapActionsCallbackInterfaces = new List<IInGameMapActions>();
+    private readonly InputAction m_InGameMap_Coat1;
+    private readonly InputAction m_InGameMap_Coat2;
+    private readonly InputAction m_InGameMap_Hat1;
+    private readonly InputAction m_InGameMap_Hat2;
+    /// <summary>
+    /// Provides access to input actions defined in input action map "InGameMap".
+    /// </summary>
+    public struct InGameMapActions
+    {
+        private @PlayerInputsMap m_Wrapper;
+
+        /// <summary>
+        /// Construct a new instance of the input action map wrapper class.
+        /// </summary>
+        public InGameMapActions(@PlayerInputsMap wrapper) { m_Wrapper = wrapper; }
+        /// <summary>
+        /// Provides access to the underlying input action "InGameMap/Coat1".
+        /// </summary>
+        public InputAction @Coat1 => m_Wrapper.m_InGameMap_Coat1;
+        /// <summary>
+        /// Provides access to the underlying input action "InGameMap/Coat2".
+        /// </summary>
+        public InputAction @Coat2 => m_Wrapper.m_InGameMap_Coat2;
+        /// <summary>
+        /// Provides access to the underlying input action "InGameMap/Hat1".
+        /// </summary>
+        public InputAction @Hat1 => m_Wrapper.m_InGameMap_Hat1;
+        /// <summary>
+        /// Provides access to the underlying input action "InGameMap/Hat2".
+        /// </summary>
+        public InputAction @Hat2 => m_Wrapper.m_InGameMap_Hat2;
+        /// <summary>
+        /// Provides access to the underlying input action map instance.
+        /// </summary>
+        public InputActionMap Get() { return m_Wrapper.m_InGameMap; }
+        /// <inheritdoc cref="UnityEngine.InputSystem.InputActionMap.Enable()" />
+        public void Enable() { Get().Enable(); }
+        /// <inheritdoc cref="UnityEngine.InputSystem.InputActionMap.Disable()" />
+        public void Disable() { Get().Disable(); }
+        /// <inheritdoc cref="UnityEngine.InputSystem.InputActionMap.enabled" />
+        public bool enabled => Get().enabled;
+        /// <summary>
+        /// Implicitly converts an <see ref="InGameMapActions" /> to an <see ref="InputActionMap" /> instance.
+        /// </summary>
+        public static implicit operator InputActionMap(InGameMapActions set) { return set.Get(); }
+        /// <summary>
+        /// Adds <see cref="InputAction.started"/>, <see cref="InputAction.performed"/> and <see cref="InputAction.canceled"/> callbacks provided via <param cref="instance" /> on all input actions contained in this map.
+        /// </summary>
+        /// <param name="instance">Callback instance.</param>
+        /// <remarks>
+        /// If <paramref name="instance" /> is <c>null</c> or <paramref name="instance"/> have already been added this method does nothing.
+        /// </remarks>
+        /// <seealso cref="InGameMapActions" />
+        public void AddCallbacks(IInGameMapActions instance)
+        {
+            if (instance == null || m_Wrapper.m_InGameMapActionsCallbackInterfaces.Contains(instance)) return;
+            m_Wrapper.m_InGameMapActionsCallbackInterfaces.Add(instance);
+            @Coat1.started += instance.OnCoat1;
+            @Coat1.performed += instance.OnCoat1;
+            @Coat1.canceled += instance.OnCoat1;
+            @Coat2.started += instance.OnCoat2;
+            @Coat2.performed += instance.OnCoat2;
+            @Coat2.canceled += instance.OnCoat2;
+            @Hat1.started += instance.OnHat1;
+            @Hat1.performed += instance.OnHat1;
+            @Hat1.canceled += instance.OnHat1;
+            @Hat2.started += instance.OnHat2;
+            @Hat2.performed += instance.OnHat2;
+            @Hat2.canceled += instance.OnHat2;
+        }
+
+        /// <summary>
+        /// Removes <see cref="InputAction.started"/>, <see cref="InputAction.performed"/> and <see cref="InputAction.canceled"/> callbacks provided via <param cref="instance" /> on all input actions contained in this map.
+        /// </summary>
+        /// <remarks>
+        /// Calling this method when <paramref name="instance" /> have not previously been registered has no side-effects.
+        /// </remarks>
+        /// <seealso cref="InGameMapActions" />
+        private void UnregisterCallbacks(IInGameMapActions instance)
+        {
+            @Coat1.started -= instance.OnCoat1;
+            @Coat1.performed -= instance.OnCoat1;
+            @Coat1.canceled -= instance.OnCoat1;
+            @Coat2.started -= instance.OnCoat2;
+            @Coat2.performed -= instance.OnCoat2;
+            @Coat2.canceled -= instance.OnCoat2;
+            @Hat1.started -= instance.OnHat1;
+            @Hat1.performed -= instance.OnHat1;
+            @Hat1.canceled -= instance.OnHat1;
+            @Hat2.started -= instance.OnHat2;
+            @Hat2.performed -= instance.OnHat2;
+            @Hat2.canceled -= instance.OnHat2;
+        }
+
+        /// <summary>
+        /// Unregisters <param cref="instance" /> and unregisters all input action callbacks via <see cref="InGameMapActions.UnregisterCallbacks(IInGameMapActions)" />.
+        /// </summary>
+        /// <seealso cref="InGameMapActions.UnregisterCallbacks(IInGameMapActions)" />
+        public void RemoveCallbacks(IInGameMapActions instance)
+        {
+            if (m_Wrapper.m_InGameMapActionsCallbackInterfaces.Remove(instance))
+                UnregisterCallbacks(instance);
+        }
+
+        /// <summary>
+        /// Replaces all existing callback instances and previously registered input action callbacks associated with them with callbacks provided via <param cref="instance" />.
+        /// </summary>
+        /// <remarks>
+        /// If <paramref name="instance" /> is <c>null</c>, calling this method will only unregister all existing callbacks but not register any new callbacks.
+        /// </remarks>
+        /// <seealso cref="InGameMapActions.AddCallbacks(IInGameMapActions)" />
+        /// <seealso cref="InGameMapActions.RemoveCallbacks(IInGameMapActions)" />
+        /// <seealso cref="InGameMapActions.UnregisterCallbacks(IInGameMapActions)" />
+        public void SetCallbacks(IInGameMapActions instance)
+        {
+            foreach (var item in m_Wrapper.m_InGameMapActionsCallbackInterfaces)
+                UnregisterCallbacks(item);
+            m_Wrapper.m_InGameMapActionsCallbackInterfaces.Clear();
+            AddCallbacks(instance);
+        }
+    }
+    /// <summary>
+    /// Provides a new <see cref="InGameMapActions" /> instance referencing this action map.
+    /// </summary>
+    public InGameMapActions @InGameMap => new InGameMapActions(this);
     /// <summary>
     /// Interface to implement callback methods for all input action callbacks associated with input actions defined by "MenuMap" which allows adding and removing callbacks.
     /// </summary>
@@ -347,5 +667,62 @@ public partial class @PlayerInputsMap: IInputActionCollection2, IDisposable
         /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
         /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
         void OnRight(InputAction.CallbackContext context);
+        /// <summary>
+        /// Method invoked when associated input action "Up" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// </summary>
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
+        void OnUp(InputAction.CallbackContext context);
+        /// <summary>
+        /// Method invoked when associated input action "Down" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// </summary>
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
+        void OnDown(InputAction.CallbackContext context);
+        /// <summary>
+        /// Method invoked when associated input action "Confirm" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// </summary>
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
+        void OnConfirm(InputAction.CallbackContext context);
+    }
+    /// <summary>
+    /// Interface to implement callback methods for all input action callbacks associated with input actions defined by "InGameMap" which allows adding and removing callbacks.
+    /// </summary>
+    /// <seealso cref="InGameMapActions.AddCallbacks(IInGameMapActions)" />
+    /// <seealso cref="InGameMapActions.RemoveCallbacks(IInGameMapActions)" />
+    public interface IInGameMapActions
+    {
+        /// <summary>
+        /// Method invoked when associated input action "Coat1" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// </summary>
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
+        void OnCoat1(InputAction.CallbackContext context);
+        /// <summary>
+        /// Method invoked when associated input action "Coat2" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// </summary>
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
+        void OnCoat2(InputAction.CallbackContext context);
+        /// <summary>
+        /// Method invoked when associated input action "Hat1" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// </summary>
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
+        void OnHat1(InputAction.CallbackContext context);
+        /// <summary>
+        /// Method invoked when associated input action "Hat2" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// </summary>
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
+        void OnHat2(InputAction.CallbackContext context);
     }
 }
