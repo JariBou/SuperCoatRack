@@ -10,16 +10,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c27ea673d537451fa1b08e2a74916816, type: 3}
-  m_Name: SequenceData_temp
+  m_Name: LevelTest_Sequence2
   m_EditorClassIdentifier: 
   sequenceData:
   - BeatDelayToPrevious: 4
     gracePeriod: {x: 0.5, y: 0.5}
-    ActionType: 0
-    ClotheType: 0
-    ClotheColor: 0
+    ActionType: 2
+    ClotheType: 1
+    ClotheColor: 1
   - BeatDelayToPrevious: 4
     gracePeriod: {x: 0.5, y: 0.5}
-    ActionType: 2
-    ClotheType: 0
-    ClotheColor: 0
+    ActionType: 1
+    ClotheType: 1
+    ClotheColor: 1

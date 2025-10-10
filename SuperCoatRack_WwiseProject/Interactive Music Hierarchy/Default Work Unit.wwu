@@ -94,7 +94,7 @@
 						</MusicSegment>
 						<MusicSegment Name="MainMusic" ID="{2BE186B6-01D6-436D-AD15-CAF824AC464C}" ShortID="68027641">
 							<PropertyList>
-								<Property Name="EndPosition" Type="Real64" Value="153564.002267574"/>
+								<Property Name="EndPosition" Type="Real64" Value="153818.181818182"/>
 								<Property Name="Tempo" Type="Real64" Value="110"/>
 							</PropertyList>
 							<ReferenceList>
@@ -206,7 +206,7 @@
 											<MusicCue Name="Exit Cue" ID="{5FE727E0-0B59-4833-8CBE-EB9DB2A82FC9}">
 												<PropertyList>
 													<Property Name="CueType" Type="int16" Value="1"/>
-													<Property Name="TimeMs" Type="Real64" Value="152344.695649658"/>
+													<Property Name="TimeMs" Type="Real64" Value="152856.245167309"/>
 												</PropertyList>
 											</MusicCue>
 										</Local>
