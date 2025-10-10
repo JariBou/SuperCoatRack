@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using _project.ScriptableObjects.Scripts;
+using _project.Scripts.Managers.Inputs;
 using JetBrains.Annotations;
 using UnityEngine;
 

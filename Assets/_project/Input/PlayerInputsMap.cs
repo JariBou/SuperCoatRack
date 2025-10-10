@@ -201,7 +201,7 @@ public partial class @PlayerInputsMap: IInputActionCollection2, IDisposable
             ""id"": ""b9236c2b-813b-424a-b0e0-b8ca8e0ab829"",
             ""actions"": [
                 {
-                    ""name"": ""Coat1"",
+                    ""name"": ""Coat"",
                     ""type"": ""Button"",
                     ""id"": ""16d9ae27-f2ba-4c03-8390-b9f184b9d37c"",
                     ""expectedControlType"": """",
@@ -210,27 +210,9 @@ public partial class @PlayerInputsMap: IInputActionCollection2, IDisposable
                     ""initialStateCheck"": false
                 },
                 {
-                    ""name"": ""Coat2"",
-                    ""type"": ""Button"",
-                    ""id"": ""a8020c7f-b5fd-4d95-9a0f-899bcd9cd60b"",
-                    ""expectedControlType"": """",
-                    ""processors"": """",
-                    ""interactions"": """",
-                    ""initialStateCheck"": false
-                },
-                {
-                    ""name"": ""Hat1"",
+                    ""name"": ""Hat"",
                     ""type"": ""Button"",
                     ""id"": ""91c393fd-fdb6-4b49-90bf-f6523b3f55ed"",
-                    ""expectedControlType"": """",
-                    ""processors"": """",
-                    ""interactions"": """",
-                    ""initialStateCheck"": false
-                },
-                {
-                    ""name"": ""Hat2"",
-                    ""type"": ""Button"",
-                    ""id"": ""fd1fe117-7077-4e34-bea1-338441362edc"",
                     ""expectedControlType"": """",
                     ""processors"": """",
                     ""interactions"": """",
@@ -245,18 +227,29 @@ public partial class @PlayerInputsMap: IInputActionCollection2, IDisposable
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""Coat1"",
+                    ""action"": ""Coat"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 },
                 {
                     ""name"": """",
-                    ""id"": ""b91a8d63-f755-413c-ab5b-2e0c6e08d342"",
+                    ""id"": ""086afe83-7591-4777-839a-954412cb169f"",
                     ""path"": ""<Joystick>/stick/right"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""Coat2"",
+                    ""action"": ""Coat"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""70d709b4-0117-4cfd-a181-ef84e9aaec84"",
+                    ""path"": ""<Keyboard>/c"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Coat"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 },
@@ -267,18 +260,29 @@ public partial class @PlayerInputsMap: IInputActionCollection2, IDisposable
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""Hat1"",
+                    ""action"": ""Hat"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 },
                 {
                     ""name"": """",
-                    ""id"": ""d6aaee00-5f01-41a5-978e-82fbe2f9ba59"",
+                    ""id"": ""0d448213-0e7d-4b44-b1b3-24009907e91f"",
                     ""path"": ""<HID::DragonRise Inc.   Generic   USB  Joystick  >/button2"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""Hat2"",
+                    ""action"": ""Hat"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""dad0ab34-39e6-45df-b3e3-681f57e0c38b"",
+                    ""path"": ""<Keyboard>/h"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Hat"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -296,10 +300,8 @@ public partial class @PlayerInputsMap: IInputActionCollection2, IDisposable
         m_MenuMap_Confirm = m_MenuMap.FindAction("Confirm", throwIfNotFound: true);
         // InGameMap
         m_InGameMap = asset.FindActionMap("InGameMap", throwIfNotFound: true);
-        m_InGameMap_Coat1 = m_InGameMap.FindAction("Coat1", throwIfNotFound: true);
-        m_InGameMap_Coat2 = m_InGameMap.FindAction("Coat2", throwIfNotFound: true);
-        m_InGameMap_Hat1 = m_InGameMap.FindAction("Hat1", throwIfNotFound: true);
-        m_InGameMap_Hat2 = m_InGameMap.FindAction("Hat2", throwIfNotFound: true);
+        m_InGameMap_Coat = m_InGameMap.FindAction("Coat", throwIfNotFound: true);
+        m_InGameMap_Hat = m_InGameMap.FindAction("Hat", throwIfNotFound: true);
     }
 
     ~@PlayerInputsMap()
@@ -521,10 +523,8 @@ public partial class @PlayerInputsMap: IInputActionCollection2, IDisposable
     // InGameMap
     private readonly InputActionMap m_InGameMap;
     private List<IInGameMapActions> m_InGameMapActionsCallbackInterfaces = new List<IInGameMapActions>();
-    private readonly InputAction m_InGameMap_Coat1;
-    private readonly InputAction m_InGameMap_Coat2;
-    private readonly InputAction m_InGameMap_Hat1;
-    private readonly InputAction m_InGameMap_Hat2;
+    private readonly InputAction m_InGameMap_Coat;
+    private readonly InputAction m_InGameMap_Hat;
     /// <summary>
     /// Provides access to input actions defined in input action map "InGameMap".
     /// </summary>
@@ -537,21 +537,13 @@ public partial class @PlayerInputsMap: IInputActionCollection2, IDisposable
         /// </summary>
         public InGameMapActions(@PlayerInputsMap wrapper) { m_Wrapper = wrapper; }
         /// <summary>
-        /// Provides access to the underlying input action "InGameMap/Coat1".
+        /// Provides access to the underlying input action "InGameMap/Coat".
         /// </summary>
-        public InputAction @Coat1 => m_Wrapper.m_InGameMap_Coat1;
+        public InputAction @Coat => m_Wrapper.m_InGameMap_Coat;
         /// <summary>
-        /// Provides access to the underlying input action "InGameMap/Coat2".
+        /// Provides access to the underlying input action "InGameMap/Hat".
         /// </summary>
-        public InputAction @Coat2 => m_Wrapper.m_InGameMap_Coat2;
-        /// <summary>
-        /// Provides access to the underlying input action "InGameMap/Hat1".
-        /// </summary>
-        public InputAction @Hat1 => m_Wrapper.m_InGameMap_Hat1;
-        /// <summary>
-        /// Provides access to the underlying input action "InGameMap/Hat2".
-        /// </summary>
-        public InputAction @Hat2 => m_Wrapper.m_InGameMap_Hat2;
+        public InputAction @Hat => m_Wrapper.m_InGameMap_Hat;
         /// <summary>
         /// Provides access to the underlying input action map instance.
         /// </summary>
@@ -578,18 +570,12 @@ public partial class @PlayerInputsMap: IInputActionCollection2, IDisposable
         {
             if (instance == null || m_Wrapper.m_InGameMapActionsCallbackInterfaces.Contains(instance)) return;
             m_Wrapper.m_InGameMapActionsCallbackInterfaces.Add(instance);
-            @Coat1.started += instance.OnCoat1;
-            @Coat1.performed += instance.OnCoat1;
-            @Coat1.canceled += instance.OnCoat1;
-            @Coat2.started += instance.OnCoat2;
-            @Coat2.performed += instance.OnCoat2;
-            @Coat2.canceled += instance.OnCoat2;
-            @Hat1.started += instance.OnHat1;
-            @Hat1.performed += instance.OnHat1;
-            @Hat1.canceled += instance.OnHat1;
-            @Hat2.started += instance.OnHat2;
-            @Hat2.performed += instance.OnHat2;
-            @Hat2.canceled += instance.OnHat2;
+            @Coat.started += instance.OnCoat;
+            @Coat.performed += instance.OnCoat;
+            @Coat.canceled += instance.OnCoat;
+            @Hat.started += instance.OnHat;
+            @Hat.performed += instance.OnHat;
+            @Hat.canceled += instance.OnHat;
         }
 
         /// <summary>
@@ -601,18 +587,12 @@ public partial class @PlayerInputsMap: IInputActionCollection2, IDisposable
         /// <seealso cref="InGameMapActions" />
         private void UnregisterCallbacks(IInGameMapActions instance)
         {
-            @Coat1.started -= instance.OnCoat1;
-            @Coat1.performed -= instance.OnCoat1;
-            @Coat1.canceled -= instance.OnCoat1;
-            @Coat2.started -= instance.OnCoat2;
-            @Coat2.performed -= instance.OnCoat2;
-            @Coat2.canceled -= instance.OnCoat2;
-            @Hat1.started -= instance.OnHat1;
-            @Hat1.performed -= instance.OnHat1;
-            @Hat1.canceled -= instance.OnHat1;
-            @Hat2.started -= instance.OnHat2;
-            @Hat2.performed -= instance.OnHat2;
-            @Hat2.canceled -= instance.OnHat2;
+            @Coat.started -= instance.OnCoat;
+            @Coat.performed -= instance.OnCoat;
+            @Coat.canceled -= instance.OnCoat;
+            @Hat.started -= instance.OnHat;
+            @Hat.performed -= instance.OnHat;
+            @Hat.canceled -= instance.OnHat;
         }
 
         /// <summary>
@@ -697,32 +677,18 @@ public partial class @PlayerInputsMap: IInputActionCollection2, IDisposable
     public interface IInGameMapActions
     {
         /// <summary>
-        /// Method invoked when associated input action "Coat1" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// Method invoked when associated input action "Coat" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
         /// </summary>
         /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
         /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
         /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
-        void OnCoat1(InputAction.CallbackContext context);
+        void OnCoat(InputAction.CallbackContext context);
         /// <summary>
-        /// Method invoked when associated input action "Coat2" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// Method invoked when associated input action "Hat" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
         /// </summary>
         /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
         /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
         /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
-        void OnCoat2(InputAction.CallbackContext context);
-        /// <summary>
-        /// Method invoked when associated input action "Hat1" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
-        /// </summary>
-        /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
-        /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
-        /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
-        void OnHat1(InputAction.CallbackContext context);
-        /// <summary>
-        /// Method invoked when associated input action "Hat2" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
-        /// </summary>
-        /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
-        /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
-        /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
-        void OnHat2(InputAction.CallbackContext context);
+        void OnHat(InputAction.CallbackContext context);
     }
 }

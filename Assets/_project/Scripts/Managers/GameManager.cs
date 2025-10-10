@@ -1,9 +1,7 @@
 ﻿using System;
 using NaughtyAttributes;
 using UnityEngine;
-using UnityEngine.Events;
 using UnityEngine.SceneManagement;
-using UnityEngine.Serialization;
 
 namespace _project.Scripts.Managers
 {
@@ -72,11 +70,11 @@ namespace _project.Scripts.Managers
             }
         }
     }
-}
 
-public enum GameState
-{
-    Menu,
-    InGame,
-    Score
+    public enum GameState
+    {
+        Menu,
+        InGame,
+        Score
+    }
 }

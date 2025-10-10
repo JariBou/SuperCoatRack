@@ -4061,6 +4061,34 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: 1ba19030-8d4d-489c-9fde-4cc10adee64a
     m_ActionName: 'MenuMap/Right[/DragonRise Inc.   Generic   USB  Joystick  /button6]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: ba3ebcf2-96ee-4e80-b6c8-6340e49e013c
+    m_ActionName: MenuMap/Up
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: cad42fad-eb74-4c42-be97-5fc1ecf2c1be
+    m_ActionName: MenuMap/Down
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: ee829d9c-05f9-440c-b7fd-db69d4e1ea01
+    m_ActionName: MenuMap/Confirm
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 16d9ae27-f2ba-4c03-8390-b9f184b9d37c
+    m_ActionName: InGameMap/Coat1
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: a8020c7f-b5fd-4d95-9a0f-899bcd9cd60b
+    m_ActionName: InGameMap/Coat2
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 91c393fd-fdb6-4b49-90bf-f6523b3f55ed
+    m_ActionName: InGameMap/Hat1
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: fd1fe117-7077-4e34-bea1-338441362edc
+    m_ActionName: InGameMap/Hat2
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: MenuMap
