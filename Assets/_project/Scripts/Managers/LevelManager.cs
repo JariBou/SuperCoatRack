@@ -1,34 +1,36 @@
 using _project.ScriptableObjects.Scripts;
 using UnityEngine;
-using UnityEngine.Serialization;
 
-public class LevelManager : MonoBehaviour
+namespace _project.Scripts.Managers
 {
-    private static LevelManager _instance;
-    public static LevelManager Instance => _instance;
-
-    [SerializeField] private LevelData[] listOfLevels;
-    
-    public LevelData[] ListOfLevels => listOfLevels;
-
-    public LevelData CurrentLevelData
+    public class LevelManager : MonoBehaviour
     {
-        get => _currentLevelData;
-        set => _currentLevelData = value;
-    }
-    [SerializeField] private LevelData _currentLevelData;
+        private static LevelManager _instance;
+        public static LevelManager Instance => _instance;
+
+        [SerializeField] private LevelData[] listOfLevels;
     
-    private void Awake()
-    {
-        if (_instance != null)
+        public LevelData[] ListOfLevels => listOfLevels;
+
+        public LevelData CurrentLevelData
         {
-            Destroy(gameObject);
+            get => _currentLevelData;
+            set => _currentLevelData = value;
         }
-        else
-        {
-            _instance = this;
-        }
-        DontDestroyOnLoad(gameObject);
-    }
+        [SerializeField] private LevelData _currentLevelData;
     
+        private void Awake()
+        {
+            if (_instance != null)
+            {
+                Destroy(gameObject);
+            }
+            else
+            {
+                _instance = this;
+            }
+            DontDestroyOnLoad(gameObject);
+        }
+    
+    }
 }

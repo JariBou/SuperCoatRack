@@ -330,6 +330,135 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 472430826}
   m_CullTransparentMesh: 1
+--- !u!1 &485710481
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 485710483}
+  - component: {fileID: 485710482}
+  - component: {fileID: 485710484}
+  m_Layer: 0
+  m_Name: Inputs
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &485710482
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 485710481}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Actions: {fileID: -944628639613478452, guid: 0ab901e4e686c7141b7d1a44ee22343f, type: 3}
+  m_NotificationBehavior: 2
+  m_UIInputModule: {fileID: 0}
+  m_DeviceLostEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_DeviceRegainedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ControlsChangedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ActionEvents:
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 4f0bcf45-dedd-4d1c-91c7-b9c6bfc2818c
+    m_ActionName: MenuMap/Left
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 1ba19030-8d4d-489c-9fde-4cc10adee64a
+    m_ActionName: MenuMap/Right
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: ba3ebcf2-96ee-4e80-b6c8-6340e49e013c
+    m_ActionName: MenuMap/Up
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: cad42fad-eb74-4c42-be97-5fc1ecf2c1be
+    m_ActionName: MenuMap/Down
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: ee829d9c-05f9-440c-b7fd-db69d4e1ea01
+    m_ActionName: MenuMap/Confirm
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 485710484}
+        m_TargetAssemblyTypeName: _project.Scripts.Managers.Inputs.InputManager,
+          Assembly-CSharp
+        m_MethodName: OnCoatInput
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 16d9ae27-f2ba-4c03-8390-b9f184b9d37c
+    m_ActionName: InGameMap/Coat1
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 485710484}
+        m_TargetAssemblyTypeName: _project.Scripts.Managers.Inputs.InputManager,
+          Assembly-CSharp
+        m_MethodName: OnHatInput
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 91c393fd-fdb6-4b49-90bf-f6523b3f55ed
+    m_ActionName: InGameMap/Hat1
+  m_NeverAutoSwitchControlSchemes: 0
+  m_DefaultControlScheme: 
+  m_DefaultActionMap: InGameMap
+  m_SplitScreenIndex: -1
+  m_Camera: {fileID: 0}
+--- !u!4 &485710483
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 485710481}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 283.95914, y: 155.76012, z: -3.6032805}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &485710484
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 485710481}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 06e08a7ff33a4527a448ef48d1f96a05, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &686954365
 GameObject:
   m_ObjectHideFlags: 0
@@ -715,3 +844,4 @@ SceneRoots:
   - {fileID: 234405925}
   - {fileID: 1114136435}
   - {fileID: 295905586}
+  - {fileID: 485710483}

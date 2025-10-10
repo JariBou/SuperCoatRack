@@ -3,12 +3,13 @@ using JetBrains.Annotations;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-namespace _project.Scripts.Managers
+namespace _project.Scripts.Managers.Inputs
 {
     public class InputManager : MonoBehaviour
     {
         public static event Action<InputTypeLink> LastInputChanged; 
         [CanBeNull] private InputTypeLink _lastInput;
+        
 
         public InputTypeLink LastInput
         {
@@ -20,7 +21,7 @@ namespace _project.Scripts.Managers
             }
         }
 
-        public void OnCoatJoystick(InputAction.CallbackContext ctx)
+        public void OnCoatInput(InputAction.CallbackContext ctx)
         {
             if (ctx.performed)
             {
@@ -32,6 +33,30 @@ namespace _project.Scripts.Managers
             }
         }
 
+        public void OnHatInput(InputAction.CallbackContext ctx)
+        {
+            if (ctx.performed)
+            {
+                LastInput = new InputTypeLink(SequenceConfig.ActionType.Drop, SequenceConfig.ClotheType.Hat, Time.time);
+            }
+            else
+            {
+                LastInput = new InputTypeLink(SequenceConfig.ActionType.Pickup, SequenceConfig.ClotheType.Hat, Time.time);
+            }
+        }
+        
+        public void OnShoeInput(InputAction.CallbackContext ctx)
+        {
+            if (ctx.performed)
+            {
+                LastInput = new InputTypeLink(SequenceConfig.ActionType.Drop, SequenceConfig.ClotheType.Shoe, Time.time);
+            }
+            else
+            {
+                LastInput = new InputTypeLink(SequenceConfig.ActionType.Pickup, SequenceConfig.ClotheType.Shoe, Time.time);
+            }
+        }
+        
         public void OnScan()
         {
             SequenceConfig.ClotheType scannedClotheType = SequenceConfig.ClotheType.Coat;

@@ -1,37 +1,39 @@
 using System;
-using Unity.VisualScripting;
 using UnityEngine;
 
-public class WwiseManager : MonoBehaviour
+namespace _project.Scripts.Managers
 {
-    private AKRESULT result;
-
-    [SerializeField] private AK.Wwise.Event playMusicEvent;
-    public int NbOfBar { get; private set; }
-    public static event Action<int> BeatEvent;
-
-    private void Start()
+    public class WwiseManager : MonoBehaviour
     {
-        AkUnitySoundEngine.PostEvent(
-            playMusicEvent.Name,
-            gameObject,
-            (uint)AkCallbackType.AK_MusicSyncBeat | (uint)AkCallbackType.AK_EndOfEvent,
-            OnBeatEvent,
-            null
-        );
-    }
+        private AKRESULT result;
 
-    private void OnBeatEvent(object in_cookie, AkCallbackType in_type, AkCallbackInfo in_info)
-    {
-        if (in_type == AkCallbackType.AK_MusicSyncBeat)
+        [SerializeField] private AK.Wwise.Event playMusicEvent;
+        public int NbOfBar { get; private set; }
+        public static event Action<int> BeatEvent;
+
+        private void Start()
         {
-            NbOfBar++;
-            Debug.Log("Beat détecté !");
-            BeatEvent?.Invoke(NbOfBar);
+            AkUnitySoundEngine.PostEvent(
+                playMusicEvent.Name,
+                gameObject,
+                (uint)AkCallbackType.AK_MusicSyncBeat | (uint)AkCallbackType.AK_EndOfEvent,
+                OnBeatEvent,
+                null
+            );
         }
-        if (in_type == AkCallbackType.AK_EndOfEvent)
+
+        private void OnBeatEvent(object in_cookie, AkCallbackType in_type, AkCallbackInfo in_info)
         {
-            Debug.Log("End of beat");
+            if (in_type == AkCallbackType.AK_MusicSyncBeat)
+            {
+                NbOfBar++;
+                Debug.Log("Beat détecté !");
+                BeatEvent?.Invoke(NbOfBar);
+            }
+            if (in_type == AkCallbackType.AK_EndOfEvent)
+            {
+                Debug.Log("End of beat");
+            }
         }
     }
 }

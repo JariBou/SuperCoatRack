@@ -6,6 +6,7 @@
         {
             Coat,
             Hat,
+            Shoe
         }
         
         public enum ClotheColor
