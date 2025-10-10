@@ -210,9 +210,27 @@ public partial class @PlayerInputsMap: IInputActionCollection2, IDisposable
                     ""initialStateCheck"": false
                 },
                 {
+                    ""name"": ""Coat1"",
+                    ""type"": ""Button"",
+                    ""id"": ""502410b8-8c34-477d-af15-733cc81d7b40"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
                     ""name"": ""Hat"",
                     ""type"": ""Button"",
                     ""id"": ""91c393fd-fdb6-4b49-90bf-f6523b3f55ed"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Hat1"",
+                    ""type"": ""Button"",
+                    ""id"": ""76c8728f-b754-4150-8f01-ca672330b906"",
                     ""expectedControlType"": """",
                     ""processors"": """",
                     ""interactions"": """",
@@ -233,8 +251,8 @@ public partial class @PlayerInputsMap: IInputActionCollection2, IDisposable
                 },
                 {
                     ""name"": """",
-                    ""id"": ""086afe83-7591-4777-839a-954412cb169f"",
-                    ""path"": ""<Joystick>/stick/right"",
+                    ""id"": ""70d709b4-0117-4cfd-a181-ef84e9aaec84"",
+                    ""path"": ""<Keyboard>/c"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
@@ -244,12 +262,23 @@ public partial class @PlayerInputsMap: IInputActionCollection2, IDisposable
                 },
                 {
                     ""name"": """",
-                    ""id"": ""70d709b4-0117-4cfd-a181-ef84e9aaec84"",
-                    ""path"": ""<Keyboard>/c"",
+                    ""id"": ""a4ed9a12-ee50-422c-a1f4-da24562dd9e3"",
+                    ""path"": ""<Joystick>/stick/right"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""Coat"",
+                    ""action"": ""Coat1"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""b41d20b3-60b6-4988-b25d-16419b809fd8"",
+                    ""path"": ""<Keyboard>/v"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Coat1"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 },
@@ -266,8 +295,8 @@ public partial class @PlayerInputsMap: IInputActionCollection2, IDisposable
                 },
                 {
                     ""name"": """",
-                    ""id"": ""0d448213-0e7d-4b44-b1b3-24009907e91f"",
-                    ""path"": ""<HID::DragonRise Inc.   Generic   USB  Joystick  >/button2"",
+                    ""id"": ""dad0ab34-39e6-45df-b3e3-681f57e0c38b"",
+                    ""path"": ""<Keyboard>/h"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
@@ -277,12 +306,23 @@ public partial class @PlayerInputsMap: IInputActionCollection2, IDisposable
                 },
                 {
                     ""name"": """",
-                    ""id"": ""dad0ab34-39e6-45df-b3e3-681f57e0c38b"",
-                    ""path"": ""<Keyboard>/h"",
+                    ""id"": ""6901fdde-a272-46a9-8168-9d69be71954f"",
+                    ""path"": ""<HID::DragonRise Inc.   Generic   USB  Joystick  >/button2"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""Hat"",
+                    ""action"": ""Hat1"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""fa7b3794-7e99-4bf6-a9ff-fff20db0e469"",
+                    ""path"": ""<Keyboard>/j"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Hat1"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -301,7 +341,9 @@ public partial class @PlayerInputsMap: IInputActionCollection2, IDisposable
         // InGameMap
         m_InGameMap = asset.FindActionMap("InGameMap", throwIfNotFound: true);
         m_InGameMap_Coat = m_InGameMap.FindAction("Coat", throwIfNotFound: true);
+        m_InGameMap_Coat1 = m_InGameMap.FindAction("Coat1", throwIfNotFound: true);
         m_InGameMap_Hat = m_InGameMap.FindAction("Hat", throwIfNotFound: true);
+        m_InGameMap_Hat1 = m_InGameMap.FindAction("Hat1", throwIfNotFound: true);
     }
 
     ~@PlayerInputsMap()
@@ -524,7 +566,9 @@ public partial class @PlayerInputsMap: IInputActionCollection2, IDisposable
     private readonly InputActionMap m_InGameMap;
     private List<IInGameMapActions> m_InGameMapActionsCallbackInterfaces = new List<IInGameMapActions>();
     private readonly InputAction m_InGameMap_Coat;
+    private readonly InputAction m_InGameMap_Coat1;
     private readonly InputAction m_InGameMap_Hat;
+    private readonly InputAction m_InGameMap_Hat1;
     /// <summary>
     /// Provides access to input actions defined in input action map "InGameMap".
     /// </summary>
@@ -541,9 +585,17 @@ public partial class @PlayerInputsMap: IInputActionCollection2, IDisposable
         /// </summary>
         public InputAction @Coat => m_Wrapper.m_InGameMap_Coat;
         /// <summary>
+        /// Provides access to the underlying input action "InGameMap/Coat1".
+        /// </summary>
+        public InputAction @Coat1 => m_Wrapper.m_InGameMap_Coat1;
+        /// <summary>
         /// Provides access to the underlying input action "InGameMap/Hat".
         /// </summary>
         public InputAction @Hat => m_Wrapper.m_InGameMap_Hat;
+        /// <summary>
+        /// Provides access to the underlying input action "InGameMap/Hat1".
+        /// </summary>
+        public InputAction @Hat1 => m_Wrapper.m_InGameMap_Hat1;
         /// <summary>
         /// Provides access to the underlying input action map instance.
         /// </summary>
@@ -573,9 +625,15 @@ public partial class @PlayerInputsMap: IInputActionCollection2, IDisposable
             @Coat.started += instance.OnCoat;
             @Coat.performed += instance.OnCoat;
             @Coat.canceled += instance.OnCoat;
+            @Coat1.started += instance.OnCoat1;
+            @Coat1.performed += instance.OnCoat1;
+            @Coat1.canceled += instance.OnCoat1;
             @Hat.started += instance.OnHat;
             @Hat.performed += instance.OnHat;
             @Hat.canceled += instance.OnHat;
+            @Hat1.started += instance.OnHat1;
+            @Hat1.performed += instance.OnHat1;
+            @Hat1.canceled += instance.OnHat1;
         }
 
         /// <summary>
@@ -590,9 +648,15 @@ public partial class @PlayerInputsMap: IInputActionCollection2, IDisposable
             @Coat.started -= instance.OnCoat;
             @Coat.performed -= instance.OnCoat;
             @Coat.canceled -= instance.OnCoat;
+            @Coat1.started -= instance.OnCoat1;
+            @Coat1.performed -= instance.OnCoat1;
+            @Coat1.canceled -= instance.OnCoat1;
             @Hat.started -= instance.OnHat;
             @Hat.performed -= instance.OnHat;
             @Hat.canceled -= instance.OnHat;
+            @Hat1.started -= instance.OnHat1;
+            @Hat1.performed -= instance.OnHat1;
+            @Hat1.canceled -= instance.OnHat1;
         }
 
         /// <summary>
@@ -684,11 +748,25 @@ public partial class @PlayerInputsMap: IInputActionCollection2, IDisposable
         /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
         void OnCoat(InputAction.CallbackContext context);
         /// <summary>
+        /// Method invoked when associated input action "Coat1" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// </summary>
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
+        void OnCoat1(InputAction.CallbackContext context);
+        /// <summary>
         /// Method invoked when associated input action "Hat" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
         /// </summary>
         /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
         /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
         /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
         void OnHat(InputAction.CallbackContext context);
+        /// <summary>
+        /// Method invoked when associated input action "Hat1" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// </summary>
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
+        void OnHat1(InputAction.CallbackContext context);
     }
 }

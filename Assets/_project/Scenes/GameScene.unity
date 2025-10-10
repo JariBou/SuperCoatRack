@@ -502,6 +502,40 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: 91c393fd-fdb6-4b49-90bf-f6523b3f55ed
     m_ActionName: InGameMap/Hat1
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 485710484}
+        m_TargetAssemblyTypeName: _project.Scripts.Managers.Inputs.InputManager,
+          Assembly-CSharp
+        m_MethodName: OnCoatInput
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 502410b8-8c34-477d-af15-733cc81d7b40
+    m_ActionName: 'InGameMap/Coat1[/Keyboard/v]'
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 485710484}
+        m_TargetAssemblyTypeName: _project.Scripts.Managers.Inputs.InputManager,
+          Assembly-CSharp
+        m_MethodName: OnHatInput
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 76c8728f-b754-4150-8f01-ca672330b906
+    m_ActionName: 'InGameMap/Hat1[/Keyboard/j]'
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: InGameMap

@@ -88,9 +88,9 @@ namespace _project.Scripts.Managers
         {
             //TODO: increment _sequenceIndex where needed
             Debug.Log("LoadNextSequence");
-            // TEMP ======
+            // TEMP =========
             if (_currentSequence != null) return;
-            // ===========
+            // ==============
             _currentSequence = Sequence.FromSequenceData(_levelData[_sequenceIndex]);
         }
 
@@ -118,7 +118,15 @@ namespace _project.Scripts.Managers
 
         private void HandleInput(bool inputWaited = false)
         {
-            if (_lastInput is null || _lastSequenceAction is null) return;
+            if (_lastInput is null)
+            {
+                if (inputWaited)
+                {
+                    OnFail();
+                }
+                return;
+            }
+            if (_lastSequenceAction is null) return;
 
             if (!_lastSequenceAction.WasInputInTimeFrame(_lastInput.Timestamp))
             {
@@ -170,7 +178,6 @@ namespace _project.Scripts.Managers
         private void OnFail()
         {
             _lastSequenceAction!.SetState(SequenceActionTimed.SequenceActionState.Failed);
-            _currentSequence = null;
             _lastInput = null;
             Debug.Log("You failed");
         }
