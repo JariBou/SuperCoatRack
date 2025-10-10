@@ -2,6 +2,7 @@
 using System.Diagnostics.CodeAnalysis;
 using _project.ScriptableObjects.Scripts;
 using JetBrains.Annotations;
+using UnityEngine;
 
 namespace _project.Scripts
 {
@@ -20,14 +21,17 @@ namespace _project.Scripts
             {
                 this.sequenceData.Add(action);
             }
+            Initialize();
         }
         
         public void Initialize()
         {
             int beatCount = 0;
+            Debug.Log("Initializing Sequence...");
             foreach (SequenceData.SequenceAction action in sequenceData)
             {
                 beatCount += action.BeatDelayToPrevious;
+                Debug.Log($"Action at beat {beatCount}");
                 _sequences.Add(beatCount, action);
             }
         }
@@ -35,6 +39,7 @@ namespace _project.Scripts
         public Sequence DoBeat()
         {
             _beatCounter++;
+            Debug.Log($"Doing Beat {_beatCounter} of Sequence");
             return this;
         }
 

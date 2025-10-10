@@ -14,4 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sequences:
   - {fileID: 11400000, guid: edd3ec4660af05f499d90010b7299b51, type: 2}
+  - {fileID: 11400000, guid: edd3ec4660af05f499d90010b7299b51, type: 2}
+  - {fileID: 11400000, guid: edd3ec4660af05f499d90010b7299b51, type: 2}
   Icon: {fileID: 21300000, guid: f601e6f405f3eb54c936eec953450f96, type: 3}
+  MusicToPlayEvent:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 0}

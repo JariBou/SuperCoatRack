@@ -9,6 +9,7 @@ namespace _project.Scripts.Managers
 {
     public class LevelSequencesManager : MonoBehaviour
     {
+        [Serializable]
         private class SequenceActionTimed
         {
             public SequenceData.SequenceAction SequenceAction;
@@ -60,15 +61,17 @@ namespace _project.Scripts.Managers
                 "StopMusic",
                 gameObject
             );
+            
             GameManager.Instance.PlayLevelMusic();
         }
 
         public void OnBeat()
         {
-            Debug.Log("Beat");
+            //Debug.Log("Beat");
             if (_currentSequence == null) return;
             if (_currentSequence.DoBeat().HasActionOnBeat(out SequenceData.SequenceAction actionOnBeat))
             {
+                Debug.Log("Sequence Has Action on beat");
                 _lastSequenceAction = new SequenceActionTimed(actionOnBeat, Time.time);
                 HandleInput();
             }
@@ -77,7 +80,6 @@ namespace _project.Scripts.Managers
             {
                 if (_currentSequence.PeakBeat(i, out SequenceData.SequenceAction peakedAction))
                 {
-                    
                 }
             }
         }
@@ -86,10 +88,13 @@ namespace _project.Scripts.Managers
         {
             //TODO: increment _sequenceIndex where needed
             Debug.Log("LoadNextSequence");
+            // TEMP ======
+            if (_currentSequence != null) return;
+            // ===========
             _currentSequence = Sequence.FromSequenceData(_levelData[_sequenceIndex]);
         }
 
-        public IEnumerable WaitForInput(float delay)
+        public IEnumerator WaitForInput(float delay)
         {
             _waitingForInput = true;
             yield return new WaitForSeconds(delay);
@@ -145,6 +150,8 @@ namespace _project.Scripts.Managers
                         throw new ArgumentOutOfRangeException();
                 }
             }
+
+            //StartCoroutine(WaitForInput(_lastSequenceAction.SequenceAction.gracePeriod.y));
             OnFail();
         }
 
