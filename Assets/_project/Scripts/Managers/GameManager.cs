@@ -57,18 +57,21 @@ namespace _project.Scripts.Managers
         private void OnBeatEvent(object in_cookie, AkCallbackType in_type, AkCallbackInfo in_info)
         {
             if (((uint)in_type & (uint)AkCallbackType.AK_MusicSyncBeat) == (uint)AkCallbackType.AK_MusicSyncBeat)
-            {    
+            {   
+                //On Beat
                 onBeatUnityEvent?.Invoke();
             }
 
             if (((uint)in_type & (uint)AkCallbackType.AK_EndOfEvent) == (uint)AkCallbackType.AK_EndOfEvent)
             {
+                //On End Beat
                 Debug.Log("End of beat");
                 EndGame();
             }
 
             if (((uint)in_type & (uint)AkCallbackType.AK_MusicSyncUserCue) == (uint)AkCallbackType.AK_MusicSyncUserCue)
             {
+                //On Cue 
                 Debug.Log("Event Trigger");
                 SequenceEvent?.Invoke();
             }
