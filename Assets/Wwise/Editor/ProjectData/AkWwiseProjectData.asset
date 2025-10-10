@@ -38,7 +38,7 @@ MonoBehaviour:
     ParentPath: Master-Mixer Hierarchy\Default Work Unit
     guid: 5651e5bf56d59a408c3dff830bcfc4b2
     GuidInternal: 
-    m_lastTime: -8584415764749440250
+    m_lastTime: -8584415212307732131
     List:
     - name: Master Audio Bus
       guid: d8a41415a61d2a41a17e75ca0c2149f3
@@ -94,7 +94,7 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: a4632d3c2cd3ab44959c4986e7d5aad3
     GuidInternal: 
-    m_lastTime: -8584415764755026457
+    m_lastTime: -8584415212307596421
     List:
     - name: BeatEvent
       guid: 17311fc5b20b774ea51aa652c2cb7da8
@@ -277,8 +277,39 @@ MonoBehaviour:
     ParentPath: Game Parameters\Default Work Unit
     guid: 5a0b48d573c7224f9db0e81c3aa84e0e
     GuidInternal: 
-    m_lastTime: -8584415764755026457
+    m_lastTime: -8584415212307696978
     List:
+    - name: GameParameter
+      guid: a856826d79199840b7308f291268bd97
+      id: 2613710368
+      PathAndIcons:
+      - ElementName: Game Parameters
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 5a0b48d573c7224f9db0e81c3aa84e0e
+      - ElementName: GameParameter
+        ObjectType: 4
+        guid: a856826d79199840b7308f291268bd97
+      Path: Game Parameters\Default Work Unit\GameParameter
+    - name: IsEventTrigger
+      guid: 544b14b51048f844a68e3921e2f85789
+      id: 2105463949
+      PathAndIcons:
+      - ElementName: Game Parameters
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 5a0b48d573c7224f9db0e81c3aa84e0e
+      - ElementName: GameParameter
+        ObjectType: 4
+        guid: a856826d79199840b7308f291268bd97
+      - ElementName: IsEventTrigger
+        ObjectType: 13
+        guid: 544b14b51048f844a68e3921e2f85789
+      Path: Game Parameters\Default Work Unit\GameParameter\IsEventTrigger
     - name: MainBusVolume
       guid: 6a95f5525c2bd84f8660ab6d841eb197
       id: 3797559158
@@ -289,10 +320,13 @@ MonoBehaviour:
       - ElementName: Default Work Unit
         ObjectType: 12
         guid: 5a0b48d573c7224f9db0e81c3aa84e0e
+      - ElementName: GameParameter
+        ObjectType: 4
+        guid: a856826d79199840b7308f291268bd97
       - ElementName: MainBusVolume
         ObjectType: 13
         guid: 6a95f5525c2bd84f8660ab6d841eb197
-      Path: Game Parameters\Default Work Unit\MainBusVolume
+      Path: Game Parameters\Default Work Unit\GameParameter\MainBusVolume
   StateWwu:
   - PhysicalPath: States\Default Work Unit.wwu
     PathAndIcons:

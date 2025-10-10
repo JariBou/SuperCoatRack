@@ -5,7 +5,32 @@
 			<ChildrenList>
 				<Folder Name="Events" ID="{D725E85B-9043-43E3-996D-2421205490A1}" ShortID="156153306">
 					<ChildrenList>
-						<Event Name="BeatEvent" ID="{C51F3117-0BB2-4E77-A51A-A652C2CB7DA8}"/>
+						<Event Name="BeatEvent" ID="{C51F3117-0BB2-4E77-A51A-A652C2CB7DA8}">
+							<ChildrenList>
+								<Action Name="" ID="{670A31B2-5D89-4E16-B41B-415A5E869E56}" ShortID="1048342361">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="38"/>
+										<Property Name="GameParameterValue" Type="Real64" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="IsEventTrigger" ID="{B5144B54-4810-44F8-A68E-3921E2F85789}" WorkUnitID="{D5480B5A-C773-4F22-9DB0-E81C3AA84E0E}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{2A8A3D39-0074-4448-8E81-751E3FBF210D}" ShortID="770570375">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="38"/>
+										<Property Name="Delay" Type="Real64" Value="0.1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="IsEventTrigger" ID="{B5144B54-4810-44F8-A68E-3921E2F85789}" WorkUnitID="{D5480B5A-C773-4F22-9DB0-E81C3AA84E0E}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
 						<Folder Name="Play" ID="{33F93AA4-1C03-4FFB-B218-4112BFF454C8}" ShortID="877910424">
 							<ChildrenList>
 								<Event Name="PlayWiiMusic" ID="{0C3F597D-533C-4EF2-ADA5-D5CD830DDB53}">

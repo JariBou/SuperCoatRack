@@ -49,8 +49,8 @@ namespace _project.Scripts.Managers
         {
             AkUnitySoundEngine.PostEvent(
                 LevelManager.Instance.CurrentLevelData.MusicToPlayEvent.Name,
-                gameObject,
-                (uint)AkCallbackType.AK_MusicSyncBeat | (uint)AkCallbackType.AK_MusicSyncPoint | (uint)AkCallbackType.AK_EndOfEvent,
+                gameObject, 
+                (uint)AkCallbackType.AK_MusicSyncUserCue | (uint)AkCallbackType.AK_EndOfEvent | (uint)AkCallbackType.AK_MusicSyncBeat,
                 OnBeatEvent,
                 null
             );
@@ -58,16 +58,20 @@ namespace _project.Scripts.Managers
 
         private void OnBeatEvent(object in_cookie, AkCallbackType in_type, AkCallbackInfo in_info)
         {
-            if (in_type == AkCallbackType.AK_MusicSyncBeat)
-            {
+            if (((uint)in_type & (uint)AkCallbackType.AK_MusicSyncBeat) == (uint)AkCallbackType.AK_MusicSyncBeat)
+            {    
                 onBeatUnityEvent?.Invoke();
             }
-            if (in_type == AkCallbackType.AK_EndOfEvent)
+
+            if (((uint)in_type & (uint)AkCallbackType.AK_EndOfEvent) == (uint)AkCallbackType.AK_EndOfEvent)
             {
                 Debug.Log("End of beat");
                 EndGame();
-            } else if (in_type == AkCallbackType.AK_MusicSyncPoint)
+            }
+
+            if (((uint)in_type & (uint)AkCallbackType.AK_MusicSyncUserCue) == (uint)AkCallbackType.AK_MusicSyncUserCue)
             {
+                Debug.Log("Event Trigger");
                 SequenceEvent?.Invoke();
             }
         }

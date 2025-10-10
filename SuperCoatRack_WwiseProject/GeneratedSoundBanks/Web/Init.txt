@@ -1,5 +1,5 @@
 Game Parameter	ID	Name			Wwise Object Path	Notes
-	3797559158	MainBusVolume			\Default Work Unit\MainBusVolume	
+	3797559158	MainBusVolume			\Default Work Unit\GameParameter\MainBusVolume	
 
 Audio Bus	ID	Name			Wwise Object Path	Notes
 	3803692087	Master Audio Bus			\Default Work Unit\Master Audio Bus	

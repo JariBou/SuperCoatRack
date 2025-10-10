@@ -10,7 +10,7 @@
     "Type": "User",
     "GUID": "{701ECBBD-9C7B-4030-8CDB-749EE5D1C7B9}",
     "Language": "SFX",
-    "Hash": "{B43378A9-FCF6-87AF-AB03-C2B8859D6B0F}",
+    "Hash": "{D6D5E294-126D-81BD-584B-80D89C07CE20}",
     "ObjectPath": "Init",
     "ShortName": "Init",
     "Path": "Init.bnk",
@@ -44,14 +44,20 @@
     ],
     "GameParameters": [
      {
+      "Id": "2105463949",
+      "Name": "IsEventTrigger",
+      "ObjectPath": "\\Game Parameters\\Default Work Unit\\GameParameter\\IsEventTrigger",
+      "GUID": "{B5144B54-4810-44F8-A68E-3921E2F85789}"
+     },
+     {
       "Id": "3797559158",
       "Name": "MainBusVolume",
-      "ObjectPath": "\\Game Parameters\\Default Work Unit\\MainBusVolume",
+      "ObjectPath": "\\Game Parameters\\Default Work Unit\\GameParameter\\MainBusVolume",
       "GUID": "{52F5956A-2B5C-4FD8-8660-AB6D841EB197}"
      }
     ]
    }
   ],
-  "FileHash": "{9ABD774F-E2B9-6A23-569D-82E2DBF7F194}"
+  "FileHash": "{B3D0E8B0-4F61-C101-4584-9A41F28311C5}"
  }
 }

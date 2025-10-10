@@ -3,11 +3,21 @@
 	<GameParameters>
 		<WorkUnit Name="Default Work Unit" ID="{D5480B5A-C773-4F22-9DB0-E81C3AA84E0E}" PersistMode="Standalone">
 			<ChildrenList>
-				<GameParameter Name="MainBusVolume" ID="{52F5956A-2B5C-4FD8-8660-AB6D841EB197}">
-					<PropertyList>
-						<Property Name="InitialValue" Type="Real64" Value="0"/>
-					</PropertyList>
-				</GameParameter>
+				<Folder Name="GameParameter" ID="{6D8256A8-1979-4098-B730-8F291268BD97}" ShortID="275822482">
+					<ChildrenList>
+						<GameParameter Name="MainBusVolume" ID="{52F5956A-2B5C-4FD8-8660-AB6D841EB197}">
+							<PropertyList>
+								<Property Name="InitialValue" Type="Real64" Value="100"/>
+							</PropertyList>
+						</GameParameter>
+						<GameParameter Name="IsEventTrigger" ID="{B5144B54-4810-44F8-A68E-3921E2F85789}">
+							<PropertyList>
+								<Property Name="InitialValue" Type="Real64" Value="0"/>
+								<Property Name="Max" Type="Real64" Value="1"/>
+							</PropertyList>
+						</GameParameter>
+					</ChildrenList>
+				</Folder>
 			</ChildrenList>
 		</WorkUnit>
 	</GameParameters>

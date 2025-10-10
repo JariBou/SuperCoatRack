@@ -172,6 +172,20 @@
 																		</MusicClip>
 																	</Local>
 																</Reference>
+																<Reference>
+																	<Local>
+																		<MusicEventCue Name="" ID="{49D6B380-7551-4DF8-B566-E4E0FB180FF6}" ShortID="417271995">
+																			<PropertyList>
+																				<Property Name="PlayAt" Type="Real64" Value="4363.63636363636"/>
+																			</PropertyList>
+																			<ReferenceList>
+																				<Reference Name="PostEventTarget">
+																					<ObjectRef Name="BeatEvent" ID="{C51F3117-0BB2-4E77-A51A-A652C2CB7DA8}" WorkUnitID="{3C2D63A4-D32C-44AB-959C-4986E7D5AAD3}"/>
+																				</Reference>
+																			</ReferenceList>
+																		</MusicEventCue>
+																	</Local>
+																</Reference>
 															</ObjectList>
 														</ObjectLists>
 													</MusicTrackSequence>
@@ -194,6 +208,46 @@
 												<PropertyList>
 													<Property Name="CueType" Type="int16" Value="1"/>
 													<Property Name="TimeMs" Type="Real64" Value="152344.695649658"/>
+												</PropertyList>
+											</MusicCue>
+										</Local>
+									</Reference>
+									<Reference>
+										<Local>
+											<MusicCue Name="Feur" ID="{62DA3BF7-6FD3-4337-93C3-9EDAD4F8414F}">
+												<PropertyList>
+													<Property Name="CueType" Type="int16" Value="2"/>
+													<Property Name="TimeMs" Type="Real64" Value="2181.81818181818"/>
+												</PropertyList>
+											</MusicCue>
+										</Local>
+									</Reference>
+									<Reference>
+										<Local>
+											<MusicCue Name="Feur" ID="{C23CC5DB-773F-45BF-BA5A-239371729586}">
+												<PropertyList>
+													<Property Name="CueType" Type="int16" Value="2"/>
+													<Property Name="TimeMs" Type="Real64" Value="4363.63636363636"/>
+												</PropertyList>
+											</MusicCue>
+										</Local>
+									</Reference>
+									<Reference>
+										<Local>
+											<MusicCue Name="Feur" ID="{EC096D3D-CEFE-4722-9D60-48113FAAA81A}">
+												<PropertyList>
+													<Property Name="CueType" Type="int16" Value="2"/>
+													<Property Name="TimeMs" Type="Real64" Value="6000"/>
+												</PropertyList>
+											</MusicCue>
+										</Local>
+									</Reference>
+									<Reference>
+										<Local>
+											<MusicCue Name="Feur" ID="{C237AFB5-7E56-4B55-8E49-FDAE28F4FCCD}">
+												<PropertyList>
+													<Property Name="CueType" Type="int16" Value="2"/>
+													<Property Name="TimeMs" Type="Real64" Value="7636.36363636364"/>
 												</PropertyList>
 											</MusicCue>
 										</Local>

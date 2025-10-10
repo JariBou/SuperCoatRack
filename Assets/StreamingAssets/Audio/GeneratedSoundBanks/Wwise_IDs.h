@@ -22,6 +22,7 @@ namespace AK
 
     namespace GAME_PARAMETERS
     {
+        static const AkUniqueID ISEVENTTRIGGER = 2105463949U;
         static const AkUniqueID MAINBUSVOLUME = 3797559158U;
     } // namespace GAME_PARAMETERS
 
