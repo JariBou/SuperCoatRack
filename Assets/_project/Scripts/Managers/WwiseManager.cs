@@ -27,7 +27,7 @@ namespace _project.Scripts.Managers
             if (in_type == AkCallbackType.AK_MusicSyncBeat)
             {
                 NbOfBar++;
-                Debug.Log("Beat détecté !");
+                // Debug.Log("Beat détecté !");
                 BeatEvent?.Invoke(NbOfBar);
             }
             if (in_type == AkCallbackType.AK_EndOfEvent)

@@ -45,7 +45,7 @@ namespace _project.Scripts.Managers
         
         private int _sequenceIndex;
         [SerializeField]
-        private int _peakAmount;
+        private int _peakAmount = 4;
         
         [CanBeNull] private Sequence _currentSequence;
         [CanBeNull] private SequenceActionTimed _lastSequenceAction;
@@ -108,15 +108,15 @@ namespace _project.Scripts.Managers
         private void InputManagerOnLastInputChanged(InputTypeLink obj)
         {
             if (_lastInput is not null) return;
+            _lastInput = obj;
             if (_waitingForInput)
             {
                 // Blablabla
-                HandleInput();
+                HandleInput(true);
             }
-            _lastInput = obj;
         }
 
-        private void HandleInput()
+        private void HandleInput(bool inputWaited = false)
         {
             if (_lastInput is null || _lastSequenceAction is null) return;
 
@@ -151,8 +151,13 @@ namespace _project.Scripts.Managers
                 }
             }
 
-            //StartCoroutine(WaitForInput(_lastSequenceAction.SequenceAction.gracePeriod.y));
-            OnFail();
+            if (inputWaited)
+            {
+                OnFail();
+            } else {
+                StartCoroutine(WaitForInput(_lastSequenceAction.SequenceAction.gracePeriod.y));
+            }
+            // OnFail();
         }
 
         private void OnSuccess()

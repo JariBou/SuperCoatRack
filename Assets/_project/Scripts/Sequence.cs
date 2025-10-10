@@ -39,7 +39,7 @@ namespace _project.Scripts
         public Sequence DoBeat()
         {
             _beatCounter++;
-            Debug.Log($"Doing Beat {_beatCounter} of Sequence");
+            // Debug.Log($"Doing Beat {_beatCounter} of Sequence");
             return this;
         }
 
