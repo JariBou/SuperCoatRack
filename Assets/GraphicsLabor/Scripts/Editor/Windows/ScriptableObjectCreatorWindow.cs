@@ -24,7 +24,7 @@ namespace GraphicsLabor.Scripts.Editor.Windows
         private List<ScriptableObject> _possibleSos = new();
 
         private Vector2 _cachedTextSize = Vector2.zero;
-        
+                private string _rememberedSoPath;
         [MenuItem("Window/GraphicLabor/SO Creator")]
         public static void ShowWindow()
         {
@@ -124,12 +124,28 @@ namespace GraphicsLabor.Scripts.Editor.Windows
                 if (GUI.Button(saveAsButtonRect, "Save As"))
                 {
                     //String tempPath = EditorUtility.OpenFolderPanel("Save ScriptableObject at:", "", "");
-                    string tempPath =
-                        EditorUtility.SaveFilePanelInProject("Save Asset", GetTempSoName(_selectedSoTab), "asset", "Enter the new SO Name");
+                     string tempPath = "";
+                    // string tempPath =
+                    //     EditorUtility.SaveFilePanelInProject("Save Asset", GetTempSoName(_selectedSoTab), "asset", "Enter the new SO Name");
+                    if (_rememberedSoPath is null)
+                    {
+                        tempPath = EditorUtility.SaveFilePanelInProject("Save Asset", GetTempSoName(_selectedSoTab), "asset", "Enter the new SO Name");
+                    }
+                    else
+                    {
+                        tempPath =
+                            EditorUtility.SaveFilePanel("Save Asset", _rememberedSoPath, GetTempSoName(_selectedSoTab), "asset");
+                    }
+                    
                     if (tempPath.StartsWith("Assets")) {
                         //GetSettings()._tempScriptableObjectsPath = tempPath;
                         ScriptableObject obj = Instantiate(_soNameAssetDic[_selectedSoTab]);
                         string objName = tempPath.Split('/')[^1].Replace(".asset", "");
+                        _rememberedSoPath = "";
+                        for (int i = 0; i < tempPath.Split('/').Length-1; i++)
+                        {
+                            _rememberedSoPath += tempPath.Split('/')[i] + '/';
+                        }
                         obj.name = objName;
                         IOHelper.CreateAssetAndOverride(obj, tempPath);
                     }
