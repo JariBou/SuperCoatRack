@@ -21,6 +21,7 @@
             Pickup,
             Drop,
             Scan,
+            Bell,
         }
     }
 }

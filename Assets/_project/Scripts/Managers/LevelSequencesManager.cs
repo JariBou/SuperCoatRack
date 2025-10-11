@@ -80,6 +80,10 @@ namespace _project.Scripts.Managers
             {
                 if (_currentSequence.PeakBeat(i, out SequenceData.SequenceAction peakedAction))
                 {
+                    if (i == 1)
+                    {
+                        Debug.Log("§144NEXT Sequence Has Action on beat");
+                    }
                 }
             }
         }
@@ -101,6 +105,7 @@ namespace _project.Scripts.Managers
             _waitingForInput = false;
             if (_lastSequenceAction is { state: SequenceActionTimed.SequenceActionState.None })
             {
+                Debug.Log("Failing after waiting....");
                 OnFail();
             }
         }
@@ -111,31 +116,47 @@ namespace _project.Scripts.Managers
             _lastInput = obj;
             if (_waitingForInput)
             {
+                Debug.Log("We were waiting for input !");
                 // Blablabla
                 HandleInput(true);
+                return;
             }
+            Debug.Log("Not waiting for input...");
         }
 
         private void HandleInput(bool inputWaited = false)
         {
+            Debug.Log("=== HANDLEINPUT ===");
             if (_lastInput is null)
             {
+                Debug.Log("_lastInput was null");
                 if (inputWaited)
                 {
                     OnFail();
                 }
+
+                if (_lastSequenceAction is not null)
+                {
+                    StartCoroutine(WaitForInput(_lastSequenceAction.SequenceAction.gracePeriod.y));
+                }
                 return;
             }
-            if (_lastSequenceAction is null) return;
+            if (_lastSequenceAction is null)
+            {
+                Debug.Log("_lastSequenceAction was null");
+                return;
+            }
 
             if (!_lastSequenceAction.WasInputInTimeFrame(_lastInput.Timestamp))
             {
+                Debug.Log($"Input was out of out of time: {_lastSequenceAction.Timestamp - _lastInput.Timestamp}");
                 OnFail();
                 return;
             }
 
             if (_lastSequenceAction.SequenceAction.ActionType == _lastInput.ActionType)
             {
+                Debug.Log($"Actions were of same type: {_lastSequenceAction.SequenceAction.ActionType}");
                 switch (_lastInput.ActionType)
                 {
                     case SequenceConfig.ActionType.Pickup:
@@ -145,6 +166,7 @@ namespace _project.Scripts.Managers
                             OnSuccess();    
                             return;
                         }
+                        Debug.Log($"Clothe type was not the same {_lastInput.ClotheType} != {_lastSequenceAction.SequenceAction.ClotheType}");
                         break;
                     case SequenceConfig.ActionType.Scan:
                         if (_lastInput.ClotheType == _lastSequenceAction.SequenceAction.ClotheType &&
@@ -153,6 +175,7 @@ namespace _project.Scripts.Managers
                             OnSuccess();
                             return;
                         }
+                        Debug.Log($"Clothe type was not the same {_lastInput.ClotheType} != {_lastSequenceAction.SequenceAction.ClotheType} or Color was not same {_lastInput.ClotheColor} !=  {_lastSequenceAction.SequenceAction.ClotheColor}");
                         break;
                     default:
                         throw new ArgumentOutOfRangeException();
@@ -163,6 +186,7 @@ namespace _project.Scripts.Managers
             {
                 OnFail();
             } else {
+                Debug.Log("Waiting for input...");
                 StartCoroutine(WaitForInput(_lastSequenceAction.SequenceAction.gracePeriod.y));
             }
             // OnFail();
@@ -170,15 +194,29 @@ namespace _project.Scripts.Managers
 
         private void OnSuccess()
         {
-            _lastSequenceAction!.SetState(SequenceActionTimed.SequenceActionState.Succeeded);
+            if (_lastSequenceAction?.state != SequenceActionTimed.SequenceActionState.None) return;
+            
+            _lastSequenceAction.SetState(SequenceActionTimed.SequenceActionState.Succeeded);
             _lastInput = null;
+            
+            if (_lastSequenceAction.SequenceAction.ActionType == SequenceConfig.ActionType.Bell)
+            {
+                _sequenceIndex++;
+            }
             Debug.Log("Success");
         }
 
         private void OnFail()
         {
+            if (_lastSequenceAction?.state != SequenceActionTimed.SequenceActionState.None) return;
+            
             _lastSequenceAction!.SetState(SequenceActionTimed.SequenceActionState.Failed);
             _lastInput = null;
+            
+            if (_lastSequenceAction.SequenceAction.ActionType == SequenceConfig.ActionType.Bell)
+            {
+                _sequenceIndex++;
+            }
             Debug.Log("You failed");
         }
 

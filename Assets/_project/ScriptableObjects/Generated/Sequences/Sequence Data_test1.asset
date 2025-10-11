@@ -14,12 +14,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sequenceData:
   - BeatDelayToPrevious: 8
-    gracePeriod: {x: 0, y: 0}
+    gracePeriod: {x: 1, y: 2}
     ActionType: 0
     ClotheType: 0
     ClotheColor: 0
   - BeatDelayToPrevious: 16
-    gracePeriod: {x: 0, y: 0}
+    gracePeriod: {x: 1, y: 2}
     ActionType: 1
     ClotheType: 0
     ClotheColor: 0

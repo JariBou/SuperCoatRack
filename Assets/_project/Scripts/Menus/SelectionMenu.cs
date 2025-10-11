@@ -1,5 +1,4 @@
-﻿using System;
-using _project.ScriptableObjects.Scripts;
+﻿using _project.ScriptableObjects.Scripts;
 using _project.Scripts.Managers;
 using _project.Scripts.Utils;
 using UnityEngine;

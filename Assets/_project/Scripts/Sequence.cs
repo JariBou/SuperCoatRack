@@ -1,7 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Diagnostics.CodeAnalysis;
 using _project.ScriptableObjects.Scripts;
-using JetBrains.Annotations;
 using UnityEngine;
 
 namespace _project.Scripts
