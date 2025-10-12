@@ -13,6 +13,8 @@ MonoBehaviour:
   m_Name: LevelData_temp
   m_EditorClassIdentifier: 
   sequences:
+  - {fileID: 11400000, guid: 3c205deb6066bf5498b54cbc190e8855, type: 2}
+  - {fileID: 11400000, guid: edd3ec4660af05f499d90010b7299b51, type: 2}
   - {fileID: 11400000, guid: edd3ec4660af05f499d90010b7299b51, type: 2}
   - {fileID: 11400000, guid: edd3ec4660af05f499d90010b7299b51, type: 2}
   - {fileID: 11400000, guid: edd3ec4660af05f499d90010b7299b51, type: 2}
