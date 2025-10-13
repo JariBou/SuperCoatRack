@@ -23,3 +23,8 @@ MonoBehaviour:
     ActionType: 2
     ClotheType: 2
     ClotheColor: 4
+  - BeatDelayToPrevious: 4
+    gracePeriod: {x: 0.5, y: 0.5}
+    ActionType: 3
+    ClotheType: 2
+    ClotheColor: 4

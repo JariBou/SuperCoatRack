@@ -15,7 +15,7 @@ namespace _project.Scripts
 
         private Sequence(SequenceData sequenceData)
         {
-            _beatCounter = 0;
+            _beatCounter = -1;
             foreach (SequenceData.SequenceAction action in sequenceData)
             {
                 this.sequenceData.Add(action);
