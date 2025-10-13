@@ -76,6 +76,9 @@ namespace _project.Scripts.Managers
                 state = newState;
             }
         }
+        
+        [SerializeField] private UIManager uiManager;
+
         [SerializeField]
         private LevelData _levelData;
         
@@ -105,9 +108,11 @@ namespace _project.Scripts.Managers
         {
             //Debug.Log("Beat");
             if (_currentSequence == null) return;
+            uiManager.ClearDisplay();
             if (_currentSequence.DoBeat().HasActionOnBeat(out SequenceData.SequenceAction actionOnBeat))
             {
                 Debug.Log("Sequence Has Action on beat");
+                uiManager.ChangeIconPosition(0, actionOnBeat);
                 _lastSequenceAction = new SequenceActionTimed(actionOnBeat, Time.time);
                 HandleInput();
             }
@@ -116,6 +121,7 @@ namespace _project.Scripts.Managers
             {
                 if (_currentSequence.PeakBeat(i, out SequenceData.SequenceAction peakedAction))
                 {
+                    uiManager.ChangeIconPosition(i, peakedAction);
                     if (i == 1)
                     {
                         Debug.Log("§144NEXT Sequence Has Action on beat");
@@ -128,9 +134,9 @@ namespace _project.Scripts.Managers
         {
             //TODO: increment _sequenceIndex where needed
             Debug.Log("LoadNextSequence");
-            // TEMP =========
-            if (_currentSequence != null) return;
-            // ==============
+            // // TEMP =========
+            // if (_currentSequence != null) return;
+            // // ==============
             _currentSequence = Sequence.FromSequenceData(_levelData[_sequenceIndex]);
         }
 
