@@ -18,54 +18,54 @@ MonoBehaviour:
     PerfectTimePercent: 0.1
     GoodTimePercent: 0.6
     ActionType: 2
-    ClotheType: 1
-    ClotheColor: 0
-  - BeatDelayToPrevious: 4
-    gracePeriod: {x: 0.5, y: 0.5}
-    PerfectTimePercent: 0.1
-    GoodTimePercent: 0.6
-    ActionType: 1
-    ClotheType: 1
-    ClotheColor: 0
-  - BeatDelayToPrevious: 4
-    gracePeriod: {x: 0.5, y: 0.5}
-    PerfectTimePercent: 0.1
-    GoodTimePercent: 0.6
-    ActionType: 2
-    ClotheType: 2
-    ClotheColor: 4
-  - BeatDelayToPrevious: 4
-    gracePeriod: {x: 0.5, y: 0.5}
-    PerfectTimePercent: 0.1
-    GoodTimePercent: 0.6
-    ActionType: 1
-    ClotheType: 2
-    ClotheColor: 4
-  - BeatDelayToPrevious: 4
-    gracePeriod: {x: 0.5, y: 0.5}
-    PerfectTimePercent: 0.1
-    GoodTimePercent: 0.6
-    ActionType: 0
-    ClotheType: 1
-    ClotheColor: 0
-  - BeatDelayToPrevious: 4
-    gracePeriod: {x: 0.5, y: 0.5}
-    PerfectTimePercent: 0.1
-    GoodTimePercent: 0.6
-    ActionType: 2
-    ClotheType: 1
-    ClotheColor: 0
-  - BeatDelayToPrevious: 4
-    gracePeriod: {x: 0.5, y: 0.5}
-    PerfectTimePercent: 0.1
-    GoodTimePercent: 0.6
-    ActionType: 2
     ClotheType: 0
-    ClotheColor: 3
+    ClotheColor: 2
   - BeatDelayToPrevious: 4
     gracePeriod: {x: 0.5, y: 0.5}
     PerfectTimePercent: 0.1
     GoodTimePercent: 0.6
     ActionType: 1
     ClotheType: 0
-    ClotheColor: 3
+    ClotheColor: 2
+  - BeatDelayToPrevious: 4
+    gracePeriod: {x: 0.5, y: 0.5}
+    PerfectTimePercent: 0.1
+    GoodTimePercent: 0.6
+    ActionType: 2
+    ClotheType: 0
+    ClotheColor: 6
+  - BeatDelayToPrevious: 4
+    gracePeriod: {x: 0.5, y: 0.5}
+    PerfectTimePercent: 0.1
+    GoodTimePercent: 0.6
+    ActionType: 1
+    ClotheType: 0
+    ClotheColor: 6
+  - BeatDelayToPrevious: 2
+    gracePeriod: {x: 0.5, y: 0.5}
+    PerfectTimePercent: 0.1
+    GoodTimePercent: 0.6
+    ActionType: 3
+    ClotheType: 2
+    ClotheColor: 5
+  - BeatDelayToPrevious: 2
+    gracePeriod: {x: 0.5, y: 0.5}
+    PerfectTimePercent: 0.1
+    GoodTimePercent: 0.6
+    ActionType: 3
+    ClotheType: 2
+    ClotheColor: 5
+  - BeatDelayToPrevious: 2
+    gracePeriod: {x: 0.5, y: 0.5}
+    PerfectTimePercent: 0.1
+    GoodTimePercent: 0.6
+    ActionType: 3
+    ClotheType: 2
+    ClotheColor: 5
+  - BeatDelayToPrevious: 2
+    gracePeriod: {x: 0.5, y: 0.5}
+    PerfectTimePercent: 0.1
+    GoodTimePercent: 0.6
+    ActionType: 3
+    ClotheType: 2
+    ClotheColor: 5

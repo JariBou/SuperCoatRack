@@ -10,7 +10,7 @@
     "Type": "User",
     "GUID": "{3F1F1E21-278D-41AA-8232-2670EB8A2976}",
     "Language": "SFX",
-    "Hash": "{A1736DCA-EC75-751D-C0CC-F8BEAC35C322}",
+    "Hash": "{70D25341-A774-8807-1B61-9A0894B3A692}",
     "ObjectPath": "\\SoundBanks\\Default Work Unit\\Music",
     "ShortName": "Music",
     "Path": "Music.bnk",
@@ -85,8 +85,8 @@
       "ObjectPath": "\\Events\\Default Work Unit\\Events\\Play\\PlayWiiMusic",
       "GUID": "{0C3F597D-533C-4EF2-ADA5-D5CD830DDB53}",
       "DurationType": "OneShot",
-      "DurationMin": "153.12083",
-      "DurationMax": "153.12083",
+      "DurationMin": "152.85625",
+      "DurationMax": "152.85625",
       "MediaRefs": [
        {
         "Id": "652455484"
@@ -106,6 +106,6 @@
     ]
    }
   ],
-  "FileHash": "{6D2E6DD2-072F-EFC2-7051-DBCE9736E561}"
+  "FileHash": "{0649E28D-E5BF-D642-6506-94D8DAABD3C4}"
  }
 }

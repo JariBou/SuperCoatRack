@@ -6,7 +6,7 @@ Event	ID	Name			Wwise Object Path	Notes
 	3517968107	BeatEvent			\Default Work Unit\Events\BeatEvent	
 
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
-	493148124	Dachlatte-_Paul-Seul-Remix_	C:\Users\jerem\Documents\UNITY\SuperCoatRack\SuperCoatRack_WwiseProject\.cache\ED\{ED686670-C4CF-5051-9816-8DE656978B3B}.wem		\Interactive Music Hierarchy\Default Work Unit\Music\Daschlatt\Dachlatte-_Paul-Seul-Remix_		30463840
-	652455484	Wii-Party-Soundtrack-Main-Menu-Music	C:\Users\jerem\Documents\UNITY\SuperCoatRack\SuperCoatRack_WwiseProject\.cache\9D\{9D8A5573-78C8-D45E-B27C-9A6C0B1631CD}.wem		\Interactive Music Hierarchy\Default Work Unit\Music\MainMusic\Wii-Party-Soundtrack-Main-Menu-Music		26890336
-	809893259	Kirby - Poyo Poyo	C:\Users\jerem\Documents\UNITY\SuperCoatRack\SuperCoatRack_WwiseProject\.cache\AE\{AECDAD6A-E3AA-12FA-D152-E77E5B39B64E}.wem		\Interactive Music Hierarchy\Default Work Unit\Music\ShortMusic\Kirby - Poyo Poyo		1036896
+	493148124	Dachlatte-_Paul-Seul-Remix_	C:\Users\yanng\SuperCoatRack\SuperCoatRack_WwiseProject\.cache\ED\{ED686670-C4CF-5051-9816-8DE656978B3B}.wem		\Interactive Music Hierarchy\Default Work Unit\Music\Daschlatt\Dachlatte-_Paul-Seul-Remix_		30463840
+	652455484	Wii-Party-Soundtrack-Main-Menu-Music	C:\Users\yanng\SuperCoatRack\SuperCoatRack_WwiseProject\.cache\9D\{9D8A5573-78C8-D45E-B27C-9A6C0B1631CD}.wem		\Interactive Music Hierarchy\Default Work Unit\Music\MainMusic\Wii-Party-Soundtrack-Main-Menu-Music		26890336
+	809893259	Kirby - Poyo Poyo	C:\Users\yanng\SuperCoatRack\SuperCoatRack_WwiseProject\.cache\AE\{AECDAD6A-E3AA-12FA-D152-E77E5B39B64E}.wem		\Interactive Music Hierarchy\Default Work Unit\Music\ShortMusic\Kirby - Poyo Poyo		1036896
 

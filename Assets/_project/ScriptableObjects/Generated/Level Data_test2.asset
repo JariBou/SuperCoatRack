@@ -13,10 +13,14 @@ MonoBehaviour:
   m_Name: Level Data_test2
   m_EditorClassIdentifier: 
   sequences:
-  - {fileID: 11400000, guid: f1ca102b559a6c04c9b3dd0d9f76997b, type: 2}
-  - {fileID: 11400000, guid: c68a29913a2b424468ed542393f77433, type: 2}
-  - {fileID: 11400000, guid: 70255b08985687f44a64bb1511e45dd9, type: 2}
-  - {fileID: 11400000, guid: 10de796be36564942ad5e10a596918ca, type: 2}
+  - {fileID: 11400000, guid: c3722788058e6e443ba9ae4ff76c928e, type: 2}
+  - {fileID: 11400000, guid: 38c81c3344136c34189cc017f9c3a916, type: 2}
+  - {fileID: 11400000, guid: 1e857eea2cdfc5d4db44486cd9b171f8, type: 2}
+  - {fileID: 11400000, guid: db8d88616d99dac40ab8d82dbf0971e0, type: 2}
+  - {fileID: 11400000, guid: ec9dc59c02dd8f04ca7ac9e1ca69c09e, type: 2}
+  - {fileID: 11400000, guid: 56ceb600c2728f64990824287a4b11e0, type: 2}
+  - {fileID: 11400000, guid: 16bc8e97a1c8ae04fb9bf8c0f85a82ec, type: 2}
+  - {fileID: 11400000, guid: 865c361d3fb0a1c46b9b51f3a939d610, type: 2}
   Icon: {fileID: 21300000, guid: f601e6f405f3eb54c936eec953450f96, type: 3}
   MusicToPlayEvent:
     idInternal: 0
