@@ -136,6 +136,15 @@ public partial class @PlayerInputsMap: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Return"",
+                    ""type"": ""Button"",
+                    ""id"": ""0f2613d3-f5a5-4ee2-b7e2-6acac12403e2"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -143,6 +152,17 @@ public partial class @PlayerInputsMap: IInputActionCollection2, IDisposable
                     ""name"": """",
                     ""id"": ""21745bd4-2581-46b8-b392-4475df29e227"",
                     ""path"": ""<Joystick>/stick/down"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Left"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""3e0e7a50-130a-403b-ab17-852343e732c8"",
+                    ""path"": ""<Keyboard>/leftArrow"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
@@ -163,8 +183,30 @@ public partial class @PlayerInputsMap: IInputActionCollection2, IDisposable
                 },
                 {
                     ""name"": """",
+                    ""id"": ""e4dcd1cd-0ff4-4422-9c30-6cab53ca8e54"",
+                    ""path"": ""<Keyboard>/rightArrow"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Right"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
                     ""id"": ""f86f40f9-a481-46c6-9d3b-43fc7f69704f"",
                     ""path"": ""<Joystick>/stick/left"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Up"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""486bb4cb-1f77-4780-8dbc-3d463aba2dd2"",
+                    ""path"": ""<Keyboard>/upArrow"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
@@ -185,12 +227,34 @@ public partial class @PlayerInputsMap: IInputActionCollection2, IDisposable
                 },
                 {
                     ""name"": """",
+                    ""id"": ""1b97cf6a-90fc-4bf0-9b07-40092029dfa2"",
+                    ""path"": ""<Keyboard>/downArrow"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Down"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
                     ""id"": ""9c621ac7-02e8-4be2-b3a3-b2925ef2d4b7"",
                     ""path"": ""<HID::DragonRise Inc.   Generic   USB  Joystick  >/button3"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
                     ""action"": ""Confirm"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""5180a98e-9171-4811-8f5e-db49eabdb7cb"",
+                    ""path"": ""<Keyboard>/backspace"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Return"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -358,6 +422,7 @@ public partial class @PlayerInputsMap: IInputActionCollection2, IDisposable
         m_MenuMap_Up = m_MenuMap.FindAction("Up", throwIfNotFound: true);
         m_MenuMap_Down = m_MenuMap.FindAction("Down", throwIfNotFound: true);
         m_MenuMap_Confirm = m_MenuMap.FindAction("Confirm", throwIfNotFound: true);
+        m_MenuMap_Return = m_MenuMap.FindAction("Return", throwIfNotFound: true);
         // InGameMap
         m_InGameMap = asset.FindActionMap("InGameMap", throwIfNotFound: true);
         m_InGameMap_Coat = m_InGameMap.FindAction("Coat", throwIfNotFound: true);
@@ -451,6 +516,7 @@ public partial class @PlayerInputsMap: IInputActionCollection2, IDisposable
     private readonly InputAction m_MenuMap_Up;
     private readonly InputAction m_MenuMap_Down;
     private readonly InputAction m_MenuMap_Confirm;
+    private readonly InputAction m_MenuMap_Return;
     /// <summary>
     /// Provides access to input actions defined in input action map "MenuMap".
     /// </summary>
@@ -482,6 +548,10 @@ public partial class @PlayerInputsMap: IInputActionCollection2, IDisposable
         /// Provides access to the underlying input action "MenuMap/Confirm".
         /// </summary>
         public InputAction @Confirm => m_Wrapper.m_MenuMap_Confirm;
+        /// <summary>
+        /// Provides access to the underlying input action "MenuMap/Return".
+        /// </summary>
+        public InputAction @Return => m_Wrapper.m_MenuMap_Return;
         /// <summary>
         /// Provides access to the underlying input action map instance.
         /// </summary>
@@ -523,6 +593,9 @@ public partial class @PlayerInputsMap: IInputActionCollection2, IDisposable
             @Confirm.started += instance.OnConfirm;
             @Confirm.performed += instance.OnConfirm;
             @Confirm.canceled += instance.OnConfirm;
+            @Return.started += instance.OnReturn;
+            @Return.performed += instance.OnReturn;
+            @Return.canceled += instance.OnReturn;
         }
 
         /// <summary>
@@ -549,6 +622,9 @@ public partial class @PlayerInputsMap: IInputActionCollection2, IDisposable
             @Confirm.started -= instance.OnConfirm;
             @Confirm.performed -= instance.OnConfirm;
             @Confirm.canceled -= instance.OnConfirm;
+            @Return.started -= instance.OnReturn;
+            @Return.performed -= instance.OnReturn;
+            @Return.canceled -= instance.OnReturn;
         }
 
         /// <summary>
@@ -764,6 +840,13 @@ public partial class @PlayerInputsMap: IInputActionCollection2, IDisposable
         /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
         /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
         void OnConfirm(InputAction.CallbackContext context);
+        /// <summary>
+        /// Method invoked when associated input action "Return" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// </summary>
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
+        void OnReturn(InputAction.CallbackContext context);
     }
     /// <summary>
     /// Interface to implement callback methods for all input action callbacks associated with input actions defined by "InGameMap" which allows adding and removing callbacks.

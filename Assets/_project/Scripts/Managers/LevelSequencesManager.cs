@@ -242,7 +242,7 @@ namespace _project.Scripts.Managers
         
         private void FinishSequenceAction(SequenceActionState actionState = SequenceActionState.Failed)
         {
-            if (_lastSequenceAction?.state != SequenceActionState.None) return;
+            if (_lastSequenceAction?.state != SequenceActionState.None || _currentSequence is null) return;
             
             _lastSequenceAction.SetState(actionState);
             Debug.Log($"Finished Sequence Action with state: {actionState}");
@@ -250,7 +250,7 @@ namespace _project.Scripts.Managers
             
             ScoreManager.SequenceActionFinished(_lastSequenceAction);
             
-            if (_lastSequenceAction.SequenceAction.ActionType == SequenceConfig.ActionType.Bell)
+            if (_currentSequence.IsLastSequence(_lastSequenceAction))
             {
                 _sequenceIndex++;
             }

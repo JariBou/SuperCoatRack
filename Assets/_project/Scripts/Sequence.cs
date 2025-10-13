@@ -1,6 +1,8 @@
 ﻿using System.Collections.Generic;
 using System.Diagnostics.CodeAnalysis;
+using System.Linq;
 using _project.ScriptableObjects.Scripts;
+using _project.Scripts.Managers;
 using UnityEngine;
 
 namespace _project.Scripts
@@ -12,6 +14,7 @@ namespace _project.Scripts
 
         private Dictionary<int, SequenceData.SequenceAction> _sequences = new();
 
+        public bool IsOver { get; private set; }
 
         private Sequence(SequenceData sequenceData)
         {
@@ -54,7 +57,14 @@ namespace _project.Scripts
         
         public bool PeakBeat(int peakCount, [MaybeNullWhen(false)] out SequenceData.SequenceAction result)
         {
-            return _sequences.TryGetValue(_beatCounter + peakCount, out result);
+            int beatCounter = _beatCounter + peakCount;
+            return _sequences.TryGetValue(beatCounter, out result);
+        }
+
+        public bool IsLastSequence(LevelSequencesManager.SequenceActionTimed lastSequenceAction)
+        {
+            SequenceData.SequenceAction sequenceAction = lastSequenceAction.SequenceAction;
+            return sequenceData[^1] == sequenceAction;
         }
     }
 }
