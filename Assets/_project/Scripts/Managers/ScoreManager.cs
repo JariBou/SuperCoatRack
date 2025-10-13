@@ -6,24 +6,34 @@ namespace _project.Scripts.Managers
 {
     public class ScoreManager : MonoBehaviour
     {
-        public static ScoreManager Instance => _instance;
-        private static ScoreManager _instance;
+        public static ScoreManager Instance { get; private set; }
+
+        public static event Action<int> ScoreChanged;
 
         [SerializeField]
         private ScoreData _scoreData;
 
         private int _score;
-        public int Score => _score;
-        
+
+        public int Score
+        {
+            get => _score;
+            private set
+            {
+                _score = value;
+                ScoreChanged?.Invoke(_score);
+            }
+        }
+
         private void Awake()
         {
-            if (_instance != null)
+            if (Instance != null)
             {
                 Destroy(gameObject);
                 return;
             }
             
-            _instance = this;
+            Instance = this;
         }
 
         private int GetScoreOfState(LevelSequencesManager.SequenceActionState actionState)
@@ -53,7 +63,7 @@ namespace _project.Scripts.Managers
 
         private void AddScore(int scoreAmount)
         {
-            _score += scoreAmount;
+            Score += scoreAmount;
         }
     }
 }
