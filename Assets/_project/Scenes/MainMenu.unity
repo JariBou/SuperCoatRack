@@ -3438,6 +3438,7 @@ MonoBehaviour:
   _mainMenuPanel: {fileID: 2064464347}
   _settingsPanel: {fileID: 889996440}
   _selectionPanel: {fileID: 1153859751}
+  _selectionMenu: {fileID: 1153859753}
 --- !u!1 &1624194830
 GameObject:
   m_ObjectHideFlags: 0
@@ -3808,12 +3809,12 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 18
+  m_fontSize: 20
   m_fontSizeBase: 14
   m_fontWeight: 400
   m_enableAutoSizing: 1
-  m_fontSizeMin: 18
-  m_fontSizeMax: 44.6
+  m_fontSizeMin: 20
+  m_fontSizeMax: 72
   m_fontStyle: 0
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
@@ -4107,11 +4108,37 @@ MonoBehaviour:
     m_ActionId: 1ba19030-8d4d-489c-9fde-4cc10adee64a
     m_ActionName: 'MenuMap/Right[/DragonRise Inc.   Generic   USB  Joystick  /button6]'
   - m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1560452644}
+        m_TargetAssemblyTypeName: _project.Scripts.Menus.MainMenu.MainMenuScript,
+          Assembly-CSharp
+        m_MethodName: OnJoystickReturn
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_ActionId: ba3ebcf2-96ee-4e80-b6c8-6340e49e013c
     m_ActionName: MenuMap/Up
   - m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1560452644}
+        m_TargetAssemblyTypeName: _project.Scripts.Menus.MainMenu.MainMenuScript,
+          Assembly-CSharp
+        m_MethodName: OnJoystickConfirm
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_ActionId: cad42fad-eb74-4c42-be97-5fc1ecf2c1be
     m_ActionName: MenuMap/Down
   - m_PersistentCalls:
@@ -4124,16 +4151,24 @@ MonoBehaviour:
     m_ActionName: InGameMap/Coat1
   - m_PersistentCalls:
       m_Calls: []
-    m_ActionId: a8020c7f-b5fd-4d95-9a0f-899bcd9cd60b
-    m_ActionName: InGameMap/Coat2
-  - m_PersistentCalls:
-      m_Calls: []
     m_ActionId: 91c393fd-fdb6-4b49-90bf-f6523b3f55ed
     m_ActionName: InGameMap/Hat1
   - m_PersistentCalls:
       m_Calls: []
-    m_ActionId: fd1fe117-7077-4e34-bea1-338441362edc
-    m_ActionName: InGameMap/Hat2
+    m_ActionId: 502410b8-8c34-477d-af15-733cc81d7b40
+    m_ActionName: 'InGameMap/Coat1[/Keyboard/v]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 76c8728f-b754-4150-8f01-ca672330b906
+    m_ActionName: 'InGameMap/Hat1[/Keyboard/j]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 555b59e3-494a-4997-a9cc-80af5275bcb4
+    m_ActionName: 'InGameMap/Reset[/Keyboard/r]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 0f2613d3-f5a5-4ee2-b7e2-6acac12403e2
+    m_ActionName: 'MenuMap/Return[/Keyboard/backspace]'
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: MenuMap
@@ -5126,7 +5161,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 68.6
+  m_fontSize: 50.7
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -5164,7 +5199,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_margin: {x: 10, y: 10, z: 10, w: 10}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0

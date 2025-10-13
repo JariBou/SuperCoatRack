@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 namespace _project.Scripts.Menus.MainMenu
 {
@@ -12,10 +13,35 @@ namespace _project.Scripts.Menus.MainMenu
         [SerializeField] 
         private GameObject _selectionPanel;
         
+        [SerializeField]
+        private SelectionMenu _selectionMenu;
+        
         private void Start()
         {
             _settingsPanel.SetActive(false);
             _selectionPanel.SetActive(false);
+        }
+
+        public void OnJoystickConfirm(InputAction.CallbackContext ctx)
+        {
+            if (!ctx.performed) return;
+            if (!_mainMenuPanel.activeSelf)
+            {
+                _selectionMenu.Play();
+            }
+            else
+            {
+                ToggleSelection();
+            }
+        }
+        
+        public void OnJoystickReturn(InputAction.CallbackContext ctx)
+        {
+            if (!ctx.performed) return;
+            if (!_mainMenuPanel.activeSelf)
+            {
+                ToggleSelection();
+            }
         }
 
         public void ToggleSelection()
