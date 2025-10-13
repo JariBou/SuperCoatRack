@@ -3,9 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using _project.Scripts;
 using GraphicsLabor.Scripts.Attributes.LaborerAttributes.ScriptableObjectAttributes;
-using JetBrains.Annotations;
 using UnityEngine;
-using Object = UnityEngine.Object;
 
 namespace _project.ScriptableObjects.Scripts
 {

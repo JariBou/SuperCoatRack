@@ -13,7 +13,11 @@
         {
             Red,
             Blue,
-            Green,
+            Yellow,
+            Black,
+            BrownTalon,
+            BrownShoes,
+            BlackRed,
         }
 
         public enum ActionType
@@ -21,6 +25,7 @@
             Pickup,
             Drop,
             Scan,
+            Bell,
         }
     }
 }

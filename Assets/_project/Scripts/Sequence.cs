@@ -1,7 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Diagnostics.CodeAnalysis;
 using _project.ScriptableObjects.Scripts;
-using JetBrains.Annotations;
 using UnityEngine;
 
 namespace _project.Scripts
@@ -39,7 +38,7 @@ namespace _project.Scripts
         public Sequence DoBeat()
         {
             _beatCounter++;
-            Debug.Log($"Doing Beat {_beatCounter} of Sequence");
+            // Debug.Log($"Doing Beat {_beatCounter} of Sequence");
             return this;
         }
 

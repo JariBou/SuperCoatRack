@@ -2,6 +2,7 @@
 using JetBrains.Annotations;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 
 namespace _project.Scripts.Managers.Inputs
 {
@@ -18,6 +19,14 @@ namespace _project.Scripts.Managers.Inputs
             {
                 _lastInput = value;
                 LastInputChanged?.Invoke(_lastInput);
+            }
+        }
+
+        public void Restart(InputAction.CallbackContext ctx)
+        {
+            if (ctx.performed)
+            {
+                SceneManager.LoadScene(SceneManager.GetActiveScene().name);
             }
         }
 
