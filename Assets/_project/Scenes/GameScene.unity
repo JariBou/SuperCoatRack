@@ -887,7 +887,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fd337995f9c444dcaef69c102d4eceac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  uiManager: {fileID: 752018357}
   _levelData: {fileID: 0}
   _peakAmount: 4
 --- !u!1 &702050527
@@ -1026,6 +1025,17 @@ MonoBehaviour:
   - {fileID: 1699032919}
   - {fileID: 209572863}
   - {fileID: 1007552737}
+  coatToDisplay:
+  - {fileID: 21300000, guid: be1733bc163a7214dbb3e2f764d6e7e2, type: 3}
+  - {fileID: 21300000, guid: 48bf5ce141494ff45b25b8405ec198a6, type: 3}
+  - {fileID: 21300000, guid: 2dd02308c9be44243ad372ecc5cf9d2c, type: 3}
+  hatToDisplay:
+  - {fileID: 21300000, guid: 7a205e6552cb7964eb48ebee347d07bf, type: 3}
+  - {fileID: 21300000, guid: dfe8898ffe32d97408a6984b25c3f496, type: 3}
+  shoesToDisplay:
+  - {fileID: 21300000, guid: 818b9c78a47309d4588d49c03b519d71, type: 3}
+  - {fileID: 21300000, guid: e831c3e97fa5d784e817e6b142181a3c, type: 3}
+  slotForCloth: {fileID: 922226781}
 --- !u!1 &821071801
 GameObject:
   m_ObjectHideFlags: 0

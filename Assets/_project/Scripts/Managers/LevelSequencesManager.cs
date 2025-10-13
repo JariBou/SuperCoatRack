@@ -114,11 +114,12 @@ namespace _project.Scripts.Managers
                 HandleInput();
             }
 
-            for (int i = 1; i <= _peakAmount; i++)
+            for (int i = _peakAmount; i > 0; i--)
             {
                 if (_currentSequence.PeakBeat(i, out SequenceData.SequenceAction peakedAction))
                 {
                     UIManager.Instance.ChangeIconPosition(i, peakedAction);
+                    UIManager.Instance.ChangeClothIcon(peakedAction, (int)peakedAction.ClotheColor);
                     if (i == 1)
                     {
                         Debug.Log("§144NEXT Sequence Has Action on beat");
