@@ -9,8 +9,18 @@ namespace _project.Scripts.Managers
 {
     public class LevelSequencesManager : MonoBehaviour
     {
+        public enum SequenceActionState
+        {
+            None = 0,
+            Failed = 1,
+            Succeeded = 2,
+            Bad = 3,
+            Good = 4,
+            Perfect = 5
+        }
+        
         [Serializable]
-        private class SequenceActionTimed
+        public class SequenceActionTimed
         {
             public SequenceData.SequenceAction SequenceAction;
             public float Timestamp;
@@ -22,22 +32,48 @@ namespace _project.Scripts.Managers
                 Timestamp = time;
             }
 
-            public bool WasInputInTimeFrame(float lastInputTimestamp)
+            public bool WasInputInTimeFrame(float lastInputTimestamp, out SequenceActionState state)
             {
                 float timeDiff = Timestamp - lastInputTimestamp;
-                return SequenceAction.gracePeriod.x > timeDiff && timeDiff > -SequenceAction.gracePeriod.y;
+                if (!(SequenceAction.gracePeriod.x > timeDiff && timeDiff > -SequenceAction.gracePeriod.y))
+                {
+                    state = SequenceActionState.Failed;
+                    return false;
+                }
+
+                float abs = Mathf.Abs(timeDiff);
+                if (Mathf.Approximately(Mathf.Sign(timeDiff), 1))
+                {
+                    float dTime = abs / SequenceAction.gracePeriod.x;
+                    CheckInputState(out state, dTime);
+                }
+                else
+                {
+                    float dTime = abs / SequenceAction.gracePeriod.y;
+                    CheckInputState(out state, dTime);
+                }
+                return true;
+
+                void CheckInputState(out SequenceActionState sequenceActionState, float dTime)
+                {
+                    if (dTime <= SequenceAction.PerfectTimePercent)
+                    {
+                        sequenceActionState = SequenceActionState.Perfect;
+                        
+                    } else if (dTime <= SequenceAction.GoodTimePercent)
+                    {
+                        sequenceActionState = SequenceActionState.Good;
+                    }
+                    else
+                    {
+                        sequenceActionState = SequenceActionState.Bad;
+                    }
+                }
             }
 
             public void SetState(SequenceActionState newState)
             {
                 state = newState;
-            }
-
-            public enum SequenceActionState
-            {
-                None,
-                Failed,
-                Succeeded,
             }
         }
         [SerializeField]
@@ -103,7 +139,7 @@ namespace _project.Scripts.Managers
             _waitingForInput = true;
             yield return new WaitForSeconds(delay);
             _waitingForInput = false;
-            if (_lastSequenceAction is { state: SequenceActionTimed.SequenceActionState.None })
+            if (_lastSequenceAction is { state: SequenceActionState.None })
             {
                 Debug.Log("Failing after waiting....");
                 OnFail();
@@ -127,6 +163,12 @@ namespace _project.Scripts.Managers
         private void HandleInput(bool inputWaited = false)
         {
             Debug.Log("=== HANDLEINPUT ===");
+            if (_lastSequenceAction is null || _lastSequenceAction.state != SequenceActionState.None)
+            {
+                Debug.Log("_lastSequenceAction was null or already completed");
+                return;
+            }
+            
             if (_lastInput is null)
             {
                 Debug.Log("_lastInput was null");
@@ -135,19 +177,11 @@ namespace _project.Scripts.Managers
                     OnFail();
                 }
 
-                if (_lastSequenceAction is not null)
-                {
-                    StartCoroutine(WaitForInput(_lastSequenceAction.SequenceAction.gracePeriod.y));
-                }
+                StartCoroutine(WaitForInput(_lastSequenceAction.SequenceAction.gracePeriod.y));
                 return;
             }
-            if (_lastSequenceAction is null)
-            {
-                Debug.Log("_lastSequenceAction was null");
-                return;
-            }
-
-            if (!_lastSequenceAction.WasInputInTimeFrame(_lastInput.Timestamp))
+            
+            if (!_lastSequenceAction.WasInputInTimeFrame(_lastInput.Timestamp, out SequenceActionState actionState))
             {
                 Debug.Log($"Input was out of out of time: {_lastSequenceAction.Timestamp - _lastInput.Timestamp}");
                 OnFail();
@@ -163,7 +197,7 @@ namespace _project.Scripts.Managers
                     case SequenceConfig.ActionType.Drop:
                         if (_lastInput.ClotheType == _lastSequenceAction.SequenceAction.ClotheType)
                         {
-                            OnSuccess();    
+                            OnSuccess(actionState);    
                             return;
                         }
                         Debug.Log($"Clothe type was not the same {_lastInput.ClotheType} != {_lastSequenceAction.SequenceAction.ClotheType}");
@@ -172,7 +206,7 @@ namespace _project.Scripts.Managers
                         if (_lastInput.ClotheType == _lastSequenceAction.SequenceAction.ClotheType &&
                             _lastInput.ClotheColor == _lastSequenceAction.SequenceAction.ClotheColor)
                         {
-                            OnSuccess();
+                            OnSuccess(actionState);
                             return;
                         }
                         Debug.Log($"Clothe type was not the same {_lastInput.ClotheType} != {_lastSequenceAction.SequenceAction.ClotheType} or Color was not same {_lastInput.ClotheColor} !=  {_lastSequenceAction.SequenceAction.ClotheColor}");
@@ -192,32 +226,30 @@ namespace _project.Scripts.Managers
             // OnFail();
         }
 
-        private void OnSuccess()
+        private void OnSuccess(SequenceActionState actionState)
         {
-            if (_lastSequenceAction?.state != SequenceActionTimed.SequenceActionState.None) return;
-            
-            _lastSequenceAction.SetState(SequenceActionTimed.SequenceActionState.Succeeded);
-            _lastInput = null;
-            
-            if (_lastSequenceAction.SequenceAction.ActionType == SequenceConfig.ActionType.Bell)
-            {
-                _sequenceIndex++;
-            }
-            Debug.Log("Success");
+            FinishSequenceAction(actionState);
         }
 
         private void OnFail()
         {
-            if (_lastSequenceAction?.state != SequenceActionTimed.SequenceActionState.None) return;
+            FinishSequenceAction();
+        }
+        
+        private void FinishSequenceAction(SequenceActionState actionState = SequenceActionState.Failed)
+        {
+            if (_lastSequenceAction?.state != SequenceActionState.None) return;
             
-            _lastSequenceAction!.SetState(SequenceActionTimed.SequenceActionState.Failed);
+            _lastSequenceAction.SetState(actionState);
+            Debug.Log($"Finished Sequence Action with state: {actionState}");
             _lastInput = null;
+            
+            ScoreManager.SequenceActionFinished(_lastSequenceAction);
             
             if (_lastSequenceAction.SequenceAction.ActionType == SequenceConfig.ActionType.Bell)
             {
                 _sequenceIndex++;
             }
-            Debug.Log("You failed");
         }
 
         private void OnEnable()
