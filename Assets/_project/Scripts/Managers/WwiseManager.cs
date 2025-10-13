@@ -15,10 +15,7 @@ namespace _project.Scripts.Managers
         {
             AkUnitySoundEngine.PostEvent(
                 playMusicEvent.Name,
-                gameObject,
-                (uint)AkCallbackType.AK_MusicSyncBeat | (uint)AkCallbackType.AK_EndOfEvent,
-                OnBeatEvent,
-                null
+                gameObject
             );
         }
 

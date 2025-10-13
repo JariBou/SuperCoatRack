@@ -9,6 +9,22 @@ public class UIManager : MonoBehaviour
     public Sprite[] iconSprites;
     public Image[] iconDisplayed;
     public Image[] iconDisplayedMirored;
+    
+    private static UIManager _instance;
+    public static UIManager Instance => _instance;
+
+    private void Awake()
+    {
+        if (_instance != null)
+        {
+            Destroy(gameObject);
+        }
+        else
+        {
+            _instance = this;
+        }
+        DontDestroyOnLoad(gameObject);
+    }
 
     public void ClearDisplay()
     {
