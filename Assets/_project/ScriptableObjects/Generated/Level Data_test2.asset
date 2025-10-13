@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Level Data_test2
   m_EditorClassIdentifier: 
   sequences:
-  - {fileID: 11400000, guid: f7f34382410b82c47ba53184c568a6d7, type: 2}
+  - {fileID: 11400000, guid: f1ca102b559a6c04c9b3dd0d9f76997b, type: 2}
   - {fileID: 11400000, guid: c68a29913a2b424468ed542393f77433, type: 2}
   - {fileID: 11400000, guid: 70255b08985687f44a64bb1511e45dd9, type: 2}
   - {fileID: 11400000, guid: 10de796be36564942ad5e10a596918ca, type: 2}
