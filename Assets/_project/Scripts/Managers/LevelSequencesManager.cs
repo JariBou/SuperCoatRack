@@ -249,7 +249,7 @@ namespace _project.Scripts.Managers
             
             ScoreManager.SequenceActionFinished(_lastSequenceAction);
             
-            if (_currentSequence.IsOver)
+            if (_currentSequence.IsLastSequence(_lastSequenceAction))
             {
                 _sequenceIndex++;
             }
