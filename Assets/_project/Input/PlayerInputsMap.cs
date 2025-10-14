@@ -151,7 +151,7 @@ public partial class @PlayerInputsMap: IInputActionCollection2, IDisposable
                 {
                     ""name"": """",
                     ""id"": ""21745bd4-2581-46b8-b392-4475df29e227"",
-                    ""path"": ""<Joystick>/stick/down"",
+                    ""path"": ""<Joystick>/stick/right"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
@@ -173,7 +173,7 @@ public partial class @PlayerInputsMap: IInputActionCollection2, IDisposable
                 {
                     ""name"": """",
                     ""id"": ""cc36b3c8-4307-4620-ae20-e7fd13c58308"",
-                    ""path"": ""<Joystick>/stick/up"",
+                    ""path"": ""<Joystick>/stick/left"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
@@ -195,7 +195,7 @@ public partial class @PlayerInputsMap: IInputActionCollection2, IDisposable
                 {
                     ""name"": """",
                     ""id"": ""f86f40f9-a481-46c6-9d3b-43fc7f69704f"",
-                    ""path"": ""<Joystick>/stick/left"",
+                    ""path"": ""<Joystick>/stick/down"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
@@ -217,7 +217,7 @@ public partial class @PlayerInputsMap: IInputActionCollection2, IDisposable
                 {
                     ""name"": """",
                     ""id"": ""15513c24-bcf7-45a7-a46c-baf4303352db"",
-                    ""path"": ""<Joystick>/stick/right"",
+                    ""path"": ""<Joystick>/stick/up"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
@@ -308,13 +308,31 @@ public partial class @PlayerInputsMap: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Shoe"",
+                    ""type"": ""Button"",
+                    ""id"": ""7db7afa7-ab62-40f2-b10f-242c44e7bb5d"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Shoe1"",
+                    ""type"": ""Button"",
+                    ""id"": ""cf611316-3088-4e73-b5b4-d1a5b4a0f837"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
                 {
                     ""name"": """",
                     ""id"": ""19139d2f-6e23-43d0-8b4b-6757307395cc"",
-                    ""path"": ""<HID::DragonRise Inc.   Generic   USB  Joystick  >/button3"",
+                    ""path"": ""<Joystick>/trigger"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
@@ -336,7 +354,7 @@ public partial class @PlayerInputsMap: IInputActionCollection2, IDisposable
                 {
                     ""name"": """",
                     ""id"": ""a4ed9a12-ee50-422c-a1f4-da24562dd9e3"",
-                    ""path"": ""<Joystick>/stick/right"",
+                    ""path"": ""<HID::DragonRise Inc.   Generic   USB  Joystick  >/button2"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
@@ -358,7 +376,7 @@ public partial class @PlayerInputsMap: IInputActionCollection2, IDisposable
                 {
                     ""name"": """",
                     ""id"": ""d28c6759-9137-49c8-8d5e-bfa0e4360c56"",
-                    ""path"": ""<Joystick>/trigger"",
+                    ""path"": ""<HID::DragonRise Inc.   Generic   USB  Joystick  >/button8"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
@@ -380,7 +398,7 @@ public partial class @PlayerInputsMap: IInputActionCollection2, IDisposable
                 {
                     ""name"": """",
                     ""id"": ""6901fdde-a272-46a9-8168-9d69be71954f"",
-                    ""path"": ""<HID::DragonRise Inc.   Generic   USB  Joystick  >/button2"",
+                    ""path"": ""<HID::DragonRise Inc.   Generic   USB  Joystick  >/button9"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
@@ -409,6 +427,28 @@ public partial class @PlayerInputsMap: IInputActionCollection2, IDisposable
                     ""action"": ""Reset"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""51b23237-d7ae-44c6-adf5-f834b4f5d108"",
+                    ""path"": ""<HID::DragonRise Inc.   Generic   USB  Joystick  >/button3"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Shoe"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""0e2bb44b-cd29-461c-9d88-4f28dd425f27"",
+                    ""path"": ""<Joystick>/stick/up"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Shoe1"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -430,6 +470,8 @@ public partial class @PlayerInputsMap: IInputActionCollection2, IDisposable
         m_InGameMap_Hat = m_InGameMap.FindAction("Hat", throwIfNotFound: true);
         m_InGameMap_Hat1 = m_InGameMap.FindAction("Hat1", throwIfNotFound: true);
         m_InGameMap_Reset = m_InGameMap.FindAction("Reset", throwIfNotFound: true);
+        m_InGameMap_Shoe = m_InGameMap.FindAction("Shoe", throwIfNotFound: true);
+        m_InGameMap_Shoe1 = m_InGameMap.FindAction("Shoe1", throwIfNotFound: true);
     }
 
     ~@PlayerInputsMap()
@@ -667,6 +709,8 @@ public partial class @PlayerInputsMap: IInputActionCollection2, IDisposable
     private readonly InputAction m_InGameMap_Hat;
     private readonly InputAction m_InGameMap_Hat1;
     private readonly InputAction m_InGameMap_Reset;
+    private readonly InputAction m_InGameMap_Shoe;
+    private readonly InputAction m_InGameMap_Shoe1;
     /// <summary>
     /// Provides access to input actions defined in input action map "InGameMap".
     /// </summary>
@@ -698,6 +742,14 @@ public partial class @PlayerInputsMap: IInputActionCollection2, IDisposable
         /// Provides access to the underlying input action "InGameMap/Reset".
         /// </summary>
         public InputAction @Reset => m_Wrapper.m_InGameMap_Reset;
+        /// <summary>
+        /// Provides access to the underlying input action "InGameMap/Shoe".
+        /// </summary>
+        public InputAction @Shoe => m_Wrapper.m_InGameMap_Shoe;
+        /// <summary>
+        /// Provides access to the underlying input action "InGameMap/Shoe1".
+        /// </summary>
+        public InputAction @Shoe1 => m_Wrapper.m_InGameMap_Shoe1;
         /// <summary>
         /// Provides access to the underlying input action map instance.
         /// </summary>
@@ -739,6 +791,12 @@ public partial class @PlayerInputsMap: IInputActionCollection2, IDisposable
             @Reset.started += instance.OnReset;
             @Reset.performed += instance.OnReset;
             @Reset.canceled += instance.OnReset;
+            @Shoe.started += instance.OnShoe;
+            @Shoe.performed += instance.OnShoe;
+            @Shoe.canceled += instance.OnShoe;
+            @Shoe1.started += instance.OnShoe1;
+            @Shoe1.performed += instance.OnShoe1;
+            @Shoe1.canceled += instance.OnShoe1;
         }
 
         /// <summary>
@@ -765,6 +823,12 @@ public partial class @PlayerInputsMap: IInputActionCollection2, IDisposable
             @Reset.started -= instance.OnReset;
             @Reset.performed -= instance.OnReset;
             @Reset.canceled -= instance.OnReset;
+            @Shoe.started -= instance.OnShoe;
+            @Shoe.performed -= instance.OnShoe;
+            @Shoe.canceled -= instance.OnShoe;
+            @Shoe1.started -= instance.OnShoe1;
+            @Shoe1.performed -= instance.OnShoe1;
+            @Shoe1.canceled -= instance.OnShoe1;
         }
 
         /// <summary>
@@ -890,5 +954,19 @@ public partial class @PlayerInputsMap: IInputActionCollection2, IDisposable
         /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
         /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
         void OnReset(InputAction.CallbackContext context);
+        /// <summary>
+        /// Method invoked when associated input action "Shoe" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// </summary>
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
+        void OnShoe(InputAction.CallbackContext context);
+        /// <summary>
+        /// Method invoked when associated input action "Shoe1" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// </summary>
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
+        void OnShoe1(InputAction.CallbackContext context);
     }
 }

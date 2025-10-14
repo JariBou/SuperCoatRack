@@ -1,6 +1,7 @@
 using System;
 using _project.ScriptableObjects.Scripts;
 using DG.Tweening;
+using GraphicsLabor.Scripts.Attributes.LaborerAttributes.DrawerAttributes;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -22,9 +23,10 @@ namespace _project.Scripts.Managers
         public Sprite[] coatToDisplay;
         public Sprite[] hatToDisplay;
         public Sprite[] shoesToDisplay;
+        [ShowMessage("Clothe Color List indexes:\nRed = 0\nBlue = 1\nYellow = 2\nBlack = 3\nBrownTalon = 4\nBrownShoes = 5\nBlackRed = 6")]
         public Image slotForCloth;
-
-        public TMP_Text _tutorialText;
+        [SerializeField] private TMP_Text _tutorialText;
+        [SerializeField] private Sprite _fallbackImage;
         
         private void Awake()
         {
@@ -68,6 +70,13 @@ namespace _project.Scripts.Managers
         {
             try
             {
+                Debug.Log("Changing cloth icon");
+                if (clothColor >= coatToDisplay.Length)
+                {
+                    Debug.LogWarning("Cloth icon is too small (no that's not the message rider but ok...)");
+                    slotForCloth.sprite = _fallbackImage;
+                    return;
+                }
                 switch (gameAction.ClotheType)
                 {
                     case SequenceConfig.ClotheType.Coat:
@@ -85,8 +94,14 @@ namespace _project.Scripts.Managers
             }
             catch (Exception _)
             {
+                Debug.LogWarning("Exception caught in ChangeClothIcon");
                 // ignored
             }
+        }
+
+        public void ClearNextClotheDisplay()
+        {
+            slotForCloth.sprite = null;
         }
 
         public void UpdateTutorialDisplay(TutorialData.TutorialAction tutorialAction)

@@ -9,6 +9,8 @@ namespace _project.Scripts.Managers
     {
         private static GameManager _instance;
         public static GameManager Instance => _instance;
+        
+        public static event Action GameStart;
 
         public GameState CurrentState
         {
@@ -20,6 +22,7 @@ namespace _project.Scripts.Managers
 
         public event Action onBeatUnityEvent ;
         public event Action SequenceEvent ;
+        
 
         private void Awake()
         {
@@ -83,6 +86,16 @@ namespace _project.Scripts.Managers
                 Debug.Log("Event Trigger");
                 SequenceEvent?.Invoke();
             }
+        }
+
+        public void BeginLevel()
+        {
+            AkUnitySoundEngine.PostEvent(
+                "StopMusic",
+                gameObject
+            );
+            PlayLevelMusic();
+            GameStart?.Invoke();
         }
     }
 
