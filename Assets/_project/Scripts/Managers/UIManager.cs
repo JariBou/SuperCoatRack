@@ -54,19 +54,26 @@ public class UIManager : MonoBehaviour
 
     public void ChangeClothIcon(SequenceData.SequenceAction action, int clothColor)
     {
-        switch (action.ClotheType)
+        try
         {
-            case SequenceConfig.ClotheType.Coat:
-                slotForCloth.sprite = coatToDisplay[clothColor];
-                break;
-            case SequenceConfig.ClotheType.Hat:
-                slotForCloth.sprite = hatToDisplay[clothColor];
-                break;
-            case SequenceConfig.ClotheType.Shoe:
-                slotForCloth.sprite = shoesToDisplay[clothColor];
-                break;
-            default:
-                throw new ArgumentOutOfRangeException();
+            switch (action.ClotheType)
+            {
+                case SequenceConfig.ClotheType.Coat:
+                    slotForCloth.sprite = coatToDisplay[clothColor];
+                    break;
+                case SequenceConfig.ClotheType.Hat:
+                    slotForCloth.sprite = hatToDisplay[clothColor];
+                    break;
+                case SequenceConfig.ClotheType.Shoe:
+                    slotForCloth.sprite = shoesToDisplay[clothColor];
+                    break;
+                default:
+                    throw new ArgumentOutOfRangeException();
+            }
+        }
+        catch (Exception _)
+        {
+            // ignored
         }
     }
 }

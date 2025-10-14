@@ -120,10 +120,6 @@ namespace _project.Scripts.Managers
                 {
                     UIManager.Instance.ChangeIconPosition(i, peakedAction);
                     UIManager.Instance.ChangeClothIcon(peakedAction, (int)peakedAction.ClotheColor);
-                    if (i == 1)
-                    {
-                        Debug.Log("§144NEXT Sequence Has Action on beat");
-                    }
                 }
             }
         }
