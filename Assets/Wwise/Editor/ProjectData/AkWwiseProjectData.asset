@@ -220,8 +220,8 @@ MonoBehaviour:
         guid: 7d593f0c3c53f24eada5d5cd830ddb53
       Path: Events\Default Work Unit\Events\Play\PlayWiiMusic
       maxAttenuation: 0
-      maxDuration: 153.12083
-      minDuration: 153.12083
+      maxDuration: 152.85625
+      minDuration: 152.85625
     - name: Stop
       guid: 3b6ac5a0f868184ab59e09086ba451ec
       id: 788884573

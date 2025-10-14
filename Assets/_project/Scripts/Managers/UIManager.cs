@@ -1,6 +1,7 @@
 using System;
 using _project.ScriptableObjects.Scripts;
 using _project.Scripts;
+using DG.Tweening;
 using UnityEngine;
 using UnityEngine.Serialization;
 using UnityEngine.UI;
@@ -39,10 +40,13 @@ public class UIManager : MonoBehaviour
         foreach (var icon in iconDisplayed)
         {
             icon.sprite = null;
+            icon.rectTransform.localScale = Vector3.zero;
+
         }
         foreach (var icon in iconDisplayedMirored)
         {
             icon.sprite = null;
+            icon.rectTransform.localScale = Vector3.zero;
         }
     }
 
@@ -50,6 +54,10 @@ public class UIManager : MonoBehaviour
     {
         iconDisplayed[iconPos].sprite = iconSprites[(int)actionType.ActionType];
         iconDisplayedMirored[iconPos].sprite = iconSprites[(int)actionType.ActionType];
+        iconDisplayed[iconPos].rectTransform.localScale = Vector3.zero;
+        iconDisplayedMirored[iconPos].rectTransform.localScale = Vector3.zero;
+        iconDisplayed[iconPos].transform.DOScale(1f, 0.2f).SetEase(Ease.OutBounce);
+        iconDisplayedMirored[iconPos].transform.DOScale(1f, 0.2f).SetEase(Ease.OutBounce);
     }
 
     public void ChangeClothIcon(SequenceData.SequenceAction action, int clothColor)
