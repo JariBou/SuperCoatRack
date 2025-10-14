@@ -97,8 +97,14 @@ namespace _project.Scripts.Managers
                 "StopMusic",
                 gameObject
             );
-            
             GameManager.Instance.PlayLevelMusic();
+
+            if (_levelData.IsTutorial)
+            {
+                TutorialManager tutorialManager = gameObject.AddComponent<TutorialManager>();
+                tutorialManager.Setup(_levelData);
+                Destroy(this);
+            }
         }
 
         public void OnBeat()
@@ -266,7 +272,6 @@ namespace _project.Scripts.Managers
             //WwiseManager.BeatEvent -= OnBeat;
             GameManager.Instance.onBeatUnityEvent -= OnBeat;
             GameManager.Instance.SequenceEvent -= LoadNextSequence;
-
         }
     }
 }

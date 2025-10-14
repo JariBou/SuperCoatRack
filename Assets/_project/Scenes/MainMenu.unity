@@ -4079,8 +4079,8 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1153859753}
         m_TargetAssemblyTypeName: _project.Scripts.Menus.SelectionMenu, Assembly-CSharp
-        m_MethodName: SelectPrevious
-        m_Mode: 1
+        m_MethodName: JoystickPrevious
+        m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -4095,8 +4095,8 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1153859753}
         m_TargetAssemblyTypeName: _project.Scripts.Menus.SelectionMenu, Assembly-CSharp
-        m_MethodName: SelectNext
-        m_Mode: 1
+        m_MethodName: JoystickNext
+        m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -5060,6 +5060,7 @@ MonoBehaviour:
   listOfLevels:
   - {fileID: 11400000, guid: 9b7d6405aa658f94b9e040f77aa2e684, type: 2}
   - {fileID: 11400000, guid: d02894d41ea92cb469ac1b10f01ee300, type: 2}
+  - {fileID: 11400000, guid: 92014d8a217bb3c479b36e278076742c, type: 2}
   _currentLevelData: {fileID: 0}
 --- !u!4 &1949757255
 Transform:

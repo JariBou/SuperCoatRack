@@ -26,6 +26,7 @@
             Drop,
             Scan,
             Bell,
+            Null,
         }
     }
 }

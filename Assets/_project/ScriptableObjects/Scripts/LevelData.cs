@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using GraphicsLabor.Scripts.Attributes.LaborerAttributes.InspectedAttributes;
 using GraphicsLabor.Scripts.Attributes.LaborerAttributes.ScriptableObjectAttributes;
 using UnityEngine;
 
@@ -9,6 +10,9 @@ namespace _project.ScriptableObjects.Scripts
     {
         public List<SequenceData> sequences = new();
         public Sprite Icon;
+        public bool IsTutorial;
+        [ShowIf(nameof(IsTutorial))]
+        public TutorialData TutorialData = new();
 
         public SequenceData this[int levelName] => sequences[levelName];
 

@@ -40,11 +40,19 @@ namespace _project.Scripts.Managers
         public void EndGame()
         {
             SceneManager.LoadScene("EndScene");
+            _currentState = GameState.Score;
+        }
+        
+        [Button]
+        public void GoToMenu()
+        {
+            SceneManager.LoadScene("MainMenu");
             _currentState = GameState.Menu;
         }
 
         public void PlayLevelMusic()
         {
+            if (LevelManager.Instance.CurrentLevelData.MusicToPlayEvent is null) return;
             AkUnitySoundEngine.PostEvent(
                 LevelManager.Instance.CurrentLevelData.MusicToPlayEvent.Name,
                 gameObject, 
