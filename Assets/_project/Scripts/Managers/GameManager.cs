@@ -1,4 +1,5 @@
 ﻿using System;
+using _project.ScriptableObjects.Scripts;
 using NaughtyAttributes;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -7,23 +8,13 @@ namespace _project.Scripts.Managers
 {
     public class GameManager : MonoBehaviour 
     {
-        private static GameManager _instance;
-        public static GameManager Instance => _instance;
-        
         public static event Action GameStart;
-
-        public GameState CurrentState
-        {
-            get => _currentState;
-            set => _currentState = value;
-        }
-
-        [SerializeField] private GameState _currentState;
-
-        public event Action onBeatUnityEvent ;
+        public event Action OnBeatUnityEvent ;
         public event Action SequenceEvent ;
         
-
+        #region Init
+        private static GameManager _instance;
+        public static GameManager Instance => _instance;
         private void Awake()
         {
             if (_instance != null)
@@ -37,7 +28,28 @@ namespace _project.Scripts.Managers
             DontDestroyOnLoad(gameObject);
             _currentState = GameState.Menu;
         }
+        #endregion
         
+        public GameState CurrentState
+        {
+            get => _currentState;
+            set => _currentState = value;
+        }
+
+        [SerializeField] private GameState _currentState;
+
+        private uint playingId; //Unused for wwise
+        private LevelData _levelData;
+
+        public float Timer { get; private set; } = 0f;
+        private float songAdvancement;
+        
+        private void Update()
+        {
+            if(Timer >= _levelData._songDurationInSeconds) return;
+            Timer += Time.deltaTime;
+            songAdvancement = Mathf.Clamp01(Timer / _levelData._songDurationInSeconds);
+        }
 
         [Button]
         public void EndGame()
@@ -56,13 +68,14 @@ namespace _project.Scripts.Managers
         public void PlayLevelMusic()
         {
             if (!LevelManager.Instance.CurrentLevelData.MusicToPlayEvent.IsValid()) return;
-            AkUnitySoundEngine.PostEvent(
+            playingId = AkUnitySoundEngine.PostEvent(
                 LevelManager.Instance.CurrentLevelData.MusicToPlayEvent.Name,
                 gameObject, 
                 (uint)AkCallbackType.AK_MusicSyncUserCue | (uint)AkCallbackType.AK_EndOfEvent | (uint)AkCallbackType.AK_MusicSyncBeat,
                 OnBeatEvent,
                 null
             );
+            _levelData = LevelManager.Instance.CurrentLevelData;
         }
 
         private void OnBeatEvent(object in_cookie, AkCallbackType in_type, AkCallbackInfo in_info)
@@ -70,7 +83,7 @@ namespace _project.Scripts.Managers
             if (((uint)in_type & (uint)AkCallbackType.AK_MusicSyncBeat) == (uint)AkCallbackType.AK_MusicSyncBeat)
             {   
                 //On Beat
-                onBeatUnityEvent?.Invoke();
+                OnBeatUnityEvent?.Invoke();
             }
 
             if (((uint)in_type & (uint)AkCallbackType.AK_EndOfEvent) == (uint)AkCallbackType.AK_EndOfEvent)

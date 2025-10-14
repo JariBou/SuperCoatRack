@@ -94,7 +94,7 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: a4632d3c2cd3ab44959c4986e7d5aad3
     GuidInternal: 
-    m_lastTime: -8584415077875295892
+    m_lastTime: -8584412313805405105
     List:
     - name: BeatEvent
       guid: 17311fc5b20b774ea51aa652c2cb7da8
@@ -277,7 +277,7 @@ MonoBehaviour:
     ParentPath: Game Parameters\Default Work Unit
     guid: 5a0b48d573c7224f9db0e81c3aa84e0e
     GuidInternal: 
-    m_lastTime: -8584415077875284421
+    m_lastTime: -8584412313805405105
     List:
     - name: GameParameter
       guid: a856826d79199840b7308f291268bd97

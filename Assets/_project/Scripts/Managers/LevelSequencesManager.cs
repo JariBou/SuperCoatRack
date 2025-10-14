@@ -260,7 +260,7 @@ namespace _project.Scripts.Managers
         {
             InputManager.LastInputChanged += InputManagerOnLastInputChanged;
             //WwiseManager.BeatEvent += OnBeat;
-            GameManager.Instance.onBeatUnityEvent += OnBeat;
+            GameManager.Instance.OnBeatUnityEvent += OnBeat;
             GameManager.Instance.SequenceEvent += LoadNextSequence;
         }
         
@@ -268,7 +268,7 @@ namespace _project.Scripts.Managers
         {
             InputManager.LastInputChanged -= InputManagerOnLastInputChanged;
             //WwiseManager.BeatEvent -= OnBeat;
-            GameManager.Instance.onBeatUnityEvent -= OnBeat;
+            GameManager.Instance.OnBeatUnityEvent -= OnBeat;
             GameManager.Instance.SequenceEvent -= LoadNextSequence;
         }
     }
