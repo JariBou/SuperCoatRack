@@ -93,11 +93,8 @@ namespace _project.Scripts.Managers
         private void Start()
         {
             _levelData = LevelManager.Instance.CurrentLevelData;
-            AkUnitySoundEngine.PostEvent(
-                "StopMusic",
-                gameObject
-            );
-            GameManager.Instance.PlayLevelMusic();
+            
+            GameManager.Instance.BeginLevel();
 
             if (_levelData.IsTutorial)
             {
