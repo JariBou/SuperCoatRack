@@ -11,6 +11,7 @@ namespace _project.ScriptableObjects.Scripts
         public List<SequenceData> sequences = new();
         public Sprite Icon;
         public bool IsTutorial;
+        public int _songDurationInSeconds;
         [ShowIf(nameof(IsTutorial))]
         public TutorialData TutorialData = new();
 
