@@ -52,7 +52,7 @@ namespace _project.Scripts.Managers
 
         public void PlayLevelMusic()
         {
-            if (LevelManager.Instance.CurrentLevelData.MusicToPlayEvent is null) return;
+            if (!LevelManager.Instance.CurrentLevelData.MusicToPlayEvent.IsValid()) return;
             AkUnitySoundEngine.PostEvent(
                 LevelManager.Instance.CurrentLevelData.MusicToPlayEvent.Name,
                 gameObject, 

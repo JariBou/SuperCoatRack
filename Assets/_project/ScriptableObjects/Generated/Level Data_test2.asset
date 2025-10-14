@@ -21,7 +21,9 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 56ceb600c2728f64990824287a4b11e0, type: 2}
   - {fileID: 11400000, guid: 16bc8e97a1c8ae04fb9bf8c0f85a82ec, type: 2}
   - {fileID: 11400000, guid: 865c361d3fb0a1c46b9b51f3a939d610, type: 2}
-  Icon: {fileID: 21300000, guid: f601e6f405f3eb54c936eec953450f96, type: 3}
+  Icon: {fileID: -308886854529651475, guid: 8f492ba4a70f5a9429dc94a8c55f6f99, type: 3}
+  IsTutorial: 0
+  TutorialData: {fileID: 0}
   MusicToPlayEvent:
     idInternal: 0
     valueGuidInternal: 
