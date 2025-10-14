@@ -101,7 +101,16 @@ namespace _project.Scripts.Managers
                 TutorialManager tutorialManager = gameObject.AddComponent<TutorialManager>();
                 tutorialManager.Setup(_levelData);
                 Destroy(this);
+                return;
             }
+
+            StartCoroutine(ClearInput());
+        }
+
+        private IEnumerator ClearInput()
+        {
+            yield return new WaitForSeconds(1);
+            _lastInput = null;
         }
 
         public void OnBeat()
