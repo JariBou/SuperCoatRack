@@ -65,7 +65,7 @@
                 {
                     "name": "",
                     "id": "21745bd4-2581-46b8-b392-4475df29e227",
-                    "path": "<Joystick>/stick/down",
+                    "path": "<Joystick>/stick/right",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -87,7 +87,7 @@
                 {
                     "name": "",
                     "id": "cc36b3c8-4307-4620-ae20-e7fd13c58308",
-                    "path": "<Joystick>/stick/up",
+                    "path": "<Joystick>/stick/left",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -109,7 +109,7 @@
                 {
                     "name": "",
                     "id": "f86f40f9-a481-46c6-9d3b-43fc7f69704f",
-                    "path": "<Joystick>/stick/left",
+                    "path": "<Joystick>/stick/down",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -131,7 +131,7 @@
                 {
                     "name": "",
                     "id": "15513c24-bcf7-45a7-a46c-baf4303352db",
-                    "path": "<Joystick>/stick/right",
+                    "path": "<Joystick>/stick/up",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -222,13 +222,31 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
+                },
+                {
+                    "name": "Shoe",
+                    "type": "Button",
+                    "id": "7db7afa7-ab62-40f2-b10f-242c44e7bb5d",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Shoe1",
+                    "type": "Button",
+                    "id": "cf611316-3088-4e73-b5b4-d1a5b4a0f837",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
                 {
                     "name": "",
                     "id": "19139d2f-6e23-43d0-8b4b-6757307395cc",
-                    "path": "<HID::DragonRise Inc.   Generic   USB  Joystick  >/button3",
+                    "path": "<Joystick>/trigger",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -250,7 +268,7 @@
                 {
                     "name": "",
                     "id": "a4ed9a12-ee50-422c-a1f4-da24562dd9e3",
-                    "path": "<Joystick>/stick/right",
+                    "path": "<HID::DragonRise Inc.   Generic   USB  Joystick  >/button2",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -272,7 +290,7 @@
                 {
                     "name": "",
                     "id": "d28c6759-9137-49c8-8d5e-bfa0e4360c56",
-                    "path": "<Joystick>/trigger",
+                    "path": "<HID::DragonRise Inc.   Generic   USB  Joystick  >/button8",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -294,7 +312,7 @@
                 {
                     "name": "",
                     "id": "6901fdde-a272-46a9-8168-9d69be71954f",
-                    "path": "<HID::DragonRise Inc.   Generic   USB  Joystick  >/button2",
+                    "path": "<HID::DragonRise Inc.   Generic   USB  Joystick  >/button9",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -321,6 +339,28 @@
                     "processors": "",
                     "groups": "",
                     "action": "Reset",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "51b23237-d7ae-44c6-adf5-f834b4f5d108",
+                    "path": "<HID::DragonRise Inc.   Generic   USB  Joystick  >/button3",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Shoe",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "0e2bb44b-cd29-461c-9d88-4f28dd425f27",
+                    "path": "<Joystick>/stick/up",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Shoe1",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

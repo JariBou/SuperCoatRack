@@ -93,12 +93,15 @@ namespace _project.Scripts.Managers
         private void Start()
         {
             _levelData = LevelManager.Instance.CurrentLevelData;
-            AkUnitySoundEngine.PostEvent(
-                "StopMusic",
-                gameObject
-            );
             
-            GameManager.Instance.PlayLevelMusic();
+            GameManager.Instance.BeginLevel();
+
+            if (_levelData.IsTutorial)
+            {
+                TutorialManager tutorialManager = gameObject.AddComponent<TutorialManager>();
+                tutorialManager.Setup(_levelData);
+                Destroy(this);
+            }
         }
 
         public void OnBeat()
@@ -106,20 +109,21 @@ namespace _project.Scripts.Managers
             //Debug.Log("Beat");
             if (_currentSequence == null) return;
             UIManager.Instance.ClearDisplay();
+            UIManager.Instance.ClearNextClotheDisplay();
             if (_currentSequence.DoBeat().HasActionOnBeat(out SequenceData.SequenceAction actionOnBeat))
             {
                 Debug.Log("Sequence Has Action on beat");
-                UIManager.Instance.ChangeIconPosition(0, actionOnBeat);
+                // UIManager.Instance.ChangeIconPosition(0, actionOnBeat);
                 _lastSequenceAction = new SequenceActionTimed(actionOnBeat, Time.time);
                 HandleInput();
             }
 
-            for (int i = _peakAmount; i > 0; i--)
+            for (int i = _peakAmount; i >= 0; i--)
             {
                 if (_currentSequence.PeakBeat(i, out SequenceData.SequenceAction peakedAction))
                 {
-                    UIManager.Instance.ChangeIconPosition(i, peakedAction);
                     UIManager.Instance.ChangeClothIcon(peakedAction, (int)peakedAction.ClotheColor);
+                    UIManager.Instance.ChangeIconPosition(i, peakedAction);
                 }
             }
         }
@@ -266,7 +270,6 @@ namespace _project.Scripts.Managers
             //WwiseManager.BeatEvent -= OnBeat;
             GameManager.Instance.onBeatUnityEvent -= OnBeat;
             GameManager.Instance.SequenceEvent -= LoadNextSequence;
-
         }
     }
 }

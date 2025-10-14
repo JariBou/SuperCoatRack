@@ -137,18 +137,37 @@ namespace GraphicsLabor.Scripts.Editor.Windows
                         tempPath =
                             EditorUtility.SaveFilePanel("Save Asset", _rememberedSoPath, GetTempSoName(_selectedSoTab), "asset");
                     }
+
+                    string path = "";
                     
-                    if (tempPath.StartsWith("Assets")) {
-                        //GetSettings()._tempScriptableObjectsPath = tempPath;
-                        ScriptableObject obj = Instantiate(_soNameAssetDic[_selectedSoTab]);
-                        string objName = tempPath.Split('/')[^1].Replace(".asset", "");
-                        _rememberedSoPath = "";
-                        for (int i = 0; i < tempPath.Split('/').Length-1; i++)
+                    List<string> pathFiltered = tempPath.Split('/').ToList();
+                    if (pathFiltered.Count > 0)
+                    {
+                        for (int i = pathFiltered.FindIndex(s => s == "Assets"); i < pathFiltered.Count - 1; i++)
                         {
-                            _rememberedSoPath += tempPath.Split('/')[i] + '/';
+                            path += pathFiltered[i] + '/';
                         }
-                        obj.name = objName;
-                        IOHelper.CreateAssetAndOverride(obj, tempPath);
+
+                        path += pathFiltered[^1];
+                        tempPath = path;
+
+                        if (tempPath.StartsWith("Assets"))
+                        {
+                            //GetSettings()._tempScriptableObjectsPath = tempPath;
+                            ScriptableObject obj = Instantiate(_soNameAssetDic[_selectedSoTab]);
+                            string objName = tempPath.Split('/')[^1].Replace(".asset", "");
+                            // bool foundAssetsFolder = false;
+
+                            _rememberedSoPath = "";
+                            pathFiltered = path.Split('/').ToList();
+                            for (int i = pathFiltered.FindIndex(s => s == "Assets"); i < pathFiltered.Count - 1; i++)
+                            {
+                                _rememberedSoPath += pathFiltered[i] + '/';
+                            }
+
+                            obj.name = objName;
+                            IOHelper.CreateAssetAndOverride(obj, tempPath);
+                        }
                     }
                 }
 

@@ -61,9 +61,24 @@ namespace _project.Scripts.Managers
             Instance.AddScore(Instance.GetScoreOfState(lastSequenceAction.state));
         }
 
+        private void GameManagerOnGameStart()
+        {
+            Score = 0;
+        }
+
         private void AddScore(int scoreAmount)
         {
             Score += scoreAmount;
+        }
+
+        private void OnEnable()
+        {
+            GameManager.GameStart += GameManagerOnGameStart;
+        }
+
+        private void OnDisable()
+        {
+            GameManager.GameStart -= GameManagerOnGameStart;
         }
     }
 }

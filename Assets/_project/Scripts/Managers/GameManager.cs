@@ -9,6 +9,8 @@ namespace _project.Scripts.Managers
     {
         private static GameManager _instance;
         public static GameManager Instance => _instance;
+        
+        public static event Action GameStart;
 
         public GameState CurrentState
         {
@@ -20,6 +22,7 @@ namespace _project.Scripts.Managers
 
         public event Action onBeatUnityEvent ;
         public event Action SequenceEvent ;
+        
 
         private void Awake()
         {
@@ -40,11 +43,19 @@ namespace _project.Scripts.Managers
         public void EndGame()
         {
             SceneManager.LoadScene("EndScene");
+            _currentState = GameState.Score;
+        }
+        
+        [Button]
+        public void GoToMenu()
+        {
+            SceneManager.LoadScene("MainMenu");
             _currentState = GameState.Menu;
         }
 
         public void PlayLevelMusic()
         {
+            if (!LevelManager.Instance.CurrentLevelData.MusicToPlayEvent.IsValid()) return;
             AkUnitySoundEngine.PostEvent(
                 LevelManager.Instance.CurrentLevelData.MusicToPlayEvent.Name,
                 gameObject, 
@@ -75,6 +86,16 @@ namespace _project.Scripts.Managers
                 Debug.Log("Event Trigger");
                 SequenceEvent?.Invoke();
             }
+        }
+
+        public void BeginLevel()
+        {
+            AkUnitySoundEngine.PostEvent(
+                "StopMusic",
+                gameObject
+            );
+            PlayLevelMusic();
+            GameStart?.Invoke();
         }
     }
 
