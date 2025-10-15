@@ -23,6 +23,7 @@ namespace _project.Scripts
         {
             ParticleSystem.MainModule particleSystemMain = _particleSystem.main;
             particleSystemMain.startColor = color;
+            _particleSystem.GetComponent<Renderer>().material.color = color;
             return this;
         }
 
