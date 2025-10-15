@@ -28,6 +28,9 @@ namespace _project.Scripts.Managers
         [SerializeField] private TMP_Text _tutorialText;
         [SerializeField] private Sprite _fallbackImage;
         
+        [SerializeField] private RectTransform[] elevatorDifferentPoses;
+        [SerializeField] private RectTransform elevatorPos;
+        
         private void Awake()
         {
             if (_instance != null)
@@ -128,6 +131,13 @@ namespace _project.Scripts.Managers
                 default:
                     throw new ArgumentOutOfRangeException();
             }
+        }
+
+        public void ChangeElevatorPosition(float elevatorAdvancement)
+        {
+            Vector3 tmpPos = elevatorPos.anchoredPosition;
+            tmpPos.y = Mathf.Lerp(elevatorDifferentPoses[0].anchoredPosition.y, elevatorDifferentPoses[1].anchoredPosition.y, elevatorAdvancement);
+            elevatorPos.anchoredPosition = tmpPos;
         }
     }
 }
