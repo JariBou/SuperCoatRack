@@ -8,6 +8,7 @@ namespace _project.Scripts
         
         [SerializeField]
         private ParticleSystem _particleSystem;
+        
 
         private void Awake()
         {

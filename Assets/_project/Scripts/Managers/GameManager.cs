@@ -46,6 +46,7 @@ namespace _project.Scripts.Managers
         
         private void Update()
         {
+            if (!_levelData) return;
             if(Timer >= _levelData._songDurationInSeconds) return;
             Timer += Time.deltaTime;
             songAdvancement = Mathf.Clamp01(Timer / _levelData._songDurationInSeconds);

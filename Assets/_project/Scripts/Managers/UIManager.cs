@@ -73,7 +73,7 @@ namespace _project.Scripts.Managers
         {
             try
             {
-                Debug.Log("Changing cloth icon");
+                //Debug.Log("Changing cloth icon");
                 if (clothColor >= coatToDisplay.Length)
                 {
                     Debug.LogWarning("Cloth icon is too small (no that's not the message rider but ok...)");

@@ -29,11 +29,11 @@ namespace _project.Scripts
         public void Initialize()
         {
             int beatCount = 0;
-            Debug.Log("Initializing Sequence...");
+            //Debug.Log("Initializing Sequence...");
             foreach (SequenceData.SequenceAction action in sequenceData)
             {
                 beatCount += action.BeatDelayToPrevious;
-                Debug.Log($"Action at beat {beatCount}");
+                //Debug.Log($"Action at beat {beatCount}");
                 _sequences.Add(beatCount, action);
             }
         }
