@@ -12,8 +12,7 @@ namespace _project.Scripts.Managers
     {
         private static UIManager _instance;
         public static UIManager Instance => _instance;
-
-    
+        
         #region BeatIcons
         public Sprite[] iconSprites;
         public Image[] iconDisplayed;
@@ -30,6 +29,8 @@ namespace _project.Scripts.Managers
         
         [SerializeField] private RectTransform[] elevatorDifferentPoses;
         [SerializeField] private RectTransform elevatorPos;
+
+        [SerializeField] private TextMeshProUGUI scoreText;
         
         private void Awake()
         {
@@ -42,6 +43,7 @@ namespace _project.Scripts.Managers
                 _instance = this;
             }
             DontDestroyOnLoad(gameObject);
+            ChangeScoreValue(0);
         }
 
         public void ClearDisplay()
@@ -138,6 +140,11 @@ namespace _project.Scripts.Managers
             Vector3 tmpPos = elevatorPos.anchoredPosition;
             tmpPos.y = Mathf.Lerp(elevatorDifferentPoses[0].anchoredPosition.y, elevatorDifferentPoses[1].anchoredPosition.y, elevatorAdvancement);
             elevatorPos.anchoredPosition = tmpPos;
+        }
+
+        public void ChangeScoreValue(int score)
+        {
+            scoreText.text = "Score : " + score;
         }
     }
 }
