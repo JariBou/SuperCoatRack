@@ -389,6 +389,15 @@ public partial class @PlayerInputsMap: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Bell"",
+                    ""type"": ""Button"",
+                    ""id"": ""e1b6d5c8-8229-4d16-8047-7d396b2b09bc"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -589,6 +598,17 @@ public partial class @PlayerInputsMap: IInputActionCollection2, IDisposable
                     ""action"": ""Scan_Shoe_BrownTalon"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""b5ef1c0a-c6c3-4e11-8c7a-6ea6ba2c2a58"",
+                    ""path"": ""<HID::DragonRise Inc.   Generic   USB  Joystick  >/button12"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Bell"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -619,6 +639,7 @@ public partial class @PlayerInputsMap: IInputActionCollection2, IDisposable
         m_InGameMap_Scan_Hat_Red = m_InGameMap.FindAction("Scan_Hat_Red", throwIfNotFound: true);
         m_InGameMap_Scan_Shoe_BrownShoes = m_InGameMap.FindAction("Scan_Shoe_BrownShoes", throwIfNotFound: true);
         m_InGameMap_Scan_Shoe_BrownTalon = m_InGameMap.FindAction("Scan_Shoe_BrownTalon", throwIfNotFound: true);
+        m_InGameMap_Bell = m_InGameMap.FindAction("Bell", throwIfNotFound: true);
     }
 
     ~@PlayerInputsMap()
@@ -865,6 +886,7 @@ public partial class @PlayerInputsMap: IInputActionCollection2, IDisposable
     private readonly InputAction m_InGameMap_Scan_Hat_Red;
     private readonly InputAction m_InGameMap_Scan_Shoe_BrownShoes;
     private readonly InputAction m_InGameMap_Scan_Shoe_BrownTalon;
+    private readonly InputAction m_InGameMap_Bell;
     /// <summary>
     /// Provides access to input actions defined in input action map "InGameMap".
     /// </summary>
@@ -933,6 +955,10 @@ public partial class @PlayerInputsMap: IInputActionCollection2, IDisposable
         /// </summary>
         public InputAction @Scan_Shoe_BrownTalon => m_Wrapper.m_InGameMap_Scan_Shoe_BrownTalon;
         /// <summary>
+        /// Provides access to the underlying input action "InGameMap/Bell".
+        /// </summary>
+        public InputAction @Bell => m_Wrapper.m_InGameMap_Bell;
+        /// <summary>
         /// Provides access to the underlying input action map instance.
         /// </summary>
         public InputActionMap Get() { return m_Wrapper.m_InGameMap; }
@@ -1000,6 +1026,9 @@ public partial class @PlayerInputsMap: IInputActionCollection2, IDisposable
             @Scan_Shoe_BrownTalon.started += instance.OnScan_Shoe_BrownTalon;
             @Scan_Shoe_BrownTalon.performed += instance.OnScan_Shoe_BrownTalon;
             @Scan_Shoe_BrownTalon.canceled += instance.OnScan_Shoe_BrownTalon;
+            @Bell.started += instance.OnBell;
+            @Bell.performed += instance.OnBell;
+            @Bell.canceled += instance.OnBell;
         }
 
         /// <summary>
@@ -1053,6 +1082,9 @@ public partial class @PlayerInputsMap: IInputActionCollection2, IDisposable
             @Scan_Shoe_BrownTalon.started -= instance.OnScan_Shoe_BrownTalon;
             @Scan_Shoe_BrownTalon.performed -= instance.OnScan_Shoe_BrownTalon;
             @Scan_Shoe_BrownTalon.canceled -= instance.OnScan_Shoe_BrownTalon;
+            @Bell.started -= instance.OnBell;
+            @Bell.performed -= instance.OnBell;
+            @Bell.canceled -= instance.OnBell;
         }
 
         /// <summary>
@@ -1241,5 +1273,12 @@ public partial class @PlayerInputsMap: IInputActionCollection2, IDisposable
         /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
         /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
         void OnScan_Shoe_BrownTalon(InputAction.CallbackContext context);
+        /// <summary>
+        /// Method invoked when associated input action "Bell" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// </summary>
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
+        void OnBell(InputAction.CallbackContext context);
     }
 }

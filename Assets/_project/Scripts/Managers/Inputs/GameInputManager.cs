@@ -89,6 +89,14 @@ namespace _project.Scripts.Managers.Inputs
             }
         }
         
+        public void OnBell(InputAction.CallbackContext ctx)
+        {
+            if (ctx.performed)
+            {
+                LastInput = new InputTypeLink(SequenceConfig.ActionType.Bell, SequenceConfig.ClotheType.Coat, SequenceConfig.ClotheColor.Red, Time.time);
+            }
+        }
+        
         public void OnScan()
         {
             SequenceConfig.ClotheType scannedClotheType = SequenceConfig.ClotheType.Coat;
