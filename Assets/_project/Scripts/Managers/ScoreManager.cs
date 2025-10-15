@@ -69,6 +69,7 @@ namespace _project.Scripts.Managers
         private void AddScore(int scoreAmount)
         {
             Score += scoreAmount;
+            UIManager.Instance.ChangeScoreValue(Score);
         }
 
         private void OnEnable()
