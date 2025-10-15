@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 
 namespace _project.Scripts.Managers.Inputs
 {
+    [RequireComponent(typeof(PlayerInput))]
     public class InputManager : MonoBehaviour
     {
         public static event Action<InputTypeLink> LastInputChanged; 
@@ -19,6 +20,17 @@ namespace _project.Scripts.Managers.Inputs
             {
                 _lastInput = value;
                 LastInputChanged?.Invoke(_lastInput);
+            }
+        }
+
+        private void Awake()
+        {
+            foreach (InputAction inputAction in GetComponent<PlayerInput>().currentActionMap.actions)
+            {
+                if (inputAction.name.StartsWith("Scan"))
+                {
+                    inputAction.performed += OnScan;
+                }
             }
         }
 
@@ -63,6 +75,17 @@ namespace _project.Scripts.Managers.Inputs
             else
             {
                 LastInput = new InputTypeLink(SequenceConfig.ActionType.Pickup, SequenceConfig.ClotheType.Shoe, Time.time);
+            }
+        }
+
+        public void OnScan(InputAction.CallbackContext ctx)
+        {
+            if (ctx.performed)
+            {
+                string[] strings = ctx.action.name.Split("_");
+                SequenceConfig.ClotheType clotheType = (SequenceConfig.ClotheType)Enum.Parse(typeof(SequenceConfig.ClotheType), strings[1]);
+                SequenceConfig.ClotheColor clotheColor = (SequenceConfig.ClotheColor)Enum.Parse(typeof(SequenceConfig.ClotheColor), strings[2]);
+                LastInput = new InputTypeLink(SequenceConfig.ActionType.Scan, clotheType, clotheColor, Time.time);
             }
         }
         

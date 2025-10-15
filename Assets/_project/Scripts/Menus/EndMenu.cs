@@ -13,7 +13,7 @@ namespace _project.Scripts.Menus
         
         private void Start()
         {
-            _scoreDispaly.text = ScoreManager.Instance.Score.ToString();
+            _scoreDispaly.text = $"Score: {ScoreManager.Instance.Score.ToString()}";
         }
 
         public void Retry()
