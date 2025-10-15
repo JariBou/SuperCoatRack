@@ -105,6 +105,8 @@ namespace _project.Scripts.Managers
             }
 
             StartCoroutine(ClearInput());
+            ParticleSystem.ColorOverLifetimeModule overModule = new ParticleSystem.ColorOverLifetimeModule();
+            overModule.color.gradient.colorKeys[1].color = Color.white;
         }
 
         private IEnumerator ClearInput()
