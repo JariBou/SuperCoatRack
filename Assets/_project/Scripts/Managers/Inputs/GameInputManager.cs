@@ -83,6 +83,7 @@ namespace _project.Scripts.Managers.Inputs
             if (ctx.performed)
             {
                 string[] strings = ctx.action.name.Split("_");
+                Debug.Log(ctx.action.name);
                 SequenceConfig.ClotheType clotheType = (SequenceConfig.ClotheType)Enum.Parse(typeof(SequenceConfig.ClotheType), strings[1]);
                 SequenceConfig.ClotheColor clotheColor = (SequenceConfig.ClotheColor)Enum.Parse(typeof(SequenceConfig.ClotheColor), strings[2]);
                 LastInput = new InputTypeLink(SequenceConfig.ActionType.Scan, clotheType, clotheColor, Time.time);
