@@ -256,6 +256,9 @@ namespace _project.Scripts.Managers
             if (_lastSequenceAction?.state != SequenceActionState.None || _currentSequence is null) return;
             
             _lastSequenceAction.SetState(actionState);
+            
+            RippleFeedbackManager.ChangeColorStatic(Color.blue).Play();
+
             Debug.Log($"Finished Sequence Action with state: {actionState}");
             _lastInput = null;
             
