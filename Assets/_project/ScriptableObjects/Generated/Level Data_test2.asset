@@ -23,6 +23,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 865c361d3fb0a1c46b9b51f3a939d610, type: 2}
   Icon: {fileID: -308886854529651475, guid: 8f492ba4a70f5a9429dc94a8c55f6f99, type: 3}
   IsTutorial: 0
+  _songDurationInSeconds: 100
   TutorialData: {fileID: 0}
   MusicToPlayEvent:
     idInternal: 0

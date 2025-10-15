@@ -49,6 +49,7 @@ namespace _project.Scripts.Managers
             if(Timer >= _levelData._songDurationInSeconds) return;
             Timer += Time.deltaTime;
             songAdvancement = Mathf.Clamp01(Timer / _levelData._songDurationInSeconds);
+            UIManager.Instance.ChangeElevatorPosition(songAdvancement);
         }
 
         [Button]
