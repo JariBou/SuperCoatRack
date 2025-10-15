@@ -737,6 +737,72 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: 555b59e3-494a-4997-a9cc-80af5275bcb4
     m_ActionName: 'InGameMap/Reset[/Keyboard/r]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 0f2613d3-f5a5-4ee2-b7e2-6acac12403e2
+    m_ActionName: 'MenuMap/Return[/Keyboard/backspace]'
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 485710484}
+        m_TargetAssemblyTypeName: _project.Scripts.Managers.Inputs.InputManager,
+          Assembly-CSharp
+        m_MethodName: OnShoeInput
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 7db7afa7-ab62-40f2-b10f-242c44e7bb5d
+    m_ActionName: InGameMap/Shoe
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 485710484}
+        m_TargetAssemblyTypeName: _project.Scripts.Managers.Inputs.InputManager,
+          Assembly-CSharp
+        m_MethodName: OnShoeInput
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: cf611316-3088-4e73-b5b4-d1a5b4a0f837
+    m_ActionName: InGameMap/Shoe1
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 5feaa61b-167d-4c59-a3f4-f5bae237b34b
+    m_ActionName: 'InGameMap/Scan_Coat_BlackRed[/Keyboard/numpad4]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 410ef053-c236-4351-b46e-39d88d7c6fb1
+    m_ActionName: 'InGameMap/Scan_Coat_Black[/Keyboard/numpad5]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: b98a7bb4-9466-4acc-8926-5fcc688b0f51
+    m_ActionName: 'InGameMap/Scan_Coat_Yellow[/Keyboard/numpad6]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 15469011-8006-4433-b7db-61e2d99976b7
+    m_ActionName: 'InGameMap/Scan_Hat_Blue[/Keyboard/numpad7]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 87e6bd22-535b-4963-95c5-b3fc75e193ea
+    m_ActionName: 'InGameMap/Scan_Hat_Red[/Keyboard/numpad8]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 5226b33c-9170-4cbf-b210-121af8696adc
+    m_ActionName: 'InGameMap/Scan_Shoe_BrownShoes[/Keyboard/numpad1]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 145a0fdb-5a80-4382-8f3e-a439440c2805
+    m_ActionName: 'InGameMap/Scan_Shoe_BrownTalon[/Keyboard/numpad2]'
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: InGameMap
