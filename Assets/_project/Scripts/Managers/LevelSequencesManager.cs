@@ -35,6 +35,7 @@ namespace _project.Scripts.Managers
             public bool WasInputInTimeFrame(float lastInputTimestamp, out SequenceActionState state)
             {
                 float timeDiff = Timestamp - lastInputTimestamp;
+                Debug.LogWarning($"TIMEDIFF: {timeDiff}");
                 if (!(SequenceAction.gracePeriod.x > timeDiff && timeDiff > -SequenceAction.gracePeriod.y))
                 {
                     state = SequenceActionState.Failed;
@@ -52,6 +53,7 @@ namespace _project.Scripts.Managers
                     float dTime = abs / SequenceAction.gracePeriod.y;
                     CheckInputState(out state, dTime);
                 }
+                Debug.LogWarning($"Input was in frame with diff: {timeDiff} and state {state}");
                 return true;
 
                 void CheckInputState(out SequenceActionState sequenceActionState, float dTime)
@@ -84,7 +86,7 @@ namespace _project.Scripts.Managers
         private int _peakAmount = 4;
         
         [CanBeNull] private Sequence _currentSequence;
-        [CanBeNull] private SequenceActionTimed _lastSequenceAction;
+        [CanBeNull] private SequenceActionTimed _currentSequenceAction;
 
         private InputTypeLink _lastInput;
         private float _lastInputTime;
@@ -125,7 +127,7 @@ namespace _project.Scripts.Managers
             {
                 Debug.Log("Sequence Has Action on beat");
                 // UIManager.Instance.ChangeIconPosition(0, actionOnBeat);
-                _lastSequenceAction = new SequenceActionTimed(actionOnBeat, Time.time);
+                _currentSequenceAction = new SequenceActionTimed(actionOnBeat, Time.time);
                 HandleInput();
             }
 
@@ -154,7 +156,7 @@ namespace _project.Scripts.Managers
             _waitingForInput = true;
             yield return new WaitForSeconds(delay);
             _waitingForInput = false;
-            if (_lastSequenceAction is { state: SequenceActionState.None })
+            if (_currentSequenceAction is { state: SequenceActionState.None })
             {
                 Debug.Log("Failing after waiting....");
                 OnFail();
@@ -164,6 +166,7 @@ namespace _project.Scripts.Managers
         private void InputManagerOnLastInputChanged(InputTypeLink obj)
         {
             if (_lastInput is not null) return;
+            Debug.LogError($"ReceivedInput of action: {obj.ActionType}");
             _lastInput = obj;
             if (_waitingForInput)
             {
@@ -178,7 +181,7 @@ namespace _project.Scripts.Managers
         private void HandleInput(bool inputWaited = false)
         {
             Debug.Log("=== HANDLEINPUT ===");
-            if (_lastSequenceAction is null || _lastSequenceAction.state != SequenceActionState.None)
+            if (_currentSequenceAction is null || _currentSequenceAction.state != SequenceActionState.None)
             {
                 Debug.Log("_lastSequenceAction was null or already completed");
                 return;
@@ -192,43 +195,47 @@ namespace _project.Scripts.Managers
                     OnFail();
                 }
 
-                StartCoroutine(WaitForInput(_lastSequenceAction.SequenceAction.gracePeriod.y));
+                StartCoroutine(WaitForInput(_currentSequenceAction.SequenceAction.gracePeriod.y));
                 return;
             }
             
-            if (!_lastSequenceAction.WasInputInTimeFrame(_lastInput.Timestamp, out SequenceActionState actionState))
+            if (!_currentSequenceAction.WasInputInTimeFrame(_lastInput.Timestamp, out SequenceActionState actionState))
             {
-                Debug.Log($"Input was out of out of time: {_lastSequenceAction.Timestamp - _lastInput.Timestamp}");
+                Debug.Log($"Input was out of out of time: {_currentSequenceAction.Timestamp - _lastInput.Timestamp}");
                 OnFail();
                 return;
             }
 
-            if (_lastSequenceAction.SequenceAction.ActionType == _lastInput.ActionType)
+            if (_currentSequenceAction.SequenceAction.ActionType == _lastInput.ActionType)
             {
-                Debug.Log($"Actions were of same type: {_lastSequenceAction.SequenceAction.ActionType}");
+                Debug.Log($"Actions were of same type: {_currentSequenceAction.SequenceAction.ActionType}");
                 switch (_lastInput.ActionType)
                 {
                     case SequenceConfig.ActionType.Pickup:
                     case SequenceConfig.ActionType.Drop:
-                        if (_lastInput.ClotheType == _lastSequenceAction.SequenceAction.ClotheType)
+                        if (_lastInput.ClotheType == _currentSequenceAction.SequenceAction.ClotheType)
                         {
                             OnSuccess(actionState);    
                             return;
                         }
-                        Debug.Log($"Clothe type was not the same {_lastInput.ClotheType} != {_lastSequenceAction.SequenceAction.ClotheType}");
+                        Debug.Log($"Clothe type was not the same {_lastInput.ClotheType} != {_currentSequenceAction.SequenceAction.ClotheType}");
                         break;
                     case SequenceConfig.ActionType.Scan:
-                        if (_lastInput.ClotheType == _lastSequenceAction.SequenceAction.ClotheType &&
-                            _lastInput.ClotheColor == _lastSequenceAction.SequenceAction.ClotheColor)
+                        if (_lastInput.ClotheType == _currentSequenceAction.SequenceAction.ClotheType &&
+                            _lastInput.ClotheColor == _currentSequenceAction.SequenceAction.ClotheColor)
                         {
                             OnSuccess(actionState);
                             return;
                         }
-                        Debug.Log($"Clothe type was not the same {_lastInput.ClotheType} != {_lastSequenceAction.SequenceAction.ClotheType} or Color was not same {_lastInput.ClotheColor} !=  {_lastSequenceAction.SequenceAction.ClotheColor}");
+                        Debug.Log($"Clothe type was not the same {_lastInput.ClotheType} != {_currentSequenceAction.SequenceAction.ClotheType} or Color was not same {_lastInput.ClotheColor} !=  {_currentSequenceAction.SequenceAction.ClotheColor}");
                         break;
                     default:
                         throw new ArgumentOutOfRangeException();
                 }
+            }
+            else
+            {
+                Debug.LogWarning($"Actions weren't of same type: (Input){_lastInput.ActionType} != (SequenceAction){_currentSequenceAction.SequenceAction.ActionType}");
             }
 
             if (inputWaited)
@@ -236,7 +243,7 @@ namespace _project.Scripts.Managers
                 OnFail();
             } else {
                 Debug.Log("Waiting for input...");
-                StartCoroutine(WaitForInput(_lastSequenceAction.SequenceAction.gracePeriod.y));
+                StartCoroutine(WaitForInput(_currentSequenceAction.SequenceAction.gracePeriod.y));
             }
             // OnFail();
         }
@@ -253,9 +260,9 @@ namespace _project.Scripts.Managers
         
         private void FinishSequenceAction(SequenceActionState actionState = SequenceActionState.Failed)
         {
-            if (_lastSequenceAction?.state != SequenceActionState.None || _currentSequence is null) return;
+            if (_currentSequenceAction?.state != SequenceActionState.None || _currentSequence is null) return;
             
-            _lastSequenceAction.SetState(actionState);
+            _currentSequenceAction.SetState(actionState);
             
             RippleFeedbackManager.ChangeColorStatic(Color.blue).Play();
             FeedbackManager.FeedbackTimingInputStatic(actionState);
@@ -263,9 +270,9 @@ namespace _project.Scripts.Managers
             Debug.Log($"Finished Sequence Action with state: {actionState}");
             _lastInput = null;
             
-            ScoreManager.SequenceActionFinished(_lastSequenceAction);
+            ScoreManager.SequenceActionFinished(_currentSequenceAction);
             
-            if (_currentSequence.IsLastSequence(_lastSequenceAction))
+            if (_currentSequence.IsLastSequence(_currentSequenceAction))
             {
                 _sequenceIndex++;
             }

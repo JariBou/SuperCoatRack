@@ -46,9 +46,10 @@ namespace _project.Scripts.Managers.Inputs
         {
             if (ctx.performed)
             {
+                Debug.LogError("Context performed");
                 LastInput = new InputTypeLink(SequenceConfig.ActionType.Drop, SequenceConfig.ClotheType.Coat, Time.time);
             }
-            else
+            else if (ctx.canceled)
             {
                 LastInput = new InputTypeLink(SequenceConfig.ActionType.Pickup, SequenceConfig.ClotheType.Coat, Time.time);
             }
@@ -60,7 +61,7 @@ namespace _project.Scripts.Managers.Inputs
             {
                 LastInput = new InputTypeLink(SequenceConfig.ActionType.Drop, SequenceConfig.ClotheType.Hat, Time.time);
             }
-            else
+            else if (ctx.canceled)
             {
                 LastInput = new InputTypeLink(SequenceConfig.ActionType.Pickup, SequenceConfig.ClotheType.Hat, Time.time);
             }
@@ -72,7 +73,7 @@ namespace _project.Scripts.Managers.Inputs
             {
                 LastInput = new InputTypeLink(SequenceConfig.ActionType.Drop, SequenceConfig.ClotheType.Shoe, Time.time);
             }
-            else
+            else if (ctx.canceled)
             {
                 LastInput = new InputTypeLink(SequenceConfig.ActionType.Pickup, SequenceConfig.ClotheType.Shoe, Time.time);
             }
