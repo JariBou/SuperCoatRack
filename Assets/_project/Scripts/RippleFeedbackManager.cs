@@ -1,5 +1,4 @@
-﻿using System;
-using UnityEngine;
+﻿using UnityEngine;
 
 namespace _project.Scripts
 {
@@ -26,8 +25,32 @@ namespace _project.Scripts
             particleSystemMain.startColor = color;
             return this;
         }
+
+        public void Play()
+        {
+            _particleSystem.Play();
+        }
         
-        // public static 
+        public static void PlayStatic()
+        {
+            _instance.Play();
+        }
+        
+        public void Stop()
+        {
+            _particleSystem.Stop();
+        }
+        
+        public static void StopStatic()
+        {
+            _instance.Stop();
+        }
+
+        public static RippleFeedbackManager ChangeColorStatic(Color color)
+        {
+            _instance.ChangeColor(color);
+            return _instance;
+        }
         
         
     }

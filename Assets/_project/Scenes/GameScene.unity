@@ -251,6 +251,51 @@ MonoBehaviour:
   unloadTriggerList: 958ca0ea
   bankNameInternal: 
   valueGuidInternal: 
+--- !u!1 &246223103
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 246223104}
+  - component: {fileID: 246223105}
+  m_Layer: 0
+  m_Name: RipplesManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &246223104
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 246223103}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 393226234}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &246223105
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 246223103}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0e3bda6359274062b0624aa04c19034f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _particleSystem: {fileID: 1718439768}
 --- !u!1 &295905583
 GameObject:
   m_ObjectHideFlags: 0
@@ -512,6 +557,7 @@ Transform:
   m_Children:
   - {fileID: 686954366}
   - {fileID: 752018356}
+  - {fileID: 246223104}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &472430826
@@ -2421,11 +2467,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3490078789241338747, guid: e04ca866f40730b4fbc3f456781cdac7, type: 3}
       propertyPath: looping
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3490078789241338747, guid: e04ca866f40730b4fbc3f456781cdac7, type: 3}
       propertyPath: lengthInSec
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3490078789241338747, guid: e04ca866f40730b4fbc3f456781cdac7, type: 3}
+      propertyPath: playOnAwake
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3490078789241338747, guid: e04ca866f40730b4fbc3f456781cdac7, type: 3}
       propertyPath: RotationModule.enabled
@@ -2640,6 +2690,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e04ca866f40730b4fbc3f456781cdac7, type: 3}
+--- !u!198 &1718439768 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 3490078789241338747, guid: e04ca866f40730b4fbc3f456781cdac7, type: 3}
+  m_PrefabInstance: {fileID: 1718439767}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1857176494
 GameObject:
   m_ObjectHideFlags: 0
