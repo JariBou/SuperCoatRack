@@ -114,8 +114,8 @@ MonoBehaviour:
         guid: 17311fc5b20b774ea51aa652c2cb7da8
       Path: Events\Default Work Unit\Events\BeatEvent
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0
+      minDuration: 0
     - name: Events
       guid: 5be825d74390e343996d2421205490a1
       id: 1381315342
@@ -174,8 +174,8 @@ MonoBehaviour:
         guid: 349aece477b9364e98940b5967ffdbab
       Path: Events\Default Work Unit\Events\Play\PlayDaschlatt
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 176
+      minDuration: 176
     - name: PlayTakeFour
       guid: 636a2150c7aaa94eb34df769da1518a4
       id: 2322593426
@@ -197,8 +197,8 @@ MonoBehaviour:
         guid: 636a2150c7aaa94eb34df769da1518a4
       Path: Events\Default Work Unit\Events\Play\PlayTakeFour
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 166.33536
+      minDuration: 166.33536
     - name: PlayTestMusic
       guid: 6c3021c4fc1b8f49ab7ac540088430c3
       id: 575116772
@@ -220,8 +220,8 @@ MonoBehaviour:
         guid: 6c3021c4fc1b8f49ab7ac540088430c3
       Path: Events\Default Work Unit\Events\Play\PlayTestMusic
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 5.878513
+      minDuration: 5.878513
     - name: PlayWiiMusic
       guid: 7d593f0c3c53f24eada5d5cd830ddb53
       id: 2131253029
@@ -243,8 +243,8 @@ MonoBehaviour:
         guid: 7d593f0c3c53f24eada5d5cd830ddb53
       Path: Events\Default Work Unit\Events\Play\PlayWiiMusic
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 152.85625
+      minDuration: 152.85625
     - name: Stop
       guid: 3b6ac5a0f868184ab59e09086ba451ec
       id: 788884573
@@ -286,8 +286,8 @@ MonoBehaviour:
         guid: 60351be06a6cc54ead0d8cebc432c2f7
       Path: Events\Default Work Unit\Events\Stop\StopMusic
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0
+      minDuration: 0
   RtpcWwu:
   - PhysicalPath: Game Parameters\Default Work Unit.wwu
     PathAndIcons:
