@@ -52,7 +52,5 @@ namespace _project.Scripts
         {
             return _instance.ChangeColor(color);
         }
-        
-        
     }
 }

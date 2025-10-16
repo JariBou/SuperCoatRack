@@ -6,6 +6,8 @@ public class FeedbackManager : MonoBehaviour
 {
     [SerializeField] private GameObject feedbackOnInputText;
 
+    [SerializeField] private GameObject rippleObject;
+
     #region Init
     
     private static FeedbackManager _instance;
@@ -46,8 +48,16 @@ public class FeedbackManager : MonoBehaviour
                 case LevelSequencesManager.SequenceActionState.Perfect:
                     tmp.GetComponent<TextMesh>().text = "Perfect";
                     break;
+                case LevelSequencesManager.SequenceActionState.None:
+                    tmp.GetComponent<TextMesh>().text = "ERROR";
+                    return this;
                 default:
                     break;
+            }
+            if (rippleObject)
+            {
+                var rippletmp = Instantiate(rippleObject, tmp.transform.position, transform.rotation, tmp.transform);
+                rippletmp.GetComponent<ParticleSystem>().Play();
             }
         }
         return this;
@@ -56,5 +66,21 @@ public class FeedbackManager : MonoBehaviour
     public static FeedbackManager FeedbackTimingInputStatic(LevelSequencesManager.SequenceActionState currentActionState)
     {
         return _instance.FeedbackTimingInput(currentActionState);
+    }
+    
+    private FeedbackManager ChangeRippleColor(Color color)
+    {
+        if (rippleObject)
+        {
+            ParticleSystem.MainModule particleSystemMain = rippleObject.GetComponent<ParticleSystem>().main;
+            particleSystemMain.startColor = color;
+            rippleObject.GetComponent<Renderer>().material.color = color;
+        }
+        return this;
+    }
+
+    public static FeedbackManager ChangeRippleColorStatic(Color color)
+    {
+        return _instance.ChangeRippleColor(color);
     }
 }
