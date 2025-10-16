@@ -66,7 +66,7 @@ MonoBehaviour:
     ParentPath: SoundBanks\Default Work Unit
     guid: 5b725a2a1ba53b4c8392d11313882357
     GuidInternal: 
-    m_lastTime: -8584409491039940285
+    m_lastTime: -8584409479258693504
     List:
     - name: Music
       guid: 211e1f3f8d27aa4182322670eb8a2976
@@ -274,8 +274,8 @@ MonoBehaviour:
         guid: 349aece477b9364e98940b5967ffdbab
       Path: Events\Default Work Unit\Events\Play\PlayDaschlatt
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 176
+      minDuration: 176
     - name: PlayTakeFour
       guid: 636a2150c7aaa94eb34df769da1518a4
       id: 2322593426
@@ -297,8 +297,8 @@ MonoBehaviour:
         guid: 636a2150c7aaa94eb34df769da1518a4
       Path: Events\Default Work Unit\Events\Play\PlayTakeFour
       maxAttenuation: 0
-      maxDuration: 166.33536
-      minDuration: 166.33536
+      maxDuration: 166.77966
+      minDuration: 166.77966
     - name: PlayTestMusic
       guid: 6c3021c4fc1b8f49ab7ac540088430c3
       id: 575116772
