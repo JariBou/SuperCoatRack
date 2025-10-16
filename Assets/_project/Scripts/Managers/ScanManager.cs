@@ -1,3 +1,6 @@
+using System.Collections;
+using System.Collections.Generic;
+using _project.Scripts.Managers.Inputs;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -13,19 +16,33 @@ namespace _project.Scripts.Managers
         private TextMeshProUGUI _textOut;
         [SerializeField]
         private RectTransform _scanZone;
+        
+        [SerializeField, Range(0, 144)]
+        private int _updatesPerSecond;
+        
+        [SerializeField]
+        private InputManager _inputManager;
 
         private bool _isCamAvaible;
         private WebCamTexture _cameraTexture;
         void Start()
         {
             SetUpCamera();
+            StartCoroutine(ScanCoroutine());
         }
 
         // Update is called once per frame
         void Update()
         {
             UpdateCameraRender();
+            // Scan();
+        }
+
+        private IEnumerator ScanCoroutine()
+        {
+            yield return new WaitForSeconds(1f/_updatesPerSecond);
             Scan();
+            StartCoroutine(ScanCoroutine());
         }
 
         private void SetUpCamera()
@@ -72,6 +89,7 @@ namespace _project.Scripts.Managers
                 Result result = barcodeReader.Decode(_cameraTexture.GetPixels32(), _cameraTexture.width, _cameraTexture.height);
                 if (result != null)
                 {
+                    _inputManager.OnScan(result.Text);
                     _textOut.text = result.Text;
                 }
                 else {

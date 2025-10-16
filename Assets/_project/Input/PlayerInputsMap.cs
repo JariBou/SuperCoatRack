@@ -398,6 +398,15 @@ public partial class @PlayerInputsMap: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Bell1"",
+                    ""type"": ""Button"",
+                    ""id"": ""2432cca2-870f-4937-b3ea-98b50d0418ac"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -609,6 +618,17 @@ public partial class @PlayerInputsMap: IInputActionCollection2, IDisposable
                     ""action"": ""Bell"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""31b178e8-f39d-438f-bb69-a302608ffc75"",
+                    ""path"": ""<HID::DragonRise Inc.   Generic   USB  Joystick  >/button12"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Bell1"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -640,6 +660,7 @@ public partial class @PlayerInputsMap: IInputActionCollection2, IDisposable
         m_InGameMap_Scan_Shoe_BrownShoes = m_InGameMap.FindAction("Scan_Shoe_BrownShoes", throwIfNotFound: true);
         m_InGameMap_Scan_Shoe_BrownTalon = m_InGameMap.FindAction("Scan_Shoe_BrownTalon", throwIfNotFound: true);
         m_InGameMap_Bell = m_InGameMap.FindAction("Bell", throwIfNotFound: true);
+        m_InGameMap_Bell1 = m_InGameMap.FindAction("Bell1", throwIfNotFound: true);
     }
 
     ~@PlayerInputsMap()
@@ -887,6 +908,7 @@ public partial class @PlayerInputsMap: IInputActionCollection2, IDisposable
     private readonly InputAction m_InGameMap_Scan_Shoe_BrownShoes;
     private readonly InputAction m_InGameMap_Scan_Shoe_BrownTalon;
     private readonly InputAction m_InGameMap_Bell;
+    private readonly InputAction m_InGameMap_Bell1;
     /// <summary>
     /// Provides access to input actions defined in input action map "InGameMap".
     /// </summary>
@@ -959,6 +981,10 @@ public partial class @PlayerInputsMap: IInputActionCollection2, IDisposable
         /// </summary>
         public InputAction @Bell => m_Wrapper.m_InGameMap_Bell;
         /// <summary>
+        /// Provides access to the underlying input action "InGameMap/Bell1".
+        /// </summary>
+        public InputAction @Bell1 => m_Wrapper.m_InGameMap_Bell1;
+        /// <summary>
         /// Provides access to the underlying input action map instance.
         /// </summary>
         public InputActionMap Get() { return m_Wrapper.m_InGameMap; }
@@ -1029,6 +1055,9 @@ public partial class @PlayerInputsMap: IInputActionCollection2, IDisposable
             @Bell.started += instance.OnBell;
             @Bell.performed += instance.OnBell;
             @Bell.canceled += instance.OnBell;
+            @Bell1.started += instance.OnBell1;
+            @Bell1.performed += instance.OnBell1;
+            @Bell1.canceled += instance.OnBell1;
         }
 
         /// <summary>
@@ -1085,6 +1114,9 @@ public partial class @PlayerInputsMap: IInputActionCollection2, IDisposable
             @Bell.started -= instance.OnBell;
             @Bell.performed -= instance.OnBell;
             @Bell.canceled -= instance.OnBell;
+            @Bell1.started -= instance.OnBell1;
+            @Bell1.performed -= instance.OnBell1;
+            @Bell1.canceled -= instance.OnBell1;
         }
 
         /// <summary>
@@ -1280,5 +1312,12 @@ public partial class @PlayerInputsMap: IInputActionCollection2, IDisposable
         /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
         /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
         void OnBell(InputAction.CallbackContext context);
+        /// <summary>
+        /// Method invoked when associated input action "Bell1" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// </summary>
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
+        void OnBell1(InputAction.CallbackContext context);
     }
 }

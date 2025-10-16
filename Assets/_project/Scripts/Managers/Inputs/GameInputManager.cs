@@ -83,27 +83,38 @@ namespace _project.Scripts.Managers.Inputs
         {
             if (ctx.performed)
             {
-                string[] strings = ctx.action.name.Split("_");
-                Debug.Log(ctx.action.name);
-                SequenceConfig.ClotheType clotheType = (SequenceConfig.ClotheType)Enum.Parse(typeof(SequenceConfig.ClotheType), strings[1]);
-                SequenceConfig.ClotheColor clotheColor = (SequenceConfig.ClotheColor)Enum.Parse(typeof(SequenceConfig.ClotheColor), strings[2]);
-                LastInput = new InputTypeLink(SequenceConfig.ActionType.Scan, clotheType, clotheColor, Time.time);
+               OnScan(ctx.action.name);
             }
         }
-        
+
+
+        private int _bellInputCount;
         public void OnBell(InputAction.CallbackContext ctx)
         {
             if (ctx.performed)
             {
-                LastInput = new InputTypeLink(SequenceConfig.ActionType.Bell, SequenceConfig.ClotheType.Coat, SequenceConfig.ClotheColor.Red, Time.time);
+                _bellInputCount++;
+                if (_bellInputCount == 2)
+                {
+                    LastInput = new InputTypeLink(SequenceConfig.ActionType.Bell, SequenceConfig.ClotheType.Coat, SequenceConfig.ClotheColor.Red, Time.time);
+                }
+            } else if (ctx.canceled)
+            {
+                _bellInputCount--;
             }
         }
-        
-        public void OnScan()
+
+        public void OnScan(string scanActionName)
         {
-            SequenceConfig.ClotheType scannedClotheType = SequenceConfig.ClotheType.Coat;
-            SequenceConfig.ClotheColor scannedClotheColor = SequenceConfig.ClotheColor.Blue;
-            LastInput = new InputTypeLink(SequenceConfig.ActionType.Scan, scannedClotheType, scannedClotheColor, Time.time);
+            string[] strings = scanActionName.Split("_");
+            if (strings[0] != "Scan")
+            {
+                Debug.LogError("Wrong scanning action");
+                return;
+            }
+            SequenceConfig.ClotheType clotheType = (SequenceConfig.ClotheType)Enum.Parse(typeof(SequenceConfig.ClotheType), strings[1]);
+            SequenceConfig.ClotheColor clotheColor = (SequenceConfig.ClotheColor)Enum.Parse(typeof(SequenceConfig.ClotheColor), strings[2]);
+            LastInput = new InputTypeLink(SequenceConfig.ActionType.Scan, clotheType, clotheColor, Time.time);
         }
     }
 
