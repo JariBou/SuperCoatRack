@@ -10,7 +10,7 @@
     "Type": "User",
     "GUID": "{3F1F1E21-278D-41AA-8232-2670EB8A2976}",
     "Language": "SFX",
-    "Hash": "{ACA3A81C-A2E2-7BD4-D542-26DE438E28F8}",
+    "Hash": "{57A4FCC9-95A4-7505-023B-656FF679D1B9}",
     "ObjectPath": "\\SoundBanks\\Default Work Unit\\Music",
     "ShortName": "Music",
     "Path": "Music.bnk",
@@ -74,6 +74,20 @@
       ]
      },
      {
+      "Id": "2322593426",
+      "Name": "PlayTakeFour",
+      "ObjectPath": "\\Events\\Default Work Unit\\Events\\Play\\PlayTakeFour",
+      "GUID": "{50216A63-AAC7-4EA9-B34D-F769DA1518A4}",
+      "DurationType": "OneShot",
+      "DurationMin": "166.33536",
+      "DurationMax": "166.33536",
+      "MediaRefs": [
+       {
+        "Id": "643449495"
+       }
+      ]
+     },
+     {
       "Id": "575116772",
       "Name": "PlayTestMusic",
       "ObjectPath": "\\Events\\Default Work Unit\\Events\\Play\\PlayTestMusic",
@@ -114,6 +128,6 @@
     ]
    }
   ],
-  "FileHash": "{21C5E427-D0C2-1DFA-BAE2-691F7446B56A}"
+  "FileHash": "{BE08E6FE-1055-404D-F0D5-66612A8DA27A}"
  }
 }

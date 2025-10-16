@@ -94,7 +94,7 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: a4632d3c2cd3ab44959c4986e7d5aad3
     GuidInternal: 
-    m_lastTime: -8584412313805405105
+    m_lastTime: -8584409977188051097
     List:
     - name: BeatEvent
       guid: 17311fc5b20b774ea51aa652c2cb7da8
@@ -176,6 +176,29 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 176
       minDuration: 176
+    - name: PlayTakeFour
+      guid: 636a2150c7aaa94eb34df769da1518a4
+      id: 2322593426
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: a4632d3c2cd3ab44959c4986e7d5aad3
+      - ElementName: Events
+        ObjectType: 4
+        guid: 5be825d74390e343996d2421205490a1
+      - ElementName: Play
+        ObjectType: 4
+        guid: a43af933031cfb4fb2184112bff454c8
+      - ElementName: PlayTakeFour
+        ObjectType: 3
+        guid: 636a2150c7aaa94eb34df769da1518a4
+      Path: Events\Default Work Unit\Events\Play\PlayTakeFour
+      maxAttenuation: 0
+      maxDuration: 166.33536
+      minDuration: 166.33536
     - name: PlayTestMusic
       guid: 6c3021c4fc1b8f49ab7ac540088430c3
       id: 575116772
@@ -384,7 +407,7 @@ MonoBehaviour:
         guid: 62147515c8fb0b4a983969e001d42495
       Path: Triggers\Default Work Unit\Mettre
   ExpandedFileSystemItemIds: 
-  ExpandedWaapiItemIds: 03000000040000000500000006000000080000000a000000120000001400000015000000190000001a000000380000003f0000004000000053000000540000006000000061000000620000007600000077000000840000008b0000008c0000008d000000a6000000a7000000a9000000aa000000c4000000c5000000cd000000d1000000d2000000d3000000d4000000d5000000d8000000e4000000ef000000ff000000110100002e01000040010000430100004e010000
+  ExpandedWaapiItemIds: 0300000004000000050000000600000007000000080000000a000000120000001400000015000000190000001a000000380000003f0000004000000053000000540000006000000061000000620000007600000077000000840000008b0000008c0000008d000000a6000000a7000000a9000000aa000000c4000000c5000000cd000000d1000000d2000000d3000000d4000000d5000000d8000000e4000000ef000000ff000000110100002e01000040010000430100004e010000
   AutoSyncSelection: 0
   autoPopulateEnabled: 1
   currentDataSource: 0
