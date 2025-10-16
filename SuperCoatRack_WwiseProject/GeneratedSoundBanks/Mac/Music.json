@@ -10,7 +10,7 @@
     "Type": "User",
     "GUID": "{3F1F1E21-278D-41AA-8232-2670EB8A2976}",
     "Language": "SFX",
-    "Hash": "{43C3A46C-DAEE-D2FB-11C3-5E1EEA4ADD11}",
+    "Hash": "{952A342A-762C-F983-2D27-9F280DBF4F02}",
     "ObjectPath": "\\SoundBanks\\Default Work Unit\\Music",
     "ShortName": "Music",
     "Path": "Music.bnk",
@@ -38,14 +38,6 @@
       "Location": "Memory",
       "ShortName": "Perfect_Sound.wav",
       "CachePath": "A2/{A2712F8B-A5FE-DF3D-3C2F-7AF97147BD77}.wem"
-     },
-     {
-      "Id": "493148124",
-      "Language": "SFX",
-      "Streaming": "false",
-      "Location": "Memory",
-      "ShortName": "Dachlatte-_Paul-Seul-Remix_.wav",
-      "CachePath": "ED/{ED686670-C4CF-5051-9816-8DE656978B3B}.wem"
      },
      {
       "Id": "643449495",
@@ -170,20 +162,6 @@
       ]
      },
      {
-      "Id": "1622344417",
-      "Name": "PlayDaschlatt",
-      "ObjectPath": "\\Events\\Default Work Unit\\Events\\Play\\PlayDaschlatt",
-      "GUID": "{E4EC9A34-B977-4E36-9894-0B5967FFDBAB}",
-      "DurationType": "OneShot",
-      "DurationMin": "176",
-      "DurationMax": "176",
-      "MediaRefs": [
-       {
-        "Id": "493148124"
-       }
-      ]
-     },
-     {
       "Id": "2322593426",
       "Name": "PlayTakeFour",
       "ObjectPath": "\\Events\\Default Work Unit\\Events\\Play\\PlayTakeFour",
@@ -238,6 +216,6 @@
     ]
    }
   ],
-  "FileHash": "{4767169B-8269-87AD-6324-248BF25A6309}"
+  "FileHash": "{98D4C3ED-CBB8-0560-6310-FFB3D6230A78}"
  }
 }
