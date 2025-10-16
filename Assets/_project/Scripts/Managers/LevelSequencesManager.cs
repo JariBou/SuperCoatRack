@@ -59,11 +59,11 @@ namespace _project.Scripts.Managers
 
                 void CheckInputState(out SequenceActionState sequenceActionState, float dTime)
                 {
-                    if (dTime <= SequenceAction.PerfectTimePercent)
+                    if (dTime <= ScoreManager.Instance.Data.PerfectTimePercent)
                     {
                         sequenceActionState = SequenceActionState.Perfect;
                         
-                    } else if (dTime <= SequenceAction.GoodTimePercent)
+                    } else if (dTime <= ScoreManager.Instance.Data.GoodTimePercent)
                     {
                         sequenceActionState = SequenceActionState.Good;
                     }
