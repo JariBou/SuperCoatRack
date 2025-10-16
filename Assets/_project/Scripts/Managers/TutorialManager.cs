@@ -20,7 +20,23 @@ namespace _project.Scripts.Managers
             _tutrialIndex = 0;
             UpdateDisplay();
         }
-        
+
+        private void Start()
+        {
+            _levelData = LevelManager.Instance.CurrentLevelData;
+            if (!_levelData.IsTutorial)
+            {
+                Destroy(this);
+                UIManager.Instance.DisableTutorialDisplay();
+                return;
+            }
+
+            UIManager.Instance.EnableTutorialDisplay();
+            _tutorialData = TutorialClass.FromTutorialData(_levelData.TutorialData);
+            _tutrialIndex = 0;
+            UpdateDisplay();
+        }
+
         private void InputManagerOnLastInputChanged(InputTypeLink obj)
         {
             _lastInput = obj;
