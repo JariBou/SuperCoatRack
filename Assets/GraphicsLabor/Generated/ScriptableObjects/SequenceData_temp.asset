@@ -13,59 +13,297 @@ MonoBehaviour:
   m_Name: SequenceData_temp
   m_EditorClassIdentifier: 
   sequenceData:
-  - BeatDelayToPrevious: 4
-    gracePeriod: {x: 0.5, y: 0.5}
-    PerfectTimePercent: 0.1
-    GoodTimePercent: 0.6
-    ActionType: 2
+  - ActionType: 2
     ClotheType: 0
     ClotheColor: 2
-  - BeatDelayToPrevious: 4
+    BeatDelayToPrevious: 4
     gracePeriod: {x: 0.5, y: 0.5}
     PerfectTimePercent: 0.1
     GoodTimePercent: 0.6
-    ActionType: 1
+  - ActionType: 2
     ClotheType: 0
     ClotheColor: 2
-  - BeatDelayToPrevious: 4
+    BeatDelayToPrevious: 8
     gracePeriod: {x: 0.5, y: 0.5}
     PerfectTimePercent: 0.1
     GoodTimePercent: 0.6
-    ActionType: 2
+  - ActionType: 2
     ClotheType: 0
-    ClotheColor: 6
-  - BeatDelayToPrevious: 4
+    ClotheColor: 2
+    BeatDelayToPrevious: 8
     gracePeriod: {x: 0.5, y: 0.5}
     PerfectTimePercent: 0.1
     GoodTimePercent: 0.6
-    ActionType: 1
+  - ActionType: 2
     ClotheType: 0
-    ClotheColor: 6
-  - BeatDelayToPrevious: 2
+    ClotheColor: 2
+    BeatDelayToPrevious: 8
     gracePeriod: {x: 0.5, y: 0.5}
     PerfectTimePercent: 0.1
     GoodTimePercent: 0.6
-    ActionType: 3
-    ClotheType: 2
-    ClotheColor: 5
-  - BeatDelayToPrevious: 2
+  - ActionType: 2
+    ClotheType: 0
+    ClotheColor: 2
+    BeatDelayToPrevious: 8
     gracePeriod: {x: 0.5, y: 0.5}
     PerfectTimePercent: 0.1
     GoodTimePercent: 0.6
-    ActionType: 3
-    ClotheType: 2
-    ClotheColor: 5
-  - BeatDelayToPrevious: 2
+  - ActionType: 2
+    ClotheType: 0
+    ClotheColor: 2
+    BeatDelayToPrevious: 8
     gracePeriod: {x: 0.5, y: 0.5}
     PerfectTimePercent: 0.1
     GoodTimePercent: 0.6
-    ActionType: 3
-    ClotheType: 2
-    ClotheColor: 5
-  - BeatDelayToPrevious: 2
+  - ActionType: 2
+    ClotheType: 0
+    ClotheColor: 2
+    BeatDelayToPrevious: 8
     gracePeriod: {x: 0.5, y: 0.5}
     PerfectTimePercent: 0.1
     GoodTimePercent: 0.6
-    ActionType: 3
-    ClotheType: 2
-    ClotheColor: 5
+  - ActionType: 2
+    ClotheType: 0
+    ClotheColor: 2
+    BeatDelayToPrevious: 8
+    gracePeriod: {x: 0.5, y: 0.5}
+    PerfectTimePercent: 0.1
+    GoodTimePercent: 0.6
+  - ActionType: 2
+    ClotheType: 0
+    ClotheColor: 2
+    BeatDelayToPrevious: 8
+    gracePeriod: {x: 0.5, y: 0.5}
+    PerfectTimePercent: 0.1
+    GoodTimePercent: 0.6
+  - ActionType: 2
+    ClotheType: 0
+    ClotheColor: 2
+    BeatDelayToPrevious: 4
+    gracePeriod: {x: 0.5, y: 0.5}
+    PerfectTimePercent: 0.1
+    GoodTimePercent: 0.6
+  - ActionType: 2
+    ClotheType: 0
+    ClotheColor: 2
+    BeatDelayToPrevious: 4
+    gracePeriod: {x: 0.5, y: 0.5}
+    PerfectTimePercent: 0.1
+    GoodTimePercent: 0.6
+  - ActionType: 2
+    ClotheType: 0
+    ClotheColor: 2
+    BeatDelayToPrevious: 4
+    gracePeriod: {x: 0.5, y: 0.5}
+    PerfectTimePercent: 0.1
+    GoodTimePercent: 0.6
+  - ActionType: 2
+    ClotheType: 0
+    ClotheColor: 2
+    BeatDelayToPrevious: 4
+    gracePeriod: {x: 0.5, y: 0.5}
+    PerfectTimePercent: 0.1
+    GoodTimePercent: 0.6
+  - ActionType: 2
+    ClotheType: 0
+    ClotheColor: 2
+    BeatDelayToPrevious: 16
+    gracePeriod: {x: 0.5, y: 0.5}
+    PerfectTimePercent: 0.1
+    GoodTimePercent: 0.6
+  - ActionType: 2
+    ClotheType: 0
+    ClotheColor: 2
+    BeatDelayToPrevious: 4
+    gracePeriod: {x: 0.5, y: 0.5}
+    PerfectTimePercent: 0.1
+    GoodTimePercent: 0.6
+  - ActionType: 2
+    ClotheType: 0
+    ClotheColor: 2
+    BeatDelayToPrevious: 4
+    gracePeriod: {x: 0.5, y: 0.5}
+    PerfectTimePercent: 0.1
+    GoodTimePercent: 0.6
+  - ActionType: 2
+    ClotheType: 0
+    ClotheColor: 2
+    BeatDelayToPrevious: 4
+    gracePeriod: {x: 0.5, y: 0.5}
+    PerfectTimePercent: 0.1
+    GoodTimePercent: 0.6
+  - ActionType: 2
+    ClotheType: 0
+    ClotheColor: 2
+    BeatDelayToPrevious: 4
+    gracePeriod: {x: 0.5, y: 0.5}
+    PerfectTimePercent: 0.1
+    GoodTimePercent: 0.6
+  - ActionType: 2
+    ClotheType: 0
+    ClotheColor: 2
+    BeatDelayToPrevious: 8
+    gracePeriod: {x: 0.5, y: 0.5}
+    PerfectTimePercent: 0.1
+    GoodTimePercent: 0.6
+  - ActionType: 2
+    ClotheType: 0
+    ClotheColor: 2
+    BeatDelayToPrevious: 4
+    gracePeriod: {x: 0.5, y: 0.5}
+    PerfectTimePercent: 0.1
+    GoodTimePercent: 0.6
+  - ActionType: 2
+    ClotheType: 0
+    ClotheColor: 2
+    BeatDelayToPrevious: 4
+    gracePeriod: {x: 0.5, y: 0.5}
+    PerfectTimePercent: 0.1
+    GoodTimePercent: 0.6
+  - ActionType: 2
+    ClotheType: 0
+    ClotheColor: 2
+    BeatDelayToPrevious: 16
+    gracePeriod: {x: 0.5, y: 0.5}
+    PerfectTimePercent: 0.1
+    GoodTimePercent: 0.6
+  - ActionType: 2
+    ClotheType: 0
+    ClotheColor: 2
+    BeatDelayToPrevious: 16
+    gracePeriod: {x: 0.5, y: 0.5}
+    PerfectTimePercent: 0.1
+    GoodTimePercent: 0.6
+  - ActionType: 2
+    ClotheType: 0
+    ClotheColor: 2
+    BeatDelayToPrevious: 16
+    gracePeriod: {x: 0.5, y: 0.5}
+    PerfectTimePercent: 0.1
+    GoodTimePercent: 0.6
+  - ActionType: 2
+    ClotheType: 0
+    ClotheColor: 2
+    BeatDelayToPrevious: 8
+    gracePeriod: {x: 0.5, y: 0.5}
+    PerfectTimePercent: 0.1
+    GoodTimePercent: 0.6
+  - ActionType: 2
+    ClotheType: 0
+    ClotheColor: 2
+    BeatDelayToPrevious: 8
+    gracePeriod: {x: 0.5, y: 0.5}
+    PerfectTimePercent: 0.1
+    GoodTimePercent: 0.6
+  - ActionType: 2
+    ClotheType: 0
+    ClotheColor: 2
+    BeatDelayToPrevious: 4
+    gracePeriod: {x: 0.5, y: 0.5}
+    PerfectTimePercent: 0.1
+    GoodTimePercent: 0.6
+  - ActionType: 2
+    ClotheType: 0
+    ClotheColor: 2
+    BeatDelayToPrevious: 4
+    gracePeriod: {x: 0.5, y: 0.5}
+    PerfectTimePercent: 0.1
+    GoodTimePercent: 0.6
+  - ActionType: 2
+    ClotheType: 0
+    ClotheColor: 2
+    BeatDelayToPrevious: 4
+    gracePeriod: {x: 0.5, y: 0.5}
+    PerfectTimePercent: 0.1
+    GoodTimePercent: 0.6
+  - ActionType: 2
+    ClotheType: 0
+    ClotheColor: 2
+    BeatDelayToPrevious: 8
+    gracePeriod: {x: 0.5, y: 0.5}
+    PerfectTimePercent: 0.1
+    GoodTimePercent: 0.6
+  - ActionType: 2
+    ClotheType: 0
+    ClotheColor: 2
+    BeatDelayToPrevious: 4
+    gracePeriod: {x: 0.5, y: 0.5}
+    PerfectTimePercent: 0.1
+    GoodTimePercent: 0.6
+  - ActionType: 2
+    ClotheType: 0
+    ClotheColor: 2
+    BeatDelayToPrevious: 8
+    gracePeriod: {x: 0.5, y: 0.5}
+    PerfectTimePercent: 0.1
+    GoodTimePercent: 0.6
+  - ActionType: 2
+    ClotheType: 0
+    ClotheColor: 2
+    BeatDelayToPrevious: 4
+    gracePeriod: {x: 0.5, y: 0.5}
+    PerfectTimePercent: 0.1
+    GoodTimePercent: 0.6
+  - ActionType: 2
+    ClotheType: 0
+    ClotheColor: 2
+    BeatDelayToPrevious: 4
+    gracePeriod: {x: 0.5, y: 0.5}
+    PerfectTimePercent: 0.1
+    GoodTimePercent: 0.6
+  - ActionType: 2
+    ClotheType: 0
+    ClotheColor: 2
+    BeatDelayToPrevious: 8
+    gracePeriod: {x: 0.5, y: 0.5}
+    PerfectTimePercent: 0.1
+    GoodTimePercent: 0.6
+  - ActionType: 2
+    ClotheType: 0
+    ClotheColor: 2
+    BeatDelayToPrevious: 8
+    gracePeriod: {x: 0.5, y: 0.5}
+    PerfectTimePercent: 0.1
+    GoodTimePercent: 0.6
+  - ActionType: 2
+    ClotheType: 0
+    ClotheColor: 2
+    BeatDelayToPrevious: 4
+    gracePeriod: {x: 0.5, y: 0.5}
+    PerfectTimePercent: 0.1
+    GoodTimePercent: 0.6
+  - ActionType: 2
+    ClotheType: 0
+    ClotheColor: 2
+    BeatDelayToPrevious: 8
+    gracePeriod: {x: 0.5, y: 0.5}
+    PerfectTimePercent: 0.1
+    GoodTimePercent: 0.6
+  - ActionType: 2
+    ClotheType: 0
+    ClotheColor: 2
+    BeatDelayToPrevious: 16
+    gracePeriod: {x: 0.5, y: 0.5}
+    PerfectTimePercent: 0.1
+    GoodTimePercent: 0.6
+  - ActionType: 2
+    ClotheType: 0
+    ClotheColor: 2
+    BeatDelayToPrevious: 8
+    gracePeriod: {x: 0.5, y: 0.5}
+    PerfectTimePercent: 0.1
+    GoodTimePercent: 0.6
+  - ActionType: 2
+    ClotheType: 0
+    ClotheColor: 2
+    BeatDelayToPrevious: 8
+    gracePeriod: {x: 0.5, y: 0.5}
+    PerfectTimePercent: 0.1
+    GoodTimePercent: 0.6
+  - ActionType: 2
+    ClotheType: 0
+    ClotheColor: 2
+    BeatDelayToPrevious: 12
+    gracePeriod: {x: 0.5, y: 0.5}
+    PerfectTimePercent: 0.1
+    GoodTimePercent: 0.6
