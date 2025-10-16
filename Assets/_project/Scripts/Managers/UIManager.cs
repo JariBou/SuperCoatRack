@@ -34,6 +34,8 @@ namespace _project.Scripts.Managers
         [SerializeField] private TMP_Text _tutorialText;
         [SerializeField] private Image _tutorialImage;
         [SerializeField] private Image _tutorialBackground;
+
+        [SerializeField] private CounterImageScript FIRSTIMAGE;
         
         private void Awake()
         {
@@ -47,6 +49,14 @@ namespace _project.Scripts.Managers
             }
             DontDestroyOnLoad(gameObject);
             ChangeScoreValue(0);
+        }
+
+        private void Start()
+        {
+            if (FIRSTIMAGE != null)
+            {
+                FIRSTIMAGE.JumpItself();
+            }
         }
 
         public void ClearDisplay()

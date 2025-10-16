@@ -108,7 +108,11 @@ namespace _project.Scripts.Managers
         {
             _levelData = LevelManager.Instance.CurrentLevelData;
             
-            GameManager.Instance.BeginLevel();
+            //GameManager.Instance.BeginLevel();
+            AkUnitySoundEngine.PostEvent(
+                "StopMusic",
+                gameObject
+            );
 
             if (_levelData.IsTutorial)
             {
