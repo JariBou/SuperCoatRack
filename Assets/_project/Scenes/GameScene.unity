@@ -1309,6 +1309,23 @@ MonoBehaviour:
     m_ActionId: e1b6d5c8-8229-4d16-8047-7d396b2b09bc
     m_ActionName: 'InGameMap/Bell[/DragonRise Inc.   Generic   USB  Joystick  /button12,/DragonRise
       Inc.   Generic   USB  Joystick  1/button12]'
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 485710484}
+        m_TargetAssemblyTypeName: _project.Scripts.Managers.Inputs.InputManager,
+          Assembly-CSharp
+        m_MethodName: OnBell
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 2432cca2-870f-4937-b3ea-98b50d0418ac
+    m_ActionName: InGameMap/Bell1
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: InGameMap
@@ -2868,6 +2885,8 @@ MonoBehaviour:
   _aspectRatioFitter: {fileID: 1614067843}
   _textOut: {fileID: 52123022}
   _scanZone: {fileID: 1614067840}
+  _updatesPerSecond: 0
+  _inputManager: {fileID: 0}
 --- !u!1 &1487356010
 GameObject:
   m_ObjectHideFlags: 0
