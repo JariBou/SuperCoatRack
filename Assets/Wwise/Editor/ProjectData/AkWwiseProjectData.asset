@@ -66,7 +66,7 @@ MonoBehaviour:
     ParentPath: SoundBanks\Default Work Unit
     guid: 5b725a2a1ba53b4c8392d11313882357
     GuidInternal: 
-    m_lastTime: -8584414192616960689
+    m_lastTime: -8584409864896364871
     List:
     - name: Music
       guid: 211e1f3f8d27aa4182322670eb8a2976
@@ -94,7 +94,7 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: a4632d3c2cd3ab44959c4986e7d5aad3
     GuidInternal: 
-    m_lastTime: -8584409977188051097
+    m_lastTime: -8584409864412480662
     List:
     - name: BeatEvent
       guid: 17311fc5b20b774ea51aa652c2cb7da8
@@ -153,6 +153,106 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
+    - name: Play_Fail_Sound
+      guid: 89f30bf7f197604ea91a0020cd04c2af
+      id: 2311302334
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: a4632d3c2cd3ab44959c4986e7d5aad3
+      - ElementName: Sfx
+        ObjectType: 4
+        guid: fee9d5e5f2f6d94b9634056ed8bc016a
+      - ElementName: Play_Fail_Sound
+        ObjectType: 3
+        guid: 89f30bf7f197604ea91a0020cd04c2af
+      Path: Events\Default Work Unit\Sfx\Play_Fail_Sound
+      maxAttenuation: 0
+      maxDuration: 0.43333334
+      minDuration: 0.43333334
+    - name: Play_Good_Sound
+      guid: 85431a0db750234384897776d08adc3c
+      id: 2710643301
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: a4632d3c2cd3ab44959c4986e7d5aad3
+      - ElementName: Sfx
+        ObjectType: 4
+        guid: fee9d5e5f2f6d94b9634056ed8bc016a
+      - ElementName: Play_Good_Sound
+        ObjectType: 3
+        guid: 85431a0db750234384897776d08adc3c
+      Path: Events\Default Work Unit\Sfx\Play_Good_Sound
+      maxAttenuation: 0
+      maxDuration: 0.76666665
+      minDuration: 0.76666665
+    - name: Play_Perfect_Sound
+      guid: 1fc513cb0766d24ab5cb826fbd18ab90
+      id: 2675739737
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: a4632d3c2cd3ab44959c4986e7d5aad3
+      - ElementName: Sfx
+        ObjectType: 4
+        guid: fee9d5e5f2f6d94b9634056ed8bc016a
+      - ElementName: Play_Perfect_Sound
+        ObjectType: 3
+        guid: 1fc513cb0766d24ab5cb826fbd18ab90
+      Path: Events\Default Work Unit\Sfx\Play_Perfect_Sound
+      maxAttenuation: 0
+      maxDuration: 0.8
+      minDuration: 0.8
+    - name: Play_Start_Sound
+      guid: a2a9f5078a389447986206b4fabf72e7
+      id: 463701278
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: a4632d3c2cd3ab44959c4986e7d5aad3
+      - ElementName: Sfx
+        ObjectType: 4
+        guid: fee9d5e5f2f6d94b9634056ed8bc016a
+      - ElementName: Play_Start_Sound
+        ObjectType: 3
+        guid: a2a9f5078a389447986206b4fabf72e7
+      Path: Events\Default Work Unit\Sfx\Play_Start_Sound
+      maxAttenuation: 0
+      maxDuration: 1.6666666
+      minDuration: 1.6666666
+    - name: Play_TimeUp_Sound
+      guid: 7f60cef0bd18934497c691f7902cbaee
+      id: 3300394306
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: a4632d3c2cd3ab44959c4986e7d5aad3
+      - ElementName: Sfx
+        ObjectType: 4
+        guid: fee9d5e5f2f6d94b9634056ed8bc016a
+      - ElementName: Play_TimeUp_Sound
+        ObjectType: 3
+        guid: 7f60cef0bd18934497c691f7902cbaee
+      Path: Events\Default Work Unit\Sfx\Play_TimeUp_Sound
+      maxAttenuation: 0
+      maxDuration: 1.5666667
+      minDuration: 1.5666667
     - name: PlayDaschlatt
       guid: 349aece477b9364e98940b5967ffdbab
       id: 1622344417
@@ -245,6 +345,23 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 152.85625
       minDuration: 152.85625
+    - name: Sfx
+      guid: fee9d5e5f2f6d94b9634056ed8bc016a
+      id: 393239870
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: a4632d3c2cd3ab44959c4986e7d5aad3
+      - ElementName: Sfx
+        ObjectType: 4
+        guid: fee9d5e5f2f6d94b9634056ed8bc016a
+      Path: Events\Default Work Unit\Sfx
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
     - name: Stop
       guid: 3b6ac5a0f868184ab59e09086ba451ec
       id: 788884573

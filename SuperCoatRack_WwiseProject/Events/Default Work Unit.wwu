@@ -96,6 +96,65 @@
 						</Folder>
 					</ChildrenList>
 				</Folder>
+				<Folder Name="Sfx" ID="{E5D5E9FE-F6F2-4BD9-9634-056ED8BC016A}" ShortID="799046139">
+					<ChildrenList>
+						<Event Name="Play_Start_Sound" ID="{07F5A9A2-388A-4794-9862-06B4FABF72E7}">
+							<ChildrenList>
+								<Action Name="" ID="{F1EA92F7-B639-4AED-823C-C3926372E5A4}" ShortID="704787170">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Start_Sound" ID="{9D96216D-898E-481D-A6DD-A78D1BCAE1CF}" WorkUnitID="{07BF2278-182C-482B-9AF7-BF5668D16BB1}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_Perfect_Sound" ID="{CB13C51F-6607-4AD2-B5CB-826FBD18AB90}">
+							<ChildrenList>
+								<Action Name="" ID="{01A849A2-6D56-4FF2-BD4A-25F218763A23}" ShortID="208619647">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Perfect_Sound" ID="{66C397DA-44C9-4E74-8F16-1B5C5BBB42BA}" WorkUnitID="{07BF2278-182C-482B-9AF7-BF5668D16BB1}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_TimeUp_Sound" ID="{F0CE607F-18BD-4493-97C6-91F7902CBAEE}">
+							<ChildrenList>
+								<Action Name="" ID="{FBE9F922-24D1-431E-BB30-53E2C7A12D43}" ShortID="155033813">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="TimeUp_Sound" ID="{FEEEA174-EECD-4AFA-A0CD-A18ADDE75CD7}" WorkUnitID="{07BF2278-182C-482B-9AF7-BF5668D16BB1}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_Good_Sound" ID="{0D1A4385-50B7-4323-8489-7776D08ADC3C}">
+							<ChildrenList>
+								<Action Name="" ID="{71B09CA0-1B45-4AAD-8FC0-472D39ECF588}" ShortID="468583524">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Good_Sound" ID="{E39C5562-B0D2-4CA3-BD9F-44F118D9C74F}" WorkUnitID="{07BF2278-182C-482B-9AF7-BF5668D16BB1}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_Fail_Sound" ID="{F70BF389-97F1-4E60-A91A-0020CD04C2AF}">
+							<ChildrenList>
+								<Action Name="" ID="{41FDDEA5-4411-4388-AE4E-CE5A85C957C6}" ShortID="410960354">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Fail_Sound" ID="{427D8084-701C-4649-A692-555E34C0ADDD}" WorkUnitID="{07BF2278-182C-482B-9AF7-BF5668D16BB1}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+					</ChildrenList>
+				</Folder>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

@@ -47,21 +47,25 @@ public class FeedbackManager : MonoBehaviour
                     tmp.GetComponent<TextMesh>().text = "Failed";
                     currentColorForRipple = Color.red;
                     currentColorForMiddleRipple = new Color(0.47f, 0.22f, 0.14f);
-                    break;
-                case LevelSequencesManager.SequenceActionState.Good:
-                    tmp.GetComponent<TextMesh>().text = "Good";
-                    currentColorForRipple = Color.green;
-                    currentColorForMiddleRipple = new Color(0.91f, 0.64f, 1f);
+                    AkUnitySoundEngine.PostEvent("Play_Fail_Sound", gameObject);
                     break;
                 case LevelSequencesManager.SequenceActionState.Bad:
                     tmp.GetComponent<TextMesh>().text = "Bad";
                     currentColorForRipple = new Color(0.86f, 0.54f, 0f);
                     currentColorForMiddleRipple = new Color(1f, 0.39f, 0.43f);
+                    AkUnitySoundEngine.PostEvent("Play_Fail_Sound", gameObject);
+                    break;
+                case LevelSequencesManager.SequenceActionState.Good:
+                    tmp.GetComponent<TextMesh>().text = "Good";
+                    currentColorForRipple = Color.green;
+                    currentColorForMiddleRipple = new Color(0.91f, 0.64f, 1f);
+                    AkUnitySoundEngine.PostEvent("Play_Good_Sound", gameObject);
                     break;
                 case LevelSequencesManager.SequenceActionState.Perfect:
                     tmp.GetComponent<TextMesh>().text = "Perfect";
                     currentColorForRipple = Color.yellow;
                     currentColorForMiddleRipple = new Color(1f, 0.95f, 0.84f);
+                    AkUnitySoundEngine.PostEvent("Play_Perfect_Sound", gameObject);
                     break;
                 case LevelSequencesManager.SequenceActionState.None:
                     tmp.GetComponent<TextMesh>().text = "ERROR";

@@ -108,6 +108,7 @@ namespace _project.Scripts.Managers
                 "StopMusic",
                 gameObject
             );
+            AkUnitySoundEngine.PostEvent("Play_Start_Sound", gameObject); // TEMP ALED TOME AAAAAAAAAAA https://www.youtube.com/watch?v=Z5910kZl3Rk
             PlayLevelMusic();
             GameStart?.Invoke();
         }

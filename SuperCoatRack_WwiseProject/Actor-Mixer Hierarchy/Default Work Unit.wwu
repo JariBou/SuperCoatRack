@@ -1,6 +1,158 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{07BF2278-182C-482B-9AF7-BF5668D16BB1}" SchemaVersion="123">
 	<AudioObjects>
-		<WorkUnit Name="Default Work Unit" ID="{07BF2278-182C-482B-9AF7-BF5668D16BB1}" PersistMode="Standalone"/>
+		<WorkUnit Name="Default Work Unit" ID="{07BF2278-182C-482B-9AF7-BF5668D16BB1}" PersistMode="Standalone">
+			<ChildrenList>
+				<Folder Name="SFX" ID="{B8D88E4B-03B9-4415-937F-17435463DF8A}" ShortID="597105459">
+					<ChildrenList>
+						<Sound Name="Start_Sound" ID="{9D96216D-898E-481D-A6DD-A78D1BCAE1CF}" ShortID="102723880">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6D98A839-AC4C-4A37-83B9-A9D3E865E785}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{BFE55156-D556-409A-8C3D-FF830BCFC4B2}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="PlayStart" ID="{F0D5892D-C6D6-4AFF-9397-A1E8E56872B2}">
+									<PropertyList>
+										<Property Name="VolumeOffset" Type="Real64">
+											<ValueList>
+												<Value>1</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>PlayStart.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="982449029"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="PlayStart" ID="{F0D5892D-C6D6-4AFF-9397-A1E8E56872B2}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="Perfect_Sound" ID="{66C397DA-44C9-4E74-8F16-1B5C5BBB42BA}" ShortID="79131142">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6D98A839-AC4C-4A37-83B9-A9D3E865E785}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{BFE55156-D556-409A-8C3D-FF830BCFC4B2}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Perfect_Sound" ID="{720C4B15-5C68-4D52-984E-00EF7A3F881E}">
+									<PropertyList>
+										<Property Name="VolumeOffset" Type="Real64">
+											<ValueList>
+												<Value>-4</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>Perfect_Sound.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="443462720"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Perfect_Sound" ID="{720C4B15-5C68-4D52-984E-00EF7A3F881E}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="TimeUp_Sound" ID="{FEEEA174-EECD-4AFA-A0CD-A18ADDE75CD7}" ShortID="88864870">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6D98A839-AC4C-4A37-83B9-A9D3E865E785}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{BFE55156-D556-409A-8C3D-FF830BCFC4B2}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="TimeUp" ID="{69C80DEC-92B1-42A6-B747-B3807E52F55D}">
+									<PropertyList>
+										<Property Name="VolumeOffset" Type="Real64">
+											<ValueList>
+												<Value>-6</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>TimeUp.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="315963784"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="TimeUp" ID="{69C80DEC-92B1-42A6-B747-B3807E52F55D}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="Good_Sound" ID="{E39C5562-B0D2-4CA3-BD9F-44F118D9C74F}" ShortID="519783993">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6D98A839-AC4C-4A37-83B9-A9D3E865E785}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{BFE55156-D556-409A-8C3D-FF830BCFC4B2}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Good_Sound" ID="{E5AF7CBD-B36B-4234-8D43-1108A2396A43}">
+									<PropertyList>
+										<Property Name="VolumeOffset" Type="Real64">
+											<ValueList>
+												<Value>-4</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>Good_Sound.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="120435780"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Good_Sound" ID="{E5AF7CBD-B36B-4234-8D43-1108A2396A43}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="Fail_Sound" ID="{427D8084-701C-4649-A692-555E34C0ADDD}" ShortID="877997965">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6D98A839-AC4C-4A37-83B9-A9D3E865E785}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{BFE55156-D556-409A-8C3D-FF830BCFC4B2}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Fail_Sound2" ID="{9B1BFBB4-6802-4D85-B65F-CC27B5EBC553}">
+									<PropertyList>
+										<Property Name="VolumeOffset" Type="Real64">
+											<ValueList>
+												<Value>-5</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>Fail_Sound2.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="811915395"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Fail_Sound2" ID="{9B1BFBB4-6802-4D85-B65F-CC27B5EBC553}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+					</ChildrenList>
+				</Folder>
+			</ChildrenList>
+		</WorkUnit>
 	</AudioObjects>
 </WwiseDocument>

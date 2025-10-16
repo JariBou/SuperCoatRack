@@ -7,6 +7,7 @@
 					<ObjectInclusionList>
 						<ObjectRef Name="Music" ID="{98F9ED3C-B6DA-4182-B533-A68275DD4C9F}" WorkUnitID="{ACD2CB43-14A2-429B-BD28-09BEF144217B}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Events" ID="{D725E85B-9043-43E3-996D-2421205490A1}" WorkUnitID="{3C2D63A4-D32C-44AB-959C-4986E7D5AAD3}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Sfx" ID="{E5D5E9FE-F6F2-4BD9-9634-056ED8BC016A}" WorkUnitID="{3C2D63A4-D32C-44AB-959C-4986E7D5AAD3}" Origin="Manual" Filter="7"/>
 					</ObjectInclusionList>
 					<ObjectExclusionList/>
 					<GameSyncExclusionList/>

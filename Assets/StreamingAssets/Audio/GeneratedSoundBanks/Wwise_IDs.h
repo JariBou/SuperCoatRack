@@ -14,6 +14,11 @@ namespace AK
     namespace EVENTS
     {
         static const AkUniqueID BEATEVENT = 3517968107U;
+        static const AkUniqueID PLAY_FAIL_SOUND = 2311302334U;
+        static const AkUniqueID PLAY_GOOD_SOUND = 2710643301U;
+        static const AkUniqueID PLAY_PERFECT_SOUND = 2675739737U;
+        static const AkUniqueID PLAY_START_SOUND = 463701278U;
+        static const AkUniqueID PLAY_TIMEUP_SOUND = 3300394306U;
         static const AkUniqueID PLAYDASCHLATT = 1622344417U;
         static const AkUniqueID PLAYTAKEFOUR = 2322593426U;
         static const AkUniqueID PLAYTESTMUSIC = 575116772U;
