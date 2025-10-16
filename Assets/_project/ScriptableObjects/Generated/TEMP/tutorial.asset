@@ -12,19 +12,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d5e3a23eb0b4e45a91afa44627f0c54, type: 3}
   m_Name: tutorial
   m_EditorClassIdentifier: 
-  sequenceData:
-  - BeatDuration: 0
-    Text: OMG
-    ActionType: 1
+  TutorialSequence:
+  - ActionType: 1
     ClotheType: 0
     ClotheColor: 0
-  - BeatDuration: 0
-    Text: la dingz
-    ActionType: 0
+    Text: Place clothes on the rack when this input is shown
+  - ActionType: 0
     ClotheType: 0
     ClotheColor: 0
-  - BeatDuration: 0
-    Text: GG
-    ActionType: 4
+    Text: Remove clothes from the rack when this input shows
+  - ActionType: 2
+    ClotheType: 0
+    ClotheColor: 2
+    Text: When this icon appears, scan the clothe that is shown before you place
+      it or after you've removed it from the rack
+  - ActionType: 3
     ClotheType: 0
     ClotheColor: 0
+    Text: A bell icon will sometimes appear, ring it to gain points!
+  - ActionType: 4
+    ClotheType: 0
+    ClotheColor: 0
+    Text: Be careful though, You'll need to do all time in RYTHM !!!
