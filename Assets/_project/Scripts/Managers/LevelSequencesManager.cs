@@ -132,12 +132,17 @@ namespace _project.Scripts.Managers
             //Debug.Log("Beat");
             if (CurrentSequence == null) return;
             UIManager.Instance.ClearDisplay();
-            UIManager.Instance.ClearNextClotheDisplay();
+            // UIManager.Instance.ClearNextClotheDisplay();
             if (CurrentSequence.DoBeat().HasActionOnBeat(out SequenceData.SequenceAction actionOnBeat))
             {
                 Debug.Log("Sequence Has Action on beat");
                 // UIManager.Instance.ChangeIconPosition(0, actionOnBeat);
                 _currentSequenceAction = new SequenceActionTimed(actionOnBeat, Time.time);
+                if (CurrentSequence.GetGameActionPack(out SequenceExtensions.GameActionPack pack,
+                        (a, b) => a.IsSameClothe(b)))
+                {
+                    UIManager.Instance.UpdateNextClotheIcon(pack.currentGameAction, pack.nextGameAction);
+                }
                 HandleInput();
             }
 
@@ -148,10 +153,10 @@ namespace _project.Scripts.Managers
                     UIManager.Instance.ChangeIconPosition(i, peakedAction);
                 }
             }
-            if (CurrentSequence.GetNextGameAction(out GameAction gameAction))
-            {
-                UIManager.Instance.ChangeClothIcon(gameAction, (int)gameAction.ClotheColor);
-            }
+            // if (CurrentSequence.GetNextGameAction(out GameAction gameAction))
+            // {
+            //     UIManager.Instance.ChangeClothIcon(gameAction, (int)gameAction.ClotheColor);
+            // }
         }
 
         public void LoadNextSequence()
@@ -162,6 +167,11 @@ namespace _project.Scripts.Managers
             // if (_currentSequence != null) return;
             // // ==============
             CurrentSequence = Sequence.FromSequenceData(_levelData[_sequenceIndex]);
+            if (CurrentSequence.GetGameActionPack(out SequenceExtensions.GameActionPack pack,
+                    (a, b) => a.IsSameClothe(b)))
+            {
+                UIManager.Instance.UpdateNextClotheIcon(pack.currentGameAction, pack.nextGameAction);
+            }
         }
 
         public IEnumerator WaitForInput(float delay)

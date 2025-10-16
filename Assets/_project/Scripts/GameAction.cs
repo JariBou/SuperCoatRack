@@ -13,5 +13,10 @@ namespace _project.Scripts
         {
             return $"GameAction(ActionType:{ActionType} ; ClotheType:{ClotheType} ; ClotheColor{ClotheColor}";
         }
+
+        public bool IsSameClothe(GameAction gameAction)
+        {
+            return ClotheType == gameAction.ClotheType && ClotheColor == gameAction.ClotheColor;
+        }
     }
 }
