@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using _project.ScriptableObjects.Scripts;
+using _project.Scripts.Extensions;
 using _project.Scripts.Managers.Inputs;
 using JetBrains.Annotations;
 using UnityEngine;
@@ -144,9 +145,12 @@ namespace _project.Scripts.Managers
             {
                 if (CurrentSequence.PeakBeat(i, out SequenceData.SequenceAction peakedAction))
                 {
-                    UIManager.Instance.ChangeClothIcon(peakedAction, (int)peakedAction.ClotheColor);
                     UIManager.Instance.ChangeIconPosition(i, peakedAction);
                 }
+            }
+            if (CurrentSequence.GetNextGameAction(out GameAction gameAction))
+            {
+                UIManager.Instance.ChangeClothIcon(gameAction, (int)gameAction.ClotheColor);
             }
         }
 
