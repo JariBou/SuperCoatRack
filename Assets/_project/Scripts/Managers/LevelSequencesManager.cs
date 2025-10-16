@@ -174,7 +174,15 @@ namespace _project.Scripts.Managers
             if (CurrentSequence.GetGameActionPack(out SequenceExtensions.GameActionPack pack,
                     (a, b) => a.IsSameClothe(b)))
             {
-                UIManager.Instance.UpdateNextClotheIcon(pack.currentGameAction, pack.nextGameAction);
+                if (_sequenceIndex == 0)
+                {
+                    UIManager.Instance.UpdateNextClotheIcon(pack.currentGameAction, pack.nextGameAction);
+                }
+                else
+                {
+                    UIManager.Instance.UpdateNextClotheIcon(null, pack.currentGameAction);
+                }
+                // UIManager.Instance.InitNextClotheIcon(pack.currentGameAction, pack.nextGameAction);
             }
         }
 

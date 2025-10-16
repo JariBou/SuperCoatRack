@@ -1,5 +1,4 @@
 using System.Collections;
-using System.Collections.Generic;
 using _project.Scripts.Managers.Inputs;
 using TMPro;
 using UnityEngine;
@@ -18,7 +17,7 @@ namespace _project.Scripts.Managers
         private RectTransform _scanZone;
         
         [SerializeField, Range(0, 144)]
-        private int _updatesPerSecond;
+        private int _updatesPerSecond = 10;
         
         [SerializeField]
         private InputManager _inputManager;

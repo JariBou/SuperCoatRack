@@ -34,7 +34,7 @@ namespace _project.Scripts.Managers
             _nextClotheDisplay.DOMove(_currentClotheDisplayPosition, _duration);
             _nextClotheDisplay.GetComponent<CanvasGroup>().DOFade(1, _duration);
             _nextClotheDisplay.DOScale(Vector3.one, _duration);
-            _currentClotheDisplay.DORotate(new Vector3(0f, 0f, 135f), _duration);
+            _currentClotheDisplay.DORotate(new Vector3(0f, 0f, 90f), _duration);
             _currentClotheDisplay.DOScale(Vector3.one * 0.8f, _duration);
             _currentClotheDisplay.GetComponent<CanvasGroup>().DOFade(0, _duration).OnComplete(DoAnimPart2);
         }

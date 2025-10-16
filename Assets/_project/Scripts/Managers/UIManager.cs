@@ -188,6 +188,48 @@ namespace _project.Scripts.Managers
 
         public void UpdateNextClotheIcon(GameAction currentGameAction, GameAction nextGameAction)
         {
+            Sprite currentSprite = null;
+            if (currentGameAction != null)
+            {
+                switch (currentGameAction.ClotheType)
+                {
+                    case SequenceConfig.ClotheType.Coat:
+                        currentSprite = coatToDisplay[(int)currentGameAction.ClotheColor];
+                        break;
+                    case SequenceConfig.ClotheType.Hat:
+                        currentSprite = hatToDisplay[(int)currentGameAction.ClotheColor];
+                        break;
+                    case SequenceConfig.ClotheType.Shoe:
+                        currentSprite = shoesToDisplay[(int)currentGameAction.ClotheColor];
+                        break;
+                    default:
+                        throw new ArgumentOutOfRangeException();
+                }
+            }
+            
+            Sprite nextSprite = null;
+            if (nextGameAction != null)
+            {
+                switch (nextGameAction.ClotheType)
+                {
+                    case SequenceConfig.ClotheType.Coat:
+                        nextSprite = coatToDisplay[(int)nextGameAction.ClotheColor];
+                        break;
+                    case SequenceConfig.ClotheType.Hat:
+                        nextSprite = hatToDisplay[(int)nextGameAction.ClotheColor];
+                        break;
+                    case SequenceConfig.ClotheType.Shoe:
+                        nextSprite = shoesToDisplay[(int)nextGameAction.ClotheColor];
+                        break;
+                    default:
+                        throw new ArgumentOutOfRangeException();
+                }
+            }
+            NextClotheDisplayManager.ConfigNewClotheDisplay(currentSprite, nextSprite);
+        }
+
+        public void InitNextClotheIcon(GameAction currentGameAction, GameAction nextGameAction)
+        {
             Sprite currentSprite;
             switch (currentGameAction.ClotheType)
             {
@@ -219,7 +261,7 @@ namespace _project.Scripts.Managers
                 default:
                     throw new ArgumentOutOfRangeException();
             }
-            NextClotheDisplayManager.ConfigNewClotheDisplay(currentSprite, nextSprite);
+            NextClotheDisplayManager.InitClotheDisplay(currentSprite, nextSprite);
         }
     }
 }
