@@ -3,6 +3,7 @@ Event	ID	Name			Wwise Object Path	Notes
 	1622344417	PlayDaschlatt			\Default Work Unit\Events\Play\PlayDaschlatt	
 	1917263390	StopMusic			\Default Work Unit\Events\Stop\StopMusic	
 	2131253029	PlayWiiMusic			\Default Work Unit\Events\Play\PlayWiiMusic	
+	2322593426	PlayTakeFour			\Default Work Unit\Events\Play\PlayTakeFour	
 	3517968107	BeatEvent			\Default Work Unit\Events\BeatEvent	
 
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
