@@ -26,11 +26,10 @@ namespace _project.Scripts.Managers
             _levelData = LevelManager.Instance.CurrentLevelData;
             if (!_levelData.IsTutorial)
             {
-                Destroy(this);
                 UIManager.Instance.DisableTutorialDisplay();
+                Destroy(this);
                 return;
             }
-
             UIManager.Instance.EnableTutorialDisplay();
             _tutorialData = TutorialClass.FromTutorialData(_levelData.TutorialData);
             _tutrialIndex = 0;
