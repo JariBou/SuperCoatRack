@@ -8,8 +8,6 @@ namespace _project.Scripts.Managers
     public class ScanManager : MonoBehaviour
     {
         [SerializeField]
-        private RawImage _rawImageBackground;
-        [SerializeField]
         private AspectRatioFitter _aspectRatioFitter;
         [SerializeField]
         private TextMeshProUGUI _textOut;
@@ -47,7 +45,6 @@ namespace _project.Scripts.Managers
                 }
             }
             _cameraTexture.Play();
-            _rawImageBackground.texture = _cameraTexture;
             _isCamAvaible = true;
         }
 
@@ -62,8 +59,6 @@ namespace _project.Scripts.Managers
 
             int orientation = _cameraTexture.videoRotationAngle;
             orientation = orientation * 3;
-            _rawImageBackground.rectTransform.localEulerAngles = new Vector3(0, 0, orientation);
-
         }
         public void OnClickScan()
         {
