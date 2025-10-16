@@ -8,5 +8,10 @@ namespace _project.Scripts
         public SequenceConfig.ActionType ActionType;
         public SequenceConfig.ClotheType ClotheType;
         public SequenceConfig.ClotheColor ClotheColor;
+
+        public override string ToString()
+        {
+            return $"GameAction(ActionType:{ActionType} ; ClotheType:{ClotheType} ; ClotheColor{ClotheColor}";
+        }
     }
 }

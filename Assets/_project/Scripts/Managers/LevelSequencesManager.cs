@@ -9,6 +9,7 @@ namespace _project.Scripts.Managers
 {
     public class LevelSequencesManager : MonoBehaviour
     {
+        public static event Action<Sequence> CurrentSequenceChanged;
         public enum SequenceActionState
         {
             None = 0,
@@ -35,7 +36,7 @@ namespace _project.Scripts.Managers
             public bool WasInputInTimeFrame(float lastInputTimestamp, out SequenceActionState state)
             {
                 float timeDiff = Timestamp - lastInputTimestamp;
-                Debug.LogWarning($"TIMEDIFF: {timeDiff}");
+                // Debug.LogWarning($"TIMEDIFF: {timeDiff}");
                 if (!(SequenceAction.gracePeriod.x > timeDiff && timeDiff > -SequenceAction.gracePeriod.y))
                 {
                     state = SequenceActionState.Failed;
@@ -53,7 +54,7 @@ namespace _project.Scripts.Managers
                     float dTime = abs / SequenceAction.gracePeriod.y;
                     CheckInputState(out state, dTime);
                 }
-                Debug.LogWarning($"Input was in frame with diff: {timeDiff} and state {state}");
+                // Debug.LogWarning($"Input was in frame with diff: {timeDiff} and state {state}");
                 return true;
 
                 void CheckInputState(out SequenceActionState sequenceActionState, float dTime)
@@ -92,6 +93,16 @@ namespace _project.Scripts.Managers
         private float _lastInputTime;
         private bool _waitingForInput;
 
+        private Sequence CurrentSequence
+        {
+            get => _currentSequence;
+            set
+            {
+                _currentSequence = value;
+                CurrentSequenceChanged?.Invoke(_currentSequence);
+            }
+        }
+
         private void Start()
         {
             _levelData = LevelManager.Instance.CurrentLevelData;
@@ -107,8 +118,6 @@ namespace _project.Scripts.Managers
             }
 
             StartCoroutine(ClearInput());
-            ParticleSystem.ColorOverLifetimeModule overModule = new ParticleSystem.ColorOverLifetimeModule();
-            overModule.color.gradient.colorKeys[1].color = Color.white;
         }
 
         private IEnumerator ClearInput()
@@ -120,10 +129,10 @@ namespace _project.Scripts.Managers
         public void OnBeat()
         {
             //Debug.Log("Beat");
-            if (_currentSequence == null) return;
+            if (CurrentSequence == null) return;
             UIManager.Instance.ClearDisplay();
             UIManager.Instance.ClearNextClotheDisplay();
-            if (_currentSequence.DoBeat().HasActionOnBeat(out SequenceData.SequenceAction actionOnBeat))
+            if (CurrentSequence.DoBeat().HasActionOnBeat(out SequenceData.SequenceAction actionOnBeat))
             {
                 Debug.Log("Sequence Has Action on beat");
                 // UIManager.Instance.ChangeIconPosition(0, actionOnBeat);
@@ -133,7 +142,7 @@ namespace _project.Scripts.Managers
 
             for (int i = _peakAmount; i >= 0; i--)
             {
-                if (_currentSequence.PeakBeat(i, out SequenceData.SequenceAction peakedAction))
+                if (CurrentSequence.PeakBeat(i, out SequenceData.SequenceAction peakedAction))
                 {
                     UIManager.Instance.ChangeClothIcon(peakedAction, (int)peakedAction.ClotheColor);
                     UIManager.Instance.ChangeIconPosition(i, peakedAction);
@@ -148,7 +157,7 @@ namespace _project.Scripts.Managers
             // // TEMP =========
             // if (_currentSequence != null) return;
             // // ==============
-            _currentSequence = Sequence.FromSequenceData(_levelData[_sequenceIndex]);
+            CurrentSequence = Sequence.FromSequenceData(_levelData[_sequenceIndex]);
         }
 
         public IEnumerator WaitForInput(float delay)
@@ -158,7 +167,7 @@ namespace _project.Scripts.Managers
             _waitingForInput = false;
             if (_currentSequenceAction is { state: SequenceActionState.None })
             {
-                Debug.Log("Failing after waiting....");
+                // Debug.Log("Failing after waiting....");
                 OnFail();
             }
         }
@@ -166,30 +175,30 @@ namespace _project.Scripts.Managers
         private void InputManagerOnLastInputChanged(InputTypeLink obj)
         {
             if (_lastInput is not null) return;
-            Debug.LogError($"ReceivedInput of action: {obj.ActionType}");
+            // Debug.LogError($"ReceivedInput of action: {obj.ActionType}");
             _lastInput = obj;
             if (_waitingForInput)
             {
-                Debug.Log("We were waiting for input !");
+                // Debug.Log("We were waiting for input !");
                 // Blablabla
                 HandleInput(true);
                 return;
             }
-            Debug.Log("Not waiting for input...");
+            // Debug.Log("Not waiting for input...");
         }
 
         private void HandleInput(bool inputWaited = false)
         {
-            Debug.Log("=== HANDLEINPUT ===");
+            // Debug.Log("=== HANDLEINPUT ===");
             if (_currentSequenceAction is null || _currentSequenceAction.state != SequenceActionState.None)
             {
-                Debug.Log("_lastSequenceAction was null or already completed");
+                // Debug.Log("_lastSequenceAction was null or already completed");
                 return;
             }
             
             if (_lastInput is null)
             {
-                Debug.Log("_lastInput was null");
+                // Debug.Log("_lastInput was null");
                 if (inputWaited)
                 {
                     OnFail();
@@ -201,14 +210,14 @@ namespace _project.Scripts.Managers
             
             if (!_currentSequenceAction.WasInputInTimeFrame(_lastInput.Timestamp, out SequenceActionState actionState))
             {
-                Debug.Log($"Input was out of out of time: {_currentSequenceAction.Timestamp - _lastInput.Timestamp}");
+                // Debug.Log($"Input was out of out of time: {_currentSequenceAction.Timestamp - _lastInput.Timestamp}");
                 OnFail();
                 return;
             }
 
             if (_currentSequenceAction.SequenceAction.ActionType == _lastInput.ActionType)
             {
-                Debug.Log($"Actions were of same type: {_currentSequenceAction.SequenceAction.ActionType}");
+                // Debug.Log($"Actions were of same type: {_currentSequenceAction.SequenceAction.ActionType}");
                 switch (_lastInput.ActionType)
                 {
                     case SequenceConfig.ActionType.Pickup:
@@ -218,7 +227,7 @@ namespace _project.Scripts.Managers
                             OnSuccess(actionState);    
                             return;
                         }
-                        Debug.Log($"Clothe type was not the same {_lastInput.ClotheType} != {_currentSequenceAction.SequenceAction.ClotheType}");
+                        // Debug.Log($"Clothe type was not the same {_lastInput.ClotheType} != {_currentSequenceAction.SequenceAction.ClotheType}");
                         break;
                     case SequenceConfig.ActionType.Scan:
                         if (_lastInput.ClotheType == _currentSequenceAction.SequenceAction.ClotheType &&
@@ -227,7 +236,7 @@ namespace _project.Scripts.Managers
                             OnSuccess(actionState);
                             return;
                         }
-                        Debug.Log($"Clothe type was not the same {_lastInput.ClotheType} != {_currentSequenceAction.SequenceAction.ClotheType} or Color was not same {_lastInput.ClotheColor} !=  {_currentSequenceAction.SequenceAction.ClotheColor}");
+                        // Debug.Log($"Clothe type was not the same {_lastInput.ClotheType} != {_currentSequenceAction.SequenceAction.ClotheType} or Color was not same {_lastInput.ClotheColor} !=  {_currentSequenceAction.SequenceAction.ClotheColor}");
                         break;
                     default:
                         throw new ArgumentOutOfRangeException();
@@ -235,14 +244,14 @@ namespace _project.Scripts.Managers
             }
             else
             {
-                Debug.LogWarning($"Actions weren't of same type: (Input){_lastInput.ActionType} != (SequenceAction){_currentSequenceAction.SequenceAction.ActionType}");
+                // Debug.LogWarning($"Actions weren't of same type: (Input){_lastInput.ActionType} != (SequenceAction){_currentSequenceAction.SequenceAction.ActionType}");
             }
 
             if (inputWaited)
             {
                 OnFail();
             } else {
-                Debug.Log("Waiting for input...");
+                // Debug.Log("Waiting for input...");
                 StartCoroutine(WaitForInput(_currentSequenceAction.SequenceAction.gracePeriod.y));
             }
             // OnFail();
@@ -260,7 +269,7 @@ namespace _project.Scripts.Managers
         
         private void FinishSequenceAction(SequenceActionState actionState = SequenceActionState.Failed)
         {
-            if (_currentSequenceAction?.state != SequenceActionState.None || _currentSequence is null) return;
+            if (_currentSequenceAction?.state != SequenceActionState.None || CurrentSequence is null) return;
             
             _currentSequenceAction.SetState(actionState);
             
@@ -272,7 +281,7 @@ namespace _project.Scripts.Managers
             
             ScoreManager.SequenceActionFinished(_currentSequenceAction);
             
-            if (_currentSequence.IsLastSequence(_currentSequenceAction))
+            if (CurrentSequence.IsLastSequence(_currentSequenceAction))
             {
                 _sequenceIndex++;
             }

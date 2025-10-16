@@ -16,6 +16,9 @@ namespace _project.Scripts
 
         public bool IsOver { get; private set; }
 
+        public int BeatCounter => _beatCounter;
+        public int MaxBeatCounter { get; private set; }
+
         private Sequence(SequenceData sequenceData)
         {
             _beatCounter = -1;
@@ -36,11 +39,12 @@ namespace _project.Scripts
                 //Debug.Log($"Action at beat {beatCount}");
                 _sequences.Add(beatCount, action);
             }
+            MaxBeatCounter = beatCount;
         }
 
         public Sequence DoBeat()
         {
-            _beatCounter++;
+            _beatCounter = BeatCounter + 1;
             // Debug.Log($"Doing Beat {_beatCounter} of Sequence");
             return this;
         }
@@ -57,8 +61,20 @@ namespace _project.Scripts
         
         public bool PeakBeat(int peakCount, [MaybeNullWhen(false)] out SequenceData.SequenceAction result)
         {
-            int beatCounter = _beatCounter + peakCount;
+            int beatCounter = BeatCounter + peakCount;
+            if (beatCounter >= MaxBeatCounter || beatCounter < 0)
+            {
+                result = null;
+                return false;
+            }
             return _sequences.TryGetValue(beatCounter, out result);
+        }
+        
+        public bool PeakBeat(int peakCount, [MaybeNullWhen(false)] out GameAction result)
+        {
+            bool found = PeakBeat(peakCount, out SequenceData.SequenceAction resultAsSequence);
+            result = resultAsSequence;
+            return found;
         }
 
         public bool IsLastSequence(LevelSequencesManager.SequenceActionTimed lastSequenceAction)

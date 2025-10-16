@@ -99,6 +99,7 @@ namespace _project.Scripts.Managers
                     default:
                         throw new ArgumentOutOfRangeException();
                 }
+                slotForCloth.enabled = true;
             }
             catch (Exception _)
             {
@@ -109,6 +110,7 @@ namespace _project.Scripts.Managers
 
         public void ClearNextClotheDisplay()
         {
+            slotForCloth.enabled = false;
             slotForCloth.sprite = null;
         }
 
