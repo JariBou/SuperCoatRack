@@ -77,6 +77,7 @@ namespace _project.Scripts.Managers
                 null
             );
             _levelData = LevelManager.Instance.CurrentLevelData;
+            Debug.Log(_levelData.name);
         }
 
         private void OnBeatEvent(object in_cookie, AkCallbackType in_type, AkCallbackInfo in_info)
