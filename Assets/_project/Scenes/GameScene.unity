@@ -1412,7 +1412,7 @@ MonoBehaviour:
   _currentParentTransform: {fileID: 1896179487}
   _nextClotheDisplay: {fileID: 1361598625}
   _currentClotheDisplay: {fileID: 987796530}
-  _duration: 1
+  _duration: 0.5
 --- !u!1 &562288388
 GameObject:
   m_ObjectHideFlags: 0
@@ -2885,8 +2885,8 @@ MonoBehaviour:
   _aspectRatioFitter: {fileID: 1614067843}
   _textOut: {fileID: 52123022}
   _scanZone: {fileID: 1614067840}
-  _updatesPerSecond: 0
-  _inputManager: {fileID: 0}
+  _updatesPerSecond: 10
+  _inputManager: {fileID: 485710484}
 --- !u!1 &1487356010
 GameObject:
   m_ObjectHideFlags: 0
