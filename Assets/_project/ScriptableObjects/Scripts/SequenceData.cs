@@ -17,8 +17,6 @@ namespace _project.ScriptableObjects.Scripts
         {
             public int BeatDelayToPrevious = 4;
             public Vector2 gracePeriod = new Vector2(.5f, .1f);
-            [Range(0f, 1f)] public float PerfectTimePercent = .1f;
-            [Range(0f, 1f)] public float GoodTimePercent = .6f;
         }
 
         public IEnumerator<SequenceAction> GetEnumerator()

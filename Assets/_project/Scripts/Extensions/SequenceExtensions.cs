@@ -54,5 +54,19 @@ namespace _project.Scripts.Extensions
             
             return found;
         }
+
+        public static bool GetNextGameAction(this Sequence sequence, out GameAction result)
+        {
+            result = null;
+            for (int i = 0; i < sequence.MaxBeatCounter - sequence.BeatCounter; i++)
+            {
+                if (sequence.PeakBeat(i, out GameAction gameAction))
+                {
+                    result = gameAction;
+                    return true;
+                }
+            }
+            return false;
+        }
     }
 }

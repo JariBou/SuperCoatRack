@@ -25,6 +25,8 @@ namespace _project.Scripts.Managers
             }
         }
 
+        public ScoreData Data => _scoreData;
+
         private void Awake()
         {
             if (Instance != null)
@@ -45,11 +47,11 @@ namespace _project.Scripts.Managers
                 case LevelSequencesManager.SequenceActionState.Succeeded:
                     break;
                 case LevelSequencesManager.SequenceActionState.Bad:
-                    return _scoreData.BadRatingScore;
+                    return Data.BadRatingScore;
                 case LevelSequencesManager.SequenceActionState.Good:
-                    return _scoreData.GoodRatingScore;
+                    return Data.GoodRatingScore;
                 case LevelSequencesManager.SequenceActionState.Perfect:
-                    return _scoreData.PerfectRatingScore;
+                    return Data.PerfectRatingScore;
                 default:
                     throw new ArgumentOutOfRangeException(nameof(actionState), actionState, null);
             }

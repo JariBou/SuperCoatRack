@@ -10,35 +10,11 @@
     "Type": "User",
     "GUID": "{3F1F1E21-278D-41AA-8232-2670EB8A2976}",
     "Language": "SFX",
-    "Hash": "{43C3A46C-DAEE-D2FB-11C3-5E1EEA4ADD11}",
+    "Hash": "{5AF5C2D9-6736-619D-1E19-86A0D8ACD3FF}",
     "ObjectPath": "\\SoundBanks\\Default Work Unit\\Music",
     "ShortName": "Music",
     "Path": "Music.bnk",
     "Media": [
-     {
-      "Id": "120435780",
-      "Language": "SFX",
-      "Streaming": "false",
-      "Location": "Memory",
-      "ShortName": "Good_Sound.wav",
-      "CachePath": "32/{32FCD600-9C83-B544-13C3-1DF1E25CA0BE}.wem"
-     },
-     {
-      "Id": "315963784",
-      "Language": "SFX",
-      "Streaming": "false",
-      "Location": "Memory",
-      "ShortName": "TimeUp.wav",
-      "CachePath": "2E/{2E49A358-90B8-AC52-71C2-9A528F49C7D9}.wem"
-     },
-     {
-      "Id": "443462720",
-      "Language": "SFX",
-      "Streaming": "false",
-      "Location": "Memory",
-      "ShortName": "Perfect_Sound.wav",
-      "CachePath": "A2/{A2712F8B-A5FE-DF3D-3C2F-7AF97147BD77}.wem"
-     },
      {
       "Id": "493148124",
       "Language": "SFX",
@@ -70,22 +46,6 @@
       "Location": "Memory",
       "ShortName": "Kirby - Poyo Poyo.wav",
       "CachePath": "AE/{AECDAD6A-E3AA-12FA-D152-E77E5B39B64E}.wem"
-     },
-     {
-      "Id": "811915395",
-      "Language": "SFX",
-      "Streaming": "false",
-      "Location": "Memory",
-      "ShortName": "Fail_Sound2.wav",
-      "CachePath": "D2/{D2B2B969-6BEB-125B-02A6-0C55C18A1D32}.wem"
-     },
-     {
-      "Id": "982449029",
-      "Language": "SFX",
-      "Streaming": "false",
-      "Location": "Memory",
-      "ShortName": "PlayStart.wav",
-      "CachePath": "82/{82CD194C-E676-FCB1-B4EF-BA577F3ECE3A}.wem"
      }
     ],
     "Events": [
@@ -98,76 +58,6 @@
       "DurationType": "OneShot",
       "DurationMin": "0",
       "DurationMax": "0"
-     },
-     {
-      "Id": "2311302334",
-      "Name": "Play_Fail_Sound",
-      "ObjectPath": "\\Events\\Default Work Unit\\Sfx\\Play_Fail_Sound",
-      "GUID": "{F70BF389-97F1-4E60-A91A-0020CD04C2AF}",
-      "DurationType": "OneShot",
-      "DurationMin": "0.43333334",
-      "DurationMax": "0.43333334",
-      "MediaRefs": [
-       {
-        "Id": "811915395"
-       }
-      ]
-     },
-     {
-      "Id": "2710643301",
-      "Name": "Play_Good_Sound",
-      "ObjectPath": "\\Events\\Default Work Unit\\Sfx\\Play_Good_Sound",
-      "GUID": "{0D1A4385-50B7-4323-8489-7776D08ADC3C}",
-      "DurationType": "OneShot",
-      "DurationMin": "0.76666665",
-      "DurationMax": "0.76666665",
-      "MediaRefs": [
-       {
-        "Id": "120435780"
-       }
-      ]
-     },
-     {
-      "Id": "2675739737",
-      "Name": "Play_Perfect_Sound",
-      "ObjectPath": "\\Events\\Default Work Unit\\Sfx\\Play_Perfect_Sound",
-      "GUID": "{CB13C51F-6607-4AD2-B5CB-826FBD18AB90}",
-      "DurationType": "OneShot",
-      "DurationMin": "0.8",
-      "DurationMax": "0.8",
-      "MediaRefs": [
-       {
-        "Id": "443462720"
-       }
-      ]
-     },
-     {
-      "Id": "463701278",
-      "Name": "Play_Start_Sound",
-      "ObjectPath": "\\Events\\Default Work Unit\\Sfx\\Play_Start_Sound",
-      "GUID": "{07F5A9A2-388A-4794-9862-06B4FABF72E7}",
-      "DurationType": "OneShot",
-      "DurationMin": "1.6666666",
-      "DurationMax": "1.6666666",
-      "MediaRefs": [
-       {
-        "Id": "982449029"
-       }
-      ]
-     },
-     {
-      "Id": "3300394306",
-      "Name": "Play_TimeUp_Sound",
-      "ObjectPath": "\\Events\\Default Work Unit\\Sfx\\Play_TimeUp_Sound",
-      "GUID": "{F0CE607F-18BD-4493-97C6-91F7902CBAEE}",
-      "DurationType": "OneShot",
-      "DurationMin": "1.5666667",
-      "DurationMax": "1.5666667",
-      "MediaRefs": [
-       {
-        "Id": "315963784"
-       }
-      ]
      },
      {
       "Id": "1622344417",
@@ -238,6 +128,6 @@
     ]
    }
   ],
-  "FileHash": "{4767169B-8269-87AD-6324-248BF25A6309}"
+  "FileHash": "{5BCE3E12-061E-D882-773A-A1652D645455}"
  }
 }

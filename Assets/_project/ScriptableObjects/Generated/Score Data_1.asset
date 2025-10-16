@@ -15,3 +15,5 @@ MonoBehaviour:
   PerfectRatingScore: 100
   GoodRatingScore: 50
   BadRatingScore: 25
+  PerfectTimePercent: 0.2004
+  GoodTimePercent: 0.6
