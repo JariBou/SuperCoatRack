@@ -24,13 +24,15 @@ namespace _project.Scripts.Managers
         public Sprite[] shoesToDisplay;
         [ShowMessage("Clothe Color List indexes:\nRed = 0\nBlue = 1\nYellow = 2\nBlack = 3\nBrownTalon = 4\nBrownShoes = 5\nBlackRed = 6")]
         public Image slotForCloth;
-        [SerializeField] private TMP_Text _tutorialText;
         [SerializeField] private Sprite _fallbackImage;
         
         [SerializeField] private RectTransform[] elevatorDifferentPoses;
         [SerializeField] private RectTransform elevatorPos;
 
         [SerializeField] private TextMeshProUGUI scoreText;
+        
+        [SerializeField] private TMP_Text _tutorialText;
+        [SerializeField] private Image _tutorialImage;
         
         private void Awake()
         {
@@ -112,6 +114,16 @@ namespace _project.Scripts.Managers
         public void UpdateTutorialDisplay(TutorialData.TutorialAction tutorialAction)
         {
             _tutorialText.text = tutorialAction.Text;
+
+            if (tutorialAction.HasImage)
+            {
+                _tutorialImage.sprite = tutorialAction.ImageToDisplay;
+                _tutorialImage.gameObject.SetActive(true);
+            }
+            else
+            {
+                _tutorialImage.gameObject.SetActive(false);
+            }
             
             ClearDisplay();
             if (tutorialAction.ActionType == SequenceConfig.ActionType.Null) return;
@@ -122,9 +134,8 @@ namespace _project.Scripts.Managers
             {
                 case SequenceConfig.ActionType.Pickup:
                 case SequenceConfig.ActionType.Drop:
-                    ChangeClothIcon(tutorialAction, (int)tutorialAction.ClotheColor);
-                    break;
                 case SequenceConfig.ActionType.Scan:
+                    ChangeClothIcon(tutorialAction, (int)tutorialAction.ClotheColor);
                     break;
                 case SequenceConfig.ActionType.Bell:
                     break;
@@ -145,6 +156,18 @@ namespace _project.Scripts.Managers
         public void ChangeScoreValue(int score)
         {
             scoreText.text = "Score : " + score;
+        }
+
+        public void EnableTutorialDisplay()
+        {
+            _tutorialText.gameObject.SetActive(true);
+            _tutorialImage.gameObject.SetActive(true);
+        }
+        
+        public void DisableTutorialDisplay()
+        {
+            _tutorialText.gameObject.SetActive(false);
+            _tutorialImage.gameObject.SetActive(false);
         }
     }
 }

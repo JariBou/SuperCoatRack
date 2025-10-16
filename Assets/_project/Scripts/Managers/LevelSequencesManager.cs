@@ -100,8 +100,8 @@ namespace _project.Scripts.Managers
 
             if (_levelData.IsTutorial)
             {
-                TutorialManager tutorialManager = gameObject.AddComponent<TutorialManager>();
-                tutorialManager.Setup(_levelData);
+                // TutorialManager tutorialManager = gameObject.AddComponent<TutorialManager>();
+                // tutorialManager.Setup(_levelData);
                 Destroy(this);
                 return;
             }
