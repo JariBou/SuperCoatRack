@@ -666,7 +666,7 @@
 						</MusicSegment>
 						<MusicSegment Name="Take Four_" ID="{AB412F2B-F343-4C60-B134-40C1F9DB8778}" ShortID="844420592">
 							<PropertyList>
-								<Property Name="EndPosition" Type="Real64" Value="41155273.056287"/>
+								<Property Name="EndPosition" Type="Real64" Value="171666.90419436"/>
 								<Property Name="Tempo" Type="Real64" Value="118"/>
 							</PropertyList>
 							<ReferenceList>
@@ -718,7 +718,7 @@
 																				<Property Name="EndTrimOffset" Type="Real64" Value="164128.798185941"/>
 																				<Property Name="FadeInMode" Type="int16" Value="0"/>
 																				<Property Name="FadeOutMode" Type="int16" Value="0"/>
-																				<Property Name="PlayAt" Type="Real64" Value="28198972.0636367"/>
+																				<Property Name="PlayAt" Type="Real64" Value="890.020812906562"/>
 																			</PropertyList>
 																			<AudioSourceRef Name="Take Four_" ID="{02AA43F0-E59E-483E-9543-D02347580221}"/>
 																			<PropertyCurveList>
@@ -801,11 +801,7 @@
 								<ObjectList Name="Cues">
 									<Reference>
 										<Local>
-											<MusicCue Name="Entry Cue" ID="{67DAC1E5-E0C2-4E9D-BD92-99684D896BA2}">
-												<PropertyList>
-													<Property Name="TimeMs" Type="Real64" Value="28197850.6347099"/>
-												</PropertyList>
-											</MusicCue>
+											<MusicCue Name="Entry Cue" ID="{67DAC1E5-E0C2-4E9D-BD92-99684D896BA2}"/>
 										</Local>
 									</Reference>
 									<Reference>
@@ -813,7 +809,7 @@
 											<MusicCue Name="Exit Cue" ID="{03C4597A-0328-46EE-8D81-4455FDAD2D2C}">
 												<PropertyList>
 													<Property Name="CueType" Type="int16" Value="1"/>
-													<Property Name="TimeMs" Type="Real64" Value="28361956.6037216"/>
+													<Property Name="TimeMs" Type="Real64" Value="166335.364521481"/>
 												</PropertyList>
 											</MusicCue>
 										</Local>
@@ -823,7 +819,7 @@
 											<MusicCue Name="" ID="{EDEBD779-27EC-4367-A448-561762C41911}">
 												<PropertyList>
 													<Property Name="CueType" Type="int16" Value="2"/>
-													<Property Name="TimeMs" Type="Real64" Value="28199891.756284"/>
+													<Property Name="TimeMs" Type="Real64" Value="2041.12157407776"/>
 												</PropertyList>
 											</MusicCue>
 										</Local>
@@ -833,7 +829,7 @@
 											<MusicCue Name="" ID="{C0258253-4D8B-4AC8-BE08-409C1DC311D7}">
 												<PropertyList>
 													<Property Name="CueType" Type="int16" Value="2"/>
-													<Property Name="TimeMs" Type="Real64" Value="28203966.2381112"/>
+													<Property Name="TimeMs" Type="Real64" Value="6101.69491525424"/>
 												</PropertyList>
 											</MusicCue>
 										</Local>
@@ -843,7 +839,7 @@
 											<MusicCue Name="" ID="{D4DC762B-ACED-49C6-B4BC-206AB45A4264}">
 												<PropertyList>
 													<Property Name="CueType" Type="int16" Value="2"/>
-													<Property Name="TimeMs" Type="Real64" Value="28208026.8871923"/>
+													<Property Name="TimeMs" Type="Real64" Value="10169.4915254237"/>
 												</PropertyList>
 											</MusicCue>
 										</Local>
@@ -853,7 +849,7 @@
 											<MusicCue Name="" ID="{3484F16B-EBEC-4BAF-878E-DB9A8DD1CF83}">
 												<PropertyList>
 													<Property Name="CueType" Type="int16" Value="2"/>
-													<Property Name="TimeMs" Type="Real64" Value="28212087.9228455"/>
+													<Property Name="TimeMs" Type="Real64" Value="14237.2881355932"/>
 												</PropertyList>
 											</MusicCue>
 										</Local>
@@ -863,7 +859,7 @@
 											<MusicCue Name="" ID="{CAF19498-829A-446E-B8D3-E3C14FDE3B48}">
 												<PropertyList>
 													<Property Name="CueType" Type="int16" Value="2"/>
-													<Property Name="TimeMs" Type="Real64" Value="28216155.7194557"/>
+													<Property Name="TimeMs" Type="Real64" Value="18305.0847457647"/>
 												</PropertyList>
 											</MusicCue>
 										</Local>
@@ -873,7 +869,7 @@
 											<MusicCue Name="" ID="{7D7D9A1E-B6F5-4FF1-8903-812A7F621EE6}">
 												<PropertyList>
 													<Property Name="CueType" Type="int16" Value="2"/>
-													<Property Name="TimeMs" Type="Real64" Value="28220223.5160658"/>
+													<Property Name="TimeMs" Type="Real64" Value="22372.8813559338"/>
 												</PropertyList>
 											</MusicCue>
 										</Local>
@@ -883,7 +879,7 @@
 											<MusicCue Name="" ID="{3D92FA19-AC11-4C12-99F2-9065527338C9}">
 												<PropertyList>
 													<Property Name="CueType" Type="int16" Value="2"/>
-													<Property Name="TimeMs" Type="Real64" Value="28223020.1262353"/>
+													<Property Name="TimeMs" Type="Real64" Value="26440.6779661017"/>
 												</PropertyList>
 											</MusicCue>
 										</Local>
@@ -893,7 +889,7 @@
 											<MusicCue Name="" ID="{B5D6A116-0912-4BB6-9C49-7BA3E579A73C}">
 												<PropertyList>
 													<Property Name="CueType" Type="int16" Value="2"/>
-													<Property Name="TimeMs" Type="Real64" Value="28227087.9228455"/>
+													<Property Name="TimeMs" Type="Real64" Value="30508.4745762712"/>
 												</PropertyList>
 											</MusicCue>
 										</Local>
@@ -903,7 +899,7 @@
 											<MusicCue Name="" ID="{FFF1A9AE-0B06-4747-826F-44EEC4051601}">
 												<PropertyList>
 													<Property Name="CueType" Type="int16" Value="2"/>
-													<Property Name="TimeMs" Type="Real64" Value="28232426.9058963"/>
+													<Property Name="TimeMs" Type="Real64" Value="34576.2711864412"/>
 												</PropertyList>
 											</MusicCue>
 										</Local>
@@ -913,7 +909,7 @@
 											<MusicCue Name="" ID="{8A2762E5-1B4F-4034-B8CC-8E8A7F96F1B6}">
 												<PropertyList>
 													<Property Name="CueType" Type="int16" Value="2"/>
-													<Property Name="TimeMs" Type="Real64" Value="28234460.8042014"/>
+													<Property Name="TimeMs" Type="Real64" Value="36610.1694915295"/>
 												</PropertyList>
 											</MusicCue>
 										</Local>
@@ -923,7 +919,7 @@
 											<MusicCue Name="" ID="{FA415E04-6754-4A7B-9164-8258429EA4F8}">
 												<PropertyList>
 													<Property Name="CueType" Type="int16" Value="2"/>
-													<Property Name="TimeMs" Type="Real64" Value="28236494.7025065"/>
+													<Property Name="TimeMs" Type="Real64" Value="38644.0677966103"/>
 												</PropertyList>
 											</MusicCue>
 										</Local>
@@ -933,7 +929,7 @@
 											<MusicCue Name="" ID="{77DAE301-7DFC-4659-8C67-26E11CC6F24C}">
 												<PropertyList>
 													<Property Name="CueType" Type="int16" Value="2"/>
-													<Property Name="TimeMs" Type="Real64" Value="28238528.6008116"/>
+													<Property Name="TimeMs" Type="Real64" Value="40677.9661016949"/>
 												</PropertyList>
 											</MusicCue>
 										</Local>
@@ -943,7 +939,7 @@
 											<MusicCue Name="" ID="{B99239E6-A161-459F-8108-D60A0EDDA499}">
 												<PropertyList>
 													<Property Name="CueType" Type="int16" Value="2"/>
-													<Property Name="TimeMs" Type="Real64" Value="28240562.4991167"/>
+													<Property Name="TimeMs" Type="Real64" Value="42711.8644067831"/>
 												</PropertyList>
 											</MusicCue>
 										</Local>
@@ -953,7 +949,7 @@
 											<MusicCue Name="" ID="{38061F80-B3ED-47FF-A462-865A94CBEE06}">
 												<PropertyList>
 													<Property Name="CueType" Type="int16" Value="2"/>
-													<Property Name="TimeMs" Type="Real64" Value="28248698.092337"/>
+													<Property Name="TimeMs" Type="Real64" Value="50847.4576271176"/>
 												</PropertyList>
 											</MusicCue>
 										</Local>
@@ -963,7 +959,7 @@
 											<MusicCue Name="" ID="{B3B0BF60-DF3E-4E37-8CF6-F9D694D38DE0}">
 												<PropertyList>
 													<Property Name="CueType" Type="int16" Value="2"/>
-													<Property Name="TimeMs" Type="Real64" Value="28250731.9906421"/>
+													<Property Name="TimeMs" Type="Real64" Value="52881.3559322059"/>
 												</PropertyList>
 											</MusicCue>
 										</Local>
@@ -973,7 +969,7 @@
 											<MusicCue Name="" ID="{202A56A4-B772-4F40-8369-C5FA3206A54F}">
 												<PropertyList>
 													<Property Name="CueType" Type="int16" Value="2"/>
-													<Property Name="TimeMs" Type="Real64" Value="28252765.8889472"/>
+													<Property Name="TimeMs" Type="Real64" Value="54915.2542372867"/>
 												</PropertyList>
 											</MusicCue>
 										</Local>
@@ -983,7 +979,7 @@
 											<MusicCue Name="" ID="{C84B8C27-A83C-4D13-A488-2ABEE062E957}">
 												<PropertyList>
 													<Property Name="CueType" Type="int16" Value="2"/>
-													<Property Name="TimeMs" Type="Real64" Value="28254799.7872523"/>
+													<Property Name="TimeMs" Type="Real64" Value="56949.152542375"/>
 												</PropertyList>
 											</MusicCue>
 										</Local>
@@ -993,7 +989,7 @@
 											<MusicCue Name="" ID="{98CE5737-52D5-41C0-A26C-9DE35367A118}">
 												<PropertyList>
 													<Property Name="CueType" Type="int16" Value="2"/>
-													<Property Name="TimeMs" Type="Real64" Value="28256833.6855573"/>
+													<Property Name="TimeMs" Type="Real64" Value="58983.0508474596"/>
 												</PropertyList>
 											</MusicCue>
 										</Local>
@@ -1003,7 +999,7 @@
 											<MusicCue Name="" ID="{F21184B3-EA49-4F40-A6E3-3B5FB28B4A9D}">
 												<PropertyList>
 													<Property Name="CueType" Type="int16" Value="2"/>
-													<Property Name="TimeMs" Type="Real64" Value="28260901.4821675"/>
+													<Property Name="TimeMs" Type="Real64" Value="63050.8474576287"/>
 												</PropertyList>
 											</MusicCue>
 										</Local>
@@ -1013,7 +1009,7 @@
 											<MusicCue Name="" ID="{D9C44DFF-DFDB-4E13-95B1-A77D3EC31141}">
 												<PropertyList>
 													<Property Name="CueType" Type="int16" Value="2"/>
-													<Property Name="TimeMs" Type="Real64" Value="28262935.3804726"/>
+													<Property Name="TimeMs" Type="Real64" Value="65084.7457627133"/>
 												</PropertyList>
 											</MusicCue>
 										</Local>
@@ -1023,7 +1019,7 @@
 											<MusicCue Name="" ID="{44BD9633-268A-4371-A13A-B6C0D270EB22}">
 												<PropertyList>
 													<Property Name="CueType" Type="int16" Value="2"/>
-													<Property Name="TimeMs" Type="Real64" Value="28264969.2787777"/>
+													<Property Name="TimeMs" Type="Real64" Value="67118.6440677978"/>
 												</PropertyList>
 											</MusicCue>
 										</Local>
@@ -1033,7 +1029,7 @@
 											<MusicCue Name="" ID="{C427B80E-C372-4F7E-9639-1796EF7A5BCC}">
 												<PropertyList>
 													<Property Name="CueType" Type="int16" Value="2"/>
-													<Property Name="TimeMs" Type="Real64" Value="28273104.871998"/>
+													<Property Name="TimeMs" Type="Real64" Value="75254.237288136"/>
 												</PropertyList>
 											</MusicCue>
 										</Local>
@@ -1043,7 +1039,7 @@
 											<MusicCue Name="" ID="{82C65F98-01FA-42AF-9123-8796D6876416}">
 												<PropertyList>
 													<Property Name="CueType" Type="int16" Value="2"/>
-													<Property Name="TimeMs" Type="Real64" Value="28281240.4652184"/>
+													<Property Name="TimeMs" Type="Real64" Value="83389.8305084743"/>
 												</PropertyList>
 											</MusicCue>
 										</Local>
@@ -1053,7 +1049,7 @@
 											<MusicCue Name="" ID="{68B07FBF-57D2-4E5F-94DB-34886D8C0B66}">
 												<PropertyList>
 													<Property Name="CueType" Type="int16" Value="2"/>
-													<Property Name="TimeMs" Type="Real64" Value="28289376.0584387"/>
+													<Property Name="TimeMs" Type="Real64" Value="91525.4237288162"/>
 												</PropertyList>
 											</MusicCue>
 										</Local>
@@ -1063,7 +1059,7 @@
 											<MusicCue Name="" ID="{220320FD-1D18-4BCA-9F01-CEC494F70597}">
 												<PropertyList>
 													<Property Name="CueType" Type="int16" Value="2"/>
-													<Property Name="TimeMs" Type="Real64" Value="28293443.8550489"/>
+													<Property Name="TimeMs" Type="Real64" Value="95593.2203389816"/>
 												</PropertyList>
 											</MusicCue>
 										</Local>
@@ -1073,7 +1069,7 @@
 											<MusicCue Name="" ID="{2EA9884F-EE96-48F6-B94B-DBDEADF6B051}">
 												<PropertyList>
 													<Property Name="CueType" Type="int16" Value="2"/>
-													<Property Name="TimeMs" Type="Real64" Value="28299545.5499641"/>
+													<Property Name="TimeMs" Type="Real64" Value="101694.915254239"/>
 												</PropertyList>
 											</MusicCue>
 										</Local>
@@ -1083,7 +1079,7 @@
 											<MusicCue Name="" ID="{CA27CD99-C899-44CD-8C7A-E10463BADE8F}">
 												<PropertyList>
 													<Property Name="CueType" Type="int16" Value="2"/>
-													<Property Name="TimeMs" Type="Real64" Value="28297511.651659"/>
+													<Property Name="TimeMs" Type="Real64" Value="99661.0169491525"/>
 												</PropertyList>
 											</MusicCue>
 										</Local>
@@ -1093,7 +1089,7 @@
 											<MusicCue Name="" ID="{A88A12E3-DAD6-442E-8D7F-A60469CC487D}">
 												<PropertyList>
 													<Property Name="CueType" Type="int16" Value="2"/>
-													<Property Name="TimeMs" Type="Real64" Value="28301579.4482692"/>
+													<Property Name="TimeMs" Type="Real64" Value="103728.813559324"/>
 												</PropertyList>
 											</MusicCue>
 										</Local>
@@ -1103,7 +1099,7 @@
 											<MusicCue Name="" ID="{15B9C9EA-E310-4CD5-8C44-6CBB53D99615}">
 												<PropertyList>
 													<Property Name="CueType" Type="int16" Value="2"/>
-													<Property Name="TimeMs" Type="Real64" Value="28303613.3465743"/>
+													<Property Name="TimeMs" Type="Real64" Value="105762.711864404"/>
 												</PropertyList>
 											</MusicCue>
 										</Local>
@@ -1113,7 +1109,7 @@
 											<MusicCue Name="" ID="{92D5E9C6-88A6-4917-AE2D-46205D746265}">
 												<PropertyList>
 													<Property Name="CueType" Type="int16" Value="2"/>
-													<Property Name="TimeMs" Type="Real64" Value="28307681.1431845"/>
+													<Property Name="TimeMs" Type="Real64" Value="107796.610169492"/>
 												</PropertyList>
 											</MusicCue>
 										</Local>
@@ -1123,7 +1119,7 @@
 											<MusicCue Name="" ID="{0A193EA4-1EC3-4BC2-AC64-9E583E5F7A08}">
 												<PropertyList>
 													<Property Name="CueType" Type="int16" Value="2"/>
-													<Property Name="TimeMs" Type="Real64" Value="28309715.0414895"/>
+													<Property Name="TimeMs" Type="Real64" Value="124067.796610169"/>
 												</PropertyList>
 											</MusicCue>
 										</Local>
@@ -1133,7 +1129,7 @@
 											<MusicCue Name="" ID="{177183CB-4FB2-4611-8C60-39A2DCC9348B}">
 												<PropertyList>
 													<Property Name="CueType" Type="int16" Value="2"/>
-													<Property Name="TimeMs" Type="Real64" Value="28313782.8380997"/>
+													<Property Name="TimeMs" Type="Real64" Value="115932.203389831"/>
 												</PropertyList>
 											</MusicCue>
 										</Local>
@@ -1143,7 +1139,7 @@
 											<MusicCue Name="" ID="{4B320A34-1394-4BD9-958A-64F07EA69E71}">
 												<PropertyList>
 													<Property Name="CueType" Type="int16" Value="2"/>
-													<Property Name="TimeMs" Type="Real64" Value="28315816.7364048"/>
+													<Property Name="TimeMs" Type="Real64" Value="117966.101694915"/>
 												</PropertyList>
 											</MusicCue>
 										</Local>
@@ -1153,7 +1149,7 @@
 											<MusicCue Name="" ID="{B5AB6A6C-B3F8-4786-BCE9-59E22C943503}">
 												<PropertyList>
 													<Property Name="CueType" Type="int16" Value="2"/>
-													<Property Name="TimeMs" Type="Real64" Value="28317850.6347099"/>
+													<Property Name="TimeMs" Type="Real64" Value="120000"/>
 												</PropertyList>
 											</MusicCue>
 										</Local>
@@ -1163,7 +1159,7 @@
 											<MusicCue Name="" ID="{4F250B41-326C-42CA-9B55-46ACDF0D3C1B}">
 												<PropertyList>
 													<Property Name="CueType" Type="int16" Value="2"/>
-													<Property Name="TimeMs" Type="Real64" Value="28319884.533015"/>
+													<Property Name="TimeMs" Type="Real64" Value="122033.898305089"/>
 												</PropertyList>
 											</MusicCue>
 										</Local>
@@ -1173,27 +1169,7 @@
 											<MusicCue Name="" ID="{DD3EDE96-4C0F-45EC-9ED5-5456A2942FEB}">
 												<PropertyList>
 													<Property Name="CueType" Type="int16" Value="2"/>
-													<Property Name="TimeMs" Type="Real64" Value="28323952.3296251"/>
-												</PropertyList>
-											</MusicCue>
-										</Local>
-									</Reference>
-									<Reference>
-										<Local>
-											<MusicCue Name="" ID="{AF40539D-DD31-4E5F-98B4-AFC28EA517DC}">
-												<PropertyList>
-													<Property Name="CueType" Type="int16" Value="2"/>
-													<Property Name="TimeMs" Type="Real64" Value="28328020.1262353"/>
-												</PropertyList>
-											</MusicCue>
-										</Local>
-									</Reference>
-									<Reference>
-										<Local>
-											<MusicCue Name="" ID="{3A8C50A4-864A-44CC-995C-5F62A381BD60}">
-												<PropertyList>
-													<Property Name="CueType" Type="int16" Value="2"/>
-													<Property Name="TimeMs" Type="Real64" Value="28330054.0245404"/>
+													<Property Name="TimeMs" Type="Real64" Value="132203.389830508"/>
 												</PropertyList>
 											</MusicCue>
 										</Local>
@@ -1203,7 +1179,7 @@
 											<MusicCue Name="" ID="{D66A57BF-7C0D-4276-8FF0-D654218C6DDE}">
 												<PropertyList>
 													<Property Name="CueType" Type="int16" Value="2"/>
-													<Property Name="TimeMs" Type="Real64" Value="28334121.8211506"/>
+													<Property Name="TimeMs" Type="Real64" Value="140338.983050847"/>
 												</PropertyList>
 											</MusicCue>
 										</Local>
@@ -1213,7 +1189,7 @@
 											<MusicCue Name="" ID="{8EBD7E76-25B8-4C3F-912B-79DFAD2F1CA9}">
 												<PropertyList>
 													<Property Name="CueType" Type="int16" Value="2"/>
-													<Property Name="TimeMs" Type="Real64" Value="28342257.4143709"/>
+													<Property Name="TimeMs" Type="Real64" Value="144406.779661019"/>
 												</PropertyList>
 											</MusicCue>
 										</Local>
@@ -1223,7 +1199,7 @@
 											<MusicCue Name="" ID="{C5DFF63B-3804-492A-AACC-0F4AEE172588}">
 												<PropertyList>
 													<Property Name="CueType" Type="int16" Value="2"/>
-													<Property Name="TimeMs" Type="Real64" Value="28346325.2109811"/>
+													<Property Name="TimeMs" Type="Real64" Value="148474.576271188"/>
 												</PropertyList>
 											</MusicCue>
 										</Local>
@@ -1233,7 +1209,7 @@
 											<MusicCue Name="" ID="{CC0564FE-017A-4DDA-B1E7-9C8A27826432}">
 												<PropertyList>
 													<Property Name="CueType" Type="int16" Value="2"/>
-													<Property Name="TimeMs" Type="Real64" Value="28350393.0075912"/>
+													<Property Name="TimeMs" Type="Real64" Value="152542.372881357"/>
 												</PropertyList>
 											</MusicCue>
 										</Local>
@@ -1243,7 +1219,26 @@
 											<MusicCue Name="" ID="{5B946A7B-FB93-4FC2-A679-0C7661680E3C}">
 												<PropertyList>
 													<Property Name="CueType" Type="int16" Value="2"/>
-													<Property Name="TimeMs" Type="Real64" Value="28358020.1262353"/>
+													<Property Name="TimeMs" Type="Real64" Value="156610.169491525"/>
+												</PropertyList>
+											</MusicCue>
+										</Local>
+									</Reference>
+									<Reference>
+										<Local>
+											<MusicCue Name="" ID="{065F5D06-08FB-4454-968C-AC3BB1FB382C}">
+												<PropertyList>
+													<Property Name="CueType" Type="int16" Value="2"/>
+												</PropertyList>
+											</MusicCue>
+										</Local>
+									</Reference>
+									<Reference>
+										<Local>
+											<MusicCue Name="" ID="{1692736E-399A-419F-8B67-1970F6FCC29C}">
+												<PropertyList>
+													<Property Name="CueType" Type="int16" Value="2"/>
+													<Property Name="TimeMs" Type="Real64" Value="160677.966101695"/>
 												</PropertyList>
 											</MusicCue>
 										</Local>
