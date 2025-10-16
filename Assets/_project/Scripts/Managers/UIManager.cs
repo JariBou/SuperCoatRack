@@ -33,6 +33,7 @@ namespace _project.Scripts.Managers
         
         [SerializeField] private TMP_Text _tutorialText;
         [SerializeField] private Image _tutorialImage;
+        [SerializeField] private Image _tutorialBackground;
         
         private void Awake()
         {
@@ -162,12 +163,14 @@ namespace _project.Scripts.Managers
         {
             _tutorialText.gameObject.SetActive(true);
             _tutorialImage.gameObject.SetActive(true);
+            _tutorialBackground.gameObject.SetActive(true);
         }
         
         public void DisableTutorialDisplay()
         {
             _tutorialText.gameObject.SetActive(false);
             _tutorialImage.gameObject.SetActive(false);
+            _tutorialBackground.gameObject.SetActive(false);
         }
     }
 }

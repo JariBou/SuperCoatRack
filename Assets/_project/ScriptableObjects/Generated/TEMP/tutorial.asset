@@ -17,20 +17,30 @@ MonoBehaviour:
     ClotheType: 0
     ClotheColor: 0
     Text: Place clothes on the rack when this input is shown
+    HasImage: 0
+    ImageToDisplay: {fileID: 0}
   - ActionType: 0
     ClotheType: 0
     ClotheColor: 0
     Text: Remove clothes from the rack when this input shows
+    HasImage: 0
+    ImageToDisplay: {fileID: 0}
   - ActionType: 2
     ClotheType: 0
     ClotheColor: 2
     Text: When this icon appears, scan the clothe that is shown before you place
       it or after you've removed it from the rack
+    HasImage: 0
+    ImageToDisplay: {fileID: 0}
   - ActionType: 3
     ClotheType: 0
     ClotheColor: 0
     Text: A bell icon will sometimes appear, ring it to gain points!
+    HasImage: 0
+    ImageToDisplay: {fileID: 0}
   - ActionType: 4
     ClotheType: 0
     ClotheColor: 0
     Text: Be careful though, You'll need to do all time in RYTHM !!!
+    HasImage: 0
+    ImageToDisplay: {fileID: 0}
