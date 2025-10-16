@@ -297,8 +297,8 @@ MonoBehaviour:
         guid: 636a2150c7aaa94eb34df769da1518a4
       Path: Events\Default Work Unit\Events\Play\PlayTakeFour
       maxAttenuation: 0
-      maxDuration: 166.77966
-      minDuration: 166.77966
+      maxDuration: 166.33536
+      minDuration: 166.33536
     - name: PlayTestMusic
       guid: 6c3021c4fc1b8f49ab7ac540088430c3
       id: 575116772
