@@ -53,7 +53,7 @@ Material:
     - _QueueControl: 0
     - _QueueOffset: 0
     m_Colors:
-    - _MiddleAccentColor: {r: 0, g: 0.031446774, b: 0.9716981, a: 1}
+    - _MiddleAccentColor: {r: 0, g: 0.032258034, b: 1, a: 1}
   m_BuildTextureStacks: []
   m_AllowLocking: 1
 --- !u!114 &717103787635264084

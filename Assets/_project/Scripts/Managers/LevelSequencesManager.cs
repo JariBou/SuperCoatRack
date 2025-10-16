@@ -107,8 +107,6 @@ namespace _project.Scripts.Managers
             }
 
             StartCoroutine(ClearInput());
-            ParticleSystem.ColorOverLifetimeModule overModule = new ParticleSystem.ColorOverLifetimeModule();
-            overModule.color.gradient.colorKeys[1].color = Color.white;
         }
 
         private IEnumerator ClearInput()
@@ -264,8 +262,8 @@ namespace _project.Scripts.Managers
             
             _currentSequenceAction.SetState(actionState);
             
-            RippleFeedbackManager.ChangeColorStatic(Color.blue).Play();
             FeedbackManager.FeedbackTimingInputStatic(actionState);
+            FeedbackManager.ChangeRippleColorStatic(Color.blue);
 
             Debug.Log($"Finished Sequence Action with state: {actionState}");
             _lastInput = null;

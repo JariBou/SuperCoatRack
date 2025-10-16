@@ -1,11 +1,28 @@
+using DG.Tweening;
+using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class GradeTextScript : MonoBehaviour
 {
-    public float timeBeforeDestroy = 1f;
     void Start()
     {
-        Destroy(gameObject, timeBeforeDestroy);
+        // Reset la taille au cas où
+        transform.localScale = Vector3.zero;
+
+        // Fait rebondir le texte
+        transform
+            .DOScale(1f, 0.2f)     // grossit vite
+            .SetEase(Ease.InOutBounce)   // effet rebondé vers l’extérieur
+            .OnComplete(() =>
+            {
+                transform
+                    .DOScale(0f, 0.7f) // revient à la taille normale
+                    .SetEase(Ease.InQuad)
+                    .OnComplete(() =>
+                        {
+                            Destroy(this);
+                        });
+            });
     }
-    
 }
