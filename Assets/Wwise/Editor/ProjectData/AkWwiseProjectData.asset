@@ -94,7 +94,7 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: a4632d3c2cd3ab44959c4986e7d5aad3
     GuidInternal: 
-    m_lastTime: -8584409202379574863
+    m_lastTime: -8584409190470823603
     List:
     - name: BeatEvent
       guid: 17311fc5b20b774ea51aa652c2cb7da8
@@ -253,29 +253,6 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 1.5666667
       minDuration: 1.5666667
-    - name: PlayDaschlatt
-      guid: 349aece477b9364e98940b5967ffdbab
-      id: 1622344417
-      PathAndIcons:
-      - ElementName: Events
-        ObjectType: 5
-        guid: 00000000000000000000000000000000
-      - ElementName: Default Work Unit
-        ObjectType: 12
-        guid: a4632d3c2cd3ab44959c4986e7d5aad3
-      - ElementName: Events
-        ObjectType: 4
-        guid: 5be825d74390e343996d2421205490a1
-      - ElementName: Play
-        ObjectType: 4
-        guid: a43af933031cfb4fb2184112bff454c8
-      - ElementName: PlayDaschlatt
-        ObjectType: 3
-        guid: 349aece477b9364e98940b5967ffdbab
-      Path: Events\Default Work Unit\Events\Play\PlayDaschlatt
-      maxAttenuation: 0
-      maxDuration: 176
-      minDuration: 176
     - name: PlayTakeFour
       guid: 636a2150c7aaa94eb34df769da1518a4
       id: 2322593426
