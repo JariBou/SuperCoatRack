@@ -1,4 +1,5 @@
 ﻿using System;
+using DG.Tweening;
 using JetBrains.Annotations;
 using UnityEngine;
 using UnityEngine.UI;
@@ -10,10 +11,14 @@ namespace _project.Scripts.Managers
         [SerializeField] private Image _coatImage;
         [SerializeField] private Image _hatImage;
         [SerializeField] private Image _shoesImage;
+        [SerializeField] private GameObject _coatRack;
+        private float _duration = 1f;
 
         private void Awake()
         {
-            DisableAllDisplays();
+            _coatImage.DOFade(0, 0);
+            _hatImage.DOFade(0, 0);
+            _shoesImage.DOFade(0, 0);
         }
 
         public void ShowPlacement([CanBeNull] GameAction action)
@@ -27,13 +32,13 @@ namespace _project.Scripts.Managers
             switch (action.ClotheType)
             {
                 case SequenceConfig.ClotheType.Coat:
-                    _coatImage.enabled = true;
+                    _coatImage.DOFade(1f, _duration);
                     break;
                 case SequenceConfig.ClotheType.Hat:
-                    _hatImage.enabled = true;
+                    _hatImage.DOFade(1f, _duration);
                     break;
                 case SequenceConfig.ClotheType.Shoe:
-                    _shoesImage.enabled = true;
+                    _shoesImage.DOFade(1f, _duration);
                     break;
                 default:
                     throw new ArgumentOutOfRangeException();
@@ -42,9 +47,34 @@ namespace _project.Scripts.Managers
 
         public void DisableAllDisplays()
         {
-            _coatImage.enabled = false;
-            _hatImage.enabled = false;
-            _shoesImage.enabled = false;
+            _coatImage.DOFade(0, _duration/2);
+            _hatImage.DOFade(0, _duration/2);
+            _shoesImage.DOFade(0, _duration/2);
+        }
+
+
+
+        private void OnBeat()
+        {
+            _coatRack.transform.DOScale(.85f, 0);
+            _coatRack.transform.DOScale(1f, 0.2f).SetEase(Ease.OutQuad);
+            
+            _coatImage.transform.DOScale(.8f, 0);
+            _coatImage.transform.DOScale(1f, 0.2f).SetEase(Ease.OutQuad);
+            _hatImage.transform.DOScale(.8f, 0);
+            _hatImage.transform.DOScale(1f, 0.2f).SetEase(Ease.OutQuad);
+            _shoesImage.transform.DOScale(.8f, 0);
+            _shoesImage.transform.DOScale(1f, 0.2f).SetEase(Ease.OutQuad);
+        }
+
+        private void OnEnable()
+        {
+            GameManager.Instance.OnBeatUnityEvent += OnBeat;
+        }
+        
+        private void OnDisable()
+        {
+            GameManager.Instance.OnBeatUnityEvent -= OnBeat;
         }
     }
 }

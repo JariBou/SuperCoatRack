@@ -1544,6 +1544,7 @@ MonoBehaviour:
   _coatImage: {fileID: 524062710}
   _hatImage: {fileID: 927340060}
   _shoesImage: {fileID: 1050110560}
+  _coatRack: {fileID: 607414927}
 --- !u!1 &562288388
 GameObject:
   m_ObjectHideFlags: 0
