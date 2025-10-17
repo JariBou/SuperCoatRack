@@ -320,8 +320,8 @@ MonoBehaviour:
         guid: d3199f9bde66214198b129b479a609da
       Path: Events\Default Work Unit\Events\Play\PlayTremendousAron
       maxAttenuation: 0
-      maxDuration: 180.30295
-      minDuration: 180.30295
+      maxDuration: 181.99667
+      minDuration: 181.99667
     - name: PlayWiiMusic
       guid: 7d593f0c3c53f24eada5d5cd830ddb53
       id: 2131253029

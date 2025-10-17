@@ -101,7 +101,7 @@ MonoBehaviour:
   - ActionType: 1
     ClotheType: 2
     ClotheColor: 5
-    BeatDelayToPrevious: 16
+    BeatDelayToPrevious: 8
     gracePeriod: {x: 0.5, y: 0.5}
   - ActionType: 0
     ClotheType: 1

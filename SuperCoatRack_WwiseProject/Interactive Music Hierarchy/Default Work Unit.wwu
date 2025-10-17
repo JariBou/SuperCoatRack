@@ -429,7 +429,7 @@
 																				<Property Name="EndTrimOffset" Type="Real64" Value="180302.947845805"/>
 																				<Property Name="FadeInMode" Type="int16" Value="0"/>
 																				<Property Name="FadeOutMode" Type="int16" Value="0"/>
-																				<Property Name="PlayAt" Type="Real64" Value="-201.009622332132"/>
+																				<Property Name="PlayAt" Type="Real64" Value="1693.72721977313"/>
 																			</PropertyList>
 																			<AudioSourceRef Name="Tremendous Aron - Lola" ID="{44CA62A0-5E95-4FF0-8DBD-E63D9C6A3A54}"/>
 																			<PropertyCurveList>

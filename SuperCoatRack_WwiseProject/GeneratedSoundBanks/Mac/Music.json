@@ -10,7 +10,7 @@
     "Type": "User",
     "GUID": "{3F1F1E21-278D-41AA-8232-2670EB8A2976}",
     "Language": "SFX",
-    "Hash": "{7D11C2A9-89CA-B8FE-E7A5-83B741FCE6E6}",
+    "Hash": "{B475457E-E530-CB28-5274-FBAFEF7A29D3}",
     "ObjectPath": "\\SoundBanks\\Default Work Unit\\Music",
     "ShortName": "Music",
     "Path": "Music.bnk",
@@ -203,8 +203,8 @@
       "ObjectPath": "\\Events\\Default Work Unit\\Events\\Play\\PlayTremendousAron",
       "GUID": "{9B9F19D3-66DE-4121-98B1-29B479A609DA}",
       "DurationType": "OneShot",
-      "DurationMin": "180.30295",
-      "DurationMax": "180.30295",
+      "DurationMin": "181.99667",
+      "DurationMax": "181.99667",
       "MediaRefs": [
        {
         "Id": "994949031"
@@ -238,6 +238,6 @@
     ]
    }
   ],
-  "FileHash": "{093247F9-5F78-E7A2-19C7-2D563CA9ACC6}"
+  "FileHash": "{738E0D32-9130-1A7C-C609-118E7097D0BA}"
  }
 }
