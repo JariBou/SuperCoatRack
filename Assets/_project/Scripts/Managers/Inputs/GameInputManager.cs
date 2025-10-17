@@ -88,19 +88,19 @@ namespace _project.Scripts.Managers.Inputs
         }
 
 
-        private int _bellInputCount;
+        // private int _bellInputCount;
         public void OnBell(InputAction.CallbackContext ctx)
         {
             if (ctx.performed)
             {
-                _bellInputCount++;
-                if (_bellInputCount == 2)
-                {
+                // _bellInputCount++;
+                // if (_bellInputCount == 2)
+                // {
                     LastInput = new InputTypeLink(SequenceConfig.ActionType.Bell, SequenceConfig.ClotheType.Coat, SequenceConfig.ClotheColor.Red, Time.time);
-                }
+                // }
             } else if (ctx.canceled)
             {
-                _bellInputCount--;
+                // _bellInputCount--;
             }
         }
 

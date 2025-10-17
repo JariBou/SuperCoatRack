@@ -47,7 +47,7 @@ namespace _project.Scripts.Menus
 
         public void SelectPrevious()
         {
-            SelectedLevelIndex = MathUtils.Mod(SelectedLevelIndex+1, LevelManager.Instance.ListOfLevels.Length); ;
+            SelectedLevelIndex = MathUtils.Mod(SelectedLevelIndex-1, LevelManager.Instance.ListOfLevels.Length); ;
         }
 
         public void JoystickNext(InputAction.CallbackContext ctx)
