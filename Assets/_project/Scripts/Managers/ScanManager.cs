@@ -24,6 +24,7 @@ namespace _project.Scripts.Managers
 
         private bool _isCamAvaible;
         private WebCamTexture _cameraTexture;
+        
         void Start()
         {
             SetUpCamera();
@@ -40,7 +41,10 @@ namespace _project.Scripts.Managers
         private IEnumerator ScanCoroutine()
         {
             yield return new WaitForSeconds(1f/_updatesPerSecond);
-            Scan();
+            if (Scan())
+            {
+                yield return new WaitForSeconds(1.5f);
+            }
             StartCoroutine(ScanCoroutine());
         }
 
@@ -80,7 +84,7 @@ namespace _project.Scripts.Managers
         {
             Scan();
         }
-        private void Scan()
+        private bool Scan()
         {
             try
             {
@@ -90,15 +94,15 @@ namespace _project.Scripts.Managers
                 {
                     _inputManager.OnScan(result.Text);
                     _textOut.text = result.Text;
+                    return true;
                 }
-                else {
-                    _textOut.text = "Failed to Read QR CODE";
-                }
+                _textOut.text = "Failed to Read QR CODE";
             }
             catch
             {
                 _textOut.text = "FAILED IN TRY";
             }
+            return false;
         }
     }
 }

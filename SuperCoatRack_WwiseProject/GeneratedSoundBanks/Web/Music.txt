@@ -1,7 +1,7 @@
 Event	ID	Name			Wwise Object Path	Notes
 	463701278	Play_Start_Sound			\Default Work Unit\Sfx\Play_Start_Sound	
 	575116772	PlayTestMusic			\Default Work Unit\Events\Play\PlayTestMusic	
-	1622344417	PlayDaschlatt			\Default Work Unit\Events\Play\PlayDaschlatt	
+	1092583427	PlayTremendousAron			\Default Work Unit\Events\Play\PlayTremendousAron	
 	1917263390	StopMusic			\Default Work Unit\Events\Stop\StopMusic	
 	2131253029	PlayWiiMusic			\Default Work Unit\Events\Play\PlayWiiMusic	
 	2311302334	Play_Fail_Sound			\Default Work Unit\Sfx\Play_Fail_Sound	
@@ -12,13 +12,13 @@ Event	ID	Name			Wwise Object Path	Notes
 	3517968107	BeatEvent			\Default Work Unit\Events\BeatEvent	
 
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
-	120435780	Good_Sound	C:\Users\jerem\Documents\Unity\SuperCoatRack\SuperCoatRack_WwiseProject\.cache\32\{32FCD600-9C83-B544-13C3-1DF1E25CA0BE}.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Good_Sound		147296
-	315963784	TimeUp_Sound	C:\Users\jerem\Documents\Unity\SuperCoatRack\SuperCoatRack_WwiseProject\.cache\2E\{2E49A358-90B8-AC52-71C2-9A528F49C7D9}.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\TimeUp_Sound		300896
-	443462720	Perfect_Sound	C:\Users\jerem\Documents\Unity\SuperCoatRack\SuperCoatRack_WwiseProject\.cache\A2\{A2712F8B-A5FE-DF3D-3C2F-7AF97147BD77}.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Perfect_Sound		153696
-	493148124	Dachlatte-_Paul-Seul-Remix_	C:\Users\jerem\Documents\Unity\SuperCoatRack\SuperCoatRack_WwiseProject\.cache\ED\{ED686670-C4CF-5051-9816-8DE656978B3B}.wem		\Interactive Music Hierarchy\Default Work Unit\Music\Daschlatt\Dachlatte-_Paul-Seul-Remix_		30463840
-	643449495	Take Four_	C:\Users\jerem\Documents\Unity\SuperCoatRack\SuperCoatRack_WwiseProject\.cache\A8\{A83ED7E2-9678-F7DF-2D69-C73BF9C2D82B}.wem		\Interactive Music Hierarchy\Default Work Unit\Music\Take Four_\Take Four_		28952416
-	652455484	Wii-Party-Soundtrack-Main-Menu-Music	C:\Users\jerem\Documents\Unity\SuperCoatRack\SuperCoatRack_WwiseProject\.cache\9D\{9D8A5573-78C8-D45E-B27C-9A6C0B1631CD}.wem		\Interactive Music Hierarchy\Default Work Unit\Music\MainMusic\Wii-Party-Soundtrack-Main-Menu-Music		26890336
-	809893259	Kirby - Poyo Poyo	C:\Users\jerem\Documents\Unity\SuperCoatRack\SuperCoatRack_WwiseProject\.cache\AE\{AECDAD6A-E3AA-12FA-D152-E77E5B39B64E}.wem		\Interactive Music Hierarchy\Default Work Unit\Music\ShortMusic\Kirby - Poyo Poyo		1036896
-	811915395	Fail_Sound	C:\Users\jerem\Documents\Unity\SuperCoatRack\SuperCoatRack_WwiseProject\.cache\D2\{D2B2B969-6BEB-125B-02A6-0C55C18A1D32}.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Fail_Sound		83296
-	982449029	Start_Sound	C:\Users\jerem\Documents\Unity\SuperCoatRack\SuperCoatRack_WwiseProject\.cache\82\{82CD194C-E676-FCB1-B4EF-BA577F3ECE3A}.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Start_Sound		320096
+	120435780	Good_Sound	C:\Users\jerem\Documents\UNITY\SuperCoatRack\SuperCoatRack_WwiseProject\.cache\32\{32FCD600-9C83-B544-13C3-1DF1E25CA0BE}.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Good_Sound		147296
+	315963784	TimeUp_Sound	C:\Users\jerem\Documents\UNITY\SuperCoatRack\SuperCoatRack_WwiseProject\.cache\2E\{2E49A358-90B8-AC52-71C2-9A528F49C7D9}.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\TimeUp_Sound		300896
+	443462720	Perfect_Sound	C:\Users\jerem\Documents\UNITY\SuperCoatRack\SuperCoatRack_WwiseProject\.cache\A2\{A2712F8B-A5FE-DF3D-3C2F-7AF97147BD77}.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Perfect_Sound		153696
+	643449495	Take Four_	C:\Users\jerem\Documents\UNITY\SuperCoatRack\SuperCoatRack_WwiseProject\.cache\A8\{A83ED7E2-9678-F7DF-2D69-C73BF9C2D82B}.wem		\Interactive Music Hierarchy\Default Work Unit\Music\Take Four_\Take Four_		28952416
+	652455484	Wii-Party-Soundtrack-Main-Menu-Music	C:\Users\jerem\Documents\UNITY\SuperCoatRack\SuperCoatRack_WwiseProject\.cache\9D\{9D8A5573-78C8-D45E-B27C-9A6C0B1631CD}.wem		\Interactive Music Hierarchy\Default Work Unit\Music\MainMusic\Wii-Party-Soundtrack-Main-Menu-Music		26890336
+	809893259	Kirby - Poyo Poyo	C:\Users\jerem\Documents\UNITY\SuperCoatRack\SuperCoatRack_WwiseProject\.cache\AE\{AECDAD6A-E3AA-12FA-D152-E77E5B39B64E}.wem		\Interactive Music Hierarchy\Default Work Unit\Music\ShortMusic\Kirby - Poyo Poyo		1036896
+	811915395	Fail_Sound	C:\Users\jerem\Documents\UNITY\SuperCoatRack\SuperCoatRack_WwiseProject\.cache\D2\{D2B2B969-6BEB-125B-02A6-0C55C18A1D32}.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Fail_Sound		83296
+	982449029	Start_Sound	C:\Users\jerem\Documents\UNITY\SuperCoatRack\SuperCoatRack_WwiseProject\.cache\82\{82CD194C-E676-FCB1-B4EF-BA577F3ECE3A}.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Start_Sound		320096
+	994949031	Tremendous Aron - Lola	C:\Users\jerem\Documents\UNITY\SuperCoatRack\SuperCoatRack_WwiseProject\.cache\ED\{ED4CA95E-F754-223A-7CDD-BF02A4D01047}.wem		\Interactive Music Hierarchy\Default Work Unit\Music\Tremendous Aron\Tremendous Aron - Lola		31805536
 

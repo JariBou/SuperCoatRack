@@ -5,93 +5,6 @@
 			<ChildrenList>
 				<Folder Name="Music" ID="{98F9ED3C-B6DA-4182-B533-A68275DD4C9F}" ShortID="407308223">
 					<ChildrenList>
-						<MusicSegment Name="Daschlatt" ID="{2E07434C-C8E8-4740-B8C0-99D73BC45FA5}" ShortID="549209061">
-							<PropertyList>
-								<Property Name="EndPosition" Type="Real64" Value="180784.715359067"/>
-								<Property Name="Tempo" Type="Real64" Value="150"/>
-							</PropertyList>
-							<ReferenceList>
-								<Reference Name="Conversion">
-									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6D98A839-AC4C-4A37-83B9-A9D3E865E785}"/>
-								</Reference>
-								<Reference Name="OutputBus">
-									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{BFE55156-D556-409A-8C3D-FF830BCFC4B2}"/>
-								</Reference>
-							</ReferenceList>
-							<ChildrenList>
-								<MusicTrack Name="Dachlatte-_Paul-Seul-Remix_" ID="{D206EBD4-F22B-4F95-8D6C-2EB09465003A}" ShortID="733806038">
-									<ReferenceList>
-										<Reference Name="OutputBus">
-											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{BFE55156-D556-409A-8C3D-FF830BCFC4B2}"/>
-										</Reference>
-										<Reference Name="TransitionRoot">
-											<Custom>
-												<MusicTransition Name="Root" ID="{0602A553-2B53-4453-9B38-C3B7140FC284}">
-													<PropertyList>
-														<Property Name="IsFolder" Type="bool" Value="True"/>
-													</PropertyList>
-													<TransitionInfo/>
-												</MusicTransition>
-											</Custom>
-										</Reference>
-									</ReferenceList>
-									<ChildrenList>
-										<AudioFileSource Name="Dachlatte-_Paul-Seul-Remix_" ID="{6ADF142E-FBFE-4E0C-AD8C-C9409ABB4641}">
-											<Language>SFX</Language>
-											<AudioFile>Dachlatte-_Paul-Seul-Remix_.wav</AudioFile>
-											<MediaIDList>
-												<MediaID ID="493148124"/>
-											</MediaIDList>
-										</AudioFileSource>
-									</ChildrenList>
-									<ObjectLists>
-										<ObjectList Name="Sequences">
-											<Reference>
-												<Local>
-													<MusicTrackSequence Name="" ID="{0255BADB-F8D4-456F-AE1C-95A75FFF8CC4}">
-														<ObjectLists>
-															<ObjectList Name="Clips">
-																<Reference>
-																	<Local>
-																		<MusicClip Name="Dachlatte-_Paul-Seul-Remix_" ID="{11CB47C5-171B-45CF-B077-BCF3C0335257}">
-																			<PropertyList>
-																				<Property Name="EndTrimOffset" Type="Real64" Value="172696.961451247"/>
-																				<Property Name="FadeInMode" Type="int16" Value="0"/>
-																				<Property Name="FadeOutMode" Type="int16" Value="0"/>
-																			</PropertyList>
-																			<AudioSourceRef Name="Dachlatte-_Paul-Seul-Remix_" ID="{6ADF142E-FBFE-4E0C-AD8C-C9409ABB4641}"/>
-																		</MusicClip>
-																	</Local>
-																</Reference>
-															</ObjectList>
-														</ObjectLists>
-													</MusicTrackSequence>
-												</Local>
-											</Reference>
-										</ObjectList>
-									</ObjectLists>
-								</MusicTrack>
-							</ChildrenList>
-							<ObjectLists>
-								<ObjectList Name="Cues">
-									<Reference>
-										<Local>
-											<MusicCue Name="Entry Cue" ID="{67AA31E2-5481-42FC-964F-E6FC177E529B}"/>
-										</Local>
-									</Reference>
-									<Reference>
-										<Local>
-											<MusicCue Name="Exit Cue" ID="{DE0B0829-46D4-4741-B2EB-272B1B1D1F5A}">
-												<PropertyList>
-													<Property Name="CueType" Type="int16" Value="1"/>
-													<Property Name="TimeMs" Type="Real64" Value="176000"/>
-												</PropertyList>
-											</MusicCue>
-										</Local>
-									</Reference>
-								</ObjectList>
-							</ObjectLists>
-						</MusicSegment>
 						<MusicSegment Name="MainMusic" ID="{2BE186B6-01D6-436D-AD15-CAF824AC464C}" ShortID="68027641">
 							<PropertyList>
 								<Property Name="EndPosition" Type="Real64" Value="153818.181818182"/>
@@ -453,6 +366,163 @@
 									<Reference>
 										<Local>
 											<MusicCue Name="" ID="{065F5D06-08FB-4454-968C-AC3BB1FB382C}">
+												<PropertyList>
+													<Property Name="CueType" Type="int16" Value="2"/>
+												</PropertyList>
+											</MusicCue>
+										</Local>
+									</Reference>
+								</ObjectList>
+							</ObjectLists>
+						</MusicSegment>
+						<MusicSegment Name="Tremendous Aron" ID="{798B51DD-AD33-4C9A-93ED-3B4E2FFDE75C}" ShortID="347456126">
+							<PropertyList>
+								<Property Name="EndPosition" Type="Real64" Value="183891.411907683"/>
+								<Property Name="Tempo" Type="Real64" Value="95"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6D98A839-AC4C-4A37-83B9-A9D3E865E785}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{BFE55156-D556-409A-8C3D-FF830BCFC4B2}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<MusicTrack Name="Tremendous Aron - Lola" ID="{B7DF8B51-8F51-4643-A501-C00EF6694723}" ShortID="110369287">
+									<ReferenceList>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{BFE55156-D556-409A-8C3D-FF830BCFC4B2}"/>
+										</Reference>
+										<Reference Name="TransitionRoot">
+											<Custom>
+												<MusicTransition Name="Root" ID="{3236F66B-E41A-4645-B41A-22C153E3EA68}">
+													<PropertyList>
+														<Property Name="IsFolder" Type="bool" Value="True"/>
+													</PropertyList>
+													<TransitionInfo/>
+												</MusicTransition>
+											</Custom>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Tremendous Aron - Lola" ID="{44CA62A0-5E95-4FF0-8DBD-E63D9C6A3A54}">
+											<Language>English(US)</Language>
+											<AudioFile>Tremendous Aron - Lola.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="994949031"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ObjectLists>
+										<ObjectList Name="Sequences">
+											<Reference>
+												<Local>
+													<MusicTrackSequence Name="" ID="{F233252E-92C5-4D27-9D2A-5787615006EA}">
+														<ObjectLists>
+															<ObjectList Name="Clips">
+																<Reference>
+																	<Local>
+																		<MusicClip Name="Tremendous Aron - Lola" ID="{0D726DE5-DAB1-407A-932E-C92E4E444561}">
+																			<PropertyList>
+																				<Property Name="BeginTrimOffset" Type="Real64" Value="201.009622332132"/>
+																				<Property Name="EndTrimOffset" Type="Real64" Value="180302.947845805"/>
+																				<Property Name="FadeInMode" Type="int16" Value="0"/>
+																				<Property Name="FadeOutMode" Type="int16" Value="0"/>
+																				<Property Name="PlayAt" Type="Real64" Value="-201.009622332132"/>
+																			</PropertyList>
+																			<AudioSourceRef Name="Tremendous Aron - Lola" ID="{44CA62A0-5E95-4FF0-8DBD-E63D9C6A3A54}"/>
+																			<PropertyCurveList>
+																				<PropertyCurve PropertyName="Highpass">
+																					<Curve Name="" ID="{D6C182BA-7420-4634-975A-F2A35181E853}">
+																						<PropertyList>
+																							<Property Name="Flags" Type="int32" Value="1"/>
+																						</PropertyList>
+																						<PointList>
+																							<Point>
+																								<XPos>0.20101</XPos>
+																								<YPos>0</YPos>
+																								<Flags>5</Flags>
+																							</Point>
+																							<Point>
+																								<XPos>180.302947845805</XPos>
+																								<YPos>0</YPos>
+																								<Flags>37</Flags>
+																							</Point>
+																						</PointList>
+																					</Curve>
+																				</PropertyCurve>
+																				<PropertyCurve PropertyName="Lowpass">
+																					<Curve Name="" ID="{71B2A44E-97CF-47A8-AAC0-853D911B3CD3}">
+																						<PropertyList>
+																							<Property Name="Flags" Type="int32" Value="1"/>
+																						</PropertyList>
+																						<PointList>
+																							<Point>
+																								<XPos>0.20101</XPos>
+																								<YPos>0</YPos>
+																								<Flags>5</Flags>
+																							</Point>
+																							<Point>
+																								<XPos>180.302947845805</XPos>
+																								<YPos>0</YPos>
+																								<Flags>37</Flags>
+																							</Point>
+																						</PointList>
+																					</Curve>
+																				</PropertyCurve>
+																				<PropertyCurve PropertyName="Volume">
+																					<Curve Name="" ID="{6B6CB82C-899E-413C-BAEC-59B994F6713E}">
+																						<PropertyList>
+																							<Property Name="Flags" Type="int32" Value="3"/>
+																						</PropertyList>
+																						<PointList>
+																							<Point>
+																								<XPos>0.20101</XPos>
+																								<YPos>0</YPos>
+																								<Flags>5</Flags>
+																							</Point>
+																							<Point>
+																								<XPos>180.302947845805</XPos>
+																								<YPos>0</YPos>
+																								<Flags>37</Flags>
+																							</Point>
+																						</PointList>
+																					</Curve>
+																				</PropertyCurve>
+																			</PropertyCurveList>
+																		</MusicClip>
+																	</Local>
+																</Reference>
+															</ObjectList>
+														</ObjectLists>
+													</MusicTrackSequence>
+												</Local>
+											</Reference>
+										</ObjectList>
+									</ObjectLists>
+								</MusicTrack>
+							</ChildrenList>
+							<ObjectLists>
+								<ObjectList Name="Cues">
+									<Reference>
+										<Local>
+											<MusicCue Name="Entry Cue" ID="{E03B8CD5-65B2-429B-8E61-6D24CEE48CEE}"/>
+										</Local>
+									</Reference>
+									<Reference>
+										<Local>
+											<MusicCue Name="Exit Cue" ID="{D333C958-CCC7-4B03-96A8-E3758F5DD93C}">
+												<PropertyList>
+													<Property Name="CueType" Type="int16" Value="1"/>
+													<Property Name="TimeMs" Type="Real64" Value="180302.947845805"/>
+												</PropertyList>
+											</MusicCue>
+										</Local>
+									</Reference>
+									<Reference>
+										<Local>
+											<MusicCue Name="" ID="{F5925CFD-38FF-4E79-AB06-458310A50B01}">
 												<PropertyList>
 													<Property Name="CueType" Type="int16" Value="2"/>
 												</PropertyList>

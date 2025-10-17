@@ -44,17 +44,6 @@
 										</Action>
 									</ChildrenList>
 								</Event>
-								<Event Name="PlayDaschlatt" ID="{E4EC9A34-B977-4E36-9894-0B5967FFDBAB}">
-									<ChildrenList>
-										<Action Name="" ID="{F7649E3C-0D64-48CE-BD66-C4C44404BD14}" ShortID="478661383">
-											<ReferenceList>
-												<Reference Name="Target">
-													<ObjectRef Name="Daschlatt" ID="{2E07434C-C8E8-4740-B8C0-99D73BC45FA5}" WorkUnitID="{ACD2CB43-14A2-429B-BD28-09BEF144217B}"/>
-												</Reference>
-											</ReferenceList>
-										</Action>
-									</ChildrenList>
-								</Event>
 								<Event Name="PlayTestMusic" ID="{C421306C-1BFC-498F-AB7A-C540088430C3}">
 									<ChildrenList>
 										<Action Name="" ID="{57DEAEBC-8D1E-4C59-AEAE-B9D772C1C358}" ShortID="282140626">
@@ -72,6 +61,17 @@
 											<ReferenceList>
 												<Reference Name="Target">
 													<ObjectRef Name="Take Four_" ID="{AB412F2B-F343-4C60-B134-40C1F9DB8778}" WorkUnitID="{ACD2CB43-14A2-429B-BD28-09BEF144217B}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+								<Event Name="PlayTremendousAron" ID="{9B9F19D3-66DE-4121-98B1-29B479A609DA}">
+									<ChildrenList>
+										<Action Name="" ID="{3D2CF2FD-9EE9-4E58-8D30-38002FCEE2AF}" ShortID="175678408">
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="Tremendous Aron" ID="{798B51DD-AD33-4C9A-93ED-3B4E2FFDE75C}" WorkUnitID="{ACD2CB43-14A2-429B-BD28-09BEF144217B}"/>
 												</Reference>
 											</ReferenceList>
 										</Action>

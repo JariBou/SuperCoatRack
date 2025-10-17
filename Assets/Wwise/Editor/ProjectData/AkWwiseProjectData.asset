@@ -94,7 +94,7 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: a4632d3c2cd3ab44959c4986e7d5aad3
     GuidInternal: 
-    m_lastTime: -8584409531781280900
+    m_lastTime: -8584409202379574863
     List:
     - name: BeatEvent
       guid: 17311fc5b20b774ea51aa652c2cb7da8
@@ -322,6 +322,29 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 5.878513
       minDuration: 5.878513
+    - name: PlayTremendousAron
+      guid: d3199f9bde66214198b129b479a609da
+      id: 1092583427
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: a4632d3c2cd3ab44959c4986e7d5aad3
+      - ElementName: Events
+        ObjectType: 4
+        guid: 5be825d74390e343996d2421205490a1
+      - ElementName: Play
+        ObjectType: 4
+        guid: a43af933031cfb4fb2184112bff454c8
+      - ElementName: PlayTremendousAron
+        ObjectType: 3
+        guid: d3199f9bde66214198b129b479a609da
+      Path: Events\Default Work Unit\Events\Play\PlayTremendousAron
+      maxAttenuation: 0
+      maxDuration: 180.30295
+      minDuration: 180.30295
     - name: PlayWiiMusic
       guid: 7d593f0c3c53f24eada5d5cd830ddb53
       id: 2131253029

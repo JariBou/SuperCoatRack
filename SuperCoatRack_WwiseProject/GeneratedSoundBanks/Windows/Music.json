@@ -10,7 +10,7 @@
     "Type": "User",
     "GUID": "{3F1F1E21-278D-41AA-8232-2670EB8A2976}",
     "Language": "SFX",
-    "Hash": "{E0C4A1D5-648D-E71F-2268-96D9872E8BB7}",
+    "Hash": "{7D11C2A9-89CA-B8FE-E7A5-83B741FCE6E6}",
     "ObjectPath": "\\SoundBanks\\Default Work Unit\\Music",
     "ShortName": "Music",
     "Path": "Music.bnk",
@@ -38,14 +38,6 @@
       "Location": "Memory",
       "ShortName": "Perfect_Sound.wav",
       "CachePath": "A2/{A2712F8B-A5FE-DF3D-3C2F-7AF97147BD77}.wem"
-     },
-     {
-      "Id": "493148124",
-      "Language": "SFX",
-      "Streaming": "false",
-      "Location": "Memory",
-      "ShortName": "Dachlatte-_Paul-Seul-Remix_.wav",
-      "CachePath": "ED/{ED686670-C4CF-5051-9816-8DE656978B3B}.wem"
      },
      {
       "Id": "643449495",
@@ -86,6 +78,14 @@
       "Location": "Memory",
       "ShortName": "PlayStart.wav",
       "CachePath": "82/{82CD194C-E676-FCB1-B4EF-BA577F3ECE3A}.wem"
+     },
+     {
+      "Id": "994949031",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Tremendous Aron - Lola.wav",
+      "CachePath": "ED/{ED4CA95E-F754-223A-7CDD-BF02A4D01047}.wem"
      }
     ],
     "Events": [
@@ -170,20 +170,6 @@
       ]
      },
      {
-      "Id": "1622344417",
-      "Name": "PlayDaschlatt",
-      "ObjectPath": "\\Events\\Default Work Unit\\Events\\Play\\PlayDaschlatt",
-      "GUID": "{E4EC9A34-B977-4E36-9894-0B5967FFDBAB}",
-      "DurationType": "OneShot",
-      "DurationMin": "176",
-      "DurationMax": "176",
-      "MediaRefs": [
-       {
-        "Id": "493148124"
-       }
-      ]
-     },
-     {
       "Id": "2322593426",
       "Name": "PlayTakeFour",
       "ObjectPath": "\\Events\\Default Work Unit\\Events\\Play\\PlayTakeFour",
@@ -208,6 +194,20 @@
       "MediaRefs": [
        {
         "Id": "809893259"
+       }
+      ]
+     },
+     {
+      "Id": "1092583427",
+      "Name": "PlayTremendousAron",
+      "ObjectPath": "\\Events\\Default Work Unit\\Events\\Play\\PlayTremendousAron",
+      "GUID": "{9B9F19D3-66DE-4121-98B1-29B479A609DA}",
+      "DurationType": "OneShot",
+      "DurationMin": "180.30295",
+      "DurationMax": "180.30295",
+      "MediaRefs": [
+       {
+        "Id": "994949031"
        }
       ]
      },
@@ -238,6 +238,6 @@
     ]
    }
   ],
-  "FileHash": "{38328D63-2FCB-6AD8-23BD-C6A77F1BD7AF}"
+  "FileHash": "{507488F0-9152-B9D1-876F-D833573D8B7E}"
  }
 }

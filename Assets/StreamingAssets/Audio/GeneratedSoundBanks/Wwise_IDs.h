@@ -19,9 +19,9 @@ namespace AK
         static const AkUniqueID PLAY_PERFECT_SOUND = 2675739737U;
         static const AkUniqueID PLAY_START_SOUND = 463701278U;
         static const AkUniqueID PLAY_TIMEUP_SOUND = 3300394306U;
-        static const AkUniqueID PLAYDASCHLATT = 1622344417U;
         static const AkUniqueID PLAYTAKEFOUR = 2322593426U;
         static const AkUniqueID PLAYTESTMUSIC = 575116772U;
+        static const AkUniqueID PLAYTREMENDOUSARON = 1092583427U;
         static const AkUniqueID PLAYWIIMUSIC = 2131253029U;
         static const AkUniqueID STOPMUSIC = 1917263390U;
     } // namespace EVENTS
