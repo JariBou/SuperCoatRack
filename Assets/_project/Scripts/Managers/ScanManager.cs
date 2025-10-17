@@ -15,6 +15,8 @@ namespace _project.Scripts.Managers
         private TextMeshProUGUI _textOut;
         [SerializeField]
         private RectTransform _scanZone;
+        [SerializeField]
+        private RawImage _rawImageBackground;
         
         [SerializeField, Range(0, 144)]
         private int _updatesPerSecond = 10;
@@ -40,32 +42,43 @@ namespace _project.Scripts.Managers
 
         private IEnumerator ScanCoroutine()
         {
-            yield return new WaitForSeconds(1f/_updatesPerSecond);
-            if (Scan())
+            while (true)
             {
-                yield return new WaitForSeconds(1.5f);
+                yield return new WaitForSeconds(1f / _updatesPerSecond);
+                if (Scan())
+                {
+                    yield return new WaitForSeconds(1.5f);
+                }
             }
-            StartCoroutine(ScanCoroutine());
         }
+
 
         private void SetUpCamera()
         {
             WebCamDevice[] devices = WebCamTexture.devices;
             if (devices.Length == 0)
             {
+                Debug.LogError("❌ Aucune caméra détectée !");
                 _isCamAvaible = false;
                 return;
             }
-            for (int i = 0; i < devices.Length; i++)
+
+            WebCamDevice selectedDevice = devices[0];
+            foreach (var device in devices)
             {
-                if (devices[i].isFrontFacing == true)
+                if (device.isFrontFacing)
                 {
-                    _cameraTexture = new WebCamTexture(devices[i].name, (int)_scanZone.rect.width, (int)_scanZone.rect.height);
+                    selectedDevice = device;
                     break;
                 }
             }
+
+            _cameraTexture = new WebCamTexture(selectedDevice.name, (int)_scanZone.rect.width, (int)_scanZone.rect.height);
             _cameraTexture.Play();
+
+            _rawImageBackground.texture = _cameraTexture;
             _isCamAvaible = true;
+            Debug.Log($"✅ Caméra utilisée : {selectedDevice.name}");
         }
 
         private void UpdateCameraRender()
@@ -77,8 +90,8 @@ namespace _project.Scripts.Managers
             float ratio = (float)_cameraTexture.width / (float)_cameraTexture.height;
             _aspectRatioFitter.aspectRatio = ratio;
 
-            int orientation = _cameraTexture.videoRotationAngle;
-            orientation = orientation * 3;
+            _rawImageBackground.rectTransform.localEulerAngles =
+                new Vector3(0, 0, -_cameraTexture.videoRotationAngle);
         }
         public void OnClickScan()
         {
@@ -86,6 +99,9 @@ namespace _project.Scripts.Managers
         }
         private bool Scan()
         {
+            if (_cameraTexture.width < 100)
+                return false; // trop petit => pas encore prête
+            Debug.Log("Scan happens");
             try
             {
                 IBarcodeReader barcodeReader = new BarcodeReader();
@@ -101,6 +117,7 @@ namespace _project.Scripts.Managers
             catch
             {
                 _textOut.text = "FAILED IN TRY";
+                return false;
             }
             return false;
         }
