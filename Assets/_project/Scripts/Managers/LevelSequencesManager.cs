@@ -143,9 +143,14 @@ namespace _project.Scripts.Managers
                 // UIManager.Instance.ChangeIconPosition(0, actionOnBeat);
                 _currentSequenceAction = new SequenceActionTimed(actionOnBeat, Time.time);
                 if (CurrentSequence.GetGameActionPack(out SequenceExtensions.GameActionPack pack,
-                        (a, b) => a.IsSameClothe(b)))
+                        (a, b) => false))
                 {
-                    UIManager.Instance.UpdateNextClotheIcon(pack.currentGameAction, pack.nextGameAction);
+                    GameAction resultNextGameAction = pack.nextNextGameAction;
+                    GameAction resultCurrentGameAction = pack.nextGameAction;
+                    UIManager.Instance.UpdateNextClotheIcon(resultCurrentGameAction, resultNextGameAction);
+                    // if (!resultNextGameAction.IsSameClothe(resultCurrentGameAction))
+                    // {
+                    // }
                 }
                 HandleInput();
             }
@@ -172,7 +177,7 @@ namespace _project.Scripts.Managers
             // // ==============
             CurrentSequence = Sequence.FromSequenceData(_levelData[_sequenceIndex]);
             if (CurrentSequence.GetGameActionPack(out SequenceExtensions.GameActionPack pack,
-                    (a, b) => a.IsSameClothe(b)))
+                    (a, b) => false))
             {
                 if (_sequenceIndex == 0)
                 {

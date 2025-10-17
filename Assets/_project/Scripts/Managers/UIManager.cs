@@ -86,7 +86,25 @@ namespace _project.Scripts.Managers
 
         public void ChangeClothIcon(GameAction gameAction, int clothColor)
         {
-            NextClotheDisplayManager.ConfigNewClotheDisplay(slotForCloth.sprite = coatToDisplay[clothColor], slotForCloth.sprite = coatToDisplay[Utils.MathUtils.Mod(clothColor-1, coatToDisplay.Length)]);
+            switch (gameAction.ClotheType)
+            {
+                case SequenceConfig.ClotheType.Coat:
+                    NextClotheDisplayManager.ConfigNewClotheDisplay(coatToDisplay[clothColor],
+                        coatToDisplay[clothColor]);
+
+                    break;
+                case SequenceConfig.ClotheType.Hat:
+                    NextClotheDisplayManager.ConfigNewClotheDisplay(hatToDisplay[clothColor], hatToDisplay[clothColor]);
+
+                    break;
+                case SequenceConfig.ClotheType.Shoe:
+                    NextClotheDisplayManager.ConfigNewClotheDisplay(shoesToDisplay[clothColor],
+                        shoesToDisplay[clothColor]);
+
+                    break;
+                default:
+                    throw new ArgumentOutOfRangeException();
+            }
             // try
             // {
             //     //Debug.Log("Changing cloth icon");

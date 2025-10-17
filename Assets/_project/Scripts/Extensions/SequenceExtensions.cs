@@ -9,6 +9,7 @@ namespace _project.Scripts.Extensions
             public GameAction previousGameAction;
             public GameAction currentGameAction;
             public GameAction nextGameAction;
+            public GameAction nextNextGameAction;
         }
 
         public static bool GetGameActionPack(this Sequence sequence, out GameActionPack result)
@@ -43,9 +44,14 @@ namespace _project.Scripts.Extensions
                         result.currentGameAction = gameAction;
                         found = true;
                     }
-                    else if (!areActionsEqualComparer.Invoke(result.currentGameAction, gameAction))
+                    else if (result.nextGameAction is null && !areActionsEqualComparer.Invoke(result.currentGameAction, gameAction))
                     {
                         result.nextGameAction = gameAction;
+                        found = true;
+                    }
+                    else if (!areActionsEqualComparer.Invoke(result.currentGameAction, gameAction))
+                    {
+                        result.nextNextGameAction = gameAction;
                         found = true;
                         break;
                     }
