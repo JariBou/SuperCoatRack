@@ -71,6 +71,9 @@ namespace _project.Scripts.Managers
                         Debug.Log($"Clothe type was not the same {_lastInput.ClotheType} != {_currentaction.ClotheType} or Color was not same {_lastInput.ClotheColor} !=  {_currentaction.ClotheColor}");
                         break;
                     case SequenceConfig.ActionType.Bell:
+                        _tutrialIndex++;
+                        UpdateDisplay();
+                        return;
                     case SequenceConfig.ActionType.Null:
                         break;
                     default:

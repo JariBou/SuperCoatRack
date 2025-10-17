@@ -41,6 +41,14 @@ namespace _project.Scripts.Managers.Inputs
                 SceneManager.LoadScene(SceneManager.GetActiveScene().name);
             }
         }
+        
+        public void EndLevel(InputAction.CallbackContext ctx)
+        {
+            if (ctx.performed)
+            {
+                GameManager.Instance.EndGame();
+            }
+        }
 
         public void OnCoatInput(InputAction.CallbackContext ctx)
         {
