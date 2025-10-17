@@ -21,7 +21,7 @@ namespace _project.ScriptableObjects.Scripts
         [HideIf(nameof(IsTutorial))]
         public AK.Wwise.Event MusicToPlayEvent;
 
-        [HideIf(nameof(IsTutorial))] public Sprite Client;
+        public Sprite Client;
         [HideIf(nameof(IsTutorial))] public Sprite HappyClient;
     }
 }

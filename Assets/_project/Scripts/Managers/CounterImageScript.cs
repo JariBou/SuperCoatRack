@@ -15,7 +15,7 @@ public class CounterImageScript : MonoBehaviour
         // Fait rebondir le texte
         transform
             .DOScale(1f, 0.5f)     // grossit vite
-            .SetEase(Ease.InQuad)   // effet rebondé vers l’extérieur
+            .SetEase(Ease.InCirc)   // effet rebondé vers l’extérieur
             .OnComplete(() =>
             {
                 transform
