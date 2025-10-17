@@ -267,7 +267,7 @@
 																				<Property Name="EndTrimOffset" Type="Real64" Value="164128.798185941"/>
 																				<Property Name="FadeInMode" Type="int16" Value="0"/>
 																				<Property Name="FadeOutMode" Type="int16" Value="0"/>
-																				<Property Name="PlayAt" Type="Real64" Value="890.020812906562"/>
+																				<Property Name="PlayAt" Type="Real64" Value="1144.25810104215"/>
 																			</PropertyList>
 																			<AudioSourceRef Name="Take Four_" ID="{02AA43F0-E59E-483E-9543-D02347580221}"/>
 																			<PropertyCurveList>

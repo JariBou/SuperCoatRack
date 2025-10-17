@@ -1996,29 +1996,29 @@ MonoBehaviour:
   - {fileID: 702050529}
   - {fileID: 684282034}
   coatToDisplay:
-  - {fileID: 21300000, guid: dfe8898ffe32d97408a6984b25c3f496, type: 3}
-  - {fileID: 21300000, guid: 7a205e6552cb7964eb48ebee347d07bf, type: 3}
-  - {fileID: 21300000, guid: be1733bc163a7214dbb3e2f764d6e7e2, type: 3}
-  - {fileID: 21300000, guid: 48bf5ce141494ff45b25b8405ec198a6, type: 3}
-  - {fileID: 21300000, guid: e831c3e97fa5d784e817e6b142181a3c, type: 3}
-  - {fileID: 21300000, guid: 818b9c78a47309d4588d49c03b519d71, type: 3}
-  - {fileID: 21300000, guid: 2dd02308c9be44243ad372ecc5cf9d2c, type: 3}
+  - {fileID: 21300000, guid: c3f62c614b9a5944a916b49570306d4f, type: 3}
+  - {fileID: 21300000, guid: da10f699bb581fc44854cdd6649e4aa4, type: 3}
+  - {fileID: 21300000, guid: dd2a624b5c2a51a4eb497a71f48a4a15, type: 3}
+  - {fileID: 21300000, guid: 3d92178ad213c4947a241c4068081951, type: 3}
+  - {fileID: 21300000, guid: fe5eaec4530d4b145a7e7570cc968f53, type: 3}
+  - {fileID: 21300000, guid: 2b255487658c83847a8ec8267a2d8471, type: 3}
+  - {fileID: 21300000, guid: 6126ca81d82c6fd4d8cf6e910b401827, type: 3}
   hatToDisplay:
-  - {fileID: 21300000, guid: dfe8898ffe32d97408a6984b25c3f496, type: 3}
-  - {fileID: 21300000, guid: 7a205e6552cb7964eb48ebee347d07bf, type: 3}
-  - {fileID: 21300000, guid: be1733bc163a7214dbb3e2f764d6e7e2, type: 3}
-  - {fileID: 21300000, guid: 48bf5ce141494ff45b25b8405ec198a6, type: 3}
-  - {fileID: 21300000, guid: e831c3e97fa5d784e817e6b142181a3c, type: 3}
-  - {fileID: 21300000, guid: 818b9c78a47309d4588d49c03b519d71, type: 3}
-  - {fileID: 21300000, guid: 2dd02308c9be44243ad372ecc5cf9d2c, type: 3}
+  - {fileID: 21300000, guid: c3f62c614b9a5944a916b49570306d4f, type: 3}
+  - {fileID: 21300000, guid: da10f699bb581fc44854cdd6649e4aa4, type: 3}
+  - {fileID: 21300000, guid: dd2a624b5c2a51a4eb497a71f48a4a15, type: 3}
+  - {fileID: 21300000, guid: 3d92178ad213c4947a241c4068081951, type: 3}
+  - {fileID: 21300000, guid: fe5eaec4530d4b145a7e7570cc968f53, type: 3}
+  - {fileID: 21300000, guid: 2b255487658c83847a8ec8267a2d8471, type: 3}
+  - {fileID: 21300000, guid: 6126ca81d82c6fd4d8cf6e910b401827, type: 3}
   shoesToDisplay:
-  - {fileID: 21300000, guid: dfe8898ffe32d97408a6984b25c3f496, type: 3}
-  - {fileID: 21300000, guid: 7a205e6552cb7964eb48ebee347d07bf, type: 3}
-  - {fileID: 21300000, guid: be1733bc163a7214dbb3e2f764d6e7e2, type: 3}
-  - {fileID: 21300000, guid: be1733bc163a7214dbb3e2f764d6e7e2, type: 3}
-  - {fileID: 21300000, guid: e831c3e97fa5d784e817e6b142181a3c, type: 3}
-  - {fileID: 21300000, guid: 818b9c78a47309d4588d49c03b519d71, type: 3}
-  - {fileID: 21300000, guid: 2dd02308c9be44243ad372ecc5cf9d2c, type: 3}
+  - {fileID: 21300000, guid: c3f62c614b9a5944a916b49570306d4f, type: 3}
+  - {fileID: 21300000, guid: da10f699bb581fc44854cdd6649e4aa4, type: 3}
+  - {fileID: 21300000, guid: dd2a624b5c2a51a4eb497a71f48a4a15, type: 3}
+  - {fileID: 21300000, guid: 3d92178ad213c4947a241c4068081951, type: 3}
+  - {fileID: 21300000, guid: fe5eaec4530d4b145a7e7570cc968f53, type: 3}
+  - {fileID: 21300000, guid: 2b255487658c83847a8ec8267a2d8471, type: 3}
+  - {fileID: 21300000, guid: 6126ca81d82c6fd4d8cf6e910b401827, type: 3}
   slotForCloth: {fileID: 0}
   _fallbackImage: {fileID: 21300000, guid: 97348591114b012428a3b776af883dfe, type: 3}
   elevatorDifferentPoses:
@@ -3696,7 +3696,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_AspectMode: 0
-  m_AspectRatio: 1.7744364
+  m_AspectRatio: 1.7777779
 --- !u!1 &1618621773
 GameObject:
   m_ObjectHideFlags: 0
