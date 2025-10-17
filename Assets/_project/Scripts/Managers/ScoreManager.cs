@@ -68,6 +68,11 @@ namespace _project.Scripts.Managers
             Score = 0;
         }
 
+        public static void Reset()
+        {
+            Instance.Score = 0;
+        }
+
         private void AddScore(int scoreAmount)
         {
             Score += scoreAmount;
