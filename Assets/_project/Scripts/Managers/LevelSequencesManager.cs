@@ -311,7 +311,8 @@ namespace _project.Scripts.Managers
             FeedbackManager.ChangeRippleColorStatic(Color.blue);
 
             Debug.Log($"Finished Sequence Action with state: {actionState}");
-            _lastInput = null;
+            // _lastInput = null;
+            StartCoroutine(WaitThenReleaseInput(1f));
             
             ScoreManager.SequenceActionFinished(_currentSequenceAction);
             
@@ -319,6 +320,12 @@ namespace _project.Scripts.Managers
             {
                 _sequenceIndex++;
             }
+        }
+
+        private IEnumerator WaitThenReleaseInput(float waitTime)
+        {
+            yield return new WaitForSeconds(waitTime);
+            _lastInput = null;
         }
 
         private void OnEnable()
