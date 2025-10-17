@@ -107,6 +107,9 @@ namespace _project.Scripts.Managers
         private void Start()
         {
             _levelData = LevelManager.Instance.CurrentLevelData;
+
+            UIManager.Instance.levelData = _levelData;
+            UIManager.Instance.ChangeClientSprite(false);
             
             //GameManager.Instance.BeginLevel();
             AkUnitySoundEngine.PostEvent(

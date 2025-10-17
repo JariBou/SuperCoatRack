@@ -1,3 +1,4 @@
+using _project.Scripts.Managers;
 using DG.Tweening;
 using TMPro;
 using UnityEngine;
@@ -21,6 +22,7 @@ public class GradeTextScript : MonoBehaviour
                     .SetEase(Ease.InQuad)
                     .OnComplete(() =>
                         {
+                            UIManager.Instance.ChangeClientSprite(false);
                             Destroy(this);
                         });
             });

@@ -38,6 +38,11 @@ namespace _project.Scripts.Managers
         [SerializeField] private CoatRackPlacementManager _coatRackPlacementManager;
 
         [SerializeField] private CounterImageScript FIRSTIMAGE;
+
+        [SerializeField] private Image Client;
+        [SerializeField] private Image Spirou;
+        public LevelData levelData;
+        
         
         private void Awake()
         {
@@ -50,6 +55,7 @@ namespace _project.Scripts.Managers
                 _instance = this;
             }
             DontDestroyOnLoad(gameObject);
+            ClearDisplay();
             ChangeScoreValue(0);
         }
 
@@ -84,6 +90,8 @@ namespace _project.Scripts.Managers
             iconDisplayedMirored[iconPos].rectTransform.localScale = Vector3.zero;
             iconDisplayed[iconPos].transform.DOScale(1f, 0.2f).SetEase(Ease.OutBounce);
             iconDisplayedMirored[iconPos].transform.DOScale(1f, 0.2f).SetEase(Ease.OutBounce);
+            Spirou.transform.DOScale(.8f, 0.2f).SetEase(Ease.OutQuad);
+            Spirou.transform.DOScale(1f, 0.2f).SetEase(Ease.OutBounce);
         }
 
         public void ChangeClothIcon(GameAction gameAction, int clothColor)
@@ -283,6 +291,24 @@ namespace _project.Scripts.Managers
                     throw new ArgumentOutOfRangeException();
             }
             NextClotheDisplayManager.InitClotheDisplay(currentSprite, nextSprite);
+        }
+
+        public void ChangeClientSprite(bool isHappy)
+        {
+            if (isHappy)
+            {
+                if (levelData.HappyClient )
+                {
+                    Client.sprite = levelData.HappyClient;
+                } 
+            }
+            else
+            {
+                if (levelData.Client )
+                {
+                    Client.sprite = levelData.Client;
+                }
+            }
         }
     }
 }

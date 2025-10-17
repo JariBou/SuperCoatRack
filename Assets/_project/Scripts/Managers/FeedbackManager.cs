@@ -66,6 +66,7 @@ public class FeedbackManager : MonoBehaviour
                     currentColorForRipple = Color.yellow;
                     currentColorForMiddleRipple = new Color(1f, 0.95f, 0.84f);
                     AkUnitySoundEngine.PostEvent("Play_Perfect_Sound", gameObject);
+                    UIManager.Instance.ChangeClientSprite(true);
                     break;
                 case LevelSequencesManager.SequenceActionState.None:
                     tmp.GetComponent<TextMesh>().text = "ERROR";
