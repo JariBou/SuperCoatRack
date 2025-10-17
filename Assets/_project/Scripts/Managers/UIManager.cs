@@ -72,13 +72,15 @@ namespace _project.Scripts.Managers
             foreach (var icon in iconDisplayed)
             {
                 icon.sprite = null;
-                icon.rectTransform.localScale = Vector3.zero;
+                icon.enabled = false;
+                // icon.rectTransform.localScale = Vector3.zero;
 
             }
             foreach (var icon in iconDisplayedMirored)
             {
                 icon.sprite = null;
-                icon.rectTransform.localScale = Vector3.zero;
+                icon.enabled = false;
+                // icon.rectTransform.localScale = Vector3.zero;
             }
         }
 
@@ -86,12 +88,15 @@ namespace _project.Scripts.Managers
         {
             iconDisplayed[iconPos].sprite = iconSprites[(int)gameAction.ActionType];
             iconDisplayedMirored[iconPos].sprite = iconSprites[(int)gameAction.ActionType];
+            Vector3 baseScale = iconDisplayedMirored[iconPos].rectTransform.localScale;
             iconDisplayed[iconPos].rectTransform.localScale = Vector3.zero;
             iconDisplayedMirored[iconPos].rectTransform.localScale = Vector3.zero;
-            iconDisplayed[iconPos].transform.DOScale(1f, 0.2f).SetEase(Ease.OutBounce);
-            iconDisplayedMirored[iconPos].transform.DOScale(1f, 0.2f).SetEase(Ease.OutBounce);
+            iconDisplayed[iconPos].transform.DOScale(baseScale, 0.2f).SetEase(Ease.OutBounce);
+            iconDisplayedMirored[iconPos].transform.DOScale(baseScale, 0.2f).SetEase(Ease.OutBounce);
             Spirou.transform.DOScale(.8f, 0.2f).SetEase(Ease.OutQuad);
             Spirou.transform.DOScale(1f, 0.2f).SetEase(Ease.OutBounce);
+            iconDisplayed[iconPos].enabled = true;
+            iconDisplayedMirored[iconPos].enabled = true;
         }
 
         public void ChangeClothIcon(GameAction gameAction, int clothColor)
@@ -169,7 +174,8 @@ namespace _project.Scripts.Managers
             
             ClearDisplay();
             if (tutorialAction.ActionType == SequenceConfig.ActionType.Null) return;
-            
+            _coatRackPlacementManager.ShowPlacement(tutorialAction);
+
             ChangeIconPosition(0, tutorialAction);
 
             switch (tutorialAction.ActionType)

@@ -1,6 +1,7 @@
 ﻿using System;
 using _project.ScriptableObjects.Scripts;
 using _project.Scripts.Managers.Inputs;
+using DG.Tweening;
 using UnityEngine;
 
 namespace _project.Scripts.Managers
@@ -10,6 +11,8 @@ namespace _project.Scripts.Managers
         private LevelData _levelData;
         private TutorialClass _tutorialData;
         private TutorialData.TutorialAction _currentaction;
+        [SerializeField] private RectTransform _tutorialCoatRackDisplayTransform;
+        [SerializeField] private CoatRackPlacementManager _coatRackPlacementManager;
         private InputTypeLink _lastInput;
         private int _tutrialIndex;
 
@@ -33,6 +36,8 @@ namespace _project.Scripts.Managers
             UIManager.Instance.EnableTutorialDisplay();
             _tutorialData = TutorialClass.FromTutorialData(_levelData.TutorialData);
             _tutrialIndex = 0;
+            _coatRackPlacementManager.transform.DOMove(_tutorialCoatRackDisplayTransform.position, 0.2f);
+            _coatRackPlacementManager.transform.DOScale(_tutorialCoatRackDisplayTransform.localScale, 0.2f);
             UpdateDisplay();
         }
 

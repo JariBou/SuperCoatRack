@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using _project.Scripts.Managers.Inputs;
 using TMPro;
@@ -120,6 +121,14 @@ namespace _project.Scripts.Managers
                 return false;
             }
             return false;
+        }
+
+        private void OnDisable()
+        {
+            if (_cameraTexture != null)
+            {
+                _cameraTexture.Stop();
+            }
         }
     }
 }
