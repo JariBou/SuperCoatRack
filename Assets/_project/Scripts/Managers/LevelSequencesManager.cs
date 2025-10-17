@@ -272,6 +272,11 @@ namespace _project.Scripts.Managers
                         }
                         // Debug.Log($"Clothe type was not the same {_lastInput.ClotheType} != {_currentSequenceAction.SequenceAction.ClotheType} or Color was not same {_lastInput.ClotheColor} !=  {_currentSequenceAction.SequenceAction.ClotheColor}");
                         break;
+                    case SequenceConfig.ActionType.Bell:
+                        OnSuccess(actionState);
+                        break;
+                    case SequenceConfig.ActionType.Null:
+                        break;
                     default:
                         throw new ArgumentOutOfRangeException();
                 }
