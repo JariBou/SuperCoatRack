@@ -34,6 +34,8 @@ namespace _project.Scripts.Managers
         [SerializeField] private TMP_Text _tutorialText;
         [SerializeField] private Image _tutorialImage;
         [SerializeField] private Image _tutorialBackground;
+        
+        [SerializeField] private CoatRackPlacementManager _coatRackPlacementManager;
 
         [SerializeField] private CounterImageScript FIRSTIMAGE;
         
@@ -243,6 +245,7 @@ namespace _project.Scripts.Managers
                         throw new ArgumentOutOfRangeException();
                 }
             }
+            _coatRackPlacementManager.ShowPlacement(currentGameAction);
             NextClotheDisplayManager.ConfigNewClotheDisplay(currentSprite, nextSprite);
         }
 
