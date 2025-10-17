@@ -46,7 +46,7 @@ namespace _project.Scripts.Managers
             _currentClotheDisplay.rotation = Quaternion.Euler(0f, 0f, 0f);
             _currentClotheDisplay.localScale = Vector3.one * 0.3f;
             _currentClotheDisplay.DOScale(Vector3.one * 0.6f, _duration);
-            _currentClotheDisplay.DOMove(_nextClotheDisplayPosition, _duration);
+            _currentClotheDisplay.DOMove(_nextClotheDisplayPosition, _duration).SetEase(Ease.OutCubic);
             SetSpriteOf(_nextClotheDisplaySprite, _currentClotheDisplay.GetComponent<Image>());
             // _currentClotheDisplay.GetComponent<Image>().sprite = _nextClotheDisplaySprite;
             _currentClotheDisplay.GetComponent<CanvasGroup>().DOFade(.8f, _duration).OnComplete(DoAnimPart3);
