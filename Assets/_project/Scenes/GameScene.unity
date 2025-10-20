@@ -153,7 +153,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -0.000061035156, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 1, y: 1}
 --- !u!114 &52123022
@@ -2163,6 +2163,16 @@ MonoBehaviour:
   Client: {fileID: 2020149123}
   Spirou: {fileID: 363625675}
   levelData: {fileID: 0}
+  ScoreSprites:
+  - {fileID: 21300000, guid: 6dd63fb462b06e44398019f4306db12e, type: 3}
+  - {fileID: 21300000, guid: 3879af41a189c6146939380e25f83b3f, type: 3}
+  - {fileID: 21300000, guid: 1d52ca2f21790544a8085e03f0d9dfd9, type: 3}
+  - {fileID: 21300000, guid: 9f9a2bd2f467e594b9abf883116e7b78, type: 3}
+  - {fileID: 21300000, guid: 125ada63dfc77004e81a0b37e82d4db7, type: 3}
+  - {fileID: 21300000, guid: 3d865a79fcf2a8f4abdc074fa2efc540, type: 3}
+  - {fileID: 21300000, guid: 24f08706f21e8eb44a541218f7b0f6d6, type: 3}
+  - {fileID: 21300000, guid: c684b75bdd233ac4fbac2e73d12958ba, type: 3}
+  ScoreImage: {fileID: 0}
 --- !u!1001 &784689678
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2599,7 +2609,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -0.00012207031, y: -41.98999}
+  m_AnchoredPosition: {x: 0, y: -41.98999}
   m_SizeDelta: {x: 0, y: 86.02}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &843282981
@@ -3876,7 +3886,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_AspectMode: 0
-  m_AspectRatio: 1.7744364
+  m_AspectRatio: 1.7777779
 --- !u!1 &1618621773
 GameObject:
   m_ObjectHideFlags: 0

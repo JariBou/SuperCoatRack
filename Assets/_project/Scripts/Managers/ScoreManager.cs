@@ -8,6 +8,7 @@ namespace _project.Scripts.Managers
     {
         public static ScoreManager Instance { get; private set; }
 
+        private int maxPossibleScorePerLevel = 0;
         public static event Action<int> ScoreChanged;
 
         [SerializeField]
@@ -26,6 +27,12 @@ namespace _project.Scripts.Managers
         }
 
         public ScoreData Data => _scoreData;
+
+        public int MaxPossibleScorePerLevel
+        {
+            get => maxPossibleScorePerLevel;
+            set => maxPossibleScorePerLevel = value;
+        }
 
         private void Awake()
         {
@@ -56,6 +63,11 @@ namespace _project.Scripts.Managers
                     throw new ArgumentOutOfRangeException(nameof(actionState), actionState, null);
             }
             return 0;
+        }
+
+        public void GetLevelMaxScoreNeeded(LevelData levelData)
+        {
+            maxPossibleScorePerLevel = levelData.sequences.Count * 100;
         }
 
         public static void SequenceActionFinished(LevelSequencesManager.SequenceActionTimed lastSequenceAction)

@@ -4,12 +4,14 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 namespace _project.Scripts.Menus
 {
     public class EndMenu : MonoBehaviour
     {
         [SerializeField] private TMP_Text _scoreDispaly;
+        [SerializeField] private Image _scoreNote;
         
         private void Start()
         {

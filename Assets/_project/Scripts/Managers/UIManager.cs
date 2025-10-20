@@ -42,7 +42,9 @@ namespace _project.Scripts.Managers
         [SerializeField] private Image Client;
         [SerializeField] private Image Spirou;
         public LevelData levelData;
-        
+
+        [SerializeField] private Sprite[] ScoreSprites;
+        [SerializeField] private Image ScoreImage;
         
         private void Awake()
         {
@@ -203,6 +205,15 @@ namespace _project.Scripts.Managers
 
         public void ChangeScoreValue(int score)
         {
+            if (ScoreSprites.Length <= 0)
+            {
+                ScoreManager.Instance.GetLevelMaxScoreNeeded(levelData);
+                int maxScorePossible = ScoreManager.Instance.MaxPossibleScorePerLevel;
+                int currentScore = ScoreManager.Instance.Score;
+                int scoreGradeLimit = ScoreSprites.Length;
+                int finalGrade =  Mathf.FloorToInt(scoreGradeLimit * currentScore / maxScorePossible);
+                ScoreImage.sprite = ScoreSprites[finalGrade];
+            }
             scoreText.text = "Score : " + score;
         }
 
