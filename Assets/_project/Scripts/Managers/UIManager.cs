@@ -44,7 +44,6 @@ namespace _project.Scripts.Managers
         public LevelData levelData;
 
         [SerializeField] private Sprite[] ScoreSprites;
-        [SerializeField] private Image ScoreImage;
         
         private void Awake()
         {
@@ -58,7 +57,6 @@ namespace _project.Scripts.Managers
             }
             DontDestroyOnLoad(gameObject);
             ClearDisplay();
-            ChangeScoreValue(0);
         }
 
         private void Start()
@@ -205,16 +203,20 @@ namespace _project.Scripts.Managers
 
         public void ChangeScoreValue(int score)
         {
-            if (ScoreSprites.Length <= 0)
+            scoreText.text = "Score : " + score;
+        }
+
+        public Sprite GetGradeSprite()
+        {
+            if (ScoreSprites.Length > 0)
             {
-                ScoreManager.Instance.GetLevelMaxScoreNeeded(levelData);
-                int maxScorePossible = ScoreManager.Instance.MaxPossibleScorePerLevel;
+                float maxScorePossible = ScoreManager.Instance.GetLevelMaxScoreNeeded(levelData);
                 int currentScore = ScoreManager.Instance.Score;
                 int scoreGradeLimit = ScoreSprites.Length;
                 int finalGrade =  Mathf.FloorToInt(scoreGradeLimit * currentScore / maxScorePossible);
-                ScoreImage.sprite = ScoreSprites[finalGrade];
+                return ScoreSprites[finalGrade];
             }
-            scoreText.text = "Score : " + score;
+            return null;
         }
 
         public void EnableTutorialDisplay()

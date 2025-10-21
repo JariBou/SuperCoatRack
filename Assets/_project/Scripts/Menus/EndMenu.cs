@@ -4,18 +4,20 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
+using UnityEngine.Serialization;
 using UnityEngine.UI;
 
 namespace _project.Scripts.Menus
 {
     public class EndMenu : MonoBehaviour
     {
-        [SerializeField] private TMP_Text _scoreDispaly;
-        [SerializeField] private Image _scoreNote;
+        [SerializeField] private TMP_Text _scoreDisplay;
+        [FormerlySerializedAs("_scoreNote")] [SerializeField] private Image _scoreGrade;
         
         private void Start()
         {
-            _scoreDispaly.text = $"Score: {ScoreManager.Instance.Score.ToString()}";
+            _scoreDisplay.text = $"Score: {ScoreManager.Instance.Score.ToString()}";
+            _scoreGrade.sprite = UIManager.Instance.GetGradeSprite();
         }
 
         public void Retry()

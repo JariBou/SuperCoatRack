@@ -8,7 +8,7 @@ namespace _project.Scripts.Managers
     {
         public static ScoreManager Instance { get; private set; }
 
-        private int maxPossibleScorePerLevel = 0;
+        private float maxPossibleScorePerLevel = 0;
         public static event Action<int> ScoreChanged;
 
         [SerializeField]
@@ -28,7 +28,7 @@ namespace _project.Scripts.Managers
 
         public ScoreData Data => _scoreData;
 
-        public int MaxPossibleScorePerLevel
+        public float MaxPossibleScorePerLevel
         {
             get => maxPossibleScorePerLevel;
             set => maxPossibleScorePerLevel = value;
@@ -65,9 +65,10 @@ namespace _project.Scripts.Managers
             return 0;
         }
 
-        public void GetLevelMaxScoreNeeded(LevelData levelData)
+        public float GetLevelMaxScoreNeeded(LevelData levelData)
         {
             maxPossibleScorePerLevel = levelData.sequences.Count * 100;
+            return maxPossibleScorePerLevel;
         }
 
         public static void SequenceActionFinished(LevelSequencesManager.SequenceActionTimed lastSequenceAction)

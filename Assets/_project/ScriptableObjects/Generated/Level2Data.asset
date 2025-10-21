@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sequences:
   - {fileID: 11400000, guid: 042429e2961a9374da304f6903ee0dc4, type: 2}
-  Icon: {fileID: 21300000, guid: 585b7bdf5ca59cf4eb585694f268fbdd, type: 3}
+  Icon: {fileID: 21300000, guid: 6e74b12903fc9cd43a4eb16ce2469294, type: 3}
   IsTutorial: 0
   _songDurationInSeconds: 166
   TutorialData: {fileID: 0}
