@@ -16,6 +16,7 @@ namespace _project.ScriptableObjects.Scripts
         public class SequenceAction : GameAction
         {
             public int BeatDelayToPrevious = 4;
+            public bool hasCustomGracePeriod = false;
             public Vector2 gracePeriod = new Vector2(.5f, .1f);
         }
 

@@ -34,11 +34,18 @@ namespace _project.Scripts.Managers
                 Timestamp = time;
             }
 
-            public bool WasInputInTimeFrame(float lastInputTimestamp, out SequenceActionState state)
+            public bool WasInputInTimeFrame(float lastInputTimestamp, LevelData levelData,
+                out SequenceActionState state)
             {
+                Vector2 gracePeriod = SequenceAction.gracePeriod;
+                if (!SequenceAction.hasCustomGracePeriod)
+                {
+                    gracePeriod = levelData.GetGracePeriodFor(SequenceAction.ActionType);
+                }
+
                 float timeDiff = Timestamp - lastInputTimestamp;
                 // Debug.LogWarning($"TIMEDIFF: {timeDiff}");
-                if (!(SequenceAction.gracePeriod.x > timeDiff && timeDiff > -SequenceAction.gracePeriod.y))
+                if (!(gracePeriod.x > timeDiff && timeDiff > -gracePeriod.y))
                 {
                     state = SequenceActionState.Failed;
                     return false;
@@ -47,31 +54,31 @@ namespace _project.Scripts.Managers
                 float abs = Mathf.Abs(timeDiff);
                 if (Mathf.Approximately(Mathf.Sign(timeDiff), 1))
                 {
-                    float dTime = abs / SequenceAction.gracePeriod.x;
+                    float dTime = abs / gracePeriod.x;
                     CheckInputState(out state, dTime);
                 }
                 else
                 {
-                    float dTime = abs / SequenceAction.gracePeriod.y;
+                    float dTime = abs / gracePeriod.y;
                     CheckInputState(out state, dTime);
                 }
                 // Debug.LogWarning($"Input was in frame with diff: {timeDiff} and state {state}");
                 return true;
-
-                void CheckInputState(out SequenceActionState sequenceActionState, float dTime)
+            }
+            
+            private void CheckInputState(out SequenceActionState sequenceActionState, float dTime)
+            {
+                if (dTime <= ScoreManager.Instance.Data.PerfectTimePercent)
                 {
-                    if (dTime <= ScoreManager.Instance.Data.PerfectTimePercent)
-                    {
-                        sequenceActionState = SequenceActionState.Perfect;
+                    sequenceActionState = SequenceActionState.Perfect;
                         
-                    } else if (dTime <= ScoreManager.Instance.Data.GoodTimePercent)
-                    {
-                        sequenceActionState = SequenceActionState.Good;
-                    }
-                    else
-                    {
-                        sequenceActionState = SequenceActionState.Bad;
-                    }
+                } else if (dTime <= ScoreManager.Instance.Data.GoodTimePercent)
+                {
+                    sequenceActionState = SequenceActionState.Good;
+                }
+                else
+                {
+                    sequenceActionState = SequenceActionState.Bad;
                 }
             }
 
@@ -242,7 +249,7 @@ namespace _project.Scripts.Managers
                 return;
             }
             
-            if (!_currentSequenceAction.WasInputInTimeFrame(_lastInput.Timestamp, out SequenceActionState actionState))
+            if (!_currentSequenceAction.WasInputInTimeFrame(_lastInput.Timestamp, _levelData, out SequenceActionState actionState))
             {
                 // Debug.Log($"Input was out of out of time: {_currentSequenceAction.Timestamp - _lastInput.Timestamp}");
                 OnFail();
