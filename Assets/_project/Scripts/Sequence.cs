@@ -1,9 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Diagnostics.CodeAnalysis;
-using System.Linq;
 using _project.ScriptableObjects.Scripts;
 using _project.Scripts.Managers;
-using UnityEngine;
 
 namespace _project.Scripts
 {

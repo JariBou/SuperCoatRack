@@ -1,5 +1,4 @@
-﻿using System;
-using _project.Scripts.Managers;
+﻿using _project.Scripts.Managers;
 using TMPro;
 using UnityEngine;
 using UnityEngine.InputSystem;

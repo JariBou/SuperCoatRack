@@ -1,8 +1,6 @@
 using _project.Scripts.Managers;
 using DG.Tweening;
-using TMPro;
 using UnityEngine;
-using UnityEngine.UI;
 
 public class GradeTextScript : MonoBehaviour
 {

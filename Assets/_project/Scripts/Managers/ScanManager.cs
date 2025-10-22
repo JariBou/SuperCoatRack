@@ -1,4 +1,3 @@
-using System;
 using System.Collections;
 using _project.Scripts.Managers.Inputs;
 using TMPro;

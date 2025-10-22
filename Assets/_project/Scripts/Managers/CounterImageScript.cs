@@ -1,7 +1,6 @@
 using _project.Scripts.Managers;
 using DG.Tweening;
 using UnityEngine;
-using UnityEngine.UIElements;
 
 public class CounterImageScript : MonoBehaviour
 {
