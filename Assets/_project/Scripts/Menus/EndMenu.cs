@@ -12,9 +12,15 @@ namespace _project.Scripts.Menus
     {
         [SerializeField] private TMP_Text _scoreDisplay;
         [FormerlySerializedAs("_scoreNote")] [SerializeField] private Image _scoreGrade;
+        private bool _isNavEnabled = false;
+        
+        [SerializeField] private GameObject _retryButton;
+        [SerializeField] private GameObject _gotoMenuButton;
         
         private void Start()
         {
+            _retryButton.SetActive(false);
+            _gotoMenuButton.SetActive(false);
             _scoreDisplay.text = $"Score: {ScoreManager.Instance.Score.ToString()}";
             _scoreGrade.sprite = UIManager.Instance.GetGradeSprite();
         }
@@ -31,14 +37,22 @@ namespace _project.Scripts.Menus
         
         public void JoystickReturn(InputAction.CallbackContext ctx)
         {
-            if(!ctx.performed) return;
+            if(!ctx.performed || !_isNavEnabled) return;
             Retry();
         }
 
         public void JoystickConfirm(InputAction.CallbackContext ctx)
         {
-            if(!ctx.performed) return;
+            if(!ctx.performed || !_isNavEnabled) return;
             GoBackToMenu();
+        }
+
+        public void EnableNav()
+        {
+            _isNavEnabled = true;
+            
+            _retryButton.SetActive(true);
+            _gotoMenuButton.SetActive(true);
         }
     }
 }

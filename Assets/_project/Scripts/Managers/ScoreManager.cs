@@ -101,5 +101,10 @@ namespace _project.Scripts.Managers
         {
             GameManager.GameStart -= GameManagerOnGameStart;
         }
+
+        public static int GetScore()
+        {
+            return Instance.Score;
+        }
     }
 }

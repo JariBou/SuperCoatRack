@@ -11,9 +11,10 @@ namespace _project.ScriptableObjects.Scripts
     [Editable, Manageable]
     public class LevelData : ScriptableObject
     {
+        public string LevelName;
+        public Sprite Icon;
         [HideIf(nameof(IsTutorial))]
         public List<SequenceData> sequences = new();
-        public Sprite Icon;
         public bool IsTutorial;
         public int _songDurationInSeconds;
         [ShowIf(nameof(IsTutorial))]

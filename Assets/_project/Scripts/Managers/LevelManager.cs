@@ -17,6 +17,9 @@ namespace _project.Scripts.Managers
             get => _currentLevelData;
             set => _currentLevelData = value;
         }
+
+        public static LevelData CurrentLevel => _instance.CurrentLevelData;
+
         [SerializeField] private LevelData _currentLevelData;
     
         private void Awake()

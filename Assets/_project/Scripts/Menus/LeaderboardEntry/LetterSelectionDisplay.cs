@@ -21,8 +21,6 @@ namespace _project.Scripts.Menus.LeaderboardEntry
 
         private void Start()
         {
-            _baseTextColor = _letterText.color;
-
             _minTextByte = char.ConvertToUtf32("A", 0);
             _maxTextByte = char.ConvertToUtf32("Z", 0);
         }
@@ -41,15 +39,41 @@ namespace _project.Scripts.Menus.LeaderboardEntry
             _letterText.text = convertFromUtf32;
         }
 
+        public void Lock()
+        {
+            _upImage.enabled = false;
+            _downImage.enabled = false;
+        }
+
+        public void Unlock()
+        {
+            _upImage.enabled = true;
+            _downImage.enabled = true;
+        }
+
         public void SetSelected(bool b)
         {
             _selected = b;
             _letterText.color = _selected ? _selectedTextColor : _baseTextColor;
+            if (_selected)
+            {
+                Unlock();
+            }
+            else
+            {
+                Lock();
+            }
         }
 
-        public void Config(Color selectedColor)
+        public void Config(Color unselectedColor, Color selectedColor)
         {
+            _baseTextColor = unselectedColor;
             _selectedTextColor = selectedColor;
+        }
+
+        public string GetLetter()
+        {
+            return _letterText.text;
         }
     }
 }

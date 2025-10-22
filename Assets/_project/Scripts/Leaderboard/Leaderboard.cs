@@ -24,9 +24,13 @@ namespace _project.Scripts.Leaderboard
             set => _instance = value;
         }
 
-        public static List<LeaderboardEntry> GetLeaderboardForMap(string mapName)
+        public static List<LeaderboardEntry> GetLeaderboardForMap(string mapName, bool sorted = true)
         {
-            Instance._leaderboard.TryGetValue(mapName, out List<LeaderboardEntry> leaderboard);
+            if (!Instance._leaderboard.TryGetValue(mapName, out List<LeaderboardEntry> leaderboard))
+            {
+                return new List<LeaderboardEntry>();
+            }
+            leaderboard.Sort((entry, leaderboardEntry) => entry.Score > leaderboardEntry.Score ? -1 : 1);
             return leaderboard;
         }
 
@@ -96,7 +100,7 @@ namespace _project.Scripts.Leaderboard
 
         public static void AddLeaderboardEntry(string levelName, LeaderboardEntry leaderboardEntry)
         {
-            _instance.AddEntry(levelName, leaderboardEntry);
+            Instance.AddEntry(levelName, leaderboardEntry);
         }
 
         private void AddEntry(string levelName, LeaderboardEntry leaderboardEntry)
