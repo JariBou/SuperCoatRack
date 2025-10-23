@@ -22,10 +22,10 @@ namespace _project.Scripts.Menus
         {
             _retryButton.SetActive(false);
             _gotoMenuButton.SetActive(false);
-            int position = Leaderboard.GetPositionOfScoreInMap(300, "test");
-            // int position = Leaderboard.GetPositionOfScoreInMap(ScoreManager.GetScore(), LevelManager.CurrentLevel.LevelName);
-            _scoreDisplay.text = $"{position}. {300}";
-            // _scoreDisplay.text = $"{position}. {ScoreManager.Instance.Score.ToString()}";
+            // int position = Leaderboard.GetPositionOfScoreInMap(300, "test");
+            int position = Leaderboard.GetPositionOfScoreInMap(ScoreManager.GetScore(), LevelManager.CurrentLevel.LevelName);
+            // _scoreDisplay.text = $"{position}. {300}";
+            _scoreDisplay.text = $"{position}. {ScoreManager.Instance.Score.ToString()}";
             _scoreGrade.sprite = UIManager.Instance.GetGradeSprite();
         }
 

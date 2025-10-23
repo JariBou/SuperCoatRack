@@ -1,7 +1,7 @@
 ﻿using TMPro;
 using UnityEngine;
 
-namespace _project.Scripts.Menus.LeaderboardEntry
+namespace _project.Scripts.Menus.LeaderboardHelpers
 {
     public class LeaderboardEntryDisplay : MonoBehaviour
     {

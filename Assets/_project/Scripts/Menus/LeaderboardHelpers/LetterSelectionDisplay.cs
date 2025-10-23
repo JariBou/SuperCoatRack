@@ -1,10 +1,8 @@
-﻿using System;
-using NaughtyAttributes;
-using TMPro;
+﻿using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace _project.Scripts.Menus.LeaderboardEntry
+namespace _project.Scripts.Menus.LeaderboardHelpers
 {
     public class LetterSelectionDisplay : MonoBehaviour
     {

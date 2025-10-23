@@ -1,4 +1,4 @@
-using _project.Scripts.Menus.LeaderboardEntry;
+using _project.Scripts.Menus.LeaderboardHelpers;
 using UnityEngine;
 using UnityEngine.InputSystem;
 

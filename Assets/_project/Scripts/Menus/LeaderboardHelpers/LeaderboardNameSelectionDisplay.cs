@@ -1,13 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
 using _project.Scripts.Managers;
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
-using UnityEngine.SceneManagement;
 
-namespace _project.Scripts.Menus.LeaderboardEntry
+namespace _project.Scripts.Menus.LeaderboardHelpers
 {
     public class LeaderboardNameSelectionDisplay : MonoBehaviour
     {

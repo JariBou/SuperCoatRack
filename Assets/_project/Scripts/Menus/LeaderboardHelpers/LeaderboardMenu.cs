@@ -5,7 +5,7 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.UI;
 
-namespace _project.Scripts.Menus.LeaderboardEntry
+namespace _project.Scripts.Menus.LeaderboardHelpers
 {
     public class LeaderboardMenu : MonoBehaviour
     {
