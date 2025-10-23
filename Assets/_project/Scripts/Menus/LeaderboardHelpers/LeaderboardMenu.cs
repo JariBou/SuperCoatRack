@@ -1,4 +1,5 @@
-﻿using _project.ScriptableObjects.Scripts;
+﻿using System;
+using _project.ScriptableObjects.Scripts;
 using _project.Scripts.Managers;
 using _project.Scripts.Utils;
 using UnityEngine;
@@ -28,20 +29,33 @@ namespace _project.Scripts.Menus.LeaderboardHelpers
                 LevelData levelData = LevelManager.Instance.ListOfLevels[value];
                 if (levelData.IsTutorial)
                 {
+                    Debug.Log($"Tutorial, going to index: {value+diff}");
                     SelectedLevelIndex = MathUtils.Mod(value+diff, LevelManager.Instance.ListOfLevels.Length);
                     return;
                 }
+                Debug.Log($"Changing index!");
                 _selectedLevelIndex = value;
                 _selectionDisplay.sprite = levelData.Icon;
                 _leaderboardDisplay.Show(levelData.LevelName);
             }
         }
+
+        private bool _wasInit;
         
         private void Start()
         {
-            SelectedLevelIndex = 0;
+            // SelectedLevelIndex = 0;
         }
-        
+
+        private void OnEnable()
+        {
+            if (!_wasInit)
+            {
+                _wasInit = true;
+                SelectedLevelIndex = 0;
+            }
+        }
+
         public void SelectNext()
         {
             SelectedLevelIndex = (SelectedLevelIndex + 1) % LevelManager.Instance.ListOfLevels.Length;

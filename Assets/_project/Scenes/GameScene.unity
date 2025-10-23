@@ -972,7 +972,6 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 686954366}
-  - {fileID: 752018356}
   - {fileID: 438618329}
   - {fileID: 423830661}
   - {fileID: 1742290416}
@@ -1454,6 +1453,10 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: 1e4b6525-9339-4ce1-9189-788a58a51090
     m_ActionName: 'InGameMap/Escape[/Keyboard/escape]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 3d3eac32-a0b2-4cd4-9476-7e44b47d6211
+    m_ActionName: 'InGameMap/F1[/Keyboard/f1]'
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: InGameMap
@@ -2093,7 +2096,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 393226234}
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &752018357
 MonoBehaviour:
@@ -2172,7 +2175,6 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 3d865a79fcf2a8f4abdc074fa2efc540, type: 3}
   - {fileID: 21300000, guid: 24f08706f21e8eb44a541218f7b0f6d6, type: 3}
   - {fileID: 21300000, guid: c684b75bdd233ac4fbac2e73d12958ba, type: 3}
-  ScoreImage: {fileID: 0}
 --- !u!1001 &784689678
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4858,5 +4860,6 @@ SceneRoots:
   - {fileID: 1114136435}
   - {fileID: 295905586}
   - {fileID: 485710483}
+  - {fileID: 752018356}
   - {fileID: 393226234}
   - {fileID: 1201024069}

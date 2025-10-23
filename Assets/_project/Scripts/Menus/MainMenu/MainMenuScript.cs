@@ -1,3 +1,4 @@
+using System;
 using _project.Scripts.Menus.LeaderboardHelpers;
 using UnityEngine;
 using UnityEngine.InputSystem;
@@ -19,6 +20,11 @@ namespace _project.Scripts.Menus.MainMenu
         
         [SerializeField]
         private LeaderboardMenu _leaderboardMenu;
+
+        private void Awake()
+        {
+            _settingsPanel.SetActive(true);
+        }
         
         private void Start()
         {

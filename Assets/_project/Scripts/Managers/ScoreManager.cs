@@ -14,6 +14,8 @@ namespace _project.Scripts.Managers
         [SerializeField]
         private ScoreData _scoreData;
 
+        [SerializeField] private Sprite[] ScoreSprites;
+        
         private int _score;
 
         public int Score
@@ -64,10 +66,28 @@ namespace _project.Scripts.Managers
             }
             return 0;
         }
+        
+        public Sprite GetGradeSprite()
+        {
+            if (ScoreSprites.Length > 0)
+            {
+                Debug.Log("======== GetGradeSprite() ========");
+                float maxScorePossible = Instance.GetLevelMaxScoreNeeded(LevelManager.CurrentLevel);
+                Debug.Log($"maxScorePossible: {maxScorePossible}");
+                int currentScore = Instance.Score;
+                Debug.Log($"currentScore: {currentScore}");
+                int scoreGradeLimit = ScoreSprites.Length;
+                Debug.Log($"scoreGradeLimit: {scoreGradeLimit}");
+                int finalGrade =  Mathf.FloorToInt(scoreGradeLimit * currentScore / maxScorePossible);
+                Debug.Log($"finalGrade: {finalGrade}");
+                return ScoreSprites[finalGrade];
+            }
+            return null;
+        }
 
         public float GetLevelMaxScoreNeeded(LevelData levelData)
         {
-            maxPossibleScorePerLevel = levelData.sequences.Count * 100;
+            maxPossibleScorePerLevel = levelData.GetMaximumPoints(Data.PerfectRatingScore);
             return maxPossibleScorePerLevel;
         }
 

@@ -54,5 +54,15 @@ namespace _project.ScriptableObjects.Scripts
             
             return Vector2.zero;
         }
+
+        public int GetMaximumPoints(int maxScoreValue)
+        {
+            int maxScore = 0;
+            foreach (SequenceData sequenceData in sequences)
+            {
+                maxScore += maxScoreValue * sequenceData.sequenceData.Count;
+            }
+            return maxScore;
+        }
     }
 }

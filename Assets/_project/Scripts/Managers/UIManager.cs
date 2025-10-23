@@ -43,19 +43,18 @@ namespace _project.Scripts.Managers
         [SerializeField] private Image Spirou;
         public LevelData levelData;
 
-        [SerializeField] private Sprite[] ScoreSprites;
         
         private void Awake()
         {
             if (_instance != null)
             {
-                Destroy(gameObject);
+                Destroy(_instance.gameObject);
             }
             else
             {
                 _instance = this;
             }
-            DontDestroyOnLoad(gameObject);
+            // DontDestroyOnLoad(gameObject);
             ClearDisplay();
         }
 
@@ -65,6 +64,11 @@ namespace _project.Scripts.Managers
             {
                 FIRSTIMAGE.JumpItself();
             }
+        }
+
+        private void OnDisable()
+        {
+            _instance = null;
         }
 
         public void ClearDisplay()
@@ -120,36 +124,6 @@ namespace _project.Scripts.Managers
                 default:
                     throw new ArgumentOutOfRangeException();
             }
-            // try
-            // {
-            //     //Debug.Log("Changing cloth icon");
-            //     if (clothColor >= coatToDisplay.Length)
-            //     {
-            //         Debug.LogWarning("Cloth icon is too small (no that's not the message rider but ok...)");
-            //         slotForCloth.sprite = _fallbackImage;
-            //         return;
-            //     }
-            //     switch (gameAction.ClotheType)
-            //     {
-            //         case SequenceConfig.ClotheType.Coat:
-            //             slotForCloth.sprite = coatToDisplay[clothColor];
-            //             break;
-            //         case SequenceConfig.ClotheType.Hat:
-            //             slotForCloth.sprite = hatToDisplay[clothColor];
-            //             break;
-            //         case SequenceConfig.ClotheType.Shoe:
-            //             slotForCloth.sprite = shoesToDisplay[clothColor];
-            //             break;
-            //         default:
-            //             throw new ArgumentOutOfRangeException();
-            //     }
-            //     slotForCloth.enabled = true;
-            // }
-            // catch (Exception _)
-            // {
-            //     Debug.LogWarning("Exception caught in ChangeClothIcon");
-            //     // ignored
-            // }
         }
 
         public void ClearNextClotheDisplay()
@@ -204,19 +178,6 @@ namespace _project.Scripts.Managers
         public void ChangeScoreValue(int score)
         {
             scoreText.text = "Score : " + score;
-        }
-
-        public Sprite GetGradeSprite()
-        {
-            if (ScoreSprites.Length > 0)
-            {
-                float maxScorePossible = ScoreManager.Instance.GetLevelMaxScoreNeeded(levelData);
-                int currentScore = ScoreManager.Instance.Score;
-                int scoreGradeLimit = ScoreSprites.Length;
-                int finalGrade =  Mathf.FloorToInt(scoreGradeLimit * currentScore / maxScorePossible);
-                return ScoreSprites[finalGrade];
-            }
-            return null;
         }
 
         public void EnableTutorialDisplay()

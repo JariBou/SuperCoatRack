@@ -2082,6 +2082,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _scoreData: {fileID: 11400000, guid: 40ba9c40e77285b46aeaa77abd1f38a9, type: 2}
+  ScoreSprites: []
 --- !u!4 &867749270
 Transform:
   m_ObjectHideFlags: 0
@@ -2443,7 +2444,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &920339666
 RectTransform:
   m_ObjectHideFlags: 0

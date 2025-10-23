@@ -416,6 +416,15 @@ public partial class @PlayerInputsMap: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""F1"",
+                    ""type"": ""Button"",
+                    ""id"": ""3d3eac32-a0b2-4cd4-9476-7e44b47d6211"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -649,6 +658,17 @@ public partial class @PlayerInputsMap: IInputActionCollection2, IDisposable
                     ""action"": ""Escape"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""6551d413-05e0-4c38-81eb-eaa9ac9b7d69"",
+                    ""path"": ""<Keyboard>/f1"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""F1"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -682,6 +702,7 @@ public partial class @PlayerInputsMap: IInputActionCollection2, IDisposable
         m_InGameMap_Bell = m_InGameMap.FindAction("Bell", throwIfNotFound: true);
         m_InGameMap_Bell1 = m_InGameMap.FindAction("Bell1", throwIfNotFound: true);
         m_InGameMap_Escape = m_InGameMap.FindAction("Escape", throwIfNotFound: true);
+        m_InGameMap_F1 = m_InGameMap.FindAction("F1", throwIfNotFound: true);
     }
 
     ~@PlayerInputsMap()
@@ -931,6 +952,7 @@ public partial class @PlayerInputsMap: IInputActionCollection2, IDisposable
     private readonly InputAction m_InGameMap_Bell;
     private readonly InputAction m_InGameMap_Bell1;
     private readonly InputAction m_InGameMap_Escape;
+    private readonly InputAction m_InGameMap_F1;
     /// <summary>
     /// Provides access to input actions defined in input action map "InGameMap".
     /// </summary>
@@ -1011,6 +1033,10 @@ public partial class @PlayerInputsMap: IInputActionCollection2, IDisposable
         /// </summary>
         public InputAction @Escape => m_Wrapper.m_InGameMap_Escape;
         /// <summary>
+        /// Provides access to the underlying input action "InGameMap/F1".
+        /// </summary>
+        public InputAction @F1 => m_Wrapper.m_InGameMap_F1;
+        /// <summary>
         /// Provides access to the underlying input action map instance.
         /// </summary>
         public InputActionMap Get() { return m_Wrapper.m_InGameMap; }
@@ -1087,6 +1113,9 @@ public partial class @PlayerInputsMap: IInputActionCollection2, IDisposable
             @Escape.started += instance.OnEscape;
             @Escape.performed += instance.OnEscape;
             @Escape.canceled += instance.OnEscape;
+            @F1.started += instance.OnF1;
+            @F1.performed += instance.OnF1;
+            @F1.canceled += instance.OnF1;
         }
 
         /// <summary>
@@ -1149,6 +1178,9 @@ public partial class @PlayerInputsMap: IInputActionCollection2, IDisposable
             @Escape.started -= instance.OnEscape;
             @Escape.performed -= instance.OnEscape;
             @Escape.canceled -= instance.OnEscape;
+            @F1.started -= instance.OnF1;
+            @F1.performed -= instance.OnF1;
+            @F1.canceled -= instance.OnF1;
         }
 
         /// <summary>
@@ -1358,5 +1390,12 @@ public partial class @PlayerInputsMap: IInputActionCollection2, IDisposable
         /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
         /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
         void OnEscape(InputAction.CallbackContext context);
+        /// <summary>
+        /// Method invoked when associated input action "F1" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// </summary>
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
+        void OnF1(InputAction.CallbackContext context);
     }
 }

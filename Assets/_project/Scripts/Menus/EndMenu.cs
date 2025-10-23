@@ -26,7 +26,7 @@ namespace _project.Scripts.Menus
             int position = Leaderboard.GetPositionOfScoreInMap(ScoreManager.GetScore(), LevelManager.CurrentLevel.LevelName);
             // _scoreDisplay.text = $"{position}. {300}";
             _scoreDisplay.text = $"{position}. {ScoreManager.Instance.Score.ToString()}";
-            _scoreGrade.sprite = UIManager.Instance.GetGradeSprite();
+            _scoreGrade.sprite = ScoreManager.Instance.GetGradeSprite();
         }
 
         public void Retry()

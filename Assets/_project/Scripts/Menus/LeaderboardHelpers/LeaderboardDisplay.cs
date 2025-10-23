@@ -37,7 +37,7 @@ namespace _project.Scripts.Menus.LeaderboardHelpers
         {
             // Leaderboard.AddLeaderboardEntry("test", new LeaderboardSripts.LeaderboardEntry("TOM", 5000));
             // LeaderboardSripts.Leaderboard.AddLeaderboardEntry(LevelManager.CurrentLevel.LevelName, new LeaderboardSripts.LeaderboardEntry("TOM", 5000));
-            gameObject.SetActive(false);
+            // gameObject.SetActive(false);
         }
 
         private void LoadLeaderboard(string levelName = null)

@@ -16,7 +16,7 @@ namespace _project.Scripts.Menus
         [SerializeField] private AudioMixer _audioMixer;
         [SerializeField] private TMP_Dropdown _languageSelector;
 
-        private void Start()
+        private void Awake()
         {
             float volumeValue = PlayerPrefs.GetFloat("Volume", 1f);
             _volumeSlider.value = volumeValue;
