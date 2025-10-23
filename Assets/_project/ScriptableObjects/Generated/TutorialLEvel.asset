@@ -12,8 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a1a83d60081447b8fddc86532f8bc9b, type: 3}
   m_Name: TutorialLEvel
   m_EditorClassIdentifier: 
-  sequences: []
+  LevelName: Tutorial
   Icon: {fileID: 21300000, guid: 53c39dc1d45bf4c45a37c606b1733ba6, type: 3}
+  sequences: []
   IsTutorial: 1
   _songDurationInSeconds: 0
   TutorialData: {fileID: 11400000, guid: 6942e80cf165a5d49864f814906a5912, type: 2}
@@ -23,3 +24,7 @@ MonoBehaviour:
     WwiseObjectReference: {fileID: 0}
   Client: {fileID: 21300000, guid: c12de898b52692d4c8995493041d667e, type: 3}
   HappyClient: {fileID: 0}
+  PickupActionGracePeriod: {x: 0.5, y: 0.5}
+  DropActionGracePeriod: {x: 0.5, y: 0.5}
+  ScanActionGracePeriod: {x: 1, y: 1}
+  BellActionGracePeriod: {x: 0.5, y: 0.5}

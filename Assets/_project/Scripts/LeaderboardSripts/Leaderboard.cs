@@ -30,7 +30,11 @@ namespace _project.Scripts.LeaderboardSripts
             {
                 return new List<LeaderboardEntry>();
             }
-            leaderboard.Sort((entry, leaderboardEntry) => entry.Score > leaderboardEntry.Score ? -1 : 1);
+
+            if (sorted)
+            {
+                leaderboard.Sort((entry, leaderboardEntry) => entry.Score > leaderboardEntry.Score ? -1 : 1);
+            }
             return leaderboard;
         }
 
@@ -47,8 +51,6 @@ namespace _project.Scripts.LeaderboardSripts
         public static void SaveLeaderboardToFile()
         {
             Dictionary<string, List<LeaderboardEntry>> leaderboard = GetLeaderboard();
-            leaderboard.Add("test1", new List<LeaderboardEntry>(){new LeaderboardEntry("HahA", 56)});
-            leaderboard.Add("test2", new List<LeaderboardEntry>(){new LeaderboardEntry("aaaaa", 64)});
             
             LeaderboardJsonWrapper jsonWrapper = new LeaderboardJsonWrapper(leaderboard);
             string json = JsonUtility.ToJson(jsonWrapper, true);
@@ -98,12 +100,12 @@ namespace _project.Scripts.LeaderboardSripts
             }
         }
 
-        public static void AddLeaderboardEntry(string levelName, LeaderboardEntry leaderboardEntry)
+        public static void AddLeaderboardEntry(string levelName, LeaderboardEntry leaderboardEntry, bool autoSave = true)
         {
-            Instance.AddEntry(levelName, leaderboardEntry);
+            Instance.AddEntry(levelName, leaderboardEntry, autoSave);
         }
 
-        private void AddEntry(string levelName, LeaderboardEntry leaderboardEntry)
+        private void AddEntry(string levelName, LeaderboardEntry leaderboardEntry, bool autoSave = true)
         {
             if (_leaderboard.TryGetValue(levelName, out List<LeaderboardEntry> leaderboard))
             {
@@ -112,6 +114,11 @@ namespace _project.Scripts.LeaderboardSripts
             else
             {
                 _leaderboard.Add(levelName, new List<LeaderboardEntry>(){leaderboardEntry});
+            }
+
+            if (autoSave)
+            {
+                SaveLeaderboardToFile();
             }
         }
 

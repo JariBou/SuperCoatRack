@@ -5,7 +5,7 @@ namespace _project.Scripts.LeaderboardSripts
     public class LeaderboardSaver : MonoBehaviour
     {
 
-        private void Start()
+        private void Awake()
         {
             Leaderboard.LoadLeaderboardFromFile();
         }

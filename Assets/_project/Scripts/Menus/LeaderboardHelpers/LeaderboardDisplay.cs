@@ -44,7 +44,7 @@ namespace _project.Scripts.Menus.LeaderboardHelpers
         {
             // List<LeaderboardSripts.LeaderboardEntry> leaderboardForMap = Leaderboard.GetLeaderboardForMap("test");
             string leaderboardLevelName = levelName ?? LevelManager.CurrentLevel.LevelName;
-            List<LeaderboardEntry> leaderboardForMap = Leaderboard.GetLeaderboardForMap(leaderboardLevelName);
+            List<LeaderboardEntry> leaderboardForMap = Leaderboard.GetLeaderboardForMap(leaderboardLevelName, true);
             if (leaderboardForMap.Count == 0)
             {
                 LeaderboardEntryDisplay leaderboardEntryDisplay = Instantiate(_leaderboardEntryPrefab, _leaderboardEntryContainer.transform).GetComponent<LeaderboardEntryDisplay>();
