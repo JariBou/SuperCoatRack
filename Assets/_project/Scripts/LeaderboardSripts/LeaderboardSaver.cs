@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace _project.Scripts.Leaderboard
+namespace _project.Scripts.LeaderboardSripts
 {
     public class LeaderboardSaver : MonoBehaviour
     {

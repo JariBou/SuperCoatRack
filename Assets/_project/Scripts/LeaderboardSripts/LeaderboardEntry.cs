@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace _project.Scripts.Leaderboard
+namespace _project.Scripts.LeaderboardSripts
 {
     [Serializable]
     public class LeaderboardEntry

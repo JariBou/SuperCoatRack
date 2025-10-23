@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 
-namespace _project.Scripts.Leaderboard
+namespace _project.Scripts.LeaderboardSripts
 {
     public class Leaderboard
     {
@@ -113,6 +113,20 @@ namespace _project.Scripts.Leaderboard
             {
                 _leaderboard.Add(levelName, new List<LeaderboardEntry>(){leaderboardEntry});
             }
+        }
+
+        public static int GetPositionOfScoreInMap(int getScore, string levelName)
+        {
+            List<LeaderboardEntry> leaderboardForMap = GetLeaderboardForMap(levelName, true);
+            for (var i = 0; i < leaderboardForMap.Count; i++)
+            {
+                LeaderboardEntry entry = leaderboardForMap[i];
+                if (entry.Score < getScore)
+                {
+                    return i+1;
+                }
+            }
+            return leaderboardForMap.Count+1;
         }
     }
     

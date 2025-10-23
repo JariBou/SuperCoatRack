@@ -11,13 +11,18 @@ namespace _project.Scripts.Menus.LeaderboardEntry
         [SerializeField] private Color _currentPlayerColor = Color.yellow;
         [SerializeField] private Color _defaultColor = Color.white;
 
-        private void Config(string name, int score)
+        public void Config(string name, string score)
         {
             _name.text = name;
-            _score.text = score.ToString();
+            _score.text = score;
+        }
+        
+        public void Config(string name, int score)
+        {
+            Config(name, score.ToString());
         }
 
-        public void Config(int i, Leaderboard.LeaderboardEntry leaderboardFor, bool selectedName)
+        public void Config(int i, LeaderboardSripts.LeaderboardEntry leaderboardFor, bool selectedName = false)
         {
             Config($"{i}.{leaderboardFor.Name}", leaderboardFor.Score);
             _name.color = selectedName ? _currentPlayerColor : _defaultColor;

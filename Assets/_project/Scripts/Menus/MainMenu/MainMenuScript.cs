@@ -1,3 +1,4 @@
+using _project.Scripts.Menus.LeaderboardEntry;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -16,18 +17,25 @@ namespace _project.Scripts.Menus.MainMenu
         [SerializeField]
         private SelectionMenu _selectionMenu;
         
+        [SerializeField]
+        private LeaderboardMenu _leaderboardMenu;
+        
         private void Start()
         {
             _settingsPanel.SetActive(false);
             _selectionPanel.SetActive(false);
+            _leaderboardMenu.gameObject.SetActive(false);
         }
 
         public void OnJoystickConfirm(InputAction.CallbackContext ctx)
         {
             if (!ctx.performed) return;
-            if (!_mainMenuPanel.activeSelf)
+            if (_selectionPanel.activeSelf)
             {
                 _selectionMenu.Play();
+            } else if (_leaderboardMenu.gameObject.activeSelf)
+            {
+                
             }
             else
             {
@@ -38,9 +46,13 @@ namespace _project.Scripts.Menus.MainMenu
         public void OnJoystickReturn(InputAction.CallbackContext ctx)
         {
             if (!ctx.performed) return;
-            if (!_mainMenuPanel.activeSelf)
+            if (_selectionPanel.activeSelf)
             {
                 ToggleSelection();
+            }
+            else if (_leaderboardMenu.gameObject.activeSelf || _mainMenuPanel.activeSelf)
+            {
+                ToggleLeaderboard();    
             }
         }
 
@@ -70,6 +82,12 @@ namespace _project.Scripts.Menus.MainMenu
             //     _settingsPanel.activeSelf? "PlayDaschlatt" : "PlayWiiMusic",
             //     gameObject
             // );
+        }
+
+        public void ToggleLeaderboard()
+        {
+            _mainMenuPanel.SetActive(!_mainMenuPanel.activeSelf);
+            _leaderboardMenu.gameObject.SetActive(!_leaderboardMenu.gameObject.activeSelf);
         }
         
 

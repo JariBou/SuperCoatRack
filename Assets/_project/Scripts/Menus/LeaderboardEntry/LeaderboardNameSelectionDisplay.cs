@@ -24,6 +24,14 @@ namespace _project.Scripts.Menus.LeaderboardEntry
 
         private void Start()
         {
+            if (LevelManager.CurrentLevel.IsTutorial)
+            {
+                _endMenu.EnableNav();
+                _leaderboardDisplay.Show();
+                Destroy(gameObject);
+                return;
+            }
+            
             for (int i = 0; i < _letterDisplays.Count; i++)
             {
                 _letterDisplays[i].Config(_unselectedColor, _selectedColor);
@@ -65,6 +73,7 @@ namespace _project.Scripts.Menus.LeaderboardEntry
             if (_selectedIndex == 0)
             {
                 _endMenu.EnableNav();
+                _leaderboardDisplay.Show();
                 Destroy(gameObject);
             }
             else
@@ -86,7 +95,7 @@ namespace _project.Scripts.Menus.LeaderboardEntry
             UpdateDisplay();
             if (_selectedIndex >= _letterDisplays.Count)
             {
-                _leaderboardDisplay.Show(GetPlayerEnteredName());
+                _leaderboardDisplay.ShowAndAdd(GetPlayerEnteredName());
                 _endMenu.EnableNav();
                 HideDisplays();
             }
