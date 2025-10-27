@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{5836A154-EF8E-469C-9244-E481556B667D}" SchemaVersion="123">
+	<InteractiveMusic>
+		<WorkUnit Name="Unit2" ID="{5836A154-EF8E-469C-9244-E481556B667D}" PersistMode="Standalone">
+			<ChildrenList>
+				<Folder Name="Music 2" ID="{31B2BC16-1AF6-465B-9B1D-707D0ACC0E55}" ShortID="280296329">
+					<ChildrenList>
+						<MusicSegment Name="Jusquici tout va bien" ID="{FD326435-60F0-402E-B1F9-B91528DCACFE}" ShortID="1052693499">
+							<PropertyList>
+								<Property Name="EndPosition" Type="Real64" Value="208690.975056689"/>
+								<Property Name="Tempo" Type="Real64" Value="160"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6D98A839-AC4C-4A37-83B9-A9D3E865E785}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{BFE55156-D556-409A-8C3D-FF830BCFC4B2}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<MusicTrack Name="Jusquici tout va bien" ID="{D8148C58-476D-4F8B-B942-3B15F6230D94}" ShortID="67981372">
+									<ReferenceList>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{BFE55156-D556-409A-8C3D-FF830BCFC4B2}"/>
+										</Reference>
+										<Reference Name="TransitionRoot">
+											<Custom>
+												<MusicTransition Name="Root" ID="{CB67FB60-9125-4C34-8539-4DFFB485596E}">
+													<PropertyList>
+														<Property Name="IsFolder" Type="bool" Value="True"/>
+													</PropertyList>
+													<TransitionInfo/>
+												</MusicTransition>
+											</Custom>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Jusquici tout va bien" ID="{935521E2-28CA-4AD5-9FBA-5EB3F8309A75}">
+											<Language>SFX</Language>
+											<AudioFile>Jusquici tout va bien.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="159507516"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ObjectLists>
+										<ObjectList Name="Sequences">
+											<Reference>
+												<Local>
+													<MusicTrackSequence Name="" ID="{696DD1D9-6A6E-4EE4-8171-0007D3C26DE9}">
+														<ObjectLists>
+															<ObjectList Name="Clips">
+																<Reference>
+																	<Local>
+																		<MusicClip Name="Jusquici tout va bien" ID="{C16EA761-F191-495A-B710-4382ED816108}">
+																			<PropertyList>
+																				<Property Name="EndTrimOffset" Type="Real64" Value="206690.975056689"/>
+																				<Property Name="FadeInMode" Type="int16" Value="0"/>
+																				<Property Name="FadeOutMode" Type="int16" Value="0"/>
+																				<Property Name="PlayAt" Type="Real64" Value="1325.8597832539"/>
+																			</PropertyList>
+																			<AudioSourceRef Name="Jusquici tout va bien" ID="{935521E2-28CA-4AD5-9FBA-5EB3F8309A75}"/>
+																		</MusicClip>
+																	</Local>
+																</Reference>
+															</ObjectList>
+														</ObjectLists>
+													</MusicTrackSequence>
+												</Local>
+											</Reference>
+										</ObjectList>
+									</ObjectLists>
+								</MusicTrack>
+							</ChildrenList>
+							<ObjectLists>
+								<ObjectList Name="Cues">
+									<Reference>
+										<Local>
+											<MusicCue Name="Entry Cue" ID="{99F0D81F-F452-475D-A9FC-5F8DA49FAA06}"/>
+										</Local>
+									</Reference>
+									<Reference>
+										<Local>
+											<MusicCue Name="Exit Cue" ID="{53BBA5E7-49AD-4D15-A883-EA0B2F68BDE9}">
+												<PropertyList>
+													<Property Name="CueType" Type="int16" Value="1"/>
+													<Property Name="TimeMs" Type="Real64" Value="206690.975056689"/>
+												</PropertyList>
+											</MusicCue>
+										</Local>
+									</Reference>
+									<Reference>
+										<Local>
+											<MusicCue Name="" ID="{54AE87C9-8779-4985-8754-F20B0A4AF8B2}">
+												<PropertyList>
+													<Property Name="CueType" Type="int16" Value="2"/>
+												</PropertyList>
+											</MusicCue>
+										</Local>
+									</Reference>
+								</ObjectList>
+							</ObjectLists>
+						</MusicSegment>
+					</ChildrenList>
+				</Folder>
+			</ChildrenList>
+		</WorkUnit>
+	</InteractiveMusic>
+</WwiseDocument>
