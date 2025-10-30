@@ -22,7 +22,7 @@ MonoBehaviour:
   MusicToPlayEvent:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 11400000, guid: fe87fd13de08110499a36631d5f1f67d, type: 2}
+    WwiseObjectReference: {fileID: 11400000, guid: a8a0145555dc0cb4e8c3ce0fe75c3bea, type: 2}
   Client: {fileID: 21300000, guid: b523a239a622db74aa132a958579972f, type: 3}
   HappyClient: {fileID: 21300000, guid: 4acadff3896a76c4193d5d41cd0d905a, type: 3}
   PickupActionGracePeriod: {x: 0.5, y: 0.5}
