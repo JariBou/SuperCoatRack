@@ -77,6 +77,17 @@
 										</Action>
 									</ChildrenList>
 								</Event>
+								<Event Name="PlayJITVB" ID="{DC1C8348-7951-4030-A2F8-ADEC57D079B8}">
+									<ChildrenList>
+										<Action Name="" ID="{2C4F8FC2-BF41-48B3-81D2-1D9915CDD6BA}" ShortID="246111365">
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="Jusquici tout va bien" ID="{FD326435-60F0-402E-B1F9-B91528DCACFE}" WorkUnitID="{ACD2CB43-14A2-429B-BD28-09BEF144217B}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
 							</ChildrenList>
 						</Folder>
 						<Folder Name="Stop" ID="{A0C56A3B-68F8-4A18-B59E-09086BA451EC}" ShortID="204520304">

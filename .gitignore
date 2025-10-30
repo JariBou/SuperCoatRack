@@ -82,3 +82,10 @@ GitStartRepoUnity.bat
 *.wsettings
 AkWwisePorjectData.asset
 IncrementalSoundBankData.xml  
+
+# Wwise generated files
+/SuperCoatRack_WwiseProject/GeneratedSoundBanks/
+/SuperCoatRack_WwiseProject/GeneratedSoundBanks/**/*.bnk
+/SuperCoatRack_WwiseProject/GeneratedSoundBanks/**/*.wem
+
+
